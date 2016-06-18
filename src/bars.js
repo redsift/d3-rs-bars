@@ -19,7 +19,7 @@ const DEFAULT_INSET = 24;   // scale space
 const DEFAULT_TICK_FORMAT = ',.0f';
 const DEFAULT_TICK_COUNT = 4;
 
-const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px }";
+const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px }";
 
 export default function bars(id) {
   let classed = 'chart-bars', 
@@ -34,13 +34,21 @@ export default function bars(id) {
       fill = presentation10.standard[0],
       orientation = 'left',
       minValue = null,
+      maxValue = null,
       inset = DEFAULT_INSET,
       tickFormatValue = DEFAULT_TICK_FORMAT,
       tickFormatIndex = DEFAULT_TICK_FORMAT,
       tickCountValue = DEFAULT_TICK_COUNT,
       tickCountIndex = DEFAULT_TICK_COUNT,
+      tickDisplayValue = null,
       grid = true,
-      text = (d) => d;
+      label = null,
+      value = function (d) {
+        if (typeof d === 'object') {
+          d = d.v;
+        }
+        return d;
+      };
   
   function _impl(context) {
     let selection = context.selection ? context.selection() : context,
@@ -48,9 +56,10 @@ export default function bars(id) {
 
     let colors = () => fill;
     if (fill === 'series') {
-      colors = random(presentation10.standard.filter((e, i) => i !== presentation10.names.grey));
+      let rnd = random(presentation10.standard.filter((e, i) => i !== presentation10.names.grey));
+      colors = (d, i) => rnd(i.toString());
     } else if (typeof fill === 'function') {
-      colors = (d, i) => fill(d, i);
+      colors = fill;
     }
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
@@ -82,9 +91,21 @@ export default function bars(id) {
 
       let data = g.datum() || [];
       let mm = extent(data, function(d) {
-        return d;
+        return value(d);
       });
       if (minValue != null) mm[0] = minValue;
+      if (maxValue != null) mm[1] = maxValue;
+
+      let labelFn = label;
+      if (labelFn == null) {
+        labelFn = function (i) {
+          let d = data[i];
+          if (d.l) {
+            return d.l;
+          }
+          return i;
+        };
+      }
 
       let rects = g.selectAll('rect').data(data);
       rects.exit().remove();
@@ -101,14 +122,15 @@ export default function bars(id) {
         rects = rects.transition(context);
       }  
 
-      // neagtive values need a center line
+      // negative values need a center line
       let aZ = g.select('line.axis-z');
       if (mm[0] < 0) {
-        if (aZ.empty()) aZ = g.append('line').attr('class', 'axis-z axis');
+        if (aZ.empty()) aZ = g.append('line').attr('class', 'axis-z axis grid');
         aZ.attr('stroke', '#000');
       } else {
         aZ.remove();
       }
+      let scaleFn = tickDisplayValue;
 
       if (orientation === 'top' || orientation === 'left') {
         let toV = w,
@@ -138,28 +160,36 @@ export default function bars(id) {
 
         let aV = axisV(scaleV).ticks(tickCountValue, tickFormatValue);
         if (grid) {
-          aV.tickSizeInner(gridSize)
+          aV.tickSizeInner(gridSize);
         }
-        g.select('g.axis-v').attr('transform', translateV).call(aV);
+        aV.tickFormat(scaleFn);
+
+        g.select('g.axis-v')
+          .attr('transform', translateV)
+          .call(aV)
+          .selectAll('line')
+            .attr('class', grid ? 'grid' : null);
+        
 
         let aI = axisI(scaleI).ticks(tickCountIndex, tickFormatIndex);
+        aI.tickFormat(labelFn);
         g.select('g.axis-i').attr('transform', translateI).call(aI);
 
         let v0 = scaleV(0);
         if (!isFinite(v0)) v0 = 0; // e.g. log scales
 
-        if (!grid) {
-          let c0 = v0 + 0.5;
-          if (orientation === 'top') {
-            aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
-          } else {
-            aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
-          }
+
+        let c0 = v0 + 0.5;
+        if (orientation === 'top') {
+          aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
+        } else {
+          aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
         }
 
         let sz = fnBarSize(scaleI);
 
-        rects.attr(attrV, (d) => d < 0 ? scaleV(d) : v0)
+        rects.data((d) => d.map(value))
+              .attr(attrV, (d) => d < 0 ? scaleV(d) : v0)
               .attr(attrVV, (d) => Math.max(scaleV(Math.abs(d)) - v0, 1))
               .attr(attrI, (d, i) => scaleI(i) - sz/2)
               .attr(attrIV, sz);
@@ -194,31 +224,39 @@ export default function bars(id) {
         if (grid) {
           aV.tickSizeInner(gridSize)
         }
-        g.select('g.axis-v').attr('transform', translateV).call(aV);
+        aV.tickFormat(scaleFn);
+
+        g.select('g.axis-v')
+          .attr('transform', translateV)
+          .call(aV)          
+          .selectAll('line')
+            .attr('class', grid ? 'grid' : null);
 
         let aI = axisI(scaleI).ticks(tickCountIndex, tickFormatIndex);
+        aI.tickFormat(labelFn);
         g.select('g.axis-i').attr('transform', translateI).call(aI);
 
         let v0 = scaleV(0);
         if (!isFinite(v0)) v0 = 0; // e.g. log scales
 
-        if (!grid) {
-          let c0 = v0 + 0.5;
-          if (orientation === 'bottom') {
-            aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
-          } else {
-            aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
-          }
+
+        let c0 = v0 + 0.5;
+        if (orientation === 'bottom') {
+          aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
+        } else {
+          aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
         }
+
         let sz = fnBarSize(scaleI);
 
-        rects.attr(attrV, (d) => Math.min(scaleV(d), v0))
+        rects.data((d) => d.map(value))
+              .attr(attrV, (d) => Math.min(scaleV(d), v0))
               .attr(attrVV, (d) => Math.max(v0 - scaleV(Math.abs(d)), 1))
               .attr(attrI, (d, i) => scaleI(i) - sz/2)
               .attr(attrIV, sz);
       }
 
-      rects.attr('fill', (d, i) => colors(i.toString()));
+      rects.attr('fill', colors);
     });
     
   }
@@ -278,6 +316,10 @@ export default function bars(id) {
     return arguments.length ? (minValue = value, _impl) : minValue;
   };  
 
+  _impl.maxValue = function(value) {
+    return arguments.length ? (maxValue = value, _impl) : maxValue;
+  };  
+
   _impl.inset = function(value) {
     return arguments.length ? (inset = value, _impl) : inset;
   };  
@@ -296,7 +338,12 @@ export default function bars(id) {
 
   _impl.tickFormatValue = function(value) {
     return arguments.length ? (tickFormatValue = value, _impl) : tickFormatValue;
-  };    
+  };  
+
+  _impl.tickDisplayValue = function(value) {
+    return arguments.length ? (tickDisplayValue = value, _impl) : tickDisplayValue;
+  };  
+
 
   _impl.style = function(value) {
     return arguments.length ? (style = value, _impl) : style;
@@ -306,6 +353,13 @@ export default function bars(id) {
     return arguments.length ? (grid = value, _impl) : grid;
   };
   
+  _impl.value = function(valuep) {
+    return arguments.length ? (value = valuep, _impl) : value;
+  };
+  
+  _impl.label = function(value) {
+    return arguments.length ? (label = value, _impl) : label;
+  };  
           
   return _impl;
 }

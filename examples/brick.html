@@ -25,13 +25,19 @@
 
     d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-bottom').orientation('bottom'));
 
-    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('series').fill('series').minValue(0));
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('series').fill('series').minValue(0).maxValue(120));
 
-    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log').logValue(10));
+    d3.select('#elm').datum([ 1, [ 2, 4, 6 ], 3, 10, 100 ]).call(d3_rs_bars.html('log').logValue(10));
 
     d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-right').logValue(10).orientation('right'));
 
-    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-series-bottom').logValue(10).orientation('bottom').fill('series'));
+    d3.select('#elm')
+      .datum([ { v:1, l:'R' }, { v:2, l:'P' }, 3, 10, 100 ])
+      .call(d3_rs_bars.html('log-series-bottom')
+              .logValue(10)
+              .orientation('bottom')
+              .tickFormatValue("$.0f")
+              .fill('series'));
 
     </script>
   </body>
