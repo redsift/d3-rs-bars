@@ -16,6 +16,8 @@ const DEFAULT_SIZE = 420;
 const DEFAULT_ASPECT = 160 / 420;
 const DEFAULT_MARGIN = 26;  // white space
 const DEFAULT_INSET = 24;   // scale space
+const DEFAULT_TICK_FORMAT = ',.0f';
+const DEFAULT_TICK_COUNT = 4;
 
 const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px }";
 
@@ -33,6 +35,11 @@ export default function bars(id) {
       orientation = 'left',
       minValue = null,
       inset = DEFAULT_INSET,
+      tickFormatValue = DEFAULT_TICK_FORMAT,
+      tickFormatIndex = DEFAULT_TICK_FORMAT,
+      tickCountValue = DEFAULT_TICK_COUNT,
+      tickCountIndex = DEFAULT_TICK_COUNT,
+      grid = true,
       text = (d) => d;
   
   function _impl(context) {
@@ -106,6 +113,7 @@ export default function bars(id) {
       if (orientation === 'top' || orientation === 'left') {
         let toV = w,
             toI = h - inset,
+            gridSize = inset / 2 - h,
             fromI = 0,
             attrV = 'x',
             attrVV = 'width',
@@ -113,37 +121,40 @@ export default function bars(id) {
             attrIV = 'height',
             axisV = axisBottom,
             axisI = axisLeft,
-            tickCount = 10,
             translateV = 'translate(0,' + (h - inset / 2) + ')',
             translateI = 'translate(' + (inset / 2) + ',0)';
 
         if (orientation === 'top') {
           toV = h; toI = w; fromI = inset;
+          gridSize = inset / 2 - w;
           attrV = 'y'; attrIV = 'width'; attrI = 'x'; attrVV = 'height'; 
           axisV = axisLeft; axisI = axisTop;
-          tickCount = 4;
           translateV = 'translate(' + inset / 2 + ', 0)';
           translateI = 'translate(0, ' + (inset / 2) + ')';
         }
         
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([inset, toV]);
-        
 
-        let aV = axisV(scaleV).ticks(tickCount, ",.0f");
+        let aV = axisV(scaleV).ticks(tickCountValue, tickFormatValue);
+        if (grid) {
+          aV.tickSizeInner(gridSize)
+        }
         g.select('g.axis-v').attr('transform', translateV).call(aV);
 
-        let aI = axisI(scaleI).ticks(tickCount, ",.0f");
+        let aI = axisI(scaleI).ticks(tickCountIndex, tickFormatIndex);
         g.select('g.axis-i').attr('transform', translateI).call(aI);
-
 
         let v0 = scaleV(0);
         if (!isFinite(v0)) v0 = 0; // e.g. log scales
 
-        if (orientation === 'top') {
-          aZ.attr('y1', v0).attr('y2', v0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
-        } else {
-          aZ.attr('x1', v0).attr('x2', v0).attr('y1', 0).attr('y2', toI + inset / 2);
+        if (!grid) {
+          let c0 = v0 + 0.5;
+          if (orientation === 'top') {
+            aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
+          } else {
+            aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
+          }
         }
 
         let sz = fnBarSize(scaleI);
@@ -154,25 +165,54 @@ export default function bars(id) {
               .attr(attrIV, sz);
 
       } else if (orientation === 'bottom' || orientation === 'right') {
-        let toV = w,
-            toI = h,
+        let toV = w - inset,
+            toI = h - inset,
+            gridSize = inset / 2 - h,
+            fromI = 0,
             attrV = 'x',
             attrVV = 'width',
             attrI = 'y',
-            attrIV = 'height';
+            attrIV = 'height',
+            axisV = axisBottom,
+            axisI = axisRight,
+            translateV = 'translate(0,' + (h - inset / 2) + ')',
+            translateI = 'translate(' + (w - inset / 2) + ',0)';
         if (orientation === 'bottom') {
-          toV = h; toI = w; attrV = 'y'; attrIV = 'width'; attrI = 'x'; attrVV = 'height';
+          toV = h - inset; toI = w; 
+          gridSize = inset / 2 - w;
+          fromI = inset;
+          attrV = 'y'; attrIV = 'width'; attrI = 'x'; attrVV = 'height';
+          axisV = axisLeft; axisI = axisBottom;
+          translateV = 'translate(' + inset / 2 + ', 0)';
+          translateI = 'translate(0, ' + (h - inset / 2) + ')';          
         }        
         
-        scaleI = scaleI.rangeRound([0, toI]);
-        scaleV = scaleV.range([toV, inset]);
+        scaleI = scaleI.rangeRound([fromI, toI]);
+        scaleV = scaleV.range([toV, 0]);
+
+        let aV = axisV(scaleV).ticks(tickCountValue, tickFormatValue);
+        if (grid) {
+          aV.tickSizeInner(gridSize)
+        }
+        g.select('g.axis-v').attr('transform', translateV).call(aV);
+
+        let aI = axisI(scaleI).ticks(tickCountIndex, tickFormatIndex);
+        g.select('g.axis-i').attr('transform', translateI).call(aI);
 
         let v0 = scaleV(0);
         if (!isFinite(v0)) v0 = 0; // e.g. log scales
 
+        if (!grid) {
+          let c0 = v0 + 0.5;
+          if (orientation === 'bottom') {
+            aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
+          } else {
+            aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
+          }
+        }
         let sz = fnBarSize(scaleI);
 
-        rects.attr(attrV, (d) => Math.min(scaleV(d), v0 - 1))
+        rects.attr(attrV, (d) => Math.min(scaleV(d), v0))
               .attr(attrVV, (d) => Math.max(v0 - scaleV(Math.abs(d)), 1))
               .attr(attrI, (d, i) => scaleI(i) - sz/2)
               .attr(attrIV, sz);
@@ -242,9 +282,30 @@ export default function bars(id) {
     return arguments.length ? (inset = value, _impl) : inset;
   };  
 
+  _impl.tickCountIndex = function(value) {
+    return arguments.length ? (tickCountIndex = value, _impl) : tickCountIndex;
+  };  
+
+  _impl.tickCountValue = function(value) {
+    return arguments.length ? (tickCountValue = value, _impl) : tickCountValue;
+  };  
+
+  _impl.tickFormatIndex = function(value) {
+    return arguments.length ? (tickFormatIndex = value, _impl) : tickFormatIndex;
+  };  
+
+  _impl.tickFormatValue = function(value) {
+    return arguments.length ? (tickFormatValue = value, _impl) : tickFormatValue;
+  };    
+
   _impl.style = function(value) {
     return arguments.length ? (style = value, _impl) : style;
   }; 
+
+  _impl.grid = function(value) {
+    return arguments.length ? (grid = value, _impl) : grid;
+  };
+  
           
   return _impl;
 }

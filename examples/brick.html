@@ -17,7 +17,7 @@
 
     'use strict';
 
-    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic'));
+    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic').scale(1));
 
     d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-top').orientation('top'));
     
