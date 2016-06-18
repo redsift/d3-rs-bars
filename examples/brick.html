@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <style>
+      
+    body {
+      margin: 0px;
+    }
+
+    </style>    
+  </head>
+  <body>
+    <div id="elm"></div>
+        
+    <script src="https://d3js.org/d3.v4.0.0-alpha.49.js"></script>
+    <script src="/d3-rs-bars.umd-es2015.min.js"></script>
+    <script>
+
+    'use strict';
+
+    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic'));
+
+    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-top').orientation('top'));
+    
+    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-right').orientation('right'));
+
+    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-bottom').orientation('bottom'));
+
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('series').fill('series').minValue(0));
+
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log').logValue(10));
+
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-right').logValue(10).orientation('right'));
+
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-series-bottom').logValue(10).orientation('bottom').fill('series'));
+
+    </script>
+  </body>
+</html>

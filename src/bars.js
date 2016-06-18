@@ -1,0 +1,250 @@
+
+import { select } from 'd3-selection';
+import { extent } from 'd3-array';
+import { scaleLinear, scaleLog, scaleTime } from 'd3-scale';
+import { axisTop, axisRight, axisBottom, axisLeft } from 'd3-axis';
+import { html as svg } from '@redsift/d3-rs-svg';
+
+import { 
+  random as random, 
+  contrasts as contrasts, 
+  presentation10 as presentation10,
+  display as display
+} from '@redsift/d3-rs-theme';
+
+const DEFAULT_SIZE = 420;
+const DEFAULT_ASPECT = 160 / 420;
+const DEFAULT_MARGIN = 26;  // white space
+const DEFAULT_INSET = 24;   // scale space
+
+const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px }";
+
+export default function bars(id) {
+  let classed = 'chart-bars', 
+      background = null,
+      width = DEFAULT_SIZE,
+      height = null,
+      margin = DEFAULT_MARGIN,
+      style = DEFAULT_STYLE,
+      scale = 1.0,
+      logValue = 0,
+      barSize = 4,
+      fill = presentation10.standard[0],
+      orientation = 'left',
+      minValue = null,
+      inset = DEFAULT_INSET,
+      text = (d) => d;
+  
+  function _impl(context) {
+    let selection = context.selection ? context.selection() : context,
+        transition = (context.selection !== undefined);
+
+    let colors = () => fill;
+    if (fill === 'series') {
+      colors = random(presentation10.standard.filter((e, i) => i !== presentation10.names.grey));
+    } else if (typeof fill === 'function') {
+      colors = (d, i) => fill(d, i);
+    }
+
+    let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
+
+    selection.each(function() {
+      let node = select(this);  
+      let sh = height || Math.round(width * DEFAULT_ASPECT);
+
+      let sid = null;
+      if (id) sid = 'svg-' + id;
+      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale).style(style);
+      let tnode = node;
+      if (transition === true) {
+        tnode = node.transition(context);
+      }
+      tnode.call(root);
+      
+      let elmS = node.select(root.self()).select(root.child());
+
+      let w = root.childWidth(),
+          h = root.childHeight();
+      
+      let g = elmS.select(_impl.self())
+      if (g.empty()) {
+        g = elmS.append('g').attr('class', classed).attr('id', id);
+        g.append('g').attr('class', 'axis-v axis');
+        g.append('g').attr('class', 'axis-i axis');
+      }
+
+      let data = g.datum() || [];
+      let mm = extent(data, function(d) {
+        return d;
+      });
+      if (minValue != null) mm[0] = minValue;
+
+      let rects = g.selectAll('rect').data(data);
+      rects.exit().remove();
+      rects = rects.enter().append('rect').merge(rects);
+            
+      let sV = scaleLinear(); 
+      if (logValue > 0) sV = scaleLog().base(logValue);
+      let scaleV = sV.domain(mm).clamp(true);
+
+      let sI = scaleLinear(); 
+      let scaleI = sI.domain([0, data.length - 1]);
+
+      if (transition === true) {
+        rects = rects.transition(context);
+      }  
+
+      // neagtive values need a center line
+      let aZ = g.select('line.axis-z');
+      if (mm[0] < 0) {
+        if (aZ.empty()) aZ = g.append('line').attr('class', 'axis-z axis');
+        aZ.attr('stroke', '#000');
+      } else {
+        aZ.remove();
+      }
+
+      if (orientation === 'top' || orientation === 'left') {
+        let toV = w,
+            toI = h - inset,
+            fromI = 0,
+            attrV = 'x',
+            attrVV = 'width',
+            attrI = 'y',
+            attrIV = 'height',
+            axisV = axisBottom,
+            axisI = axisLeft,
+            tickCount = 10,
+            translateV = 'translate(0,' + (h - inset / 2) + ')',
+            translateI = 'translate(' + (inset / 2) + ',0)';
+
+        if (orientation === 'top') {
+          toV = h; toI = w; fromI = inset;
+          attrV = 'y'; attrIV = 'width'; attrI = 'x'; attrVV = 'height'; 
+          axisV = axisLeft; axisI = axisTop;
+          tickCount = 4;
+          translateV = 'translate(' + inset / 2 + ', 0)';
+          translateI = 'translate(0, ' + (inset / 2) + ')';
+        }
+        
+        scaleI = scaleI.rangeRound([fromI, toI]);
+        scaleV = scaleV.range([inset, toV]);
+        
+
+        let aV = axisV(scaleV).ticks(tickCount, ",.0f");
+        g.select('g.axis-v').attr('transform', translateV).call(aV);
+
+        let aI = axisI(scaleI).ticks(tickCount, ",.0f");
+        g.select('g.axis-i').attr('transform', translateI).call(aI);
+
+
+        let v0 = scaleV(0);
+        if (!isFinite(v0)) v0 = 0; // e.g. log scales
+
+        if (orientation === 'top') {
+          aZ.attr('y1', v0).attr('y2', v0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
+        } else {
+          aZ.attr('x1', v0).attr('x2', v0).attr('y1', 0).attr('y2', toI + inset / 2);
+        }
+
+        let sz = fnBarSize(scaleI);
+
+        rects.attr(attrV, (d) => d < 0 ? scaleV(d) : v0)
+              .attr(attrVV, (d) => Math.max(scaleV(Math.abs(d)) - v0, 1))
+              .attr(attrI, (d, i) => scaleI(i) - sz/2)
+              .attr(attrIV, sz);
+
+      } else if (orientation === 'bottom' || orientation === 'right') {
+        let toV = w,
+            toI = h,
+            attrV = 'x',
+            attrVV = 'width',
+            attrI = 'y',
+            attrIV = 'height';
+        if (orientation === 'bottom') {
+          toV = h; toI = w; attrV = 'y'; attrIV = 'width'; attrI = 'x'; attrVV = 'height';
+        }        
+        
+        scaleI = scaleI.rangeRound([0, toI]);
+        scaleV = scaleV.range([toV, inset]);
+
+        let v0 = scaleV(0);
+        if (!isFinite(v0)) v0 = 0; // e.g. log scales
+
+        let sz = fnBarSize(scaleI);
+
+        rects.attr(attrV, (d) => Math.min(scaleV(d), v0 - 1))
+              .attr(attrVV, (d) => Math.max(v0 - scaleV(Math.abs(d)), 1))
+              .attr(attrI, (d, i) => scaleI(i) - sz/2)
+              .attr(attrIV, sz);
+      }
+
+      rects.attr('fill', (d, i) => colors(i.toString()));
+    });
+    
+  }
+  
+  _impl.self = function() { return 'g' + (id ?  '#' + id : '.' + classed); }
+
+  _impl.id = function() {
+    return id;
+  };
+    
+  _impl.classed = function(value) {
+    return arguments.length ? (classed = value, _impl) : classed;
+  };
+    
+  _impl.background = function(value) {
+    return arguments.length ? (background = value, _impl) : background;
+  };
+
+  _impl.size = function(value) {
+    return arguments.length ? (width = value, height = null, _impl) : width;
+  };
+    
+  _impl.width = function(value) {
+    return arguments.length ? (width = value, _impl) : width;
+  };  
+
+  _impl.height = function(value) {
+    return arguments.length ? (height = value, _impl) : height;
+  }; 
+
+  _impl.scale = function(value) {
+    return arguments.length ? (scale = value, _impl) : scale;
+  }; 
+
+  _impl.margin = function(value) {
+    return arguments.length ? (margin = value, _impl) : margin;
+  };   
+
+  _impl.logValue = function(value) {
+    return arguments.length ? (logValue = value, _impl) : logValue;
+  }; 
+
+  // if > 0, pixels size. if < 0, relative to the interspacing [-1.0 to 0.0]
+  _impl.barSize = function(value) {
+    return arguments.length ? (barSize = value, _impl) : barSize;
+  }; 
+
+  _impl.fill = function(value) {
+    return arguments.length ? (fill = value, _impl) : fill;
+  };  
+
+  _impl.orientation = function(value) {
+    return arguments.length ? (orientation = value, _impl) : orientation;
+  };  
+  
+  _impl.minValue = function(value) {
+    return arguments.length ? (minValue = value, _impl) : minValue;
+  };  
+
+  _impl.inset = function(value) {
+    return arguments.length ? (inset = value, _impl) : inset;
+  };  
+
+  _impl.style = function(value) {
+    return arguments.length ? (style = value, _impl) : style;
+  }; 
+          
+  return _impl;
+}
