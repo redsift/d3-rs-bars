@@ -30,7 +30,7 @@ export default function bars(id) {
       style = DEFAULT_STYLE,
       scale = 1.0,
       logValue = 0,
-      barSize = 4,
+      barSize = 6,
       fill = presentation10.standard[0],
       orientation = 'left',
       minValue = null,
@@ -44,9 +44,16 @@ export default function bars(id) {
       grid = true,
       label = null,
       value = function (d) {
+        if (Array.isArray(d)) {
+          return d;
+        }
         if (typeof d === 'object') {
           d = d.v;
         }
+        if (!Array.isArray(d)) {
+            d = [ d ];
+        }          
+
         return d;
       };
   
@@ -56,8 +63,12 @@ export default function bars(id) {
 
     let colors = () => fill;
     if (fill === 'series') {
-      let rnd = random(presentation10.standard.filter((e, i) => i !== presentation10.names.grey));
+      let rnd = random(presentation10.standard);
       colors = (d, i) => rnd(i.toString());
+    } else if (fill === 'global') {
+      let rnd = random(presentation10.standard);
+      let count = -1;
+      colors = () => (count++, rnd(count.toString()));
     } else if (typeof fill === 'function') {
       colors = fill;
     }
@@ -91,8 +102,10 @@ export default function bars(id) {
 
       let data = g.datum() || [];
       let mm = extent(data, function(d) {
-        return value(d);
+        let array = value(d);
+        return array[0]; // this assume the data is ordered and stacked lowest to highest
       });
+
       if (minValue != null) mm[0] = minValue;
       if (maxValue != null) mm[1] = maxValue;
 
@@ -107,9 +120,9 @@ export default function bars(id) {
         };
       }
 
-      let rects = g.selectAll('rect').data(data);
+      let rects = g.selectAll('g.stack').data(data);
       rects.exit().remove();
-      rects = rects.enter().append('rect').merge(rects);
+      rects = rects.enter().append('g').attr('class', 'stack').merge(rects);
             
       let sV = scaleLinear(); 
       if (logValue > 0) sV = scaleLog().base(logValue);
@@ -188,11 +201,15 @@ export default function bars(id) {
 
         let sz = fnBarSize(scaleI);
 
-        rects.data((d) => d.map(value))
-              .attr(attrV, (d) => d < 0 ? scaleV(d) : v0)
-              .attr(attrVV, (d) => Math.max(scaleV(Math.abs(d)) - v0, 1))
-              .attr(attrI, (d, i) => scaleI(i) - sz/2)
-              .attr(attrIV, sz);
+        let r = rects.attr('transform', (d, i) => 'translate(' + (attrI === 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
+                      .data((d) => d.map(value)).selectAll('rect').data((d) => d);
+        r.exit().remove();
+        r = r.enter().append('rect').merge(r);
+
+        r.attr(attrV, (d) => d < 0 ? scaleV(d) : v0)
+          .attr(attrVV, (d) => Math.max(scaleV(Math.abs(d)) - v0, 1))
+          .attr(attrIV, sz)
+          .attr('fill', colors);
 
       } else if (orientation === 'bottom' || orientation === 'right') {
         let toV = w - inset,
@@ -249,14 +266,16 @@ export default function bars(id) {
 
         let sz = fnBarSize(scaleI);
 
-        rects.data((d) => d.map(value))
-              .attr(attrV, (d) => Math.min(scaleV(d), v0))
+        let r = rects.attr('transform', (d, i) => 'translate(' + (attrI === 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
+                      .data((d) => d.map(value)).selectAll('rect').data((d) => d);
+        r.exit().remove();
+        r = r.enter().append('rect').merge(r);
+        r.attr(attrV, (d) => Math.min(scaleV(d), v0))
               .attr(attrVV, (d) => Math.max(v0 - scaleV(Math.abs(d)), 1))
-              .attr(attrI, (d, i) => scaleI(i) - sz/2)
-              .attr(attrIV, sz);
+              .attr(attrIV, sz)
+              .attr('fill', colors);
       }
 
-      rects.attr('fill', colors);
     });
     
   }
