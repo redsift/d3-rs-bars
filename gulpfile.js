@@ -19,7 +19,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var rename = require('gulp-rename');
 var commonjs = require('rollup-plugin-commonjs');
-
+var json = require('rollup-plugin-json');
 
 var outputFilename = argv.o;
 var globals = [];
@@ -61,6 +61,10 @@ gulp.task('umd', task.umd = () => {
             format: 'umd',
             sourceMap: true,
             plugins: [ 
+                        json({
+                            include: [ './package.json' , 'node_modules/**' ], 
+                            exclude: [  ]
+                        }),
                         nodeResolve({
                             skip: skips,
                             // use "jsnext:main" if possible

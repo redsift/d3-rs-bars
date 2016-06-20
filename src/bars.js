@@ -3,9 +3,11 @@ import { select } from 'd3-selection';
 import { extent } from 'd3-array';
 import { scaleLinear, scaleLog } from 'd3-scale';
 import { axisTop, axisRight, axisBottom, axisLeft } from 'd3-axis';
-import { timeFormat } from 'd3-time-format';
+import { timeFormatLocale } from 'd3-time-format';
 import { format } from 'd3-format';
 import { html as svg } from '@redsift/d3-rs-svg';
+
+import * as fmt_ru_RU from 'd3-time-format/locale/ru-RU.json'
 
 import { 
   random as random, 
@@ -49,6 +51,7 @@ export default function bars(id) {
       tickDisplayValue = null,
       grid = true,
       label = null,
+      language = navigator.language,
       defaultValueFormat = format(DEFAULT_TICK_FORMAT_VALUE),
       defaultValueFormatSi = format(DEFAULT_TICK_FORMAT_VALUE_SI),
       defaultValueFormatSmall = format(DEFAULT_TICK_FORMAT_VALUE_SMALL),
@@ -84,7 +87,8 @@ export default function bars(id) {
 
     let formatTime = null;
     if (labelTime != null) {
-      formatTime = timeFormat(labelTime);
+      let locale = timeFormatLocale(fmt_ru_RU);
+      formatTime = locale.format(labelTime);
     }
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
@@ -412,6 +416,9 @@ export default function bars(id) {
     return arguments.length ? (labelTime = value, _impl) : labelTime;
   };    
   
+  _impl.language = function(value) {
+    return arguments.length ? (language = value, _impl) : language;
+  };   
           
   return _impl;
 }
