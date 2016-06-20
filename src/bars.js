@@ -1,13 +1,14 @@
 
 import { select } from 'd3-selection';
 import { extent } from 'd3-array';
-import { scaleLinear, scaleLog, scaleTime } from 'd3-scale';
+import { scaleLinear, scaleLog } from 'd3-scale';
 import { axisTop, axisRight, axisBottom, axisLeft } from 'd3-axis';
+import { timeFormat } from 'd3-time-format';
+import { format } from 'd3-format';
 import { html as svg } from '@redsift/d3-rs-svg';
 
 import { 
   random as random, 
-  contrasts as contrasts, 
   presentation10 as presentation10,
   display as display
 } from '@redsift/d3-rs-theme';
@@ -16,7 +17,10 @@ const DEFAULT_SIZE = 420;
 const DEFAULT_ASPECT = 160 / 420;
 const DEFAULT_MARGIN = 26;  // white space
 const DEFAULT_INSET = 24;   // scale space
-const DEFAULT_TICK_FORMAT = ',.0f';
+const DEFAULT_TICK_FORMAT_VALUE = ',.0f';
+const DEFAULT_TICK_FORMAT_VALUE_SI = '.2s';
+const DEFAULT_TICK_FORMAT_VALUE_SMALL = '.3f';
+const DEFAULT_TICK_FORMAT_INDEX = ',d';
 const DEFAULT_TICK_COUNT = 4;
 const DEFAULT_SCALE = 42; // why not
 
@@ -37,13 +41,17 @@ export default function bars(id) {
       minValue = null,
       maxValue = null,
       inset = DEFAULT_INSET,
-      tickFormatValue = DEFAULT_TICK_FORMAT,
-      tickFormatIndex = DEFAULT_TICK_FORMAT,
+      tickFormatValue = null,
+      tickFormatIndex = DEFAULT_TICK_FORMAT_INDEX,
+      labelTime = null,
       tickCountValue = DEFAULT_TICK_COUNT,
-      tickCountIndex = DEFAULT_TICK_COUNT,
+      tickCountIndex = null,
       tickDisplayValue = null,
       grid = true,
       label = null,
+      defaultValueFormat = format(DEFAULT_TICK_FORMAT_VALUE),
+      defaultValueFormatSi = format(DEFAULT_TICK_FORMAT_VALUE_SI),
+      defaultValueFormatSmall = format(DEFAULT_TICK_FORMAT_VALUE_SMALL),
       value = function (d) {
         if (Array.isArray(d)) {
           return d;
@@ -72,6 +80,11 @@ export default function bars(id) {
       colors = () => (count++, rnd(count.toString()));
     } else if (typeof fill === 'function') {
       colors = fill;
+    }
+
+    let formatTime = null;
+    if (labelTime != null) {
+      formatTime = timeFormat(labelTime);
     }
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
@@ -115,17 +128,6 @@ export default function bars(id) {
       if (mm[0] === undefined) mm[0] = 0;
       if (mm[1] === undefined) mm[1] = DEFAULT_SCALE;
             
-      let labelFn = label;
-      if (labelFn == null) {
-        labelFn = function (i) {
-          let d = data[i];
-          if (d != null && d.l !== undefined) {
-            return d.l;
-          }
-          return i;
-        };
-      }
-
       let rects = g.selectAll('g.stack').data(data);
       rects.exit().remove();
       rects = rects.enter().append('g').attr('class', 'stack').merge(rects);
@@ -137,6 +139,44 @@ export default function bars(id) {
       let sI = scaleLinear(); 
       let scaleI = sI.domain([0, data.length > 0 ? data.length - 1 : DEFAULT_SCALE]);
 
+      let ticks = tickCountIndex;
+      if (ticks == null) {
+        ticks = Math.min(DEFAULT_TICK_COUNT, data.length - 1);
+      }
+
+      let labelFn = label;
+      if (labelFn == null) {
+        labelFn = function (i) {
+          let d = data[i];
+          if (d != null && d.l !== undefined) {
+            if (formatTime != null ) {
+              return formatTime(d.l);
+            }
+            return d.l;
+          }
+          if (formatTime != null ) {
+            return formatTime(i);
+          }
+          return scaleI.tickFormat(ticks, tickFormatIndex)(i);
+        };
+      }
+      
+      let scaleFn = tickDisplayValue;
+      
+      if (scaleFn == null && logValue === 0) {
+        scaleFn = function (i) {
+          if (tickFormatValue != null) {
+            return scaleV.tickFormat()(i);
+          } else if (i > 9999 || i <= 0.001) {
+            return defaultValueFormatSi(i);  
+          } else if (i < 1) {
+            return defaultValueFormatSmall(i);  
+          } else {
+            return defaultValueFormat(i);
+          }
+        }
+      }
+      
       if (transition === true) {
         rects = rects.transition(context);
       }  
@@ -149,26 +189,39 @@ export default function bars(id) {
       } else {
         aZ.remove();
       }
-      let scaleFn = tickDisplayValue;
 
+      let v0 = 0.0,
+          toI = 0.0,
+          gridSize = 0.0,
+          fnAttrV = null,
+          fnAttrVV = null,
+          attrV = '',
+          attrVV = '',
+          attrIV = '',
+          axisV = null,
+          axisI = null,
+          translateV = '',
+          translateI = '';
+            
       if (orientation === 'top' || orientation === 'left') {
         let toV = w,
-            toI = h - inset,
-            gridSize = inset / 2 - h,
-            fromI = 0,
-            attrV = 'x',
-            attrVV = 'width',
-            attrI = 'y',
-            attrIV = 'height',
-            axisV = axisBottom,
-            axisI = axisLeft,
-            translateV = 'translate(0,' + (h - inset / 2) + ')',
-            translateI = 'translate(' + (inset / 2) + ',0)';
+            fromI = 0;
 
+            
+        toI = h - inset;
+        gridSize = inset / 2 - h;
+        attrV = 'x';
+        attrVV = 'width';
+        attrIV = 'height';
+        axisV = axisBottom;
+        axisI = axisLeft;  
+        translateV = 'translate(0,' + (h - inset / 2) + ')';
+        translateI = 'translate(' + (inset / 2) + ',0)';
+        
         if (orientation === 'top') {
           toV = h; toI = w; fromI = inset;
           gridSize = inset / 2 - w;
-          attrV = 'y'; attrIV = 'width'; attrI = 'x'; attrVV = 'height'; 
+          attrV = 'y'; attrIV = 'width'; attrVV = 'height'; 
           axisV = axisLeft; axisI = axisTop;
           translateV = 'translate(' + inset / 2 + ', 0)';
           translateI = 'translate(0, ' + (inset / 2) + ')';
@@ -177,64 +230,30 @@ export default function bars(id) {
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([inset, toV]);
 
-        let aV = axisV(scaleV).ticks(tickCountValue, tickFormatValue);
-        if (grid) {
-          aV.tickSizeInner(gridSize);
-        }
-        aV.tickFormat(scaleFn);
 
-        g.select('g.axis-v')
-          .attr('transform', translateV)
-          .call(aV)
-          .selectAll('line')
-            .attr('class', grid ? 'grid' : null);
-        
-
-        let aI = axisI(scaleI).ticks(tickCountIndex, tickFormatIndex);
-        aI.tickFormat(labelFn);
-        g.select('g.axis-i').attr('transform', translateI).call(aI);
-
-        let v0 = scaleV(0);
-        if (!isFinite(v0)) v0 = 0; // e.g. log scales
-
-
-        let c0 = v0 + 0.5;
-        if (orientation === 'top') {
-          aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
-        } else {
-          aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
-        }
-
-        let sz = fnBarSize(scaleI);
-
-        let r = rects.attr('transform', (d, i) => 'translate(' + (attrI === 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
-                      .data((d) => (d == null) ? [] : d.map(value)).selectAll('rect').data((d) => d);
-        r.exit().remove();
-        r = r.enter().append('rect').merge(r);
-
-        r.attr(attrV, (d) => d < 0 ? scaleV(d) : v0)
-          .attr(attrVV, (d) => Math.max(scaleV(Math.abs(d)) - v0, 1))
-          .attr(attrIV, sz)
-          .attr('fill', colors);
+        v0 = scaleV(0);
+        fnAttrV = (d) => d < 0 ? scaleV(d) : v0;
+        fnAttrVV = (d) => Math.max(scaleV(Math.abs(d)) - v0, 1);
 
       } else if (orientation === 'bottom' || orientation === 'right') {
         let toV = w - inset,
-            toI = h - inset,
-            gridSize = inset / 2 - h,
-            fromI = 0,
-            attrV = 'x',
-            attrVV = 'width',
-            attrI = 'y',
-            attrIV = 'height',
-            axisV = axisBottom,
-            axisI = axisRight,
-            translateV = 'translate(0,' + (h - inset / 2) + ')',
-            translateI = 'translate(' + (w - inset / 2) + ',0)';
+            fromI = 0;
+            
+        toI = h - inset;
+        gridSize = inset / 2 - h;
+        attrV = 'x';
+        attrVV = 'width';
+        attrIV = 'height';
+        axisV = axisBottom;
+        axisI = axisRight;
+        translateV = 'translate(0,' + (h - inset / 2) + ')';
+        translateI = 'translate(' + (w - inset / 2) + ',0)';        
+                
         if (orientation === 'bottom') {
           toV = h - inset; toI = w; 
           gridSize = inset / 2 - w;
           fromI = inset;
-          attrV = 'y'; attrIV = 'width'; attrI = 'x'; attrVV = 'height';
+          attrV = 'y'; attrIV = 'width'; attrVV = 'height';
           axisV = axisLeft; axisI = axisBottom;
           translateV = 'translate(' + inset / 2 + ', 0)';
           translateI = 'translate(0, ' + (h - inset / 2) + ')';          
@@ -243,44 +262,48 @@ export default function bars(id) {
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([toV, 0]);
 
-        let aV = axisV(scaleV).ticks(tickCountValue, tickFormatValue);
-        if (grid) {
-          aV.tickSizeInner(gridSize)
-        }
-        aV.tickFormat(scaleFn);
-
-        g.select('g.axis-v')
-          .attr('transform', translateV)
-          .call(aV)          
-          .selectAll('line')
-            .attr('class', grid ? 'grid' : null);
-
-        let aI = axisI(scaleI).ticks(tickCountIndex, tickFormatIndex);
-        aI.tickFormat(labelFn);
-        g.select('g.axis-i').attr('transform', translateI).call(aI);
-
-        let v0 = scaleV(0);
-        if (!isFinite(v0)) v0 = 0; // e.g. log scales
-
-
-        let c0 = v0 + 0.5;
-        if (orientation === 'bottom') {
-          aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
-        } else {
-          aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
-        }
-
-        let sz = fnBarSize(scaleI);
-
-        let r = rects.attr('transform', (d, i) => 'translate(' + (attrI === 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
-                      .data((d) => (d == null) ? [] : d.map(value)).selectAll('rect').data((d) => d);
-        r.exit().remove();
-        r = r.enter().append('rect').merge(r);
-        r.attr(attrV, (d) => Math.min(scaleV(d), v0))
-              .attr(attrVV, (d) => Math.max(v0 - scaleV(Math.abs(d)), 1))
-              .attr(attrIV, sz)
-              .attr('fill', colors);
+        v0 = scaleV(0);
+        fnAttrV = (d) => Math.min(scaleV(d), v0);
+        fnAttrVV = (d) => Math.max(v0 - scaleV(Math.abs(d)), 1);
       }
+
+      let aV = axisV(scaleV).ticks(tickCountValue, (tickFormatValue == null ? DEFAULT_TICK_FORMAT_VALUE : tickFormatValue));
+      if (grid) {
+        aV.tickSizeInner(gridSize);
+      }
+      aV.tickFormat(scaleFn);
+
+      g.select('g.axis-v')
+        .attr('transform', translateV)
+        .call(aV)
+        .selectAll('line')
+          .attr('class', grid ? 'grid' : null);
+      
+
+      let aI = axisI(scaleI).ticks(ticks, tickFormatIndex);
+      aI.tickFormat(labelFn);
+      g.select('g.axis-i').attr('transform', translateI).call(aI);
+      
+      if (!isFinite(v0)) v0 = 0.0; // e.g. log scales
+
+      let c0 = v0 + 0.5;
+      if (orientation === 'bottom' || orientation === 'top') {
+        aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
+      } else {
+        aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
+      }
+
+
+      let sz = fnBarSize(scaleI);
+
+      let r = rects.attr('transform', (d, i) => 'translate(' + (attrV !== 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
+                    .data((d) => (d == null) ? [] : d.map(value)).selectAll('rect').data((d) => d);
+      r.exit().remove();
+      r = r.enter().append('rect').merge(r);
+      r.attr(attrV, fnAttrV)
+            .attr(attrVV, fnAttrVV)
+            .attr(attrIV, sz)
+            .attr('fill', colors);
 
     });
     
@@ -369,7 +392,6 @@ export default function bars(id) {
     return arguments.length ? (tickDisplayValue = value, _impl) : tickDisplayValue;
   };  
 
-
   _impl.style = function(value) {
     return arguments.length ? (style = value, _impl) : style;
   }; 
@@ -385,6 +407,11 @@ export default function bars(id) {
   _impl.label = function(value) {
     return arguments.length ? (label = value, _impl) : label;
   };  
+  
+  _impl.labelTime = function(value) {
+    return arguments.length ? (labelTime = value, _impl) : labelTime;
+  };    
+  
           
   return _impl;
 }

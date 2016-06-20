@@ -45,6 +45,22 @@
               .tickFormatValue("$.0f")
               .fill('series'));
 
+    d3.select('#elm').datum([ 
+                              { v:1, l:1466424812000 + (86400000 * 0) }, 
+                              { v:2, l:1466424812000 + (86400000 * 1) }, 
+                              { v:3, l:1466424812000 + (86400000 * 2) }, 
+                              { v:300.5, l:1466424812000 + (86400000 * 3) }, 
+                              { v:4000, l:1466424812000 + (86400000 * 4) }, 
+                              { v:40000, l:1466424812000 + (86400000 * 5) } 
+                              ])
+                      .call(d3_rs_bars.html('basic-time').orientation('bottom').labelTime('%a %d'));
+    
+    d3.select('#elm').datum([ 0.1, 0.2, 0.003 ]).call(d3_rs_bars.html('small').fill('global'));
+    
+    d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003 ]).call(d3_rs_bars.html('si-small').fill('global'));
+    
+    d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003, 0.1, 50, 6000000 ]).call(d3_rs_bars.html('mix').fill('global'));
+        
     </script>
   </body>
 </html>

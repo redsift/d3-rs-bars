@@ -32,8 +32,91 @@ tape("html() 1 bar state", function(t) {
     
     t.equal(el.selectAll('svg').size(), 1);
     
-    // In this chart, no rects should be visible
+    // In this chart, one rect should be there
     t.equal(el.selectAll('rect').size(), 1);
     
     t.end();
+});
+
+['left', 'right'].forEach(function (layout) {
+
+tape("html() data state - " + layout, function(t) {
+    var host = bars.html().orientation(layout);
+    var el = d3.select('#test');
+    el.datum([ 1, 2 ]).call(host);
+    
+    t.equal(el.selectAll('svg').size(), 1);
+    
+    rects = el.selectAll('rect');
+    t.equal(rects.size(), 2);
+    
+    var one = parseInt(rects.nodes()[0].getAttribute('width'));
+    var two = parseInt(rects.nodes()[1].getAttribute('width'));
+    t.ok(one > 0);    
+    t.ok(one < two);
+    
+    
+    t.end();
+});
+
+tape("html() data scale - " + layout, function(t) {
+    var host = bars.html().orientation(layout).minValue(0);
+    var el = d3.select('#test');
+    el.datum([ 1, 2 ]).call(host);
+    
+    t.equal(el.selectAll('svg').size(), 1);
+    
+    rects = el.selectAll('rect');
+    t.equal(rects.size(), 2);
+    
+    var one = parseInt(rects.nodes()[0].getAttribute('width'));
+    var two = parseInt(rects.nodes()[1].getAttribute('width'));
+    t.equal(Math.round(one*2), Math.round(two));
+    
+    
+    t.end();
+});
+
+});
+
+['top', 'bottom'].forEach(function (layout) {
+
+tape("html() data state - " + layout, function(t) {
+    var host = bars.html().orientation(layout);
+    var el = d3.select('#test');
+    el.datum([ 1, 2 ]).call(host);
+    
+    t.equal(el.selectAll('svg').size(), 1);
+    
+    rects = el.selectAll('rect');
+    t.equal(rects.size(), 2);
+    
+    var one = parseInt(rects.nodes()[0].getAttribute('height'));
+    var two = parseInt(rects.nodes()[1].getAttribute('height'));
+    t.ok(one > 0);
+    t.ok(one < two);
+    
+    
+    t.end();
+});
+
+tape("html() data scale - " + layout, function(t) {
+    var host = bars.html().orientation(layout).minValue(0);
+    var el = d3.select('#test');
+    el.datum([ 1, 2 ]).call(host);
+    
+    t.equal(el.selectAll('svg').size(), 1);
+    
+    rects = el.selectAll('rect');
+    t.equal(rects.size(), 2);
+    
+    var one = parseInt(rects.nodes()[0].getAttribute('height'));
+    var two = parseInt(rects.nodes()[1].getAttribute('height'));
+    t.equal(Math.round(one*2), Math.round(two));
+    
+    
+    t.end();
+});
+
+
 });

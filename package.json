@@ -22,8 +22,8 @@
     "url": "https://github.com/redsift/d3-rs-bars.git"
   },
   "scripts": {
-    "serve": "gulp -o d3-rs-bars -g d3-selection -g d3-array -g d3-scale -g d3-axis serve",
-    "build": "gulp -o d3-rs-bars -g d3-selection -g d3-array -g d3-scale -g d3-axis build",
+    "serve": "gulp -o d3-rs-bars -g d3-selection -g d3-array -g d3-scale -g d3-axis -g d3-time-format -g d3-format serve",
+    "build": "gulp -o d3-rs-bars -g d3-selection -g d3-array -g d3-scale -g d3-axis -g d3-time-format -g d3-format build",
     "pretest": "npm outdated && npm run version && npm run build",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
     "version": "json2module package.json > package.js",
@@ -34,6 +34,8 @@
     "d3-array": "^1.0.0",
     "d3-scale": "^0.9.2",
     "d3-axis": "^0.4.1",
+    "d3-format": "^0.6.0",
+    "d3-time-format": "^1.0.0",
     "@redsift/d3-rs-svg": "~0.2.3",
     "@redsift/d3-rs-theme": "~0.0.1",
     "@redsift/d3-rs-tip": "~0.2.1"     
