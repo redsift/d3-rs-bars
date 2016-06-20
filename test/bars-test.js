@@ -38,7 +38,10 @@ tape("html() 1 bar state", function(t) {
     t.end();
 });
 
-['left', 'right'].forEach(function (layout) {
+[ {l:'top', s:'height'}, {l:'bottom', s:'height'}, {l:'left', s:'width'}, {l:'right', s:'width'}].forEach(function (o) {
+
+var layout = o.l;
+var testSize = o.s;
 
 tape("html() data state - " + layout, function(t) {
     var host = bars.html().orientation(layout);
@@ -50,12 +53,13 @@ tape("html() data state - " + layout, function(t) {
     rects = el.selectAll('rect');
     t.equal(rects.size(), 2);
     
-    var one = parseInt(rects.nodes()[0].getAttribute('width'));
-    var two = parseInt(rects.nodes()[1].getAttribute('width'));
+    var one = parseInt(rects.nodes()[0].getAttribute(testSize));
+    var two = parseInt(rects.nodes()[1].getAttribute(testSize));
     t.ok(one > 0);    
     t.ok(one < two);
-    
-    
+
+    t.equal(rects.nodes()[0].getAttribute('fill'), rects.nodes()[1].getAttribute('fill')); 
+        
     t.end();
 });
 
@@ -69,54 +73,37 @@ tape("html() data scale - " + layout, function(t) {
     rects = el.selectAll('rect');
     t.equal(rects.size(), 2);
     
-    var one = parseInt(rects.nodes()[0].getAttribute('width'));
-    var two = parseInt(rects.nodes()[1].getAttribute('width'));
+    var one = parseInt(rects.nodes()[0].getAttribute(testSize));
+    var two = parseInt(rects.nodes()[1].getAttribute(testSize));
     t.equal(Math.round(one*2), Math.round(two));
     
+    t.equal(rects.nodes()[0].getAttribute('fill'), rects.nodes()[1].getAttribute('fill')); 
     
     t.end();
 });
 
-});
-
-['top', 'bottom'].forEach(function (layout) {
-
-tape("html() data state - " + layout, function(t) {
-    var host = bars.html().orientation(layout);
-    var el = d3.select('#test');
-    el.datum([ 1, 2 ]).call(host);
-    
-    t.equal(el.selectAll('svg').size(), 1);
-    
-    rects = el.selectAll('rect');
-    t.equal(rects.size(), 2);
-    
-    var one = parseInt(rects.nodes()[0].getAttribute('height'));
-    var two = parseInt(rects.nodes()[1].getAttribute('height'));
-    t.ok(one > 0);
-    t.ok(one < two);
-    
-    
-    t.end();
-});
-
-tape("html() data scale - " + layout, function(t) {
+tape("html() data extremes - " + layout, function(t) {
     var host = bars.html().orientation(layout).minValue(0);
     var el = d3.select('#test');
-    el.datum([ 1, 2 ]).call(host);
+    el.datum([ 0.00001, 1, 4000000000 ]).call(host);
     
     t.equal(el.selectAll('svg').size(), 1);
     
     rects = el.selectAll('rect');
-    t.equal(rects.size(), 2);
+    t.equal(rects.size(), 3);
     
-    var one = parseInt(rects.nodes()[0].getAttribute('height'));
-    var two = parseInt(rects.nodes()[1].getAttribute('height'));
-    t.equal(Math.round(one*2), Math.round(two));
+    var one = parseInt(rects.nodes()[0].getAttribute(testSize));
+    var two = parseInt(rects.nodes()[1].getAttribute(testSize));
+    var three = parseInt(rects.nodes()[2].getAttribute(testSize));
+    t.equal(one, 1);
+    t.equal(two, 1);    
+    t.ok(three > 50);    
     
+    t.equal(rects.nodes()[0].getAttribute('fill'), rects.nodes()[1].getAttribute('fill')); 
+    t.equal(rects.nodes()[2].getAttribute('fill'), rects.nodes()[1].getAttribute('fill')); 
     
     t.end();
 });
 
-
 });
+
