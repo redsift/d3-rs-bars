@@ -18,6 +18,7 @@ const DEFAULT_MARGIN = 26;  // white space
 const DEFAULT_INSET = 24;   // scale space
 const DEFAULT_TICK_FORMAT = ',.0f';
 const DEFAULT_TICK_COUNT = 4;
+const DEFAULT_SCALE = 42; // why not
 
 const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px }";
 
@@ -105,15 +106,20 @@ export default function bars(id) {
         let array = value(d);
         return array[0]; // this assume the data is ordered and stacked lowest to highest
       });
+      
+      if (mm[0] === mm [1]) mm[0] = 0;
 
       if (minValue != null) mm[0] = minValue;
       if (maxValue != null) mm[1] = maxValue;
-
+      
+      if (mm[0] === undefined) mm[0] = 0;
+      if (mm[1] === undefined) mm[1] = DEFAULT_SCALE;
+            
       let labelFn = label;
       if (labelFn == null) {
         labelFn = function (i) {
           let d = data[i];
-          if (d.l) {
+          if (d != null && d.l !== undefined) {
             return d.l;
           }
           return i;
@@ -129,7 +135,7 @@ export default function bars(id) {
       let scaleV = sV.domain(mm).clamp(true);
 
       let sI = scaleLinear(); 
-      let scaleI = sI.domain([0, data.length - 1]);
+      let scaleI = sI.domain([0, data.length > 0 ? data.length - 1 : DEFAULT_SCALE]);
 
       if (transition === true) {
         rects = rects.transition(context);
@@ -202,7 +208,7 @@ export default function bars(id) {
         let sz = fnBarSize(scaleI);
 
         let r = rects.attr('transform', (d, i) => 'translate(' + (attrI === 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
-                      .data((d) => d.map(value)).selectAll('rect').data((d) => d);
+                      .data((d) => (d == null) ? [] : d.map(value)).selectAll('rect').data((d) => d);
         r.exit().remove();
         r = r.enter().append('rect').merge(r);
 
@@ -267,7 +273,7 @@ export default function bars(id) {
         let sz = fnBarSize(scaleI);
 
         let r = rects.attr('transform', (d, i) => 'translate(' + (attrI === 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
-                      .data((d) => d.map(value)).selectAll('rect').data((d) => d);
+                      .data((d) => (d == null) ? [] : d.map(value)).selectAll('rect').data((d) => d);
         r.exit().remove();
         r = r.enter().append('rect').merge(r);
         r.attr(attrV, (d) => Math.min(scaleV(d), v0))

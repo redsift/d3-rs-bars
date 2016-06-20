@@ -16,7 +16,13 @@
     <script>
 
     'use strict';
-
+    
+    d3.select('#elm').call(d3_rs_bars.html('empty'));
+    
+    d3.select('#elm').datum([ 1 ]).call(d3_rs_bars.html('singles'));
+    
+    d3.select('#elm').datum([ 0, 1 ]).call(d3_rs_bars.html('couples'));
+    
     d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic').scale(1));
 
     d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-top').orientation('top'));
