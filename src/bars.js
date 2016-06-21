@@ -51,6 +51,10 @@ export default function bars(id) {
       grid = true,
       label = null,
       language = null,
+      stacked = true,
+      legend = null,
+      highlight = null,
+      displayTip = -1,
       value = function (d) {
         if (Array.isArray(d)) {
           return d;
@@ -69,7 +73,25 @@ export default function bars(id) {
     let selection = context.selection ? context.selection() : context,
         transition = (context.selection !== undefined);
 
-
+    let ldg = legend;
+    if (legend != null) {
+      if (!Array.isArray(legend)) {
+        ldg = [ legend ];
+      } else if (legend.length === 0) {
+        ldg = null;
+      }
+    }
+    
+    let hlt = highlight;
+    if (highlight == null) {
+      hlt = [];
+    } else if (!Array.isArray(highlight)) {
+      hlt = [ highlight ];
+    }    
+    //TODO: display highlight on value
+    //TODO: display ledgend if ldg
+    //TODO: display an exposed tip if displayTip
+    
     let formatTime = null;
     if (labelTime != null) {
       let locale = timeFormatLocale(time(language).d3);
@@ -90,7 +112,9 @@ export default function bars(id) {
         scaleFn = (i) => fn(i); 
       } else {
         scaleFn = function (i) {
-          if (i > 9999 || i <= 0.001) {
+          if (i === 0.0) {
+            return defaultValueFormat(i);
+          } else if (i > 9999 || i <= 0.001) {
             return defaultValueFormatSi(i);  
           } else if (i < 1) {
             return defaultValueFormatSmall(i);  
@@ -134,22 +158,39 @@ export default function bars(id) {
       
       let vdata = data.map(function(d) {
         let a = value(d);
-        
-        let t = 0.0;
-        return a.map((v) => (t += v, t)).reverse();
+        if (stacked) {
+          let t = 0.0;
+          return a.map((v) => (t += v, t)).reverse();
+        } else {
+          return a;
+        }
       });
       
       g.datum(vdata); // this rebind is required even though there is a following select
-      
-      let mm = extent(vdata, function(d) {
-        if (d.length > 1) twoD = true;
+      let maxSeries = 1;
+     
+      var max = d3.max(vdata, function (d) { 
+        let l = d.length;
         
-        return d[0]; // data is ordered and stacked lowest to highest
+        if (l > 1) {
+          maxSeries = Math.max(maxSeries, l);
+          twoD = true;
+        }        
+        return d3.max(d)
       });
-      
-      if (mm[0] === mm [1]) mm[0] = 0;
 
-      if (minValue != null) mm[0] = minValue;
+      let min = minValue;
+      if (min == null) {
+        min = d3.min(vdata, (d) => d3.min(d));
+        if (min > 0) {
+          min = logValue === 0 ? 0 : 1;
+        }
+      }
+      
+      let mm = [ min, max ];
+            
+      if (mm[0] === mm[1]) mm[0] = 0;
+      
       if (maxValue != null) mm[1] = maxValue;
       
       if (mm[0] === undefined) mm[0] = 0;
@@ -184,8 +225,8 @@ export default function bars(id) {
             
       let sV = scaleLinear(); 
       if (logValue > 0) sV = scaleLog().base(logValue);
-      let scaleV = sV.domain(mm).clamp(true);
-
+      let scaleV = sV.domain(mm); // .clamp(true)
+      
       let sI = scaleLinear(); 
       let scaleI = sI.domain([0, vdata.length > 0 ? vdata.length - 1 : DEFAULT_SCALE]);
 
@@ -231,6 +272,7 @@ export default function bars(id) {
           fnAttrV = null,
           fnAttrVV = null,
           attrV = '',
+          attrO = '',
           attrVV = '',
           attrIV = '',
           axisV = null,
@@ -246,6 +288,7 @@ export default function bars(id) {
         toI = h - inset;
         gridSize = inset / 2 - h;
         attrV = 'x';
+        attrO = 'y';        
         attrVV = 'width';
         attrIV = 'height';
         axisV = axisBottom;
@@ -256,7 +299,7 @@ export default function bars(id) {
         if (orientation === 'top') {
           toV = h; toI = w; fromI = inset;
           gridSize = inset / 2 - w;
-          attrV = 'y'; attrIV = 'width'; attrVV = 'height'; 
+          attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height'; 
           axisV = axisLeft; axisI = axisTop;
           translateV = 'translate(' + inset / 2 + ', 0)';
           translateI = 'translate(0, ' + (inset / 2) + ')';
@@ -266,10 +309,14 @@ export default function bars(id) {
         scaleV = scaleV.range([inset, toV]);
 
 
-        v0 = scaleV(0);
-        fnAttrV = (d) => d < 0 ? scaleV(d) : v0;
+        v0 = scaleV(mm[0]);
+        let t0 = scaleV(0);
+        /*
+        fnAttrV = (d) => d < 0 ? scaleV(d) : t0;
+        fnAttrVV = (d) => d < 0 ? scaleV(Math.abs(d)) - t0 : Math.max(scaleV(Math.abs(d)) - v0, 1);
+        */
+        fnAttrV = (d) => d < 0 ? t0 : Math.min(scaleV(d), v0);
         fnAttrVV = (d) => Math.max(scaleV(Math.abs(d)) - v0, 1);
-
       } else if (orientation === 'bottom' || orientation === 'right') {
         let toV = w - inset,
             fromI = 0;
@@ -277,6 +324,7 @@ export default function bars(id) {
         toI = h - inset;
         gridSize = inset / 2 - h;
         attrV = 'x';
+        attrO = 'y'; 
         attrVV = 'width';
         attrIV = 'height';
         axisV = axisBottom;
@@ -288,7 +336,7 @@ export default function bars(id) {
           toV = h - inset; toI = w; 
           gridSize = inset / 2 - w;
           fromI = inset;
-          attrV = 'y'; attrIV = 'width'; attrVV = 'height';
+          attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height';
           axisV = axisLeft; axisI = axisBottom;
           translateV = 'translate(' + inset / 2 + ', 0)';
           translateI = 'translate(0, ' + (h - inset / 2) + ')';          
@@ -297,7 +345,7 @@ export default function bars(id) {
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([toV, 0]);
 
-        v0 = scaleV(0);
+        v0 = scaleV(mm[0]);
         fnAttrV = (d) => Math.min(scaleV(d), v0);
         fnAttrVV = (d) => Math.max(v0 - scaleV(Math.abs(d)), 1);
       }
@@ -336,6 +384,7 @@ export default function bars(id) {
       r = r.enter().append('rect').merge(r);
       r.attr(attrV, fnAttrV)
             .attr(attrVV, fnAttrVV)
+            .attr(attrO, (d, i) => stacked ? 0 : (maxSeries / 2 - i) * sz) // center the series when not stacked
             .attr(attrIV, sz)
             .attr('fill', colors);
 
@@ -449,6 +498,22 @@ export default function bars(id) {
   _impl.language = function(value) {
     return arguments.length ? (language = value, _impl) : language;
   };   
-          
+  
+  _impl.stacked = function(value) {
+    return arguments.length ? (stacked = value, _impl) : stacked;
+  };    
+  
+  _impl.legend = function(value) {
+    return arguments.length ? (legend = value, _impl) : legend;
+  };  
+  
+  _impl.displayTip = function(value) {
+    return arguments.length ? (displayTip = value, _impl) : displayTip;
+  };   
+  
+  _impl.highlight = function(value) {
+    return arguments.length ? (highlight = value, _impl) : highlight;
+  };    
+            
   return _impl;
 }
