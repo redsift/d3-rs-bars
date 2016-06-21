@@ -4,11 +4,10 @@ import { extent } from 'd3-array';
 import { scaleLinear, scaleLog } from 'd3-scale';
 import { axisTop, axisRight, axisBottom, axisLeft } from 'd3-axis';
 import { timeFormatLocale } from 'd3-time-format';
-import { format } from 'd3-format';
+import { formatLocale } from 'd3-format';
+
 import { html as svg } from '@redsift/d3-rs-svg';
-
-import * as fmt_ru_RU from 'd3-time-format/locale/ru-RU.json'
-
+import { units, time } from "@redsift/d3-rs-intl";
 import { 
   random as random, 
   presentation10 as presentation10,
@@ -38,7 +37,7 @@ export default function bars(id) {
       scale = 1.0,
       logValue = 0,
       barSize = 6,
-      fill = presentation10.standard[0],
+      fill = null,
       orientation = 'left',
       minValue = null,
       maxValue = null,
@@ -51,10 +50,7 @@ export default function bars(id) {
       tickDisplayValue = null,
       grid = true,
       label = null,
-      language = navigator.language,
-      defaultValueFormat = format(DEFAULT_TICK_FORMAT_VALUE),
-      defaultValueFormatSi = format(DEFAULT_TICK_FORMAT_VALUE_SI),
-      defaultValueFormatSmall = format(DEFAULT_TICK_FORMAT_VALUE_SMALL),
+      language = null,
       value = function (d) {
         if (Array.isArray(d)) {
           return d;
@@ -73,22 +69,36 @@ export default function bars(id) {
     let selection = context.selection ? context.selection() : context,
         transition = (context.selection !== undefined);
 
-    let colors = () => fill;
-    if (fill === 'series') {
-      let rnd = random(presentation10.standard);
-      colors = (d, i) => rnd(i.toString());
-    } else if (fill === 'global') {
-      let rnd = random(presentation10.standard);
-      let count = -1;
-      colors = () => (count++, rnd(count.toString()));
-    } else if (typeof fill === 'function') {
-      colors = fill;
-    }
 
     let formatTime = null;
     if (labelTime != null) {
-      let locale = timeFormatLocale(fmt_ru_RU);
+      let locale = timeFormatLocale(time(language).d3);
       formatTime = locale.format(labelTime);
+    }
+
+    let scaleFn = tickDisplayValue;
+    
+    if (scaleFn == null && logValue === 0) {
+      let locale = formatLocale(units(language).d3);
+
+      let defaultValueFormat = locale.format(DEFAULT_TICK_FORMAT_VALUE);
+      let defaultValueFormatSi = locale.format(DEFAULT_TICK_FORMAT_VALUE_SI);
+      let defaultValueFormatSmall = locale.format(DEFAULT_TICK_FORMAT_VALUE_SMALL);      
+      
+      if (tickFormatValue != null) {
+        let fn = locale.format(tickFormatValue);
+        scaleFn = (i) => fn(i); 
+      } else {
+        scaleFn = function (i) {
+          if (i > 9999 || i <= 0.001) {
+            return defaultValueFormatSi(i);  
+          } else if (i < 1) {
+            return defaultValueFormatSmall(i);  
+          } else {
+            return defaultValueFormat(i);
+          }
+        }
+      }
     }
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
@@ -118,9 +128,14 @@ export default function bars(id) {
         g.append('g').attr('class', 'axis-i axis');
       }
 
+      let twoD = false;
+      
       let data = g.datum() || [];
       let mm = extent(data, function(d) {
         let array = value(d);
+        
+        if (array.length > 1) twoD = true;
+        
         return array[0]; // this assume the data is ordered and stacked lowest to highest
       });
       
@@ -131,6 +146,27 @@ export default function bars(id) {
       
       if (mm[0] === undefined) mm[0] = 0;
       if (mm[1] === undefined) mm[1] = DEFAULT_SCALE;
+
+      let colors = () => fill;
+      if (fill == null) {
+        if (twoD) {
+          // data has nested stacks, use the series presentation
+          let rnd = random(presentation10.standard);
+          colors = (d, i) => rnd(i.toString());          
+        } else {
+          colors = () => presentation10.standard[0];
+        }
+      } else if (fill === 'series') {
+        let rnd = random(presentation10.standard);
+        colors = (d, i) => rnd(i.toString());
+      } else if (fill === 'global') {
+        let rnd = random(presentation10.standard);
+        let count = -1;
+        colors = () => (count++, rnd(count.toString()));
+      } else if (typeof fill === 'function') {
+        colors = fill;
+      }
+
             
       let rects = g.selectAll('g.stack').data(data);
       rects.exit().remove();
@@ -164,22 +200,7 @@ export default function bars(id) {
           return scaleI.tickFormat(ticks, tickFormatIndex)(i);
         };
       }
-      
-      let scaleFn = tickDisplayValue;
-      
-      if (scaleFn == null && logValue === 0) {
-        scaleFn = function (i) {
-          if (tickFormatValue != null) {
-            return scaleV.tickFormat()(i);
-          } else if (i > 9999 || i <= 0.001) {
-            return defaultValueFormatSi(i);  
-          } else if (i < 1) {
-            return defaultValueFormatSmall(i);  
-          } else {
-            return defaultValueFormat(i);
-          }
-        }
-      }
+
       
       if (transition === true) {
         rects = rects.transition(context);

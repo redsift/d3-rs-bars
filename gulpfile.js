@@ -27,7 +27,7 @@ if (argv.g) {
     globals = Array.isArray(argv.g) ? argv.g : [ argv.g ]
 }
 
-var skips = [];
+var skips = [ ];
 
 var globalMap = {};
 globals.forEach((d) => {
@@ -77,7 +77,7 @@ gulp.task('umd', task.umd = () => {
                             main: true,  // Default: true
 
                             // not all files you want to resolve are .js files
-                            extensions: [ '.js', '.json' ],  // Default: ['.js']
+                            extensions: [ '.js' ],  // Default: ['.js']
 
                             // whether to prefer built-in modules (e.g. `fs`, `path`) or
                             // local ones with the same names
