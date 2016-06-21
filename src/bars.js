@@ -131,12 +131,20 @@ export default function bars(id) {
       let twoD = false;
       
       let data = g.datum() || [];
-      let mm = extent(data, function(d) {
-        let array = value(d);
+      
+      let vdata = data.map(function(d) {
+        let a = value(d);
         
-        if (array.length > 1) twoD = true;
+        let t = 0.0;
+        return a.map((v) => (t += v, t)).reverse();
+      });
+      
+      g.datum(vdata); // this rebind is required even though there is a following select
+      
+      let mm = extent(vdata, function(d) {
+        if (d.length > 1) twoD = true;
         
-        return array[0]; // this assume the data is ordered and stacked lowest to highest
+        return d[0]; // data is ordered and stacked lowest to highest
       });
       
       if (mm[0] === mm [1]) mm[0] = 0;
@@ -165,10 +173,12 @@ export default function bars(id) {
         colors = () => (count++, rnd(count.toString()));
       } else if (typeof fill === 'function') {
         colors = fill;
+      } else if (Array.isArray(fill)) {
+        let count = -1;
+        colors = () => (count++, fill[ count % fill.length ])
       }
-
             
-      let rects = g.selectAll('g.stack').data(data);
+      let rects = g.selectAll('g.stack').data(vdata);
       rects.exit().remove();
       rects = rects.enter().append('g').attr('class', 'stack').merge(rects);
             
@@ -177,11 +187,11 @@ export default function bars(id) {
       let scaleV = sV.domain(mm).clamp(true);
 
       let sI = scaleLinear(); 
-      let scaleI = sI.domain([0, data.length > 0 ? data.length - 1 : DEFAULT_SCALE]);
+      let scaleI = sI.domain([0, vdata.length > 0 ? vdata.length - 1 : DEFAULT_SCALE]);
 
       let ticks = tickCountIndex;
       if (ticks == null) {
-        ticks = Math.min(DEFAULT_TICK_COUNT, data.length - 1);
+        ticks = Math.min(DEFAULT_TICK_COUNT, vdata.length - 1);
       }
 
       let labelFn = label;
@@ -317,7 +327,6 @@ export default function bars(id) {
       } else {
         aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
       }
-
 
       let sz = fnBarSize(scaleI);
 
