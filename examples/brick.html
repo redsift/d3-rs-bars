@@ -16,7 +16,7 @@
     <script>
 
     'use strict';
-    
+
     d3.select('#elm').call(d3_rs_bars.html('empty'));
     
     d3.select('#elm').datum([ 1 ]).call(d3_rs_bars.html('singles'));
@@ -34,7 +34,7 @@
     d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('global').fill('global').minValue(0).maxValue(120));
 
     var stack = [ 1, [ 5, 2, 4, 3, 2, 1 ], [ 2, 5, 4, 3, 2, 1 ], 10, [100, 99, 80, 70, 60, 50, 30, 20 ] ];
-    d3.select('#elm').datum(stack).call(d3_rs_bars.html('log').logValue(10));
+    d3.select('#elm').datum(stack).call(d3_rs_bars.html('log').logValue(10).width(400).height(200));
     
     var side = [  [ 1, 9 ], [ 5, 2 ], [ 2, 5 ], [ 10, 1 ] ];
     d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false));
@@ -67,7 +67,7 @@
     d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003 ]).call(d3_rs_bars.html('si-small').fill('global'));
     
     d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003, 0.1, 50, 6000000 ]).call(d3_rs_bars.html('mix').fill('global'));
-        
+
     </script>
   </body>
 </html>

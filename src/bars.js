@@ -1,6 +1,6 @@
 
 import { select } from 'd3-selection';
-import { extent } from 'd3-array';
+import { max, min } from 'd3-array';
 import { scaleLinear, scaleLog } from 'd3-scale';
 import { axisTop, axisRight, axisBottom, axisLeft } from 'd3-axis';
 import { timeFormatLocale } from 'd3-time-format';
@@ -72,7 +72,7 @@ export default function bars(id) {
   function _impl(context) {
     let selection = context.selection ? context.selection() : context,
         transition = (context.selection !== undefined);
-
+/*
     let ldg = legend;
     if (legend != null) {
       if (!Array.isArray(legend)) {
@@ -87,7 +87,8 @@ export default function bars(id) {
       hlt = [];
     } else if (!Array.isArray(highlight)) {
       hlt = [ highlight ];
-    }    
+    }   
+*/     
     //TODO: display highlight on value
     //TODO: display ledgend if ldg
     //TODO: display an exposed tip if displayTip
@@ -169,25 +170,25 @@ export default function bars(id) {
       g.datum(vdata); // this rebind is required even though there is a following select
       let maxSeries = 1;
      
-      var max = d3.max(vdata, function (d) { 
+      let maxV = max(vdata, function (d) { 
         let l = d.length;
         
         if (l > 1) {
           maxSeries = Math.max(maxSeries, l);
           twoD = true;
         }        
-        return d3.max(d)
+        return max(d)
       });
 
-      let min = minValue;
-      if (min == null) {
-        min = d3.min(vdata, (d) => d3.min(d));
-        if (min > 0) {
-          min = logValue === 0 ? 0 : 1;
+      let minV = minValue;
+      if (minV == null) {
+        minV = min(vdata, (d) => min(d));
+        if (minV > 0) {
+          minV = logValue === 0 ? 0 : 1;
         }
       }
       
-      let mm = [ min, max ];
+      let mm = [ minV, maxV ];
             
       if (mm[0] === mm[1]) mm[0] = 0;
       
@@ -311,12 +312,9 @@ export default function bars(id) {
 
         v0 = scaleV(mm[0]);
         let t0 = scaleV(0);
-        /*
-        fnAttrV = (d) => d < 0 ? scaleV(d) : t0;
-        fnAttrVV = (d) => d < 0 ? scaleV(Math.abs(d)) - t0 : Math.max(scaleV(Math.abs(d)) - v0, 1);
-        */
-        fnAttrV = (d) => d < 0 ? t0 : Math.min(scaleV(d), v0);
-        fnAttrVV = (d) => Math.max(scaleV(Math.abs(d)) - v0, 1);
+
+        fnAttrV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) : (mm[0] < 0 ? t0 : Math.min(scaleV(d), v0) );
+        fnAttrVV = (d) => mm[0] < 0 && d < 0 ? t0 - scaleV(d) :  Math.max(scaleV(Math.abs(d)) - (mm[0] < 0 ? t0 : v0), 1);
       } else if (orientation === 'bottom' || orientation === 'right') {
         let toV = w - inset,
             fromI = 0;
@@ -346,8 +344,10 @@ export default function bars(id) {
         scaleV = scaleV.range([toV, 0]);
 
         v0 = scaleV(mm[0]);
-        fnAttrV = (d) => Math.min(scaleV(d), v0);
-        fnAttrVV = (d) => Math.max(v0 - scaleV(Math.abs(d)), 1);
+        let t0 = scaleV(0);
+                
+        fnAttrV = (d) => mm[0] < 0 && d < 0 ? t0 : Math.min(scaleV(d), v0);
+        fnAttrVV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) - t0 : Math.max((mm[0] < 0 ? t0 : v0) - scaleV(Math.abs(d)), 1);
       }
 
       let aV = axisV(scaleV).ticks(tickCountValue, (tickFormatValue == null ? DEFAULT_TICK_FORMAT_VALUE : tickFormatValue));
@@ -367,9 +367,10 @@ export default function bars(id) {
       aI.tickFormat(labelFn);
       g.select('g.axis-i').attr('transform', translateI).call(aI);
       
-      if (!isFinite(v0)) v0 = 0.0; // e.g. log scales
+      let t0 = scaleV(0);
+      if (!isFinite(t0)) t0 = 0.0; // e.g. log scales
 
-      let c0 = v0 + 0.5;
+      let c0 = t0 + 0.5;
       if (orientation === 'bottom' || orientation === 'top') {
         aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
       } else {
