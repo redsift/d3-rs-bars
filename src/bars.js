@@ -8,6 +8,7 @@ import { formatLocale } from 'd3-format';
 
 import { html as svg } from '@redsift/d3-rs-svg';
 import { units, time } from "@redsift/d3-rs-intl";
+import { tip } from "@redsift/d3-rs-tip";
 import { 
   random as random, 
   presentation10 as presentation10,
@@ -24,10 +25,11 @@ const DEFAULT_TICK_FORMAT_VALUE_SMALL = '.3f';
 const DEFAULT_TICK_FORMAT_INDEX = ',d';
 const DEFAULT_TICK_COUNT = 4;
 const DEFAULT_SCALE = 42; // why not
-const DEFAULT_LEGEND_SIZE = 14;
+const DEFAULT_LEGEND_SIZE = 10;
 const DEFAULT_LEGEND_PADDING = 8;
 const DEFAULT_LEGEND_TEXT_SCALE = 8; // hack value to do fast estimation of length of string
-const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px } .legend text { font-size: 12px }";
+const DEFAULT_HIGHLIGHT_TEXT_PADDING = 2;
+const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px } .legend text { font-size: 12px } .highlight { opacity: 0.66 } .highlight text { font-size: 12px } ";
 
 export default function bars(id) {
   let classed = 'chart-bars', 
@@ -70,6 +72,7 @@ export default function bars(id) {
 
         return d;
       };
+
   
   function _impl(context) {
     let selection = context.selection ? context.selection() : context,
@@ -84,16 +87,15 @@ export default function bars(id) {
       }
     }
 
-/*    
+    
     let hlt = highlight;
     if (highlight == null) {
       hlt = [];
     } else if (!Array.isArray(highlight)) {
       hlt = [ highlight ];
     }   
-*/     
+     
     //TODO: display highlight on value
-    //TODO: display ledgend if ldg
     //TODO: display an exposed tip if displayTip
     
     let formatTime = null;
@@ -130,14 +132,17 @@ export default function bars(id) {
     }
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
-
+       
+    let ran = random(presentation10.standard.slice().reverse());
+    let icolors = (d, i) => ran(i);
+      
     selection.each(function() {
       let node = select(this);  
       let sh = height || Math.round(width * DEFAULT_ASPECT);
 
       let sid = null;
       if (id) sid = 'svg-' + id;
-      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale).style(style);
+      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale);
       let tnode = node;
       if (transition === true) {
         tnode = node.transition(context);
@@ -146,7 +151,17 @@ export default function bars(id) {
       
       let elmS = node.select(root.self()).select(root.child());
 
-     
+      let tid = null;
+      if (id) tid = 'tip-' + id;
+      let rtip = tip(tid).html((d, i) => data);
+      
+      rtip.direction(orientation === 'top' ? 's' : 'n');   
+              
+      let st = style + ' ' + rtip.style();
+      rtip.style(st);
+
+      elmS.call(rtip);
+    
       let g = elmS.select(_impl.self())
       if (g.empty()) {
         g = elmS.append('g').attr('class', classed).attr('id', id);
@@ -154,6 +169,7 @@ export default function bars(id) {
         g.append('g').attr('class', 'axis-i axis');
         g.append('g').attr('class', 'legend');
       }
+
 
       let twoD = false;
       
@@ -224,6 +240,7 @@ export default function bars(id) {
         }
         return colors;  
       }
+
             
       let w = root.childWidth(),
           h = root.childHeight();
@@ -270,7 +287,13 @@ export default function bars(id) {
       let scaleV = sV.domain(mm); // .clamp(true)
       
       let sI = scaleLinear(); 
-      let scaleI = sI.domain([0, vdata.length > 0 ? vdata.length - 1 : DEFAULT_SCALE]);
+      let domainI = [ 0, DEFAULT_SCALE ];
+      if (vdata.length > 4) {
+        domainI = [ 0, vdata.length ];
+      } else if (vdata.length > 0) {
+        domainI = [ -1, vdata.length ]
+      }
+      let scaleI = sI.domain(domainI);
 
       let ticks = tickCountIndex;
       if (ticks == null) {
@@ -310,6 +333,7 @@ export default function bars(id) {
 
       let v0 = 0.0,
           toI = 0.0,
+          fromI = 0.0,
           gridSize = 0.0,
           fnAttrV = null,
           fnAttrVV = null,
@@ -323,10 +347,8 @@ export default function bars(id) {
           translateI = '';
             
       if (orientation === 'top' || orientation === 'left') {
-        let toV = w,
-            fromI = 0;
+        let toV = w;
 
-            
         toI = h - inset;
         gridSize = inset / 2 - h;
         attrV = 'x';
@@ -357,8 +379,7 @@ export default function bars(id) {
         fnAttrV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) : (mm[0] < 0 ? t0 : Math.min(scaleV(d), v0) );
         fnAttrVV = (d) => mm[0] < 0 && d < 0 ? t0 - scaleV(d) :  Math.max(scaleV(Math.abs(d)) - (mm[0] < 0 ? t0 : v0), 1);
       } else if (orientation === 'bottom' || orientation === 'right') {
-        let toV = w - inset,
-            fromI = 0;
+        let toV = w - inset;
             
         toI = h - inset;
         gridSize = inset / 2 - h;
@@ -405,7 +426,9 @@ export default function bars(id) {
       
 
       let aI = axisI(scaleI).ticks(ticks, tickFormatIndex);
+      aI.tickValues(vdata.map((d,i) => i));
       aI.tickFormat(labelFn);
+      
       g.select('g.axis-i').attr('transform', translateI).call(aI);
       
       let t0 = scaleV(0);
@@ -423,13 +446,55 @@ export default function bars(id) {
       let r = rects.attr('transform', (d, i) => 'translate(' + (attrV !== 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
                     .data((d) => (d == null) ? [] : d.map(value)).selectAll('rect').data((d) => d);
       r.exit().remove();
-      r = r.enter().append('rect').merge(r);
+      r = r.enter()
+            .append('rect')
+              .on('mouseover', rtip.show)
+              .on('mouseout', rtip.hide)
+            .merge(r);
       r.attr(attrV, fnAttrV)
             .attr(attrVV, fnAttrVV)
             .attr(attrO, (d, i) => stacked ? 0 : (i - ((maxSeries - 1) / 2)) * sz) // center the series when not stacked
             .attr(attrIV, sz)
             .attr('fill', colors);
 
+      let hls = g.selectAll('.highlight').data(hlt);
+      hls.exit().remove();
+      let nhls = hls.enter().append('g').attr('class', 'highlight');
+      hls = nhls.merge(hls);
+      
+      nhls.append('rect').attr('class', 'marker');
+      nhls.append('rect').attr('class', 'label-background');
+      nhls.append('text').attr('class', 'label').attr('text-anchor', 'end');    
+      
+      hls.attr('transform', (d) => 'translate(' + ( attrV === 'x' ? (scaleV(d) + ',0') : ('0,' + scaleV(d)) ) + ')');
+      hls.selectAll('rect.marker')
+        .attr(attrVV, 2)
+        .attr(attrO, fromI)
+        .attr(attrIV, toI - fromI)
+        .attr('fill', icolors);
+      
+      function textForData(d) {
+        if (scaleFn != null) {
+          return scaleFn(d)
+        }
+        return d + ''; // TODO: FLoating point?
+      }
+      
+      hls.selectAll('rect.label-background')
+        .attr(attrV, -DEFAULT_LEGEND_SIZE) // TODO: Position wrong for left / right charts
+        .attr(attrO, (d) => toI - (DEFAULT_HIGHLIGHT_TEXT_PADDING * 2 + textForData(d).length * DEFAULT_LEGEND_TEXT_SCALE))
+        .attr('height', DEFAULT_LEGEND_SIZE + 1)
+        .attr('width', (d) => DEFAULT_HIGHLIGHT_TEXT_PADDING * 2 + textForData(d).length * DEFAULT_LEGEND_TEXT_SCALE)
+        .attr('fill', icolors);
+      
+      hls.selectAll('text').attr(attrO, toI - DEFAULT_HIGHLIGHT_TEXT_PADDING).text((d) => textForData(d));
+        
+      if (displayTip > -1) {
+        let no = r.nodes();
+        if (no.length > 0) {
+          rtip.show(no[0]); //TODO: incorrect layout on bricks.html 
+        }
+      }
     });
     
   }
