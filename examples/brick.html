@@ -17,7 +17,10 @@
 
     'use strict';
 
-    d3.select('#elm').call(d3_rs_bars.html('empty'));
+//https://bricks.redsift.io/reusable/d3-rs-bars?_datum=&orientation=bottom&scale=2&width=400&height=200&stacked=false&labelTime=%Y&legend=2014
+    d3.select('#elm').datum([{v:[10,16],l:1388534400000},{v:[13,3], l:1420070400000},{v:[13,3], l:1420070400000},{v:[13,3], l:1420070400000}]).call(d3_rs_bars.html('years').orientation('bottom').stacked(false).labelTime('%Y').highlight([9 , 2]));
+ 
+    d3.select('#elm').datum([]).call(d3_rs_bars.html('empty'));
     
     d3.select('#elm').datum([ 1 ]).call(d3_rs_bars.html('singles'));
     
@@ -27,7 +30,7 @@
 
     d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-top').orientation('top'));
     
-    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-right').orientation('right'));
+    d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-right').orientation('right').displayTip(1));
 
     d3.select('#elm').datum([ 1, 2, -3, 4, -2 ]).call(d3_rs_bars.html('basic-bottom').orientation('bottom'));
 
@@ -37,10 +40,10 @@
     d3.select('#elm').datum(stack).call(d3_rs_bars.html('log').logValue(10).width(400).height(200));
     
     var side = [  [ 1, 9 ], [ 5, 2 ], [ 2, 5 ], [ 10, 1 ] ];
-    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false).legend([ 'One', 'longer', 'TWO' ]));
-    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-right').orientation('right').stacked(false));
-    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-top').logValue(10).orientation('top').stacked(false));
-    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-bottom').orientation('bottom').stacked(false).legend([ '1', '2', '3' ]));    
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false).legend([ 'One', 'longer', 'TWO' ]).highlight(5.05));
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-right').orientation('right').stacked(false).logValue(10).highlight(3.03));
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-top').logValue(10).orientation('top').stacked(false).highlight(3.03));
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-bottom').orientation('bottom').stacked(false).legend([ '1', '2', '3' ]).highlight(3.03));    
     
     d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-right').logValue(10).orientation('right').fill(['red', 'blue']));
 
@@ -60,7 +63,7 @@
                               { v:4000, l:1466424812000 + (86400000 * 4) }, 
                               { v:40000, l:1466424812000 + (86400000 * 5) } 
                               ])
-                      .call(d3_rs_bars.html('basic-time').orientation('bottom').labelTime('%a %d'));
+                      .call(d3_rs_bars.html('basic-time').orientation('bottom').labelTime('%a %d').highlight([35000 , 100]));
     
     d3.select('#elm').datum([ 0.1, 0.2, 0.003 ]).call(d3_rs_bars.html('small').fill('global'));
     

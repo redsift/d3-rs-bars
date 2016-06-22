@@ -37,8 +37,8 @@
     "d3-time-format": "^1.0.0",
     "@redsift/d3-rs-svg": "~0.2.3",
     "@redsift/d3-rs-theme": "~0.0.2",
-    "@redsift/d3-rs-tip": "~0.2.1",     
-    "@redsift/d3-rs-intl": "~0.0.1"  
+    "@redsift/d3-rs-tip": "~0.2.3",     
+    "@redsift/d3-rs-intl": "~0.0.1"
   },
   "devDependencies": {
     "@redsift/tape-reel": "~0.0.2",

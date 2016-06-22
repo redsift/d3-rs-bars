@@ -52,3 +52,4 @@
 |classed|SVG custom class|N|
 |labelTime|Interpret the label as a millisecond epoch and format it using the [specified string](https://github.com/d3/d3-time-format#locale_format).|N|
 |minValue,maxValue|Sets the minimum and maximum Value scale range. Note that for log scales, minValue must be > 0|Y|
+|barSize|Size of the bar elements|Y|
