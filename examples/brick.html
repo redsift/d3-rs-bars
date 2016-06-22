@@ -37,10 +37,10 @@
     d3.select('#elm').datum(stack).call(d3_rs_bars.html('log').logValue(10).width(400).height(200));
     
     var side = [  [ 1, 9 ], [ 5, 2 ], [ 2, 5 ], [ 10, 1 ] ];
-    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false));
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false).legend([ 'One', 'longer', 'TWO' ]));
     d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-right').orientation('right').stacked(false));
     d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-top').logValue(10).orientation('top').stacked(false));
-    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-bottom').orientation('bottom').stacked(false));    
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-bottom').orientation('bottom').stacked(false).legend([ '1', '2', '3' ]));    
     
     d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-right').logValue(10).orientation('right').fill(['red', 'blue']));
 
