@@ -105,5 +105,25 @@ tape("html() data extremes - " + layout, function(t) {
     t.end();
 });
 
+tape("html() data series stacked - " + layout, function(t) {
+    var host = bars.html().orientation(layout).minValue(0);
+    var el = d3.select('#test');
+    el.datum([ [ 3, 3 ], 6 ]).call(host);
+    
+    t.equal(el.selectAll('svg').size(), 1);
+    
+    rects = el.selectAll('rect');
+    t.equal(rects.size(), 3);
+    
+    var one = parseInt(rects.nodes()[0].getAttribute(testSize));
+    var two = parseInt(rects.nodes()[1].getAttribute(testSize));
+    var three = parseInt(rects.nodes()[2].getAttribute(testSize));
+    
+    t.equal(one, three);
+    t.ok(one > two);
+        
+    t.end();            
+});
+
 });
 

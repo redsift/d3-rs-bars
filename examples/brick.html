@@ -16,7 +16,7 @@
     <script>
 
     'use strict';
-    
+
     d3.select('#elm').call(d3_rs_bars.html('empty'));
     
     d3.select('#elm').datum([ 1 ]).call(d3_rs_bars.html('singles'));
@@ -33,12 +33,19 @@
 
     d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('global').fill('global').minValue(0).maxValue(120));
 
-    d3.select('#elm').datum([ 1, [ 6, 5, 4, 3, 2, 1 ], 3, 10, [100, 99, 80, 70, 60, 50, 30, 20 ] ]).call(d3_rs_bars.html('log').logValue(10).fill('series'));
-
-    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-right').logValue(10).orientation('right'));
+    var stack = [ 1, [ 5, 2, 4, 3, 2, 1 ], [ 2, 5, 4, 3, 2, 1 ], 10, [100, 99, 80, 70, 60, 50, 30, 20 ] ];
+    d3.select('#elm').datum(stack).call(d3_rs_bars.html('log').logValue(10).width(400).height(200));
+    
+    var side = [  [ 1, 9 ], [ 5, 2 ], [ 2, 5 ], [ 10, 1 ] ];
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false));
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-right').orientation('right').stacked(false));
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-top').logValue(10).orientation('top').stacked(false));
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-bottom').orientation('bottom').stacked(false));    
+    
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-right').logValue(10).orientation('right').fill(['red', 'blue']));
 
     d3.select('#elm')
-      .datum([ { v:1, l:'R' }, { v:2, l:'P' }, [9, 3], 10, 100 ])
+      .datum([ { v:1, l:'R' }, { v:2, l:'P' }, [3, 3], 10, 100 ])
       .call(d3_rs_bars.html('log-series-bottom')
               .logValue(10)
               .orientation('bottom')
@@ -60,7 +67,7 @@
     d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003 ]).call(d3_rs_bars.html('si-small').fill('global'));
     
     d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003, 0.1, 50, 6000000 ]).call(d3_rs_bars.html('mix').fill('global'));
-        
+
     </script>
   </body>
 </html>
