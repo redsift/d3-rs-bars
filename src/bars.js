@@ -24,8 +24,10 @@ const DEFAULT_TICK_FORMAT_VALUE_SMALL = '.3f';
 const DEFAULT_TICK_FORMAT_INDEX = ',d';
 const DEFAULT_TICK_COUNT = 4;
 const DEFAULT_SCALE = 42; // why not
-
-const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px }";
+const DEFAULT_LEGEND_SIZE = 14;
+const DEFAULT_LEGEND_PADDING = 8;
+const DEFAULT_LEGEND_TEXT_SCALE = 8; // hack value to do fast estimation of length of string
+const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro'; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px } .legend text { font-size: 12px }";
 
 export default function bars(id) {
   let classed = 'chart-bars', 
@@ -72,7 +74,7 @@ export default function bars(id) {
   function _impl(context) {
     let selection = context.selection ? context.selection() : context,
         transition = (context.selection !== undefined);
-/*
+
     let ldg = legend;
     if (legend != null) {
       if (!Array.isArray(legend)) {
@@ -81,7 +83,8 @@ export default function bars(id) {
         ldg = null;
       }
     }
-    
+
+/*    
     let hlt = highlight;
     if (highlight == null) {
       hlt = [];
@@ -143,14 +146,13 @@ export default function bars(id) {
       
       let elmS = node.select(root.self()).select(root.child());
 
-      let w = root.childWidth(),
-          h = root.childHeight();
-      
+     
       let g = elmS.select(_impl.self())
       if (g.empty()) {
         g = elmS.append('g').attr('class', classed).attr('id', id);
         g.append('g').attr('class', 'axis-v axis');
         g.append('g').attr('class', 'axis-i axis');
+        g.append('g').attr('class', 'legend');
       }
 
       let twoD = false;
@@ -197,28 +199,67 @@ export default function bars(id) {
       if (mm[0] === undefined) mm[0] = 0;
       if (mm[1] === undefined) mm[1] = DEFAULT_SCALE;
 
-      let colors = () => fill;
-      if (fill == null) {
-        if (twoD) {
-          // data has nested stacks, use the series presentation
+      function _makeFillFn() {
+        let colors = () => fill;
+        if (fill == null) {
+          if (twoD) {
+            // data has nested stacks, use the series presentation
+            let rnd = random(presentation10.standard);
+            colors = (d, i) => rnd(i);          
+          } else {
+            colors = () => presentation10.standard[0];
+          }
+        } else if (fill === 'series') {
           let rnd = random(presentation10.standard);
-          colors = (d, i) => rnd(i.toString());          
-        } else {
-          colors = () => presentation10.standard[0];
+          colors = (d, i) => rnd(i);
+        } else if (fill === 'global') {
+          let rnd = random(presentation10.standard);
+          let count = -1;
+          colors = () => (count++, rnd(count));
+        } else if (typeof fill === 'function') {
+          colors = fill;
+        } else if (Array.isArray(fill)) {
+          let count = -1;
+          colors = () => (count++, fill[ count % fill.length ])
         }
-      } else if (fill === 'series') {
-        let rnd = random(presentation10.standard);
-        colors = (d, i) => rnd(i.toString());
-      } else if (fill === 'global') {
-        let rnd = random(presentation10.standard);
-        let count = -1;
-        colors = () => (count++, rnd(count.toString()));
-      } else if (typeof fill === 'function') {
-        colors = fill;
-      } else if (Array.isArray(fill)) {
-        let count = -1;
-        colors = () => (count++, fill[ count % fill.length ])
+        return colors;  
       }
+            
+      let w = root.childWidth(),
+          h = root.childHeight();
+      
+      if (ldg !== null) {
+        h = h - DEFAULT_LEGEND_SIZE;
+        let rg = g.select('g.legend');
+        let lg = rg.attr('transform', 'translate(' + (w/2) + ',' + (h + DEFAULT_LEGEND_PADDING) + ')').selectAll('g').data(ldg);
+        lg.exit().remove();
+        let newlg = lg.enter().append('g');
+        
+        let colors = _makeFillFn();
+
+        newlg.append('rect')
+              .attr('width', DEFAULT_LEGEND_SIZE)
+              .attr('height', DEFAULT_LEGEND_SIZE)
+              .attr('fill', colors);
+
+        newlg.append('text')
+          .attr('dominant-baseline', 'central')
+          .attr('y', DEFAULT_LEGEND_SIZE / 2)
+          .attr('x', () => DEFAULT_LEGEND_SIZE + DEFAULT_LEGEND_PADDING);
+              
+        lg = newlg.merge(lg);
+
+        lg.selectAll('text').text((d) => d);
+
+        let lens = ldg.map((s) => s.length * DEFAULT_LEGEND_TEXT_SCALE + DEFAULT_LEGEND_SIZE + 2 * DEFAULT_LEGEND_PADDING);
+        let clens = []
+        let total = lens.reduce((p, c) => (clens.push(p) , p + c), 0);
+        
+        let offset = -total / 2;
+        rg.selectAll('g').data(clens).attr('transform', (d) => 'translate(' + (offset + d) + ',0)');
+      }            
+      
+      let colors = _makeFillFn();
             
       let rects = g.selectAll('g.stack').data(vdata);
       rects.exit().remove();
@@ -385,7 +426,7 @@ export default function bars(id) {
       r = r.enter().append('rect').merge(r);
       r.attr(attrV, fnAttrV)
             .attr(attrVV, fnAttrVV)
-            .attr(attrO, (d, i) => stacked ? 0 : (maxSeries / 2 - i) * sz) // center the series when not stacked
+            .attr(attrO, (d, i) => stacked ? 0 : (i - ((maxSeries - 1) / 2)) * sz) // center the series when not stacked
             .attr(attrIV, sz)
             .attr('fill', colors);
 
