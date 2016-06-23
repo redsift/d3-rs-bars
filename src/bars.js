@@ -153,7 +153,7 @@ export default function bars(id) {
 
       let tid = null;
       if (id) tid = 'tip-' + id;
-      let rtip = tip(tid).html((d, i) => data);
+      let rtip = tip(tid).html((d) => d);
       
       rtip.direction(orientation === 'top' ? 's' : 'n');   
               
