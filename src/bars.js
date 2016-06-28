@@ -30,7 +30,17 @@ const DEFAULT_LEGEND_PADDING = 8;
 const DEFAULT_LEGEND_TEXT_SCALE = 8; // hack value to do fast estimation of length of string
 const DEFAULT_HIGHLIGHT_TEXT_PADDING = 2;
 // Font fallback chosen to keep presentation on places like GitHub where Content Security Policy prevents inline SRC
-const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px } .legend text { font-size: 12px } .highlight { opacity: 0.66 } .highlight text { font-size: 12px } ";
+const DEFAULT_STYLE = [
+  "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300);",
+  "text{ font-family: 'Source Code Pro', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-weight: 300; fill: " + display.text.black + "; }",
+  "path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; }",
+  "line { stroke-width: 1.5px }",
+  "line.grid { stroke-width: 1.0px }",
+  "line.axis-z { stroke-width: 2.0px }",
+  ".legend text { font-size: 12px }",
+  ".highlight { pointer-events: none; opacity: 0.66 }",
+  ".highlight text { font-size: 12px }"
+  ].join(" \n");
 
 export default function bars(id) {
   let classed = 'chart-bars', 
@@ -88,7 +98,6 @@ export default function bars(id) {
         ldg = null;
       }
     }
-
     
     let hlt = highlight;
     if (highlight == null) {
@@ -96,9 +105,6 @@ export default function bars(id) {
     } else if (!Array.isArray(highlight)) {
       hlt = [ highlight ];
     }   
-     
-    //TODO: display highlight on value
-    //TODO: display an exposed tip if displayTip
     
     let formatTime = null;
     if (labelTime != null) {
