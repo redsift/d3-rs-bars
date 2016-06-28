@@ -1,0 +1,1918 @@
+Institution code (UKPRN)	Institution name	Institution sort order	Main panel	Unit of assessment number	Unit of assessment name	Multiple submission letter	Multiple submission name	Joint submission	Profile	FTE Category A staff submitted	4*	3*	2*	1*	unclassified
+H-0170	University of Aberdeen	1	A	1	Clinical Medicine				Overall	47	15	60	20	5	0
+H-0170	University of Aberdeen	1	A	2	Public Health, Health Services & Primary Care				Overall	60.5	25	50	20	5	0
+H-0170	University of Aberdeen	1	A	4	Psychology, Psychiatry & Neuroscience				Overall	26	5	45	40	10	0
+H-0170	University of Aberdeen	1	A	5	Biological Sciences				Overall	81.8	5	35	35	15	10
+H-0170	University of Aberdeen	1	A	6	Agriculture, Veterinary & Food Science				Overall	20	20	35	40	5	0
+H-0170	University of Aberdeen	1	B	7	Earth Systems & Environmental Sciences				Overall	14.53	10	50	35	5	0
+H-0170	University of Aberdeen	1	B	8	Chemistry				Overall	12	5	35	55	5	0
+H-0170	University of Aberdeen	1	B	10	Mathematical Sciences				Overall	14	20	45	35	0	0
+H-0170	University of Aberdeen	1	B	11	Computer Science & Informatics				Overall	14.8	20	50	30	0	0
+H-0170	University of Aberdeen	1	B	15	General Engineering				Overall	31.1	20	35	30	15	0
+H-0170	University of Aberdeen	1	C	16	Architecture, Built Environment & Planning				Overall	7.9	20	40	30	10	0
+H-0170	University of Aberdeen	1	C	17	Geography, Environmental Studies & Archaeology				Overall	25.7	10	40	40	10	0
+H-0170	University of Aberdeen	1	C	18	Economics & Econometrics				Overall	14	20	45	35	0	0
+H-0170	University of Aberdeen	1	C	19	Business & Management Studies				Overall	21.25	10	30	40	15	5
+H-0170	University of Aberdeen	1	C	20	Law				Overall	35.7	5	30	45	20	0
+H-0170	University of Aberdeen	1	C	21	Politics & International Studies				Overall	18	5	20	55	15	5
+H-0170	University of Aberdeen	1	C	23	Sociology				Overall	14	15	40	35	10	0
+H-0170	University of Aberdeen	1	C	24	Anthropology & Development Studies				Overall	7	30	25	25	20	0
+H-0170	University of Aberdeen	1	C	25	Education				Overall	11.23	5	20	40	30	5
+H-0170	University of Aberdeen	1	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	5	5	25	40	25	5
+H-0170	University of Aberdeen	1	D	28	Modern Languages				Overall	20	5	25	45	25	0
+H-0170	University of Aberdeen	1	D	29	English Language & Literature				Overall	20.5	30	35	30	5	0
+H-0170	University of Aberdeen	1	D	30	History				Overall	25.6	30	30	35	5	0
+H-0170	University of Aberdeen	1	D	32	Philosophy				Overall	3	0	25	70	5	0
+H-0170	University of Aberdeen	1	D	33	Theology & Religious Studies				Overall	18	15	65	20	0	0
+H-0170	University of Aberdeen	1	D	34	Art & Design: History, Practice, Theory				Overall	8.3	20	35	40	5	0
+H-0170	University of Aberdeen	1	D	35	Music, Drama, Dance, Performing Arts				Overall	7.6	5	45	35	15	0
+H-0095	University of Abertay Dundee	2	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	9.7	0	10	35	35	20
+H-0095	University of Abertay Dundee	2	A	4	Psychology, Psychiatry & Neuroscience				Overall	10	0	15	40	45	0
+H-0095	University of Abertay Dundee	2	B	7	Earth Systems & Environmental Sciences				Overall	12	10	35	40	15	0
+H-0095	University of Abertay Dundee	2	B	15	General Engineering				Overall	10	5	20	40	35	0
+H-0095	University of Abertay Dundee	2	C	19	Business & Management Studies				Overall	9	0	15	35	40	10
+H-0095	University of Abertay Dundee	2	C	20	Law				Overall	3	0	20	60	20	0
+H-0177	Aberystwyth University	3	A	6	Agriculture, Veterinary & Food Science				Overall	46.5	10	35	50	5	0
+H-0177	Aberystwyth University	3	B	9	Physics				Overall	18.33	5	15	50	30	0
+H-0177	Aberystwyth University	3	B	10	Mathematical Sciences				Overall	8.3	5	35	45	15	0
+H-0177	Aberystwyth University	3	B	11	Computer Science & Informatics				Overall	15.53	25	45	30	0	0
+H-0177	Aberystwyth University	3	C	17	Geography, Environmental Studies & Archaeology				Overall	31.33	20	45	30	5	0
+H-0177	Aberystwyth University	3	C	19	Business & Management Studies				Overall	16	5	25	35	30	5
+H-0177	Aberystwyth University	3	C	20	Law				Overall	21	5	30	30	35	0
+H-0177	Aberystwyth University	3	C	21	Politics & International Studies				Overall	33	40	25	25	10	0
+H-0177	Aberystwyth University	3	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	8	0	15	50	35	0
+H-0177	Aberystwyth University	3	D	27	Area Studies				Overall	5	20	15	45	15	5
+H-0177	Aberystwyth University	3	D	28	Modern Languages				Overall	13.2	25	40	25	10	0
+H-0177	Aberystwyth University	3	D	29	English Language & Literature				Overall	22	10	30	55	5	0
+H-0177	Aberystwyth University	3	D	30	History				Overall	20.8	10	35	35	20	0
+H-0177	Aberystwyth University	3	D	34	Art & Design: History, Practice, Theory				Overall	7.75	5	20	40	35	0
+H-0177	Aberystwyth University	3	D	35	Music, Drama, Dance, Performing Arts				Overall	22.9	30	30	20	20	0
+H-0177	Aberystwyth University	3	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	11.2	10	40	35	15	0
+H-0047	Anglia Ruskin University	4	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	8.4	5	10	40	35	10
+H-0047	Anglia Ruskin University	4	A	4	Psychology, Psychiatry & Neuroscience				Overall	4	5	40	35	15	5
+H-0047	Anglia Ruskin University	4	C	17	Geography, Environmental Studies & Archaeology				Overall	8.4	5	15	45	30	5
+H-0047	Anglia Ruskin University	4	C	22	Social Work & Social Policy				Overall	7.7	5	25	60	10	0
+H-0047	Anglia Ruskin University	4	D	27	Area Studies				Overall	11.1	0	20	40	35	5
+H-0047	Anglia Ruskin University	4	D	29	English Language & Literature				Overall	11	15	45	35	5	0
+H-0047	Anglia Ruskin University	4	D	30	History				Overall	3.5	20	40	25	15	0
+H-0047	Anglia Ruskin University	4	D	34	Art & Design: History, Practice, Theory				Overall	10.54	5	25	40	20	10
+H-0047	Anglia Ruskin University	4	D	35	Music, Drama, Dance, Performing Arts				Overall	6.5	5	10	65	15	5
+H-7002	Armagh Observatory	5	B	9	Physics				Overall	7.5	5	30	50	15	0
+H-0108	Aston University	6	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	56.4	15	35	35	15	0
+H-0108	Aston University	6	B	15	General Engineering				Overall	58.73	10	25	50	15	0
+H-0108	Aston University	6	C	19	Business & Management Studies				Overall	88.82	15	45	35	5	0
+H-0108	Aston University	6	D	27	Area Studies				Overall	33.1	5	15	45	30	5
+H-0178	Bangor University	7	A	2	Public Health, Health Services & Primary Care				Overall	16.1	5	20	35	40	0
+H-0178	Bangor University	7	A	4	Psychology, Psychiatry & Neuroscience				Overall	39	20	45	25	10	0
+H-0178	Bangor University	7	A	5	Biological Sciences				Overall	16.56	5	20	55	20	0
+H-0178	Bangor University	7	A	6	Agriculture, Veterinary & Food Science				Overall	35	5	40	45	10	0
+H-0178	Bangor University	7	B	7	Earth Systems & Environmental Sciences				Overall	28.4	10	50	30	10	0
+H-0178	Bangor University	7	B	8	Chemistry				Overall	12	10	35	45	10	0
+H-0178	Bangor University	7	B	11	Computer Science & Informatics				Overall	6.95	15	35	40	5	5
+H-0178	Bangor University	7	B	13	Elec Engineering, Metallurgy & Materials				Overall	8	30	40	25	5	0
+H-0178	Bangor University	7	C	19	Business & Management Studies				Overall	13.75	15	50	30	5	0
+H-0178	Bangor University	7	C	22	Social Work & Social Policy				Overall	15.4	5	25	55	15	0
+H-0178	Bangor University	7	C	25	Education				Overall	4.66	10	20	20	35	15
+H-0178	Bangor University	7	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	16.8	10	25	45	20	0
+H-0178	Bangor University	7	D	27	Area Studies				Overall	9	5	20	45	25	5
+H-0178	Bangor University	7	D	28	Modern Languages				Overall	12.97	5	30	40	20	5
+H-0178	Bangor University	7	D	29	English Language & Literature				Overall	14.25	15	30	50	5	0
+H-0178	Bangor University	7	D	30	History				Overall	17	15	35	35	10	5
+H-0178	Bangor University	7	D	33	Theology & Religious Studies				Overall	7.45	5	25	45	20	5
+H-0178	Bangor University	7	D	35	Music, Drama, Dance, Performing Arts				Overall	10.5	25	45	20	10	0
+H-0109	University of Bath	8	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	40.7	20	40	30	10	0
+H-0109	University of Bath	8	A	5	Biological Sciences				Overall	36.7	10	40	40	10	0
+H-0109	University of Bath	8	B	8	Chemistry				Overall	28	5	55	40	0	0
+H-0109	University of Bath	8	B	9	Physics				Overall	20.2	20	50	25	5	0
+H-0109	University of Bath	8	B	10	Mathematical Sciences				Overall	44.8	20	45	30	5	0
+H-0109	University of Bath	8	B	11	Computer Science & Informatics				Overall	24.33	25	50	20	5	0
+H-0109	University of Bath	8	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	56.4	10	45	40	5	0
+H-0109	University of Bath	8	B	13	Elec Engineering, Metallurgy & Materials				Overall	15.7	25	35	30	10	0
+H-0109	University of Bath	8	C	16	Architecture, Built Environment & Planning				Overall	23.3	25	45	25	5	0
+H-0109	University of Bath	8	C	19	Business & Management Studies				Overall	62.7	30	40	25	5	0
+H-0109	University of Bath	8	C	22	Social Work & Social Policy				Overall	23.7	35	40	25	0	0
+H-0109	University of Bath	8	C	24	Anthropology & Development Studies				Overall	16.5	15	30	40	15	0
+H-0109	University of Bath	8	C	25	Education				Overall	32.7	15	30	40	15	0
+H-0109	University of Bath	8	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	11	15	20	45	20	0
+H-0109	University of Bath	8	D	27	Area Studies				Overall	33	10	35	40	15	0
+H-0048	Bath Spa University	9	A	4	Psychology, Psychiatry & Neuroscience				Overall	3	0	5	65	20	10
+H-0048	Bath Spa University	9	A	5	Biological Sciences				Overall	3	0	0	15	80	5
+H-0048	Bath Spa University	9	C	17	Geography, Environmental Studies & Archaeology				Overall	4	0	15	30	50	5
+H-0048	Bath Spa University	9	C	25	Education				Overall	10	0	15	30	35	20
+H-0048	Bath Spa University	9	D	29	English Language & Literature				Overall	18.7	5	25	50	20	0
+H-0048	Bath Spa University	9	D	30	History				Overall	6	5	40	35	20	0
+H-0048	Bath Spa University	9	D	33	Theology & Religious Studies				Overall	4	0	10	10	65	15
+H-0048	Bath Spa University	9	D	34	Art & Design: History, Practice, Theory				Overall	17.88	5	15	65	15	0
+H-0048	Bath Spa University	9	D	35	Music, Drama, Dance, Performing Arts				Overall	5	10	20	50	20	0
+H-0048	Bath Spa University	9	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	3	10	10	30	50	0
+H-0026	University of Bedfordshire	10	B	7	Earth Systems & Environmental Sciences				Overall	8.4	5	10	55	30	0
+H-0026	University of Bedfordshire	10	B	11	Computer Science & Informatics				Overall	16.2	0	30	50	20	0
+H-0026	University of Bedfordshire	10	C	19	Business & Management Studies				Overall	8	0	15	45	35	5
+H-0026	University of Bedfordshire	10	C	22	Social Work & Social Policy				Overall	9.1	5	45	45	5	0
+H-0026	University of Bedfordshire	10	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	10.5	5	15	35	45	0
+H-0026	University of Bedfordshire	10	D	29	English Language & Literature				Overall	3.6	15	25	25	25	10
+H-0026	University of Bedfordshire	10	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	7.9	10	40	45	5	0
+H-0127	Birkbeck College	11	A	4	Psychology, Psychiatry & Neuroscience				Overall	23.7	25	45	25	5	0
+H-0127	Birkbeck College	11	A	5	Biological Sciences				Overall	22.95	15	40	30	10	5
+H-0127	Birkbeck College	11	B	7	Earth Systems & Environmental Sciences				Overall	9	25	55	20	0	0
+H-0127	Birkbeck College	11	B	11	Computer Science & Informatics				Overall	19	15	50	30	5	0
+H-0127	Birkbeck College	11	C	18	Economics & Econometrics				Overall	25.1	20	50	25	5	0
+H-0127	Birkbeck College	11	C	19	Business & Management Studies				Overall	31.9	10	40	35	15	0
+H-0127	Birkbeck College	11	C	20	Law				Overall	20.9	5	25	35	30	5
+H-0127	Birkbeck College	11	C	21	Politics & International Studies				Overall	17	10	35	35	20	0
+H-0127	Birkbeck College	11	C	23	Sociology				Overall	24.55	5	30	40	20	5
+H-0127	Birkbeck College	11	D	28	Modern Languages				Overall	32.3	10	30	40	15	5
+H-0127	Birkbeck College	11	D	29	English Language & Literature				Overall	33.65	35	25	30	5	5
+H-0127	Birkbeck College	11	D	30	History				Overall	33.5	35	35	20	10	0
+H-0127	Birkbeck College	11	D	32	Philosophy				Overall	14.5	25	35	40	0	0
+H-0127	Birkbeck College	11	D	34	Art & Design: History, Practice, Theory				Overall	19	20	55	15	10	0
+H-0110	University of Birmingham	12	A	1	Clinical Medicine				Overall	157.05	15	55	25	5	0
+H-0110	University of Birmingham	12	A	2	Public Health, Health Services & Primary Care				Overall	50.5	25	40	30	5	0
+H-0110	University of Birmingham	12	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	24.5	10	50	30	10	0
+H-0110	University of Birmingham	12	A	4	Psychology, Psychiatry & Neuroscience				Overall	63.33	25	55	20	0	0
+H-0110	University of Birmingham	12	A	5	Biological Sciences				Overall	58.3	10	40	40	5	5
+H-0110	University of Birmingham	12	B	7	Earth Systems & Environmental Sciences				Overall	17.48	15	50	30	5	0
+H-0110	University of Birmingham	12	B	8	Chemistry				Overall	22	10	50	35	5	0
+H-0110	University of Birmingham	12	B	9	Physics				Overall	43.6	20	40	30	10	0
+H-0110	University of Birmingham	12	B	10	Mathematical Sciences				Overall	43	10	35	35	20	0
+H-0110	University of Birmingham	12	B	11	Computer Science & Informatics				Overall	34	30	45	20	5	0
+H-0110	University of Birmingham	12	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	44.84	20	50	20	10	0
+H-0110	University of Birmingham	12	B	13	Elec Engineering, Metallurgy & Materials				Overall	52.95	15	60	25	0	0
+H-0110	University of Birmingham	12	B	14	Civil and Construction Engineering				Overall	22.55	10	55	30	5	0
+H-0110	University of Birmingham	12	C	16	Architecture, Built Environment & Planning				Overall	11	10	40	30	20	0
+H-0110	University of Birmingham	12	C	17	Geography, Environmental Studies & Archaeology				Overall	50.4	10	40	45	5	0
+H-0110	University of Birmingham	12	C	18	Economics & Econometrics				Overall	21.38	15	50	30	5	0
+H-0110	University of Birmingham	12	C	19	Business & Management Studies				Overall	47.03	20	35	35	10	0
+H-0110	University of Birmingham	12	C	20	Law				Overall	26	15	45	30	10	0
+H-0110	University of Birmingham	12	C	21	Politics & International Studies				Overall	28	5	40	40	15	0
+H-0110	University of Birmingham	12	C	22	Social Work & Social Policy				Overall	26.12	15	45	35	5	0
+H-0110	University of Birmingham	12	C	23	Sociology				Overall	18	5	25	35	30	5
+H-0110	University of Birmingham	12	C	24	Anthropology & Development Studies				Overall	7.84	10	25	40	25	0
+H-0110	University of Birmingham	12	C	25	Education				Overall	46.8	10	35	35	20	0
+H-0110	University of Birmingham	12	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	32.8	25	35	30	10	0
+H-0110	University of Birmingham	12	D	27	Area Studies				Overall	34.46	20	30	35	10	5
+H-0110	University of Birmingham	12	D	28	Modern Languages				Overall	38.2	10	40	35	10	5
+H-0110	University of Birmingham	12	D	29	English Language & Literature				Overall	42.05	25	35	35	5	0
+H-0110	University of Birmingham	12	D	30	History				Overall	33.15	20	40	30	10	0
+H-0110	University of Birmingham	12	D	31	Classics				Overall	18.5	20	30	40	10	0
+H-0110	University of Birmingham	12	D	32	Philosophy				Overall	12	5	40	40	15	0
+H-0110	University of Birmingham	12	D	33	Theology & Religious Studies				Overall	22.9	15	45	30	10	0
+H-0110	University of Birmingham	12	D	34	Art & Design: History, Practice, Theory				Overall	6.25	30	40	30	0	0
+H-0110	University of Birmingham	12	D	35	Music, Drama, Dance, Performing Arts				Overall	17.6	50	35	10	5	0
+H-0052	Birmingham City University	13	C	16	Architecture, Built Environment & Planning				Overall	8	10	15	30	40	5
+H-0052	Birmingham City University	13	C	19	Business & Management Studies				Overall	8	5	20	20	45	10
+H-0052	Birmingham City University	13	C	22	Social Work & Social Policy				Overall	6	5	15	70	10	0
+H-0052	Birmingham City University	13	C	25	Education				Overall	3.55	5	20	40	30	5
+H-0052	Birmingham City University	13	D	29	English Language & Literature				Overall	13.4	5	15	60	20	0
+H-0052	Birmingham City University	13	D	34	Art & Design: History, Practice, Theory				Overall	34.5	30	30	20	20	0
+H-0052	Birmingham City University	13	D	35	Music, Drama, Dance, Performing Arts				Overall	13.5	15	25	45	15	0
+H-0007	Bishop Grosseteste University College, Lincoln	14	C	25	Education				Overall	5	0	10	15	35	40
+H-0007	Bishop Grosseteste University College, Lincoln	14	D	29	English Language & Literature				Overall	3	0	0	75	10	15
+H-0049	University of Bolton	15	A	4	Psychology, Psychiatry & Neuroscience				Overall	5.5	0	5	30	55	10
+H-0049	University of Bolton	15	B	15	General Engineering				Overall	15.2	10	15	50	25	0
+H-0049	University of Bolton	15	C	16	Architecture, Built Environment & Planning				Overall	5	10	30	25	25	10
+H-0049	University of Bolton	15	C	19	Business & Management Studies				Overall	3.4	0	10	30	45	15
+H-0049	University of Bolton	15	C	22	Social Work & Social Policy				Overall	4	5	40	30	25	0
+H-0049	University of Bolton	15	C	25	Education				Overall	8.4	0	15	30	40	15
+H-0049	University of Bolton	15	D	29	English Language & Literature				Overall	6.4	0	10	30	50	10
+H-0049	University of Bolton	15	D	32	Philosophy				Overall	2	0	55	45	0	0
+H-0049	University of Bolton	15	D	34	Art & Design: History, Practice, Theory				Overall	3.5	0	0	30	60	10
+H-0050	Bournemouth University	16	A	1	Clinical Medicine				Overall	5.7	0	20	30	35	15
+H-0050	Bournemouth University	16	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	9.2	10	30	35	20	5
+H-0050	Bournemouth University	16	B	11	Computer Science & Informatics				Overall	10.2	5	30	50	15	0
+H-0050	Bournemouth University	16	B	15	General Engineering				Overall	11.2	5	35	30	25	5
+H-0050	Bournemouth University	16	C	17	Geography, Environmental Studies & Archaeology				Overall	18.5	10	25	40	20	5
+H-0050	Bournemouth University	16	C	19	Business & Management Studies				Overall	23.8	5	25	35	30	5
+H-0050	Bournemouth University	16	C	20	Law				Overall	6.2	0	0	25	75	0
+H-0050	Bournemouth University	16	D	34	Art & Design: History, Practice, Theory				Overall	14.5	15	55	30	0	0
+H-0050	Bournemouth University	16	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	11.9	15	35	40	5	5
+H-0197	Arts Institute at Bournemouth	17	D	34	Art & Design: History, Practice, Theory				Overall	7.5	0	10	10	70	10
+H-0111	University of Bradford	18	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	89.75	10	35	40	15	0
+H-0111	University of Bradford	18	B	11	Computer Science & Informatics				Overall	23	5	40	40	15	0
+H-0111	University of Bradford	18	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	28.6	10	30	50	10	0
+H-0111	University of Bradford	18	B	13	Elec Engineering, Metallurgy & Materials				Overall	8.2	0	10	50	35	5
+H-0111	University of Bradford	18	B	14	Civil and Construction Engineering				Overall	8.2	5	50	35	10	0
+H-0111	University of Bradford	18	C	17	Geography, Environmental Studies & Archaeology				Overall	20	20	30	40	10	0
+H-0111	University of Bradford	18	C	19	Business & Management Studies				Overall	40.6	15	30	45	10	0
+H-0111	University of Bradford	18	C	21	Politics & International Studies				Overall	28.39	15	35	25	25	0
+H-0111	University of Bradford	18	C	22	Social Work & Social Policy				Overall	16.4	10	40	45	5	0
+H-0111	University of Bradford	18	C	24	Anthropology & Development Studies				Overall	7.7	5	25	40	30	0
+H-0111	University of Bradford	18	D	30	History				Overall	6.5	5	20	55	20	0
+H-0111	University of Bradford	18	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	6.6	5	15	20	60	0
+H-0051	University of Brighton	19	A	1	Clinical Medicine				Overall	0.1	5	30	45	20	0
+H-0051	University of Brighton	19	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	45.8	0	15	40	40	5
+H-0051	University of Brighton	19	B	7	Earth Systems & Environmental Sciences				Overall	17	0	40	50	10	0
+H-0051	University of Brighton	19	B	9	Physics				Overall	1	0	45	45	5	5
+H-0051	University of Brighton	19	B	10	Mathematical Sciences				Overall	3	0	15	45	35	5
+H-0051	University of Brighton	19	B	11	Computer Science & Informatics				Overall	9	15	40	35	10	0
+H-0051	University of Brighton	19	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	4.7	5	65	25	5	0
+H-0051	University of Brighton	19	C	19	Business & Management Studies				Overall	19.75	20	25	25	25	5
+H-0051	University of Brighton	19	C	22	Social Work & Social Policy				Overall	24	0	35	55	10	0
+H-0051	University of Brighton	19	C	25	Education				Overall	10.74	10	25	30	30	5
+H-0051	University of Brighton	19	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	22	10	25	30	35	0
+H-0051	University of Brighton	19	D	27	Area Studies				Overall	5	0	10	35	55	0
+H-0051	University of Brighton	19	D	34	Art & Design: History, Practice, Theory				Overall	71.58	35	30	20	15	0
+H-0051	University of Brighton	19	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	18	5	30	45	20	0
+H-0112	University of Bristol	20	A	1	Clinical Medicine				Overall	69	5	50	45	0	0
+H-0112	University of Bristol	20	A	2	Public Health, Health Services & Primary Care				Overall	49.76	20	55	20	5	0
+H-0112	University of Bristol	20	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	19.41	20	40	35	5	0
+H-0112	University of Bristol	20	A	4	Psychology, Psychiatry & Neuroscience				Overall	51.86	10	50	30	10	0
+H-0112	University of Bristol	20	A	5	Biological Sciences				Overall	143.18	15	40	35	10	0
+H-0112	University of Bristol	20	A	6	Agriculture, Veterinary & Food Science				Overall	55.38	0	40	45	15	0
+H-0112	University of Bristol	20	B	7	Earth Systems & Environmental Sciences				Overall	47.7	25	50	20	5	0
+H-0112	University of Bristol	20	B	8	Chemistry				Overall	67	25	50	25	0	0
+H-0112	University of Bristol	20	B	9	Physics				Overall	46	20	35	35	10	0
+H-0112	University of Bristol	20	B	10	Mathematical Sciences				Overall	95.53	25	45	30	0	0
+H-0112	University of Bristol	20	B	11	Computer Science & Informatics				Overall	36.2	30	40	25	5	0
+H-0112	University of Bristol	20	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	38.1	25	55	15	5	0
+H-0112	University of Bristol	20	B	13	Elec Engineering, Metallurgy & Materials				Overall	32	10	55	30	5	0
+H-0112	University of Bristol	20	B	14	Civil and Construction Engineering				Overall	18	25	55	15	5	0
+H-0112	University of Bristol	20	C	17	Geography, Environmental Studies & Archaeology				Overall	51.42	15	35	35	10	5
+H-0112	University of Bristol	20	C	18	Economics & Econometrics				Overall	19.45	30	55	15	0	0
+H-0112	University of Bristol	20	C	19	Business & Management Studies				Overall	17.2	0	30	45	20	5
+H-0112	University of Bristol	20	C	20	Law				Overall	43.7	15	40	35	10	0
+H-0112	University of Bristol	20	C	21	Politics & International Studies				Overall	24	10	30	35	20	5
+H-0112	University of Bristol	20	C	22	Social Work & Social Policy				Overall	47.36	20	40	30	10	0
+H-0112	University of Bristol	20	C	23	Sociology				Overall	17.93	10	40	30	20	0
+H-0112	University of Bristol	20	C	25	Education				Overall	42.56	25	35	30	10	0
+H-0112	University of Bristol	20	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	8.6	20	35	35	10	0
+H-0112	University of Bristol	20	D	28	Modern Languages				Overall	41.66	10	30	40	15	5
+H-0112	University of Bristol	20	D	29	English Language & Literature				Overall	18.4	20	50	25	5	0
+H-0112	University of Bristol	20	D	30	History				Overall	26	15	40	35	10	0
+H-0112	University of Bristol	20	D	31	Classics				Overall	20	20	35	40	5	0
+H-0112	University of Bristol	20	D	32	Philosophy				Overall	16	30	35	30	5	0
+H-0112	University of Bristol	20	D	33	Theology & Religious Studies				Overall	10	15	30	40	15	0
+H-0112	University of Bristol	20	D	34	Art & Design: History, Practice, Theory				Overall	6	15	30	45	10	0
+H-0112	University of Bristol	20	D	35	Music, Drama, Dance, Performing Arts				Overall	19.3	10	75	10	5	0
+H-0151E	British Institute in Paris	21	D	28	Modern Languages				Overall	4	0	30	20	40	10
+H-0113	Brunel University	22	A	2	Public Health, Health Services & Primary Care				Overall	5.4	15	50	30	5	0
+H-0113	Brunel University	22	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	55.6	10	15	20	30	25
+H-0113	Brunel University	22	A	4	Psychology, Psychiatry & Neuroscience				Overall	25.6	5	30	50	15	0
+H-0113	Brunel University	22	B	7	Earth Systems & Environmental Sciences				Overall	8.6	10	30	50	10	0
+H-0113	Brunel University	22	B	10	Mathematical Sciences				Overall	29	15	35	40	10	0
+H-0113	Brunel University	22	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	38.46	10	40	40	10	0
+H-0113	Brunel University	22	B	15	General Engineering				Overall	65.3	5	45	50	0	0
+H-0113	Brunel University	22	C	17	Geography, Environmental Studies & Archaeology				Overall	7.86	5	20	60	15	0
+H-0113	Brunel University	22	C	18	Economics & Econometrics				Overall	25	10	50	35	5	0
+H-0113	Brunel University	22	C	19	Business & Management Studies				Overall	51.1	10	35	35	20	0
+H-0113	Brunel University	22	C	20	Law				Overall	29	5	45	40	10	0
+H-0113	Brunel University	22	C	21	Politics & International Studies				Overall	16	5	20	50	25	0
+H-0113	Brunel University	22	C	22	Social Work & Social Policy				Overall	11.2	5	30	40	25	0
+H-0113	Brunel University	22	C	23	Sociology				Overall	11	10	40	35	15	0
+H-0113	Brunel University	22	C	24	Anthropology & Development Studies				Overall	8.2	20	30	35	15	0
+H-0113	Brunel University	22	C	25	Education				Overall	15.5	5	10	35	40	10
+H-0113	Brunel University	22	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	21	15	20	40	25	0
+H-0113	Brunel University	22	D	29	English Language & Literature				Overall	16.5	15	30	45	10	0
+H-0113	Brunel University	22	D	34	Art & Design: History, Practice, Theory				Overall	10.5	0	35	45	15	5
+H-0113	Brunel University	22	D	35	Music, Drama, Dance, Performing Arts				Overall	20.2	15	30	40	10	5
+H-0113	Brunel University	22	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	63	10	25	60	5	0
+H-0009	Buckinghamshire New University	23	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	5.6	0	10	15	45	30
+H-0009	Buckinghamshire New University	23	C	19	Business & Management Studies				Overall	2.6	0	20	40	30	10
+H-0009	Buckinghamshire New University	23	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	5	0	5	50	45	0
+H-0009	Buckinghamshire New University	23	D	34	Art & Design: History, Practice, Theory				Overall	13.05	5	25	40	20	10
+H-0114	University of Cambridge	24	A	1	Clinical Medicine				Overall	187.75	35	45	15	5	0
+H-0114	University of Cambridge	24	A	2	Public Health, Health Services & Primary Care				Overall	15.2	20	45	30	5	0
+H-0114	University of Cambridge	24	A	4	Psychology, Psychiatry & Neuroscience				Overall	64.8	35	50	15	0	0
+H-0114	University of Cambridge	24	A	5	Biological Sciences				Overall	213.69	20	40	30	5	5
+H-0114	University of Cambridge	24	A	6	Agriculture, Veterinary & Food Science				Overall	38.6	5	40	45	10	0
+H-0114	University of Cambridge	24	B	7	Earth Systems & Environmental Sciences				Overall	44.9	40	50	10	0	0
+H-0114	University of Cambridge	24	B	8	Chemistry				Overall	62.95	40	40	20	0	0
+H-0114	University of Cambridge	24	B	9	Physics				Overall	141.25	25	40	30	5	0
+H-0114	University of Cambridge	24	B	10	Mathematical Sciences				Overall	151.3	30	45	25	0	0
+H-0114	University of Cambridge	24	B	11	Computer Science & Informatics				Overall	44.83	45	45	10	0	0
+H-0114	University of Cambridge	24	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	30.5	30	55	15	0	0
+H-0114	University of Cambridge	24	B	13	Elec Engineering, Metallurgy & Materials				Overall	29.5	40	55	5	0	0
+H-0114	University of Cambridge	24	B	15	General Engineering				Overall	150	45	45	10	0	0
+H-0114	University of Cambridge	24	C	16	Architecture, Built Environment & Planning				Overall	34.73	30	45	25	0	0
+H-0114	University of Cambridge	24	C	17	Geography, Environmental Studies & Archaeology				Overall	88.02	30	30	40	0	0
+H-0114	University of Cambridge	24	C	18	Economics & Econometrics				Overall	38	30	45	25	0	0
+H-0114	University of Cambridge	24	C	19	Business & Management Studies				Overall	45.4	35	40	20	5	0
+H-0114	University of Cambridge	24	C	20	Law				Overall	83.27	25	35	35	5	0
+H-0114	University of Cambridge	24	C	21	Politics & International Studies				Overall	26	20	30	30	20	0
+H-0114	University of Cambridge	24	C	23	Sociology				Overall	21	20	35	35	10	0
+H-0114	University of Cambridge	24	C	24	Anthropology & Development Studies				Overall	30.8	35	25	30	10	0
+H-0114	University of Cambridge	24	C	25	Education				Overall	49.6	30	35	25	10	0
+H-0114	University of Cambridge	24	D	27	Area Studies				Overall	33	15	35	30	15	5
+H-0114	University of Cambridge	24	D	28	Modern Languages				Overall	90	30	30	30	10	0
+H-0114	University of Cambridge	24	D	29	English Language & Literature				Overall	70.45	40	25	25	10	0
+H-0114	University of Cambridge	24	D	30	History				Overall	102	40	25	25	10	0
+H-0114	University of Cambridge	24	D	31	Classics				Overall	40.1	45	25	30	0	0
+H-0114	University of Cambridge	24	D	32	Philosophy				Overall	54	25	40	30	5	0
+H-0114	University of Cambridge	24	D	33	Theology & Religious Studies				Overall	32	35	25	35	5	0
+H-0114	University of Cambridge	24	D	34	Art & Design: History, Practice, Theory				Overall	12	10	50	40	0	0
+H-0114	University of Cambridge	24	D	35	Music, Drama, Dance, Performing Arts				Overall	14.75	45	40	10	5	0
+H-0012	Canterbury Christ Church University	25	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	10.6	0	5	25	45	25
+H-0012	Canterbury Christ Church University	25	C	25	Education				Overall	19	10	25	35	25	5
+H-0012	Canterbury Christ Church University	25	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	12	0	20	40	35	5
+H-0012	Canterbury Christ Church University	25	D	29	English Language & Literature				Overall	11	0	20	25	50	5
+H-0012	Canterbury Christ Church University	25	D	30	History				Overall	11	0	30	45	20	5
+H-0012	Canterbury Christ Church University	25	D	33	Theology & Religious Studies				Overall	5.7	0	20	25	50	5
+H-0012	Canterbury Christ Church University	25	D	35	Music, Drama, Dance, Performing Arts				Overall	7.4	10	20	45	25	0
+H-0179	Cardiff University	26	A	1	Clinical Medicine				Overall	120.02	5	40	45	10	0
+H-0179	Cardiff University	26	A	2	Public Health, Health Services & Primary Care				Overall	11.9	5	60	30	5	0
+H-0179	Cardiff University	26	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	87.67	15	35	35	10	5
+H-0179	Cardiff University	26	A	4	Psychology, Psychiatry & Neuroscience				Overall	80.65	25	45	25	5	0
+H-0179	Cardiff University	26	A	5	Biological Sciences				Overall	53.9	15	40	35	10	0
+H-0179	Cardiff University	26	B	7	Earth Systems & Environmental Sciences				Overall	37	15	55	25	5	0
+H-0179	Cardiff University	26	B	8	Chemistry				Overall	36.57	10	50	40	0	0
+H-0179	Cardiff University	26	B	9	Physics				Overall	32.3	5	45	30	20	0
+H-0179	Cardiff University	26	B	10	Mathematical Sciences				Overall	30.45	5	35	45	15	0
+H-0179	Cardiff University	26	B	11	Computer Science & Informatics				Overall	22.15	20	50	25	5	0
+H-0179	Cardiff University	26	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	25.6	20	45	30	5	0
+H-0179	Cardiff University	26	B	13	Elec Engineering, Metallurgy & Materials				Overall	18.26	10	40	45	5	0
+H-0179	Cardiff University	26	B	14	Civil and Construction Engineering				Overall	21.3	25	65	10	0	0
+H-0179	Cardiff University	26	C	16	Architecture, Built Environment & Planning				Overall	65.7	30	35	25	10	0
+H-0179	Cardiff University	26	C	17	Geography, Environmental Studies & Archaeology				Overall	21.33	15	40	35	10	0
+H-0179	Cardiff University	26	C	19	Business & Management Studies				Overall	114.85	35	35	25	5	0
+H-0179	Cardiff University	26	C	20	Law				Overall	24.85	25	35	35	5	0
+H-0179	Cardiff University	26	C	23	Sociology				Overall	61.4	25	30	35	10	0
+H-0179	Cardiff University	26	D	27	Area Studies				Overall	33.4	15	30	35	20	0
+H-0179	Cardiff University	26	D	28	Modern Languages				Overall	8	15	40	30	15	0
+H-0179	Cardiff University	26	D	29	English Language & Literature				Overall	44.2	35	25	30	10	0
+H-0179	Cardiff University	26	D	30	History				Overall	29	10	35	40	15	0
+H-0179	Cardiff University	26	D	32	Philosophy				Overall	8	5	25	60	10	0
+H-0179	Cardiff University	26	D	33	Theology & Religious Studies				Overall	12	5	30	55	5	5
+H-0179	Cardiff University	26	D	35	Music, Drama, Dance, Performing Arts				Overall	13.2	15	55	20	10	0
+H-0179	Cardiff University	26	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	16.5	45	30	20	5	0
+H-0010	Central School of Speech and Drama	27	D	35	Music, Drama, Dance, Performing Arts				Overall	11.2	15	40	30	15	0
+H-0053	University of Central Lancashire	28	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	41.2	10	10	45	25	10
+H-0053	University of Central Lancashire	28	A	4	Psychology, Psychiatry & Neuroscience				Overall	30.9	5	15	50	30	0
+H-0053	University of Central Lancashire	28	B	9	Physics				Overall	22.2	5	35	45	15	0
+H-0053	University of Central Lancashire	28	B	15	General Engineering				Overall	5.6	0	30	50	20	0
+H-0053	University of Central Lancashire	28	C	16	Architecture, Built Environment & Planning				Overall	6	5	35	40	15	5
+H-0053	University of Central Lancashire	28	C	17	Geography, Environmental Studies & Archaeology				Overall	5	5	15	45	35	0
+H-0053	University of Central Lancashire	28	C	19	Business & Management Studies				Overall	26	5	25	35	30	5
+H-0053	University of Central Lancashire	28	C	20	Law				Overall	17.6	0	15	35	45	5
+H-0053	University of Central Lancashire	28	C	21	Politics & International Studies				Overall	10	0	5	20	65	10
+H-0053	University of Central Lancashire	28	C	22	Social Work & Social Policy				Overall	14.14	10	30	40	20	0
+H-0053	University of Central Lancashire	28	C	25	Education				Overall	11.6	0	5	25	50	20
+H-0053	University of Central Lancashire	28	D	28	Modern Languages				Overall	6	15	25	55	5	0
+H-0053	University of Central Lancashire	28	D	29	English Language & Literature				Overall	9	0	20	50	30	0
+H-0053	University of Central Lancashire	28	D	30	History				Overall	15.2	10	25	40	25	0
+H-0053	University of Central Lancashire	28	D	34	Art & Design: History, Practice, Theory				Overall	13.9	0	15	25	50	10
+H-0053	University of Central Lancashire	28	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	11	15	20	35	30	0
+H-0011	University of Chester	29	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	13.8	0	15	30	45	10
+H-0011	University of Chester	29	B	10	Mathematical Sciences				Overall	5.8	0	15	45	35	5
+H-0011	University of Chester	29	C	17	Geography, Environmental Studies & Archaeology				Overall	4	0	10	45	40	5
+H-0011	University of Chester	29	C	22	Social Work & Social Policy				Overall	10.8	0	15	40	40	5
+H-0011	University of Chester	29	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	5.8	5	20	40	30	5
+H-0011	University of Chester	29	D	29	English Language & Literature				Overall	6	5	15	45	35	0
+H-0011	University of Chester	29	D	30	History				Overall	3.2	15	30	35	15	5
+H-0011	University of Chester	29	D	33	Theology & Religious Studies				Overall	5.75	0	30	55	15	0
+H-0011	University of Chester	29	D	34	Art & Design: History, Practice, Theory				Overall	4.7	0	5	5	75	15
+H-0011	University of Chester	29	D	35	Music, Drama, Dance, Performing Arts				Overall	3.95	5	25	70	0	0
+H-0082	University of Chichester	30	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	11.8	5	15	40	40	0
+H-0082	University of Chichester	30	D	29	English Language & Literature				Overall	7.5	0	25	45	30	0
+H-0082	University of Chichester	30	D	30	History				Overall	5	0	30	45	20	5
+H-0082	University of Chichester	30	D	33	Theology & Religious Studies				Overall	3.4	0	15	60	20	5
+H-0082	University of Chichester	30	D	35	Music, Drama, Dance, Performing Arts				Overall	5.95	0	40	45	10	5
+H-0115	City University London	31	A	2	Public Health, Health Services & Primary Care				Overall	5.75	0	5	45	45	5
+H-0115	City University London	31	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	90.95	10	25	35	20	10
+H-0115	City University London	31	A	4	Psychology, Psychiatry & Neuroscience				Overall	10.8	5	45	40	10	0
+H-0115	City University London	31	B	10	Mathematical Sciences				Overall	8.2	5	15	65	15	0
+H-0115	City University London	31	B	11	Computer Science & Informatics				Overall	23.3	15	40	35	10	0
+H-0115	City University London	31	B	15	General Engineering				Overall	34.95	10	35	45	10	0
+H-0115	City University London	31	C	18	Economics & Econometrics				Overall	14.2	10	45	45	0	0
+H-0115	City University London	31	C	19	Business & Management Studies				Overall	94.5	15	40	35	10	0
+H-0115	City University London	31	C	20	Law				Overall	14.05	5	30	35	30	0
+H-0115	City University London	31	C	22	Social Work & Social Policy				Overall	3	20	45	35	0	0
+H-0115	City University London	31	C	23	Sociology				Overall	27.2	15	30	30	20	5
+H-0115	City University London	31	D	34	Art & Design: History, Practice, Theory				Overall	4.6	5	40	50	5	0
+H-0115	City University London	31	D	35	Music, Drama, Dance, Performing Arts				Overall	11	30	35	30	5	0
+H-0115	City University London	31	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	11.3	15	50	30	5	0
+H-0201	Courtauld Institute of Art	32	D	34	Art & Design: History, Practice, Theory				Overall	25.5	40	40	20	0	0
+H-0056	Coventry University	33	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	14.2	5	5	25	55	10
+H-0056	Coventry University	33	A	4	Psychology, Psychiatry & Neuroscience				Overall	1	0	0	25	65	10
+H-0056	Coventry University	33	B	10	Mathematical Sciences				Overall	7	0	20	70	10	0
+H-0056	Coventry University	33	B	11	Computer Science & Informatics				Overall	8.5	5	20	50	25	0
+H-0056	Coventry University	33	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	8	0	25	35	30	10
+H-0056	Coventry University	33	B	13	Elec Engineering, Metallurgy & Materials				Overall	13.7	0	20	35	30	15
+H-0056	Coventry University	33	C	16	Architecture, Built Environment & Planning				Overall	6.1	0	20	30	40	10
+H-0056	Coventry University	33	C	19	Business & Management Studies				Overall	7.2	0	20	40	35	5
+H-0056	Coventry University	33	C	20	Law				Overall	7	0	5	15	70	10
+H-0056	Coventry University	33	C	21	Politics & International Studies				Overall	12	5	5	45	35	10
+H-0056	Coventry University	33	C	22	Social Work & Social Policy				Overall	4.8	5	20	60	15	0
+H-0056	Coventry University	33	C	25	Education				Overall	12	0	20	40	30	10
+H-0056	Coventry University	33	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	4	0	15	40	35	10
+H-0056	Coventry University	33	D	34	Art & Design: History, Practice, Theory				Overall	25.35	5	55	20	20	0
+H-0056	Coventry University	33	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	5	5	35	45	10	5
+H-0002	Cranfield University	34	A	5	Biological Sciences				Overall	23.2	5	15	35	35	10
+H-0002	Cranfield University	34	A	6	Agriculture, Veterinary & Food Science				Overall	27.4	0	40	45	15	0
+H-0002	Cranfield University	34	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	95.81	20	40	30	10	0
+H-0002	Cranfield University	34	B	15	General Engineering				Overall	42.9	5	25	50	20	0
+H-0002	Cranfield University	34	C	19	Business & Management Studies				Overall	46.36	25	40	25	10	0
+H-0038	University of Cumbria	35	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	12.6	0	0	10	55	35
+H-0038	University of Cumbria	35	A	6	Agriculture, Veterinary & Food Science				Overall	5	0	0	35	55	10
+H-0038	University of Cumbria	35	C	25	Education				Overall	9.1	0	5	25	35	35
+H-0038	University of Cumbria	35	D	29	English Language & Literature				Overall	5	0	10	35	45	10
+H-0038	University of Cumbria	35	D	30	History				Overall	4.6	0	20	65	10	5
+H-0038	University of Cumbria	35	D	33	Theology & Religious Studies				Overall	5.4	5	10	45	35	5
+H-0038	University of Cumbria	35	D	34	Art & Design: History, Practice, Theory				Overall	9.23	0	10	25	50	15
+H-0015	Dartington College of Arts	36	D	34	Art & Design: History, Practice, Theory				Overall	7.7	0	0	50	50	0
+H-0015	Dartington College of Arts	36	D	35	Music, Drama, Dance, Performing Arts				Overall	14.43	5	5	75	15	0
+H-0068	De Montfort University	37	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	31	5	30	40	20	5
+H-0068	De Montfort University	37	B	11	Computer Science & Informatics				Overall	22.3	10	35	40	15	0
+H-0068	De Montfort University	37	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	10	5	45	40	10	0
+H-0068	De Montfort University	37	B	13	Elec Engineering, Metallurgy & Materials				Overall	6	5	30	45	20	0
+H-0068	De Montfort University	37	B	14	Civil and Construction Engineering				Overall	1	25	45	25	5	0
+H-0068	De Montfort University	37	B	15	General Engineering				Overall	6	5	25	55	10	5
+H-0068	De Montfort University	37	C	16	Architecture, Built Environment & Planning				Overall	14	15	50	25	10	0
+H-0068	De Montfort University	37	C	19	Business & Management Studies				Overall	18.6	10	25	45	20	0
+H-0068	De Montfort University	37	C	20	Law				Overall	15	0	20	45	35	0
+H-0068	De Montfort University	37	C	21	Politics & International Studies				Overall	14	5	15	45	30	5
+H-0068	De Montfort University	37	C	22	Social Work & Social Policy				Overall	21.2	5	25	50	20	0
+H-0068	De Montfort University	37	D	29	English Language & Literature				Overall	19.8	40	20	35	5	0
+H-0068	De Montfort University	37	D	30	History				Overall	14.5	0	45	40	15	0
+H-0068	De Montfort University	37	D	34	Art & Design: History, Practice, Theory				Overall	17.37	5	40	25	25	5
+H-0068	De Montfort University	37	D	35	Music, Drama, Dance, Performing Arts				Overall	15.3	15	40	30	15	0
+H-0068	De Montfort University	37	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	12.5	25	35	30	5	5
+H-0057	University of Derby	38	A	4	Psychology, Psychiatry & Neuroscience				Overall	12	0	10	45	45	0
+H-0057	University of Derby	38	A	5	Biological Sciences				Overall	6	0	15	35	50	0
+H-0057	University of Derby	38	D	34	Art & Design: History, Practice, Theory				Overall	9.25	5	20	45	20	10
+H-0057	University of Derby	38	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	12.2	25	15	45	10	5
+H-0172	University of Dundee	39	A	1	Clinical Medicine				Overall	83.7	5	60	25	10	0
+H-0172	University of Dundee	39	A	2	Public Health, Health Services & Primary Care				Overall	12.5	5	40	40	10	5
+H-0172	University of Dundee	39	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	45.92	10	40	35	10	5
+H-0172	University of Dundee	39	A	4	Psychology, Psychiatry & Neuroscience				Overall	22	5	30	50	15	0
+H-0172	University of Dundee	39	A	5	Biological Sciences				Overall	65	25	40	25	10	0
+H-0172	University of Dundee	39	B	10	Mathematical Sciences				Overall	10.7	10	35	45	10	0
+H-0172	University of Dundee	39	B	11	Computer Science & Informatics				Overall	15.2	15	50	30	5	0
+H-0172	University of Dundee	39	B	14	Civil and Construction Engineering				Overall	16.9	15	70	15	0	0
+H-0172	University of Dundee	39	B	15	General Engineering				Overall	30.9	5	30	55	10	0
+H-0172	University of Dundee	39	C	16	Architecture, Built Environment & Planning				Overall	7.7	5	35	30	25	5
+H-0172	University of Dundee	39	C	17	Geography, Environmental Studies & Archaeology				Overall	17.7	15	45	35	5	0
+H-0172	University of Dundee	39	C	18	Economics & Econometrics				Overall	14	5	40	50	5	0
+H-0172	University of Dundee	39	C	19	Business & Management Studies				Overall	19	5	35	40	20	0
+H-0172	University of Dundee	39	C	20	Law				Overall	27	5	45	50	0	0
+H-0172	University of Dundee	39	C	21	Politics & International Studies				Overall	9	10	20	40	30	0
+H-0172	University of Dundee	39	C	22	Social Work & Social Policy				Overall	5.5	5	30	50	15	0
+H-0172	University of Dundee	39	C	25	Education				Overall	13	5	15	35	35	10
+H-0172	University of Dundee	39	D	29	English Language & Literature				Overall	13.6	10	35	45	10	0
+H-0172	University of Dundee	39	D	30	History				Overall	16	15	50	25	10	0
+H-0172	University of Dundee	39	D	32	Philosophy				Overall	7	10	35	50	5	0
+H-0172	University of Dundee	39	D	34	Art & Design: History, Practice, Theory				Overall	52.4	35	20	25	20	0
+H-0116	University of Durham	40	A	4	Psychology, Psychiatry & Neuroscience				Overall	31	15	45	35	5	0
+H-0116	University of Durham	40	A	5	Biological Sciences				Overall	36	10	40	40	10	0
+H-0116	University of Durham	40	B	7	Earth Systems & Environmental Sciences				Overall	32.2	15	55	25	5	0
+H-0116	University of Durham	40	B	8	Chemistry				Overall	42.6	20	45	30	5	0
+H-0116	University of Durham	40	B	9	Physics				Overall	69.5	20	40	35	5	0
+H-0116	University of Durham	40	B	10	Mathematical Sciences				Overall	52.6	10	55	30	5	0
+H-0116	University of Durham	40	B	11	Computer Science & Informatics				Overall	22	20	45	30	5	0
+H-0116	University of Durham	40	B	15	General Engineering				Overall	31.2	10	50	30	10	0
+H-0116	University of Durham	40	C	17	Geography, Environmental Studies & Archaeology				Overall	82.4	35	40	20	5	0
+H-0116	University of Durham	40	C	19	Business & Management Studies				Overall	48.8	15	40	40	5	0
+H-0116	University of Durham	40	C	20	Law				Overall	31	30	35	30	5	0
+H-0116	University of Durham	40	C	21	Politics & International Studies				Overall	23	15	35	30	15	5
+H-0116	University of Durham	40	C	22	Social Work & Social Policy				Overall	35	15	45	30	10	0
+H-0116	University of Durham	40	C	24	Anthropology & Development Studies				Overall	33.6	20	35	25	15	5
+H-0116	University of Durham	40	C	25	Education				Overall	30.8	20	35	30	15	0
+H-0116	University of Durham	40	D	27	Area Studies				Overall	2	20	45	25	10	0
+H-0116	University of Durham	40	D	28	Modern Languages				Overall	33	15	35	35	15	0
+H-0116	University of Durham	40	D	29	English Language & Literature				Overall	28.6	30	30	30	10	0
+H-0116	University of Durham	40	D	30	History				Overall	29	20	40	30	10	0
+H-0116	University of Durham	40	D	31	Classics				Overall	17	25	40	30	5	0
+H-0116	University of Durham	40	D	32	Philosophy				Overall	18	15	40	35	10	0
+H-0116	University of Durham	40	D	33	Theology & Religious Studies				Overall	19	40	25	30	5	0
+H-0116	University of Durham	40	D	35	Music, Drama, Dance, Performing Arts				Overall	11	30	30	25	15	0
+H-0016	Edge Hill University	41	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	5.6	5	25	35	30	5
+H-0016	Edge Hill University	41	C	17	Geography, Environmental Studies & Archaeology				Overall	6	0	5	30	45	20
+H-0016	Edge Hill University	41	C	22	Social Work & Social Policy				Overall	20.5	0	15	30	50	5
+H-0016	Edge Hill University	41	C	25	Education				Overall	15.91	0	5	25	50	20
+H-0016	Edge Hill University	41	D	29	English Language & Literature				Overall	12	0	20	30	45	5
+H-0016	Edge Hill University	41	D	30	History				Overall	5	10	15	35	30	10
+H-0167	University of Edinburgh	42	A	1	Clinical Medicine				Overall	158.47	40	40	20	0	0
+H-0167	University of Edinburgh	42	A	4	Psychology, Psychiatry & Neuroscience				Overall	128.37	15	45	35	5	0
+H-0167	University of Edinburgh	42	A	5	Biological Sciences				Overall	122.71	15	45	30	10	0
+H-0167	University of Edinburgh	42	A	6	Agriculture, Veterinary & Food Science				Overall	107.24	20	35	25	10	10
+H-0167	University of Edinburgh	42	B	7	Earth Systems & Environmental Sciences				Overall	77.14	15	55	25	5	0
+H-0167	University of Edinburgh	42	B	8	Chemistry				Overall	43.89	30	40	30	0	0
+H-0167	University of Edinburgh	42	B	9	Physics				Overall	60.5	20	45	30	5	0
+H-0167	University of Edinburgh	42	B	10	Mathematical Sciences				Overall	59	15	45	35	5	0
+H-0167	University of Edinburgh	42	B	11	Computer Science & Informatics				Overall	104.25	35	50	15	0	0
+H-0167	University of Edinburgh	42	B	15	General Engineering				Overall	87.39	15	40	45	0	0
+H-0167	University of Edinburgh	42	C	16	Architecture, Built Environment & Planning				Overall	18	25	45	25	5	0
+H-0167	University of Edinburgh	42	C	17	Geography, Environmental Studies & Archaeology				Overall	36.8	20	35	30	15	0
+H-0167	University of Edinburgh	42	C	18	Economics & Econometrics				Overall	18	25	45	30	0	0
+H-0167	University of Edinburgh	42	C	19	Business & Management Studies				Overall	52.65	10	40	35	15	0
+H-0167	University of Edinburgh	42	C	20	Law				Overall	48.74	30	25	35	10	0
+H-0167	University of Edinburgh	42	C	21	Politics & International Studies				Overall	30	10	45	25	20	0
+H-0167	University of Edinburgh	42	C	22	Social Work & Social Policy				Overall	43.9	30	35	25	10	0
+H-0167	University of Edinburgh	42	C	23	Sociology				Overall	46.3	30	25	35	10	0
+H-0167	University of Edinburgh	42	C	24	Anthropology & Development Studies				Overall	18	25	35	25	10	5
+H-0167	University of Edinburgh	42	C	25	Education				Overall	84.97	15	30	30	20	5
+H-0167	University of Edinburgh	42	D	27	Area Studies				Overall	15	10	25	25	30	10
+H-0167	University of Edinburgh	42	D	28	Modern Languages				Overall	88	20	30	30	15	5
+H-0167	University of Edinburgh	42	D	29	English Language & Literature				Overall	33.61	40	30	25	5	0
+H-0167	University of Edinburgh	42	D	30	History				Overall	60.98	25	35	25	10	5
+H-0167	University of Edinburgh	42	D	31	Classics				Overall	18	10	35	45	10	0
+H-0167	University of Edinburgh	42	D	32	Philosophy				Overall	17	20	45	30	5	0
+H-0167	University of Edinburgh	42	D	33	Theology & Religious Studies				Overall	30	30	30	25	15	0
+H-0167	University of Edinburgh	42	D	34	Art & Design: History, Practice, Theory				Overall	16	15	45	40	0	0
+H-0167	University of Edinburgh	42	D	35	Music, Drama, Dance, Performing Arts				Overall	14.9	20	45	20	15	0
+H-0096	Edinburgh College of Art	43	C	16	Architecture, Built Environment & Planning				Overall	13.6	25	45	25	5	0
+H-0096	Edinburgh College of Art	43	D	34	Art & Design: History, Practice, Theory				Overall	45.82	10	35	20	25	10
+H-0118	University of Essex	44	A	4	Psychology, Psychiatry & Neuroscience				Overall	22	10	45	40	5	0
+H-0118	University of Essex	44	A	5	Biological Sciences				Overall	30.9	5	35	45	10	5
+H-0118	University of Essex	44	B	11	Computer Science & Informatics				Overall	31	15	50	30	5	0
+H-0118	University of Essex	44	B	13	Elec Engineering, Metallurgy & Materials				Overall	11.45	20	40	30	10	0
+H-0118	University of Essex	44	C	18	Economics & Econometrics				Overall	34.31	40	55	5	0	0
+H-0118	University of Essex	44	C	19	Business & Management Studies				Overall	30.5	10	45	40	5	0
+H-0118	University of Essex	44	C	20	Law				Overall	25.3	5	45	40	10	0
+H-0118	University of Essex	44	C	21	Politics & International Studies				Overall	28.95	45	30	20	5	0
+H-0118	University of Essex	44	C	23	Sociology				Overall	43.7	35	25	30	10	0
+H-0118	University of Essex	44	D	28	Modern Languages				Overall	16	25	35	25	15	0
+H-0118	University of Essex	44	D	29	English Language & Literature				Overall	19	10	45	40	5	0
+H-0118	University of Essex	44	D	30	History				Overall	13.36	35	35	25	5	0
+H-0118	University of Essex	44	D	32	Philosophy				Overall	8.2	20	55	20	5	0
+H-0118	University of Essex	44	D	34	Art & Design: History, Practice, Theory				Overall	7.35	25	50	15	10	0
+H-0119	University of Exeter	45	A	1	Clinical Medicine				Overall	20.96	5	60	25	10	0
+H-0119	University of Exeter	45	A	2	Public Health, Health Services & Primary Care				Overall	16.1	5	45	45	5	0
+H-0119	University of Exeter	45	A	4	Psychology, Psychiatry & Neuroscience				Overall	33.53	15	40	35	10	0
+H-0119	University of Exeter	45	A	5	Biological Sciences				Overall	48.83	10	40	40	10	0
+H-0119	University of Exeter	45	B	9	Physics				Overall	28	15	45	35	5	0
+H-0119	University of Exeter	45	B	10	Mathematical Sciences				Overall	23	10	50	40	0	0
+H-0119	University of Exeter	45	B	11	Computer Science & Informatics				Overall	6	15	50	25	5	5
+H-0119	University of Exeter	45	B	15	General Engineering				Overall	38.53	5	30	35	25	5
+H-0119	University of Exeter	45	C	17	Geography, Environmental Studies & Archaeology				Overall	51.3	15	50	30	5	0
+H-0119	University of Exeter	45	C	18	Economics & Econometrics				Overall	13.5	20	55	25	0	0
+H-0119	University of Exeter	45	C	19	Business & Management Studies				Overall	43.25	15	45	30	10	0
+H-0119	University of Exeter	45	C	20	Law				Overall	26	10	35	30	25	0
+H-0119	University of Exeter	45	C	21	Politics & International Studies				Overall	29.5	20	35	30	15	0
+H-0119	University of Exeter	45	C	23	Sociology				Overall	18.72	20	35	40	5	0
+H-0119	University of Exeter	45	C	25	Education				Overall	23.83	20	40	30	10	0
+H-0119	University of Exeter	45	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	26	10	25	40	25	0
+H-0119	University of Exeter	45	D	27	Area Studies				Overall	18	15	25	40	15	5
+H-0119	University of Exeter	45	D	28	Modern Languages				Overall	41.33	15	35	35	10	5
+H-0119	University of Exeter	45	D	29	English Language & Literature				Overall	44	45	20	25	10	0
+H-0119	University of Exeter	45	D	30	History				Overall	39.73	20	40	35	5	0
+H-0119	University of Exeter	45	D	31	Classics				Overall	18	30	30	30	10	0
+H-0119	University of Exeter	45	D	33	Theology & Religious Studies				Overall	11.79	10	40	35	15	0
+H-0119	University of Exeter	45	D	35	Music, Drama, Dance, Performing Arts				Overall	16	35	40	20	5	0
+H-0017	University College Falmouth	46	D	34	Art & Design: History, Practice, Theory				Overall	17.05	5	25	55	15	0
+H-0090	University of Glamorgan	47	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	26.6	0	0	5	55	40
+H-0090	University of Glamorgan	47	A	4	Psychology, Psychiatry & Neuroscience				Overall	12.7	0	10	25	55	10
+H-0090	University of Glamorgan	47	A	5	Biological Sciences				Overall	4	0	10	30	55	5
+H-0090	University of Glamorgan	47	B	10	Mathematical Sciences				Overall	4	0	20	45	30	5
+H-0090	University of Glamorgan	47	B	11	Computer Science & Informatics				Overall	22.45	5	35	40	20	0
+H-0090	University of Glamorgan	47	B	15	General Engineering				Overall	9.85	5	55	35	5	0
+H-0090	University of Glamorgan	47	C	16	Architecture, Built Environment & Planning				Overall	6.2	10	40	35	10	5
+H-0090	University of Glamorgan	47	C	19	Business & Management Studies				Overall	27.1	5	10	50	35	0
+H-0090	University of Glamorgan	47	C	20	Law				Overall	6.8	0	15	30	55	0
+H-0090	University of Glamorgan	47	C	22	Social Work & Social Policy				Overall	18.1	5	40	50	5	0
+H-0090	University of Glamorgan	47	C	25	Education				Overall	6.75	0	20	35	35	10
+H-0090	University of Glamorgan	47	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	9.5	5	15	30	40	10
+H-0090	University of Glamorgan	47	D	29	English Language & Literature				Overall	15	15	25	50	5	5
+H-0090	University of Glamorgan	47	D	30	History				Overall	6	10	40	45	5	0
+H-0090	University of Glamorgan	47	D	35	Music, Drama, Dance, Performing Arts				Overall	15.4	5	25	45	25	0
+H-0090	University of Glamorgan	47	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	8	10	20	45	25	0
+H-0168	University of Glasgow	48	A	1	Clinical Medicine				Overall	166.85	15	45	30	10	0
+H-0168	University of Glasgow	48	A	2	Public Health, Health Services & Primary Care				Overall	22.7	10	45	40	5	0
+H-0168	University of Glasgow	48	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	19.6	15	45	30	10	0
+H-0168	University of Glasgow	48	A	4	Psychology, Psychiatry & Neuroscience				Overall	39.9	20	40	40	0	0
+H-0168	University of Glasgow	48	A	5	Biological Sciences				Overall	78.6	15	40	35	10	0
+H-0168	University of Glasgow	48	A	6	Agriculture, Veterinary & Food Science				Overall	74.9	5	50	35	10	0
+H-0168	University of Glasgow	48	B	7	Earth Systems & Environmental Sciences				Overall	36	5	50	35	10	0
+H-0168	University of Glasgow	48	B	8	Chemistry				Overall	25	10	60	25	5	0
+H-0168	University of Glasgow	48	B	9	Physics				Overall	45.75	20	40	35	5	0
+H-0168	University of Glasgow	48	B	10	Mathematical Sciences				Overall	48.32	10	40	40	10	0
+H-0168	University of Glasgow	48	B	11	Computer Science & Informatics				Overall	30	30	50	20	0	0
+H-0168	University of Glasgow	48	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	34	10	35	40	15	0
+H-0168	University of Glasgow	48	B	13	Elec Engineering, Metallurgy & Materials				Overall	37.5	20	45	30	5	0
+H-0168	University of Glasgow	48	B	14	Civil and Construction Engineering				Overall	14	15	40	20	20	5
+H-0168	University of Glasgow	48	C	16	Architecture, Built Environment & Planning				Overall	17.39	15	45	35	5	0
+H-0168	University of Glasgow	48	C	17	Geography, Environmental Studies & Archaeology				Overall	35.86	10	40	35	15	0
+H-0168	University of Glasgow	48	C	18	Economics & Econometrics				Overall	20.8	25	50	25	0	0
+H-0168	University of Glasgow	48	C	19	Business & Management Studies				Overall	37.15	10	45	30	15	0
+H-0168	University of Glasgow	48	C	20	Law				Overall	37.95	15	40	35	10	0
+H-0168	University of Glasgow	48	C	21	Politics & International Studies				Overall	20	15	30	30	20	5
+H-0168	University of Glasgow	48	C	22	Social Work & Social Policy				Overall	4	5	35	45	15	0
+H-0168	University of Glasgow	48	C	23	Sociology				Overall	27.5	10	30	35	25	0
+H-0168	University of Glasgow	48	C	25	Education				Overall	62.3	10	20	35	30	5
+H-0168	University of Glasgow	48	D	27	Area Studies				Overall	9	5	35	45	10	5
+H-0168	University of Glasgow	48	D	28	Modern Languages				Overall	35.5	10	35	30	20	5
+H-0168	University of Glasgow	48	D	29	English Language & Literature				Overall	49.83	35	35	20	10	0
+H-0168	University of Glasgow	48	D	30	History				Overall	41	25	35	30	10	0
+H-0168	University of Glasgow	48	D	31	Classics				Overall	8.2	10	15	50	20	5
+H-0168	University of Glasgow	48	D	32	Philosophy				Overall	12.5	5	50	45	0	0
+H-0168	University of Glasgow	48	D	33	Theology & Religious Studies				Overall	16.5	10	35	35	15	5
+H-0168	University of Glasgow	48	D	34	Art & Design: History, Practice, Theory				Overall	18.42	45	40	15	0	0
+H-0168	University of Glasgow	48	D	35	Music, Drama, Dance, Performing Arts				Overall	27.25	35	30	25	10	0
+H-0168	University of Glasgow	48	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	6.4	25	30	35	10	0
+H-0106	Glasgow Caledonian University	49	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	48.41	15	45	30	10	0
+H-0106	Glasgow Caledonian University	49	A	4	Psychology, Psychiatry & Neuroscience				Overall	18.7	0	10	40	50	0
+H-0106	Glasgow Caledonian University	49	B	10	Mathematical Sciences				Overall	1	5	5	30	60	0
+H-0106	Glasgow Caledonian University	49	B	11	Computer Science & Informatics				Overall	8	0	15	55	25	5
+H-0106	Glasgow Caledonian University	49	B	15	General Engineering				Overall	10	0	20	50	20	10
+H-0106	Glasgow Caledonian University	49	C	16	Architecture, Built Environment & Planning				Overall	12.3	15	45	25	15	0
+H-0106	Glasgow Caledonian University	49	C	19	Business & Management Studies				Overall	24	0	25	50	20	5
+H-0106	Glasgow Caledonian University	49	C	20	Law				Overall	4.5	0	15	30	45	10
+H-0106	Glasgow Caledonian University	49	C	23	Sociology				Overall	11.2	5	5	35	45	10
+H-0106	Glasgow Caledonian University	49	C	25	Education				Overall	6.9	0	25	50	25	0
+H-0106	Glasgow Caledonian University	49	D	30	History				Overall	7	10	25	40	20	5
+H-0106	Glasgow Caledonian University	49	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	5.9	10	15	70	5	0
+H-0097	Glasgow School of Art	50	D	34	Art & Design: History, Practice, Theory				Overall	76.85	25	25	20	25	5
+H-0054	University of Gloucestershire	51	A	4	Psychology, Psychiatry & Neuroscience				Overall	7	0	10	30	45	15
+H-0054	University of Gloucestershire	51	C	16	Architecture, Built Environment & Planning				Overall	5.4	5	35	45	15	0
+H-0054	University of Gloucestershire	51	C	17	Geography, Environmental Studies & Archaeology				Overall	12	0	15	45	35	5
+H-0054	University of Gloucestershire	51	C	19	Business & Management Studies				Overall	13.8	0	10	35	40	15
+H-0054	University of Gloucestershire	51	C	22	Social Work & Social Policy				Overall	4.6	0	10	35	50	5
+H-0054	University of Gloucestershire	51	C	25	Education				Overall	5.6	10	15	40	20	15
+H-0054	University of Gloucestershire	51	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	7.2	0	10	30	50	10
+H-0054	University of Gloucestershire	51	D	29	English Language & Literature				Overall	9	5	30	40	25	0
+H-0054	University of Gloucestershire	51	D	30	History				Overall	10	5	20	40	30	5
+H-0054	University of Gloucestershire	51	D	33	Theology & Religious Studies				Overall	4	0	40	45	10	5
+H-0054	University of Gloucestershire	51	D	34	Art & Design: History, Practice, Theory				Overall	11.46	5	5	60	25	5
+H-0054	University of Gloucestershire	51	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	4	0	0	20	80	0
+H-0087	Glyndwr University	52	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	5.8	0	25	30	30	15
+H-0087	Glyndwr University	52	B	11	Computer Science & Informatics				Overall	3.2	5	35	50	10	0
+H-0087	Glyndwr University	52	B	13	Elec Engineering, Metallurgy & Materials				Overall	6.8	5	30	35	30	0
+H-0087	Glyndwr University	52	C	22	Social Work & Social Policy				Overall	3	0	20	40	35	5
+H-0087	Glyndwr University	52	C	25	Education				Overall	5.7	0	5	20	35	40
+H-0087	Glyndwr University	52	D	34	Art & Design: History, Practice, Theory				Overall	2.3	0	5	40	55	0
+H-0131	Goldsmiths College, University of London	53	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	4.5	0	0	15	40	45
+H-0131	Goldsmiths College, University of London	53	A	4	Psychology, Psychiatry & Neuroscience				Overall	26.85	10	40	40	10	0
+H-0131	Goldsmiths College, University of London	53	B	11	Computer Science & Informatics				Overall	21.2	20	40	30	10	0
+H-0131	Goldsmiths College, University of London	53	C	21	Politics & International Studies				Overall	16.4	10	20	45	20	5
+H-0131	Goldsmiths College, University of London	53	C	22	Social Work & Social Policy				Overall	6.8	10	25	45	20	0
+H-0131	Goldsmiths College, University of London	53	C	23	Sociology				Overall	32.6	35	25	30	10	0
+H-0131	Goldsmiths College, University of London	53	C	24	Anthropology & Development Studies				Overall	16.7	25	30	30	15	0
+H-0131	Goldsmiths College, University of London	53	C	25	Education				Overall	17.7	10	20	30	35	5
+H-0131	Goldsmiths College, University of London	53	D	29	English Language & Literature				Overall	29.05	15	50	25	5	5
+H-0131	Goldsmiths College, University of London	53	D	30	History				Overall	13	10	20	45	15	10
+H-0131	Goldsmiths College, University of London	53	D	34	Art & Design: History, Practice, Theory				Overall	52.7	20	35	35	10	0
+H-0131	Goldsmiths College, University of London	53	D	35	Music, Drama, Dance, Performing Arts				Overall	29.7	30	40	20	10	0
+H-0131	Goldsmiths College, University of London	53	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	21.7	45	35	15	5	0
+H-0059	University of Greenwich	54	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	16.1	5	20	30	35	10
+H-0059	University of Greenwich	54	A	4	Psychology, Psychiatry & Neuroscience				Overall	7	0	15	45	35	5
+H-0059	University of Greenwich	54	A	6	Agriculture, Veterinary & Food Science				Overall	24.45	5	25	50	20	0
+H-0059	University of Greenwich	54	B	10	Mathematical Sciences				Overall	2	0	40	40	20	0
+H-0059	University of Greenwich	54	B	11	Computer Science & Informatics				Overall	16.8	0	20	50	30	0
+H-0059	University of Greenwich	54	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	5.5	30	40	25	5	0
+H-0059	University of Greenwich	54	B	14	Civil and Construction Engineering				Overall	8	5	30	30	30	5
+H-0059	University of Greenwich	54	B	15	General Engineering				Overall	14.6	0	20	40	20	20
+H-0059	University of Greenwich	54	C	16	Architecture, Built Environment & Planning				Overall	10	10	30	40	10	10
+H-0059	University of Greenwich	54	C	19	Business & Management Studies				Overall	22.6	5	15	40	30	10
+H-0059	University of Greenwich	54	C	20	Law				Overall	7	0	5	40	45	10
+H-0059	University of Greenwich	54	C	21	Politics & International Studies				Overall	1	0	0	40	45	15
+H-0059	University of Greenwich	54	C	24	Anthropology & Development Studies				Overall	14.25	0	25	40	30	5
+H-0059	University of Greenwich	54	C	25	Education				Overall	5.3	5	5	45	40	5
+H-0059	University of Greenwich	54	D	28	Modern Languages				Overall	1	0	20	40	35	5
+H-0059	University of Greenwich	54	D	29	English Language & Literature				Overall	5.75	0	25	25	45	5
+H-0059	University of Greenwich	54	D	30	History				Overall	12.4	10	25	45	20	0
+H-0059	University of Greenwich	54	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	7	0	10	45	45	0
+H-0208	Guildhall School of Music & Drama	55	D	35	Music, Drama, Dance, Performing Arts				Overall	14.92	10	25	30	25	10
+H-0018	Harper Adams University College	56	A	6	Agriculture, Veterinary & Food Science				Overall	18.4	0	25	45	30	0
+H-0171	Heriot-Watt University	57	A	4	Psychology, Psychiatry & Neuroscience				Overall	9.2	0	5	30	65	0
+H-0171	Heriot-Watt University	57	A	6	Agriculture, Veterinary & Food Science				Overall	12.7	5	35	35	25	0
+H-0171	Heriot-Watt University	57	B	7	Earth Systems & Environmental Sciences				Overall	10.9	0	25	55	20	0
+H-0171	Heriot-Watt University	57	B	8	Chemistry				Overall	19	10	40	50	0	0
+H-0171	Heriot-Watt University	57	B	9	Physics				Overall	19.5	15	40	40	5	0
+H-0171	Heriot-Watt University	57	B	10	Mathematical Sciences				Overall	47.46	10	40	40	10	0
+H-0171	Heriot-Watt University	57	B	11	Computer Science & Informatics				Overall	20.1	15	45	30	10	0
+H-0171	Heriot-Watt University	57	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	11.4	10	35	40	15	0
+H-0171	Heriot-Watt University	57	B	14	Civil and Construction Engineering				Overall	18	5	50	35	10	0
+H-0171	Heriot-Watt University	57	B	15	General Engineering				Overall	73.3	20	45	30	5	0
+H-0171	Heriot-Watt University	57	C	16	Architecture, Built Environment & Planning				Overall	39.2	20	30	35	10	5
+H-0171	Heriot-Watt University	57	C	19	Business & Management Studies				Overall	36.23	10	35	40	15	0
+H-0171	Heriot-Watt University	57	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	8.2	10	15	35	30	10
+H-0171	Heriot-Watt University	57	D	27	Area Studies				Overall	13.2	10	20	40	30	0
+H-0171	Heriot-Watt University	57	D	34	Art & Design: History, Practice, Theory				Overall	10.65	15	35	20	15	15
+H-0060	University of Hertfordshire	58	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	27.22	5	30	40	25	0
+H-0060	University of Hertfordshire	58	A	4	Psychology, Psychiatry & Neuroscience				Overall	17	5	25	55	15	0
+H-0060	University of Hertfordshire	58	B	9	Physics				Overall	28	15	40	35	10	0
+H-0060	University of Hertfordshire	58	B	11	Computer Science & Informatics				Overall	25	10	45	40	5	0
+H-0060	University of Hertfordshire	58	B	15	General Engineering				Overall	4	15	35	30	15	5
+H-0060	University of Hertfordshire	58	C	19	Business & Management Studies				Overall	12.4	5	30	45	15	5
+H-0060	University of Hertfordshire	58	C	22	Social Work & Social Policy				Overall	3.7	0	15	55	30	0
+H-0060	University of Hertfordshire	58	C	25	Education				Overall	5.7	0	20	35	35	10
+H-0060	University of Hertfordshire	58	D	29	English Language & Literature				Overall	6	10	35	45	5	5
+H-0060	University of Hertfordshire	58	D	30	History				Overall	9	25	45	30	0	0
+H-0060	University of Hertfordshire	58	D	32	Philosophy				Overall	7.8	0	35	55	10	0
+H-0060	University of Hertfordshire	58	D	34	Art & Design: History, Practice, Theory				Overall	5.1	10	50	25	15	0
+H-0060	University of Hertfordshire	58	D	35	Music, Drama, Dance, Performing Arts				Overall	3.7	5	10	40	40	5
+H-0205	Heythrop College	59	D	32	Philosophy				Overall	7	0	5	50	35	10
+H-0205	Heythrop College	59	D	33	Theology & Religious Studies				Overall	16.5	0	10	40	40	10
+H-0061	University of Huddersfield	60	B	8	Chemistry				Overall	10	0	25	50	25	0
+H-0061	University of Huddersfield	60	B	11	Computer Science & Informatics				Overall	6	5	20	50	25	0
+H-0061	University of Huddersfield	60	B	15	General Engineering				Overall	10	5	30	55	10	0
+H-0061	University of Huddersfield	60	C	19	Business & Management Studies				Overall	2	0	30	50	15	5
+H-0061	University of Huddersfield	60	C	21	Politics & International Studies				Overall	7	0	0	25	55	20
+H-0061	University of Huddersfield	60	C	22	Social Work & Social Policy				Overall	16.8	10	35	40	15	0
+H-0061	University of Huddersfield	60	C	23	Sociology				Overall	9	0	25	25	45	5
+H-0061	University of Huddersfield	60	C	25	Education				Overall	7	5	10	50	30	5
+H-0061	University of Huddersfield	60	D	29	English Language & Literature				Overall	10.51	5	15	50	30	0
+H-0061	University of Huddersfield	60	D	30	History				Overall	8.75	5	40	45	10	0
+H-0061	University of Huddersfield	60	D	35	Music, Drama, Dance, Performing Arts				Overall	12.6	20	55	20	5	0
+H-0061	University of Huddersfield	60	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	3.75	0	0	15	70	15
+H-0120	University of Hull	61	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	30.6	20	40	30	5	5
+H-0120	University of Hull	61	A	4	Psychology, Psychiatry & Neuroscience				Overall	20.7	5	30	45	20	0
+H-0120	University of Hull	61	A	5	Biological Sciences				Overall	11.8	5	10	55	30	0
+H-0120	University of Hull	61	B	8	Chemistry				Overall	26	5	45	45	5	0
+H-0120	University of Hull	61	B	15	General Engineering				Overall	25.6	0	40	55	5	0
+H-0120	University of Hull	61	C	17	Geography, Environmental Studies & Archaeology				Overall	24.9	15	40	35	10	0
+H-0120	University of Hull	61	C	19	Business & Management Studies				Overall	60.6	5	40	40	15	0
+H-0120	University of Hull	61	C	20	Law				Overall	23.5	5	40	40	15	0
+H-0120	University of Hull	61	C	21	Politics & International Studies				Overall	21.2	10	25	40	20	5
+H-0120	University of Hull	61	C	22	Social Work & Social Policy				Overall	30.8	10	30	45	15	0
+H-0120	University of Hull	61	C	25	Education				Overall	18.1	5	20	45	25	5
+H-0120	University of Hull	61	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	11	0	10	35	55	0
+H-0120	University of Hull	61	D	29	English Language & Literature				Overall	34.3	10	45	35	10	0
+H-0120	University of Hull	61	D	30	History				Overall	29.7	15	50	25	10	0
+H-0120	University of Hull	61	D	32	Philosophy				Overall	10	5	30	45	20	0
+H-0120	University of Hull	61	D	35	Music, Drama, Dance, Performing Arts				Overall	17.9	5	35	40	20	0
+H-0132	Imperial College London	62	A	1	Clinical Medicine				Overall	392.32	30	45	20	5	0
+H-0132	Imperial College London	62	A	2	Public Health, Health Services & Primary Care				Overall	32.95	40	30	30	0	0
+H-0132	Imperial College London	62	A	4	Psychology, Psychiatry & Neuroscience				Overall	55.1	10	50	30	10	0
+H-0132	Imperial College London	62	A	5	Biological Sciences				Overall	92.3	20	45	25	10	0
+H-0132	Imperial College London	62	B	8	Chemistry				Overall	53.1	20	55	25	0	0
+H-0132	Imperial College London	62	B	9	Physics				Overall	126.8	20	45	25	10	0
+H-0132	Imperial College London	62	B	10	Mathematical Sciences				Overall	72.9	20	45	30	5	0
+H-0132	Imperial College London	62	B	11	Computer Science & Informatics				Overall	53.4	35	50	15	0	0
+H-0132	Imperial College London	62	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	105	30	50	15	5	0
+H-0132	Imperial College London	62	B	13	Elec Engineering, Metallurgy & Materials				Overall	71	20	35	40	5	0
+H-0132	Imperial College London	62	B	14	Civil and Construction Engineering				Overall	49.4	40	55	5	0	0
+H-0132	Imperial College London	62	B	15	General Engineering				Overall	67.7	25	45	30	0	0
+H-0132	Imperial College London	62	C	19	Business & Management Studies				Overall	47.6	35	50	15	0	0
+H-0132	Imperial College London	62	D	30	History				Overall	5	40	40	20	0	0
+H-0188	Institute of Cancer Research	63	A	1	Clinical Medicine				Overall	65.51	35	40	25	0	0
+H-0188	Institute of Cancer Research	63	A	5	Biological Sciences				Overall	31	40	45	15	0	0
+H-0133	Institute of Education	64	C	25	Education				Overall	218.03	35	30	25	10	0
+H-7003	Institute of Zoology	65	A	5	Biological Sciences				Overall	21	10	40	45	5	0
+H-0121	Keele University	66	A	1	Clinical Medicine				Overall	14.4	0	15	45	40	0
+H-0121	Keele University	66	A	2	Public Health, Health Services & Primary Care				Overall	16.5	15	25	45	15	0
+H-0121	Keele University	66	A	4	Psychology, Psychiatry & Neuroscience				Overall	14.2	0	25	45	25	5
+H-0121	Keele University	66	B	9	Physics				Overall	10	5	35	40	20	0
+H-0121	Keele University	66	B	10	Mathematical Sciences				Overall	9	15	45	35	5	0
+H-0121	Keele University	66	B	15	General Engineering				Overall	43.8	10	40	40	10	0
+H-0121	Keele University	66	C	19	Business & Management Studies				Overall	38.4	10	35	35	15	5
+H-0121	Keele University	66	C	20	Law				Overall	25.6	10	40	35	15	0
+H-0121	Keele University	66	C	21	Politics & International Studies				Overall	29.75	10	20	50	15	5
+H-0121	Keele University	66	C	22	Social Work & Social Policy				Overall	39.5	15	50	30	5	0
+H-0121	Keele University	66	D	28	Modern Languages				Overall	2	15	20	35	30	0
+H-0121	Keele University	66	D	29	English Language & Literature				Overall	15	10	40	45	5	0
+H-0121	Keele University	66	D	30	History				Overall	19	20	35	30	15	0
+H-0121	Keele University	66	D	35	Music, Drama, Dance, Performing Arts				Overall	8	20	45	30	5	0
+H-0122	University of Kent	67	A	4	Psychology, Psychiatry & Neuroscience				Overall	39.1	10	30	40	20	0
+H-0122	University of Kent	67	A	5	Biological Sciences				Overall	19.4	5	30	40	20	5
+H-0122	University of Kent	67	B	7	Earth Systems & Environmental Sciences				Overall	8.41	5	50	35	10	0
+H-0122	University of Kent	67	B	9	Physics				Overall	3	0	30	60	10	0
+H-0122	University of Kent	67	B	10	Mathematical Sciences				Overall	24	15	40	40	5	0
+H-0122	University of Kent	67	B	11	Computer Science & Informatics				Overall	26.7	15	50	30	5	0
+H-0122	University of Kent	67	B	13	Elec Engineering, Metallurgy & Materials				Overall	22	25	55	20	0	0
+H-0122	University of Kent	67	C	18	Economics & Econometrics				Overall	13	15	60	25	0	0
+H-0122	University of Kent	67	C	19	Business & Management Studies				Overall	38.6	10	45	30	15	0
+H-0122	University of Kent	67	C	20	Law				Overall	36.5	30	35	25	10	0
+H-0122	University of Kent	67	C	21	Politics & International Studies				Overall	21	0	35	40	25	0
+H-0122	University of Kent	67	C	22	Social Work & Social Policy				Overall	55.7	30	40	25	5	0
+H-0122	University of Kent	67	C	24	Anthropology & Development Studies				Overall	15.7	20	30	30	20	0
+H-0122	University of Kent	67	D	28	Modern Languages				Overall	19	5	15	50	25	5
+H-0122	University of Kent	67	D	29	English Language & Literature				Overall	18.25	30	35	25	10	0
+H-0122	University of Kent	67	D	30	History				Overall	22	35	35	25	5	0
+H-0122	University of Kent	67	D	31	Classics				Overall	10	5	5	65	25	0
+H-0122	University of Kent	67	D	32	Philosophy				Overall	8	10	25	55	10	0
+H-0122	University of Kent	67	D	33	Theology & Religious Studies				Overall	4.5	10	30	30	25	5
+H-0122	University of Kent	67	D	35	Music, Drama, Dance, Performing Arts				Overall	24.9	35	35	20	10	0
+H-0134	King's College London	68	A	1	Clinical Medicine				Overall	172.9	15	45	35	5	0
+H-0134	King's College London	68	A	2	Public Health, Health Services & Primary Care				Overall	38.5	10	40	40	10	0
+H-0134	King's College London	68	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	147.21	15	35	30	15	5
+H-0134	King's College London	68	A	4	Psychology, Psychiatry & Neuroscience				Overall	214.59	15	40	40	5	0
+H-0134	King's College London	68	A	5	Biological Sciences				Overall	89.1	20	35	35	5	5
+H-0134	King's College London	68	B	9	Physics				Overall	16.4	10	40	45	5	0
+H-0134	King's College London	68	B	10	Mathematical Sciences				Overall	31	15	50	25	10	0
+H-0134	King's College London	68	B	11	Computer Science & Informatics				Overall	24	15	45	35	5	0
+H-0134	King's College London	68	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	18	10	35	40	15	0
+H-0134	King's College London	68	B	13	Elec Engineering, Metallurgy & Materials				Overall	15	5	35	40	20	0
+H-0134	King's College London	68	C	17	Geography, Environmental Studies & Archaeology				Overall	31.2	20	50	25	5	0
+H-0134	King's College London	68	C	19	Business & Management Studies				Overall	28.25	30	40	25	5	0
+H-0134	King's College London	68	C	20	Law				Overall	53.55	15	35	40	10	0
+H-0134	King's College London	68	C	21	Politics & International Studies				Overall	61.3	15	30	30	20	5
+H-0134	King's College London	68	C	25	Education				Overall	34.15	30	35	25	10	0
+H-0134	King's College London	68	D	27	Area Studies				Overall	8	15	35	20	15	15
+H-0134	King's College London	68	D	28	Modern Languages				Overall	39.5	25	35	25	10	5
+H-0134	King's College London	68	D	29	English Language & Literature				Overall	20.5	15	55	25	5	0
+H-0134	King's College London	68	D	30	History				Overall	21.5	25	35	30	10	0
+H-0134	King's College London	68	D	31	Classics				Overall	27.75	30	35	25	10	0
+H-0134	King's College London	68	D	32	Philosophy				Overall	21.03	35	40	20	5	0
+H-0134	King's College London	68	D	33	Theology & Religious Studies				Overall	16	10	55	30	5	0
+H-0134	King's College London	68	D	35	Music, Drama, Dance, Performing Arts				Overall	19.1	45	40	10	5	0
+H-0134	King's College London	68	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	23.5	35	30	15	15	5
+H-0063	Kingston University	69	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	34.8	5	20	40	25	10
+H-0063	Kingston University	69	A	4	Psychology, Psychiatry & Neuroscience				Overall	8	0	20	35	35	10
+H-0063	Kingston University	69	B	11	Computer Science & Informatics				Overall	17.45	5	30	45	20	0
+H-0063	Kingston University	69	B	15	General Engineering				Overall	16	5	20	40	35	0
+H-0063	Kingston University	69	C	16	Architecture, Built Environment & Planning				Overall	5.2	0	10	30	50	10
+H-0063	Kingston University	69	C	17	Geography, Environmental Studies & Archaeology				Overall	17.2	5	25	55	15	0
+H-0063	Kingston University	69	C	18	Economics & Econometrics				Overall	4	5	15	55	25	0
+H-0063	Kingston University	69	C	19	Business & Management Studies				Overall	21.1	10	35	45	10	0
+H-0063	Kingston University	69	C	20	Law				Overall	4.75	0	10	35	50	5
+H-0063	Kingston University	69	C	25	Education				Overall	4	0	25	25	35	15
+H-0063	Kingston University	69	D	27	Area Studies				Overall	17.8	5	15	35	35	10
+H-0063	Kingston University	69	D	29	English Language & Literature				Overall	18.35	10	30	50	10	0
+H-0063	Kingston University	69	D	30	History				Overall	10.65	5	25	45	25	0
+H-0063	Kingston University	69	D	34	Art & Design: History, Practice, Theory				Overall	25.05	10	40	40	10	0
+H-0063	Kingston University	69	D	35	Music, Drama, Dance, Performing Arts				Overall	9.5	0	10	30	55	5
+H-0176	University of Wales, Lampeter	70	C	17	Geography, Environmental Studies & Archaeology				Overall	15	15	35	35	15	0
+H-0176	University of Wales, Lampeter	70	D	28	Modern Languages				Overall	2.5	0	5	45	35	15
+H-0176	University of Wales, Lampeter	70	D	29	English Language & Literature				Overall	12.9	0	15	45	25	15
+H-0176	University of Wales, Lampeter	70	D	31	Classics				Overall	6.2	5	15	40	40	0
+H-0176	University of Wales, Lampeter	70	D	33	Theology & Religious Studies				Overall	23	5	30	55	10	0
+H-0123	Lancaster University	71	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	18	20	40	35	5	0
+H-0123	Lancaster University	71	A	4	Psychology, Psychiatry & Neuroscience				Overall	31	10	30	45	15	0
+H-0123	Lancaster University	71	B	7	Earth Systems & Environmental Sciences				Overall	55.25	15	55	25	5	0
+H-0123	Lancaster University	71	B	9	Physics				Overall	26.4	25	45	25	5	0
+H-0123	Lancaster University	71	B	10	Mathematical Sciences				Overall	31.65	15	45	35	5	0
+H-0123	Lancaster University	71	B	11	Computer Science & Informatics				Overall	30.25	25	55	20	0	0
+H-0123	Lancaster University	71	B	13	Elec Engineering, Metallurgy & Materials				Overall	9.5	10	45	35	5	5
+H-0123	Lancaster University	71	B	15	General Engineering				Overall	14	10	40	45	5	0
+H-0123	Lancaster University	71	C	19	Business & Management Studies				Overall	113.36	25	50	20	5	0
+H-0123	Lancaster University	71	C	20	Law				Overall	22	5	40	45	10	0
+H-0123	Lancaster University	71	C	21	Politics & International Studies				Overall	18	5	15	50	25	5
+H-0123	Lancaster University	71	C	22	Social Work & Social Policy				Overall	42.25	20	40	35	5	0
+H-0123	Lancaster University	71	C	23	Sociology				Overall	29.8	35	25	25	15	0
+H-0123	Lancaster University	71	C	25	Education				Overall	17.9	15	30	35	20	0
+H-0123	Lancaster University	71	D	27	Area Studies				Overall	13	5	30	50	10	5
+H-0123	Lancaster University	71	D	28	Modern Languages				Overall	31.7	20	25	40	15	0
+H-0123	Lancaster University	71	D	29	English Language & Literature				Overall	29	20	40	30	10	0
+H-0123	Lancaster University	71	D	30	History				Overall	25.63	15	40	40	5	0
+H-0123	Lancaster University	71	D	32	Philosophy				Overall	9	10	30	55	5	0
+H-0123	Lancaster University	71	D	33	Theology & Religious Studies				Overall	10	15	40	35	10	0
+H-0123	Lancaster University	71	D	34	Art & Design: History, Practice, Theory				Overall	33.7	25	55	20	0	0
+H-0124	University of Leeds	72	A	1	Clinical Medicine				Overall	113.75	10	50	35	5	0
+H-0124	University of Leeds	72	A	2	Public Health, Health Services & Primary Care				Overall	36.4	20	40	35	5	0
+H-0124	University of Leeds	72	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	42	25	35	25	10	5
+H-0124	University of Leeds	72	A	4	Psychology, Psychiatry & Neuroscience				Overall	37.4	10	40	45	5	0
+H-0124	University of Leeds	72	A	5	Biological Sciences				Overall	113.8	15	45	35	5	0
+H-0124	University of Leeds	72	A	6	Agriculture, Veterinary & Food Science				Overall	9.8	20	35	35	5	5
+H-0124	University of Leeds	72	B	7	Earth Systems & Environmental Sciences				Overall	74.3	15	55	25	5	0
+H-0124	University of Leeds	72	B	8	Chemistry				Overall	37.2	20	50	30	0	0
+H-0124	University of Leeds	72	B	9	Physics				Overall	35.5	15	35	40	10	0
+H-0124	University of Leeds	72	B	10	Mathematical Sciences				Overall	59.1	20	40	35	5	0
+H-0124	University of Leeds	72	B	11	Computer Science & Informatics				Overall	32.5	25	55	20	0	0
+H-0124	University of Leeds	72	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	40.5	20	55	20	5	0
+H-0124	University of Leeds	72	B	13	Elec Engineering, Metallurgy & Materials				Overall	22	30	50	15	5	0
+H-0124	University of Leeds	72	B	14	Civil and Construction Engineering				Overall	22.2	10	45	40	5	0
+H-0124	University of Leeds	72	B	15	General Engineering				Overall	48	20	60	20	0	0
+H-0124	University of Leeds	72	C	16	Architecture, Built Environment & Planning				Overall	31.65	20	45	30	5	0
+H-0124	University of Leeds	72	C	17	Geography, Environmental Studies & Archaeology				Overall	37.7	25	45	25	5	0
+H-0124	University of Leeds	72	C	19	Business & Management Studies				Overall	69.66	20	50	25	5	0
+H-0124	University of Leeds	72	C	20	Law				Overall	35.2	15	40	30	15	0
+H-0124	University of Leeds	72	C	21	Politics & International Studies				Overall	28.6	5	10	50	30	5
+H-0124	University of Leeds	72	C	22	Social Work & Social Policy				Overall	31.9	35	30	30	5	0
+H-0124	University of Leeds	72	C	25	Education				Overall	33.6	20	40	35	5	0
+H-0124	University of Leeds	72	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	7.3	10	20	50	20	0
+H-0124	University of Leeds	72	D	27	Area Studies				Overall	18	5	40	40	15	0
+H-0124	University of Leeds	72	D	28	Modern Languages				Overall	57.8	20	35	35	10	0
+H-0124	University of Leeds	72	D	29	English Language & Literature				Overall	49.4	35	30	30	5	0
+H-0124	University of Leeds	72	D	30	History				Overall	31.2	15	50	30	5	0
+H-0124	University of Leeds	72	D	31	Classics				Overall	8	5	25	50	20	0
+H-0124	University of Leeds	72	D	32	Philosophy				Overall	27	20	45	30	5	0
+H-0124	University of Leeds	72	D	33	Theology & Religious Studies				Overall	8	15	30	50	5	0
+H-0124	University of Leeds	72	D	34	Art & Design: History, Practice, Theory				Overall	29.1	25	20	40	15	0
+H-0124	University of Leeds	72	D	35	Music, Drama, Dance, Performing Arts				Overall	22.1	20	45	30	5	0
+H-0124	University of Leeds	72	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	19	15	35	50	0	0
+H-0207	Leeds College of Music	73	D	35	Music, Drama, Dance, Performing Arts				Overall	4.83	10	15	40	35	0
+H-0064	Leeds Metropolitan University	74	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	16.2	0	10	25	55	10
+H-0064	Leeds Metropolitan University	74	C	19	Business & Management Studies				Overall	16.8	0	20	45	30	5
+H-0064	Leeds Metropolitan University	74	C	25	Education				Overall	13.7	0	20	35	35	10
+H-0064	Leeds Metropolitan University	74	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	32.9	15	25	35	25	0
+H-0064	Leeds Metropolitan University	74	D	34	Art & Design: History, Practice, Theory				Overall	8.8	5	10	45	40	0
+H-0064	Leeds Metropolitan University	74	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	32.6	15	40	30	15	0
+H-0040	Leeds Trinity & All Saints	75	A	4	Psychology, Psychiatry & Neuroscience				Overall	1	0	0	55	30	15
+H-0040	Leeds Trinity & All Saints	75	D	29	English Language & Literature				Overall	8	0	35	30	25	10
+H-0040	Leeds Trinity & All Saints	75	D	30	History				Overall	4	5	20	50	20	5
+H-0040	Leeds Trinity & All Saints	75	D	33	Theology & Religious Studies				Overall	2	0	40	10	25	25
+H-0125	University of Leicester	76	A	1	Clinical Medicine				Overall	94.05	5	35	55	5	0
+H-0125	University of Leicester	76	A	2	Public Health, Health Services & Primary Care				Overall	24.4	10	50	35	5	0
+H-0125	University of Leicester	76	A	4	Psychology, Psychiatry & Neuroscience				Overall	26	5	10	50	35	0
+H-0125	University of Leicester	76	A	5	Biological Sciences				Overall	79.33	10	35	40	15	0
+H-0125	University of Leicester	76	B	7	Earth Systems & Environmental Sciences				Overall	17.2	10	55	30	5	0
+H-0125	University of Leicester	76	B	8	Chemistry				Overall	21.8	5	35	55	5	0
+H-0125	University of Leicester	76	B	9	Physics				Overall	45	15	40	30	15	0
+H-0125	University of Leicester	76	B	10	Mathematical Sciences				Overall	22	5	40	50	5	0
+H-0125	University of Leicester	76	B	11	Computer Science & Informatics				Overall	19	20	45	30	5	0
+H-0125	University of Leicester	76	B	15	General Engineering				Overall	30.2	15	30	45	10	0
+H-0125	University of Leicester	76	C	17	Geography, Environmental Studies & Archaeology				Overall	54.33	25	40	25	10	0
+H-0125	University of Leicester	76	C	18	Economics & Econometrics				Overall	26.2	20	50	30	0	0
+H-0125	University of Leicester	76	C	19	Business & Management Studies				Overall	36.4	15	40	30	15	0
+H-0125	University of Leicester	76	C	20	Law				Overall	45.4	5	35	35	25	0
+H-0125	University of Leicester	76	C	21	Politics & International Studies				Overall	11	5	10	50	30	5
+H-0125	University of Leicester	76	C	22	Social Work & Social Policy				Overall	15	5	20	35	35	5
+H-0125	University of Leicester	76	C	23	Sociology				Overall	12.5	10	20	45	20	5
+H-0125	University of Leicester	76	C	25	Education				Overall	41.3	5	25	45	20	5
+H-0125	University of Leicester	76	D	28	Modern Languages				Overall	9	5	35	35	25	0
+H-0125	University of Leicester	76	D	29	English Language & Literature				Overall	23.25	15	45	35	5	0
+H-0125	University of Leicester	76	D	30	History				Overall	33	20	30	40	10	0
+H-0125	University of Leicester	76	D	34	Art & Design: History, Practice, Theory				Overall	6.8	10	30	50	10	0
+H-0125	University of Leicester	76	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	19.8	65	30	5	0	0
+H-0062	University of Lincoln	77	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	9	0	10	15	40	35
+H-0062	University of Lincoln	77	A	4	Psychology, Psychiatry & Neuroscience				Overall	5.8	5	20	45	30	0
+H-0062	University of Lincoln	77	A	6	Agriculture, Veterinary & Food Science				Overall	8.45	5	5	45	40	5
+H-0062	University of Lincoln	77	B	11	Computer Science & Informatics				Overall	9	15	35	35	15	0
+H-0062	University of Lincoln	77	C	16	Architecture, Built Environment & Planning				Overall	17.6	5	30	30	30	5
+H-0062	University of Lincoln	77	C	19	Business & Management Studies				Overall	21.4	0	20	40	30	10
+H-0062	University of Lincoln	77	C	20	Law				Overall	3	0	10	40	50	0
+H-0062	University of Lincoln	77	C	21	Politics & International Studies				Overall	8.2	5	15	30	45	5
+H-0062	University of Lincoln	77	C	22	Social Work & Social Policy				Overall	12.5	5	30	55	10	0
+H-0062	University of Lincoln	77	C	25	Education				Overall	3.4	5	30	40	10	15
+H-0062	University of Lincoln	77	D	30	History				Overall	8.5	0	40	50	5	5
+H-0062	University of Lincoln	77	D	34	Art & Design: History, Practice, Theory				Overall	20.7	5	10	45	25	15
+H-0062	University of Lincoln	77	D	35	Music, Drama, Dance, Performing Arts				Overall	8	5	15	25	50	5
+H-0062	University of Lincoln	77	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	10	15	55	25	0	5
+H-0126	University of Liverpool	78	A	1	Clinical Medicine				Overall	124.1	10	50	30	5	5
+H-0126	University of Liverpool	78	A	2	Public Health, Health Services & Primary Care				Overall	36.6	10	45	35	10	0
+H-0126	University of Liverpool	78	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	56.4	10	30	35	20	5
+H-0126	University of Liverpool	78	A	4	Psychology, Psychiatry & Neuroscience				Overall	28	5	25	50	20	0
+H-0126	University of Liverpool	78	A	5	Biological Sciences				Overall	109	10	45	35	10	0
+H-0126	University of Liverpool	78	A	6	Agriculture, Veterinary & Food Science				Overall	62.6	5	40	45	10	0
+H-0126	University of Liverpool	78	B	7	Earth Systems & Environmental Sciences				Overall	25	15	60	20	5	0
+H-0126	University of Liverpool	78	B	8	Chemistry				Overall	37.1	20	50	25	5	0
+H-0126	University of Liverpool	78	B	9	Physics				Overall	34.6	20	35	35	10	0
+H-0126	University of Liverpool	78	B	10	Mathematical Sciences				Overall	43.33	10	45	40	5	0
+H-0126	University of Liverpool	78	B	11	Computer Science & Informatics				Overall	28	30	45	25	0	0
+H-0126	University of Liverpool	78	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	23	15	45	35	5	0
+H-0126	University of Liverpool	78	B	13	Elec Engineering, Metallurgy & Materials				Overall	36	35	35	30	0	0
+H-0126	University of Liverpool	78	B	14	Civil and Construction Engineering				Overall	13.33	5	45	25	25	0
+H-0126	University of Liverpool	78	C	16	Architecture, Built Environment & Planning				Overall	26.3	10	40	35	15	0
+H-0126	University of Liverpool	78	C	17	Geography, Environmental Studies & Archaeology				Overall	50.4	25	40	30	5	0
+H-0126	University of Liverpool	78	C	19	Business & Management Studies				Overall	39	10	40	35	15	0
+H-0126	University of Liverpool	78	C	20	Law				Overall	23.5	10	45	25	20	0
+H-0126	University of Liverpool	78	C	21	Politics & International Studies				Overall	17	0	15	55	25	5
+H-0126	University of Liverpool	78	C	23	Sociology				Overall	21	5	25	35	30	5
+H-0126	University of Liverpool	78	D	27	Area Studies				Overall	12.2	20	20	35	20	5
+H-0126	University of Liverpool	78	D	28	Modern Languages				Overall	24	15	35	35	15	0
+H-0126	University of Liverpool	78	D	29	English Language & Literature				Overall	27.45	30	35	30	5	0
+H-0126	University of Liverpool	78	D	30	History				Overall	25	35	35	25	5	0
+H-0126	University of Liverpool	78	D	31	Classics				Overall	11.35	10	40	35	10	5
+H-0126	University of Liverpool	78	D	32	Philosophy				Overall	11	0	25	60	15	0
+H-0126	University of Liverpool	78	D	35	Music, Drama, Dance, Performing Arts				Overall	13.2	10	50	30	5	5
+H-0023	Liverpool Hope University	79	A	4	Psychology, Psychiatry & Neuroscience				Overall	8	0	5	20	65	10
+H-0023	Liverpool Hope University	79	B	11	Computer Science & Informatics				Overall	4.2	0	20	40	35	5
+H-0023	Liverpool Hope University	79	C	21	Politics & International Studies				Overall	9	0	0	25	45	30
+H-0023	Liverpool Hope University	79	C	22	Social Work & Social Policy				Overall	4	5	0	30	50	15
+H-0023	Liverpool Hope University	79	C	25	Education				Overall	8.8	0	20	30	25	25
+H-0023	Liverpool Hope University	79	D	29	English Language & Literature				Overall	6.2	0	10	30	55	5
+H-0023	Liverpool Hope University	79	D	33	Theology & Religious Studies				Overall	13.9	5	15	55	20	5
+H-0023	Liverpool Hope University	79	D	35	Music, Drama, Dance, Performing Arts				Overall	8.5	0	30	35	30	5
+H-0065	Liverpool John Moores University	80	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	61.6	5	20	45	30	0
+H-0065	Liverpool John Moores University	80	A	5	Biological Sciences				Overall	7	0	10	50	40	0
+H-0065	Liverpool John Moores University	80	B	9	Physics				Overall	16.5	10	35	40	15	0
+H-0065	Liverpool John Moores University	80	B	11	Computer Science & Informatics				Overall	4	5	45	45	5	0
+H-0065	Liverpool John Moores University	80	B	13	Elec Engineering, Metallurgy & Materials				Overall	2	20	40	30	10	0
+H-0065	Liverpool John Moores University	80	B	15	General Engineering				Overall	5	20	40	30	10	0
+H-0065	Liverpool John Moores University	80	C	16	Architecture, Built Environment & Planning				Overall	12	5	20	30	40	5
+H-0065	Liverpool John Moores University	80	C	19	Business & Management Studies				Overall	8	0	5	40	50	5
+H-0065	Liverpool John Moores University	80	C	24	Anthropology & Development Studies				Overall	9	10	35	35	20	0
+H-0065	Liverpool John Moores University	80	C	25	Education				Overall	11.19	0	20	40	35	5
+H-0065	Liverpool John Moores University	80	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	22	25	25	35	15	0
+H-0065	Liverpool John Moores University	80	D	29	English Language & Literature				Overall	10.7	5	25	45	25	0
+H-0065	Liverpool John Moores University	80	D	30	History				Overall	7	0	15	65	15	5
+H-0065	Liverpool John Moores University	80	D	34	Art & Design: History, Practice, Theory				Overall	12.4	0	35	40	25	0
+H-0065	Liverpool John Moores University	80	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	5	5	20	30	45	0
+H-0135	London Business School	81	C	19	Business & Management Studies				Overall	89.86	55	30	10	5	0
+H-0202	London Metropolitan University	82	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	10	5	25	35	25	10
+H-0202	London Metropolitan University	82	A	4	Psychology, Psychiatry & Neuroscience				Overall	11	0	10	45	40	5
+H-0202	London Metropolitan University	82	A	5	Biological Sciences				Overall	8	0	5	25	45	25
+H-0202	London Metropolitan University	82	A	6	Agriculture, Veterinary & Food Science				Overall	3	0	5	50	30	15
+H-0202	London Metropolitan University	82	B	10	Mathematical Sciences				Overall	8	5	20	40	35	0
+H-0202	London Metropolitan University	82	B	11	Computer Science & Informatics				Overall	23	0	10	35	50	5
+H-0202	London Metropolitan University	82	B	13	Elec Engineering, Metallurgy & Materials				Overall	4	0	0	35	45	20
+H-0202	London Metropolitan University	82	C	16	Architecture, Built Environment & Planning				Overall	23	5	30	35	30	0
+H-0202	London Metropolitan University	82	C	18	Economics & Econometrics				Overall	8	0	35	55	10	0
+H-0202	London Metropolitan University	82	C	19	Business & Management Studies				Overall	28	0	15	35	40	10
+H-0202	London Metropolitan University	82	C	20	Law				Overall	6.5	0	10	50	25	15
+H-0202	London Metropolitan University	82	C	21	Politics & International Studies				Overall	19.6	5	15	30	40	10
+H-0202	London Metropolitan University	82	C	22	Social Work & Social Policy				Overall	20.4	10	40	30	20	0
+H-0202	London Metropolitan University	82	C	25	Education				Overall	10.8	10	40	35	15	0
+H-0202	London Metropolitan University	82	D	27	Area Studies				Overall	21.14	5	30	50	15	0
+H-0202	London Metropolitan University	82	D	34	Art & Design: History, Practice, Theory				Overall	36.6	0	10	45	40	5
+H-0202	London Metropolitan University	82	D	35	Music, Drama, Dance, Performing Arts				Overall	6.5	0	25	15	55	5
+H-0202	London Metropolitan University	82	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	12.5	15	25	40	20	0
+H-0152	Loughborough University	83	A	2	Public Health, Health Services & Primary Care				Overall	19	0	15	45	40	0
+H-0152	Loughborough University	83	B	8	Chemistry				Overall	25.33	0	25	70	5	0
+H-0152	Loughborough University	83	B	9	Physics				Overall	17.1	15	35	35	10	5
+H-0152	Loughborough University	83	B	10	Mathematical Sciences				Overall	31.8	10	40	40	10	0
+H-0152	Loughborough University	83	B	11	Computer Science & Informatics				Overall	16.2	15	40	35	10	0
+H-0152	Loughborough University	83	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	143.43	20	50	25	5	0
+H-0152	Loughborough University	83	B	13	Elec Engineering, Metallurgy & Materials				Overall	26.2	15	45	35	5	0
+H-0152	Loughborough University	83	B	14	Civil and Construction Engineering				Overall	27.5	15	50	25	10	0
+H-0152	Loughborough University	83	C	16	Architecture, Built Environment & Planning				Overall	27	25	50	20	5	0
+H-0152	Loughborough University	83	C	17	Geography, Environmental Studies & Archaeology				Overall	24.25	10	40	40	10	0
+H-0152	Loughborough University	83	C	18	Economics & Econometrics				Overall	21.25	5	40	50	5	0
+H-0152	Loughborough University	83	C	19	Business & Management Studies				Overall	57.4	15	45	35	5	0
+H-0152	Loughborough University	83	C	23	Sociology				Overall	47.22	25	20	30	20	5
+H-0152	Loughborough University	83	C	25	Education				Overall	7	5	15	30	35	15
+H-0152	Loughborough University	83	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	41.8	25	35	30	10	0
+H-0152	Loughborough University	83	D	27	Area Studies				Overall	17.6	10	30	40	15	5
+H-0152	Loughborough University	83	D	29	English Language & Literature				Overall	20.4	10	40	40	10	0
+H-0152	Loughborough University	83	D	34	Art & Design: History, Practice, Theory				Overall	64.64	55	30	15	0	0
+H-0152	Loughborough University	83	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	27.7	15	40	30	10	5
+H-0137	London School of Economics and Political Science	84	B	10	Mathematical Sciences				Overall	25.5	15	40	35	5	5
+H-0137	London School of Economics and Political Science	84	C	17	Geography, Environmental Studies & Archaeology				Overall	23.35	20	50	25	5	0
+H-0137	London School of Economics and Political Science	84	C	18	Economics & Econometrics				Overall	41.6	60	35	5	0	0
+H-0137	London School of Economics and Political Science	84	C	19	Business & Management Studies				Overall	86.41	30	40	25	5	0
+H-0137	London School of Economics and Political Science	84	C	20	Law				Overall	50.95	45	30	15	10	0
+H-0137	London School of Economics and Political Science	84	C	21	Politics & International Studies				Overall	69.45	30	30	30	10	0
+H-0137	London School of Economics and Political Science	84	C	22	Social Work & Social Policy				Overall	50.7	50	30	20	0	0
+H-0137	London School of Economics and Political Science	84	C	23	Sociology				Overall	37.75	20	25	35	15	5
+H-0137	London School of Economics and Political Science	84	C	24	Anthropology & Development Studies				Overall	17	40	25	30	0	5
+H-0137	London School of Economics and Political Science	84	D	27	Area Studies				Overall	15.1	20	45	30	5	0
+H-0137	London School of Economics and Political Science	84	D	30	History				Overall	48.35	35	30	25	10	0
+H-0137	London School of Economics and Political Science	84	D	32	Philosophy				Overall	13.55	35	30	30	5	0
+H-0137	London School of Economics and Political Science	84	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	10.65	45	30	25	0	0
+H-0138	London School of Hygiene & Tropical Medicine	85	A	1	Clinical Medicine				Overall	30.8	20	60	15	5	0
+H-0138	London School of Hygiene & Tropical Medicine	85	A	2	Public Health, Health Services & Primary Care				Overall	179.02	30	35	30	5	0
+H-0204	University of Manchester	86	A	1	Clinical Medicine				Overall	116.83	20	55	25	0	0
+H-0204	University of Manchester	86	A	2	Public Health, Health Services & Primary Care				Overall	33.6	40	40	15	5	0
+H-0204	University of Manchester	86	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	133.32	40	35	20	5	0
+H-0204	University of Manchester	86	A	4	Psychology, Psychiatry & Neuroscience				Overall	70.7	10	35	45	10	0
+H-0204	University of Manchester	86	A	5	Biological Sciences				Overall	179.9	20	45	35	0	0
+H-0204	University of Manchester	86	B	7	Earth Systems & Environmental Sciences				Overall	37.1	20	50	25	5	0
+H-0204	University of Manchester	86	B	8	Chemistry				Overall	58.3	20	45	35	0	0
+H-0204	University of Manchester	86	B	9	Physics				Overall	82.8	20	35	30	15	0
+H-0204	University of Manchester	86	B	10	Mathematical Sciences				Overall	66.7	25	35	35	5	0
+H-0204	University of Manchester	86	B	11	Computer Science & Informatics				Overall	72.05	30	55	15	0	0
+H-0204	University of Manchester	86	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	32.73	25	60	15	0	0
+H-0204	University of Manchester	86	B	13	Elec Engineering, Metallurgy & Materials				Overall	95.33	20	60	15	5	0
+H-0204	University of Manchester	86	B	15	General Engineering				Overall	52.16	20	50	30	0	0
+H-0204	University of Manchester	86	C	16	Architecture, Built Environment & Planning				Overall	17.9	20	40	30	10	0
+H-0204	University of Manchester	86	C	17	Geography, Environmental Studies & Archaeology				Overall	35	15	45	30	10	0
+H-0204	University of Manchester	86	C	18	Economics & Econometrics				Overall	34.8	25	55	20	0	0
+H-0204	University of Manchester	86	C	19	Business & Management Studies				Overall	182.22	25	40	30	5	0
+H-0204	University of Manchester	86	C	20	Law				Overall	61.8	10	40	40	10	0
+H-0204	University of Manchester	86	C	21	Politics & International Studies				Overall	46.4	20	30	30	20	0
+H-0204	University of Manchester	86	C	22	Social Work & Social Policy				Overall	13	15	30	50	5	0
+H-0204	University of Manchester	86	C	23	Sociology				Overall	49.2	40	20	25	15	0
+H-0204	University of Manchester	86	C	24	Anthropology & Development Studies				Overall	61.78	25	40	25	10	0
+H-0204	University of Manchester	86	C	25	Education				Overall	40.6	20	35	30	10	5
+H-0204	University of Manchester	86	D	27	Area Studies				Overall	19	10	25	45	20	0
+H-0204	University of Manchester	86	D	28	Modern Languages				Overall	68.3	20	40	30	10	0
+H-0204	University of Manchester	86	D	29	English Language & Literature				Overall	33.45	30	45	25	0	0
+H-0204	University of Manchester	86	D	30	History				Overall	34.2	20	40	30	10	0
+H-0204	University of Manchester	86	D	31	Classics				Overall	16.8	25	30	35	10	0
+H-0204	University of Manchester	86	D	32	Philosophy				Overall	13.5	10	35	50	5	0
+H-0204	University of Manchester	86	D	33	Theology & Religious Studies				Overall	23.85	25	40	30	5	0
+H-0204	University of Manchester	86	D	34	Art & Design: History, Practice, Theory				Overall	17	40	40	15	5	0
+H-0204	University of Manchester	86	D	35	Music, Drama, Dance, Performing Arts				Overall	24.02	50	35	10	5	0
+H-0066	Manchester Metropolitan University	87	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	54.5	5	30	50	15	0
+H-0066	Manchester Metropolitan University	87	B	7	Earth Systems & Environmental Sciences				Overall	17.91	5	40	40	15	0
+H-0066	Manchester Metropolitan University	87	B	11	Computer Science & Informatics				Overall	13	5	30	40	25	0
+H-0066	Manchester Metropolitan University	87	B	13	Elec Engineering, Metallurgy & Materials				Overall	13.8	0	30	40	30	0
+H-0066	Manchester Metropolitan University	87	B	15	General Engineering				Overall	6	0	35	45	20	0
+H-0066	Manchester Metropolitan University	87	C	18	Economics & Econometrics				Overall	4.75	0	10	50	40	0
+H-0066	Manchester Metropolitan University	87	C	19	Business & Management Studies				Overall	26.4	5	30	45	20	0
+H-0066	Manchester Metropolitan University	87	C	22	Social Work & Social Policy				Overall	19.5	5	15	50	25	5
+H-0066	Manchester Metropolitan University	87	C	23	Sociology				Overall	22.5	5	30	40	25	0
+H-0066	Manchester Metropolitan University	87	C	25	Education				Overall	22.8	20	35	35	10	0
+H-0066	Manchester Metropolitan University	87	D	27	Area Studies				Overall	32.4	0	20	50	20	10
+H-0066	Manchester Metropolitan University	87	D	29	English Language & Literature				Overall	26.95	15	20	50	15	0
+H-0066	Manchester Metropolitan University	87	D	32	Philosophy				Overall	5.5	5	35	55	5	0
+H-0066	Manchester Metropolitan University	87	D	34	Art & Design: History, Practice, Theory				Overall	61.75	10	35	35	15	5
+H-0066	Manchester Metropolitan University	87	D	35	Music, Drama, Dance, Performing Arts				Overall	10.8	5	25	55	15	0
+H-0066	Manchester Metropolitan University	87	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	16.5	0	20	45	35	0
+H-0067	Middlesex University	88	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	18	5	25	35	30	5
+H-0067	Middlesex University	88	A	4	Psychology, Psychiatry & Neuroscience				Overall	14.5	0	10	30	60	0
+H-0067	Middlesex University	88	B	11	Computer Science & Informatics				Overall	22.3	10	25	45	20	0
+H-0067	Middlesex University	88	C	17	Geography, Environmental Studies & Archaeology				Overall	12.15	5	35	40	20	0
+H-0067	Middlesex University	88	C	19	Business & Management Studies				Overall	38.79	5	25	50	20	0
+H-0067	Middlesex University	88	C	20	Law				Overall	7.3	0	15	35	50	0
+H-0067	Middlesex University	88	C	22	Social Work & Social Policy				Overall	15.2	5	45	40	10	0
+H-0067	Middlesex University	88	D	29	English Language & Literature				Overall	8.5	5	30	50	15	0
+H-0067	Middlesex University	88	D	32	Philosophy				Overall	7	20	45	30	5	0
+H-0067	Middlesex University	88	D	34	Art & Design: History, Practice, Theory				Overall	31	15	40	35	10	0
+H-0067	Middlesex University	88	D	35	Music, Drama, Dance, Performing Arts				Overall	12.1	20	35	25	20	0
+H-0067	Middlesex University	88	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	4	0	45	25	30	0
+H-0151Z	University Marine Biological Station, Millport	89	A	6	Agriculture, Veterinary & Food Science				Overall	4	5	10	15	70	0
+H-0107	Napier University	90	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	29.6	5	5	40	45	5
+H-0107	Napier University	90	A	4	Psychology, Psychiatry & Neuroscience				Overall	6.8	0	5	30	55	10
+H-0107	Napier University	90	B	7	Earth Systems & Environmental Sciences				Overall	13	0	20	45	30	5
+H-0107	Napier University	90	B	11	Computer Science & Informatics				Overall	26.7	0	20	60	20	0
+H-0107	Napier University	90	B	14	Civil and Construction Engineering				Overall	31.35	5	25	45	25	0
+H-0107	Napier University	90	C	16	Architecture, Built Environment & Planning				Overall	11	5	30	45	20	0
+H-0107	Napier University	90	C	19	Business & Management Studies				Overall	31	0	15	45	35	5
+H-0107	Napier University	90	C	20	Law				Overall	6	0	5	20	55	20
+H-0107	Napier University	90	C	23	Sociology				Overall	6.8	0	10	40	45	5
+H-0107	Napier University	90	D	29	English Language & Literature				Overall	6.5	5	15	55	20	5
+H-0107	Napier University	90	D	34	Art & Design: History, Practice, Theory				Overall	10.75	0	25	35	25	15
+H-0107	Napier University	90	D	35	Music, Drama, Dance, Performing Arts				Overall	7.1	0	5	25	40	30
+H-0107	Napier University	90	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	5.5	10	50	25	10	5
+H-0154	University of Newcastle upon Tyne	91	A	1	Clinical Medicine				Overall	144.67	15	50	30	5	0
+H-0154	University of Newcastle upon Tyne	91	A	2	Public Health, Health Services & Primary Care				Overall	35.02	10	40	45	5	0
+H-0154	University of Newcastle upon Tyne	91	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	27	15	45	35	5	0
+H-0154	University of Newcastle upon Tyne	91	A	4	Psychology, Psychiatry & Neuroscience				Overall	67.9	10	30	45	15	0
+H-0154	University of Newcastle upon Tyne	91	A	5	Biological Sciences				Overall	44	15	45	30	5	5
+H-0154	University of Newcastle upon Tyne	91	A	6	Agriculture, Veterinary & Food Science				Overall	39	5	40	45	10	0
+H-0154	University of Newcastle upon Tyne	91	B	7	Earth Systems & Environmental Sciences				Overall	26.2	15	50	30	5	0
+H-0154	University of Newcastle upon Tyne	91	B	8	Chemistry				Overall	23	5	40	50	5	0
+H-0154	University of Newcastle upon Tyne	91	B	10	Mathematical Sciences				Overall	34	10	45	40	5	0
+H-0154	University of Newcastle upon Tyne	91	B	11	Computer Science & Informatics				Overall	30.6	20	50	30	0	0
+H-0154	University of Newcastle upon Tyne	91	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	57.05	15	50	30	5	0
+H-0154	University of Newcastle upon Tyne	91	B	13	Elec Engineering, Metallurgy & Materials				Overall	30.7	15	45	30	10	0
+H-0154	University of Newcastle upon Tyne	91	B	14	Civil and Construction Engineering				Overall	41	20	70	10	0	0
+H-0154	University of Newcastle upon Tyne	91	C	16	Architecture, Built Environment & Planning				Overall	34.9	25	40	25	10	0
+H-0154	University of Newcastle upon Tyne	91	C	17	Geography, Environmental Studies & Archaeology				Overall	40.5	15	35	35	15	0
+H-0154	University of Newcastle upon Tyne	91	C	19	Business & Management Studies				Overall	39.9	10	40	40	10	0
+H-0154	University of Newcastle upon Tyne	91	C	20	Law				Overall	19	0	40	45	15	0
+H-0154	University of Newcastle upon Tyne	91	C	21	Politics & International Studies				Overall	18	15	25	35	25	0
+H-0154	University of Newcastle upon Tyne	91	C	23	Sociology				Overall	21.6	15	35	35	15	0
+H-0154	University of Newcastle upon Tyne	91	C	25	Education				Overall	11.1	10	40	35	15	0
+H-0154	University of Newcastle upon Tyne	91	D	28	Modern Languages				Overall	50.43	15	25	40	15	5
+H-0154	University of Newcastle upon Tyne	91	D	29	English Language & Literature				Overall	30.8	25	45	25	5	0
+H-0154	University of Newcastle upon Tyne	91	D	30	History				Overall	28.3	15	25	45	15	0
+H-0154	University of Newcastle upon Tyne	91	D	31	Classics				Overall	10	10	35	45	10	0
+H-0154	University of Newcastle upon Tyne	91	D	34	Art & Design: History, Practice, Theory				Overall	15	25	60	10	5	0
+H-0154	University of Newcastle upon Tyne	91	D	35	Music, Drama, Dance, Performing Arts				Overall	12.7	35	45	15	5	0
+H-0028	Newman University College	92	C	25	Education				Overall	3	0	25	35	30	10
+H-0028	Newman University College	92	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	4	0	0	35	60	5
+H-0028	Newman University College	92	D	30	History				Overall	0.8	0	0	85	5	10
+H-0086	University of Wales, Newport	93	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	1	10	15	20	30	25
+H-0086	University of Wales, Newport	93	C	22	Social Work & Social Policy				Overall	4.8	5	40	30	20	5
+H-0086	University of Wales, Newport	93	C	25	Education				Overall	1	0	0	25	55	20
+H-0086	University of Wales, Newport	93	D	30	History				Overall	3.5	0	20	40	35	5
+H-0086	University of Wales, Newport	93	D	34	Art & Design: History, Practice, Theory				Overall	17.2	10	60	25	5	0
+H-0027	University of Northampton	94	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	10.6	5	5	30	45	15
+H-0027	University of Northampton	94	B	13	Elec Engineering, Metallurgy & Materials				Overall	6.4	0	20	35	35	10
+H-0027	University of Northampton	94	C	19	Business & Management Studies				Overall	6.9	5	10	30	45	10
+H-0027	University of Northampton	94	C	25	Education				Overall	17	5	10	40	35	10
+H-0027	University of Northampton	94	D	27	Area Studies				Overall	2	0	10	40	30	20
+H-0027	University of Northampton	94	D	29	English Language & Literature				Overall	13.6	0	15	55	30	0
+H-0027	University of Northampton	94	D	30	History				Overall	8.5	5	35	45	15	0
+H-0027	University of Northampton	94	D	34	Art & Design: History, Practice, Theory				Overall	9	0	5	25	60	10
+H-0027	University of Northampton	94	D	35	Music, Drama, Dance, Performing Arts				Overall	9.5	0	25	40	35	0
+H-0069	University of Northumbria at Newcastle	95	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	32.55	5	25	40	20	10
+H-0069	University of Northumbria at Newcastle	95	A	4	Psychology, Psychiatry & Neuroscience				Overall	16	0	25	65	10	0
+H-0069	University of Northumbria at Newcastle	95	B	15	General Engineering				Overall	14	5	45	35	15	0
+H-0069	University of Northumbria at Newcastle	95	C	16	Architecture, Built Environment & Planning				Overall	12.8	5	45	40	10	0
+H-0069	University of Northumbria at Newcastle	95	C	19	Business & Management Studies				Overall	19	0	20	45	30	5
+H-0069	University of Northumbria at Newcastle	95	C	22	Social Work & Social Policy				Overall	11	5	30	45	20	0
+H-0069	University of Northumbria at Newcastle	95	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	10.25	5	15	40	35	5
+H-0069	University of Northumbria at Newcastle	95	D	29	English Language & Literature				Overall	8.5	5	20	55	20	0
+H-0069	University of Northumbria at Newcastle	95	D	30	History				Overall	8.11	0	20	45	35	0
+H-0069	University of Northumbria at Newcastle	95	D	34	Art & Design: History, Practice, Theory				Overall	29.4	15	15	55	15	0
+H-0190	Norwich University College of the Arts	96	D	34	Art & Design: History, Practice, Theory				Overall	8.7	5	30	50	15	0
+H-0155	University of Nottingham	97	A	1	Clinical Medicine				Overall	109.7	5	30	55	10	0
+H-0155	University of Nottingham	97	A	2	Public Health, Health Services & Primary Care				Overall	30.76	30	40	25	5	0
+H-0155	University of Nottingham	97	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	83.03	30	40	20	5	5
+H-0155	University of Nottingham	97	A	4	Psychology, Psychiatry & Neuroscience				Overall	66.5	10	50	35	5	0
+H-0155	University of Nottingham	97	A	5	Biological Sciences				Overall	93.34	5	35	45	10	5
+H-0155	University of Nottingham	97	A	6	Agriculture, Veterinary & Food Science				Overall	104.3	15	45	35	5	0
+H-0155	University of Nottingham	97	B	8	Chemistry				Overall	35	30	55	15	0	0
+H-0155	University of Nottingham	97	B	9	Physics				Overall	44.45	25	40	30	5	0
+H-0155	University of Nottingham	97	B	10	Mathematical Sciences				Overall	58.4	20	45	30	5	0
+H-0155	University of Nottingham	97	B	11	Computer Science & Informatics				Overall	30.5	30	50	20	0	0
+H-0155	University of Nottingham	97	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	46.5	25	50	20	5	0
+H-0155	University of Nottingham	97	B	13	Elec Engineering, Metallurgy & Materials				Overall	22	10	55	30	5	0
+H-0155	University of Nottingham	97	B	14	Civil and Construction Engineering				Overall	30.01	25	60	15	0	0
+H-0155	University of Nottingham	97	B	15	General Engineering				Overall	16	25	50	25	0	0
+H-0155	University of Nottingham	97	C	16	Architecture, Built Environment & Planning				Overall	36	10	30	45	15	0
+H-0155	University of Nottingham	97	C	17	Geography, Environmental Studies & Archaeology				Overall	53.5	20	40	30	10	0
+H-0155	University of Nottingham	97	C	18	Economics & Econometrics				Overall	47.25	30	55	15	0	0
+H-0155	University of Nottingham	97	C	19	Business & Management Studies				Overall	90.4	20	50	25	5	0
+H-0155	University of Nottingham	97	C	20	Law				Overall	46.43	30	35	30	5	0
+H-0155	University of Nottingham	97	C	21	Politics & International Studies				Overall	34	15	35	35	15	0
+H-0155	University of Nottingham	97	C	22	Social Work & Social Policy				Overall	30.5	10	40	40	10	0
+H-0155	University of Nottingham	97	C	23	Sociology				Overall	8.3	15	30	35	20	0
+H-0155	University of Nottingham	97	C	25	Education				Overall	51.2	20	25	35	15	5
+H-0155	University of Nottingham	97	D	27	Area Studies				Overall	42	10	20	40	30	0
+H-0155	University of Nottingham	97	D	28	Modern Languages				Overall	54	20	35	30	10	5
+H-0155	University of Nottingham	97	D	29	English Language & Literature				Overall	35	35	35	25	5	0
+H-0155	University of Nottingham	97	D	30	History				Overall	25.2	15	35	45	5	0
+H-0155	University of Nottingham	97	D	31	Classics				Overall	13	10	45	35	10	0
+H-0155	University of Nottingham	97	D	32	Philosophy				Overall	15.5	25	35	35	5	0
+H-0155	University of Nottingham	97	D	33	Theology & Religious Studies				Overall	11.25	20	40	35	5	0
+H-0155	University of Nottingham	97	D	34	Art & Design: History, Practice, Theory				Overall	7.2	20	55	20	5	0
+H-0155	University of Nottingham	97	D	35	Music, Drama, Dance, Performing Arts				Overall	10.25	25	60	15	0	0
+H-0155	University of Nottingham	97	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	7	5	35	45	15	0
+H-0071	Nottingham Trent University	98	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	14	20	30	40	5	5
+H-0071	Nottingham Trent University	98	A	4	Psychology, Psychiatry & Neuroscience				Overall	25	0	15	35	50	0
+H-0071	Nottingham Trent University	98	B	7	Earth Systems & Environmental Sciences				Overall	2	0	5	50	45	0
+H-0071	Nottingham Trent University	98	B	11	Computer Science & Informatics				Overall	6	0	30	55	15	0
+H-0071	Nottingham Trent University	98	B	15	General Engineering				Overall	10	15	40	40	5	0
+H-0071	Nottingham Trent University	98	C	16	Architecture, Built Environment & Planning				Overall	19.6	0	30	40	25	5
+H-0071	Nottingham Trent University	98	C	17	Geography, Environmental Studies & Archaeology				Overall	2	5	25	45	25	0
+H-0071	Nottingham Trent University	98	C	19	Business & Management Studies				Overall	31.4	5	25	50	20	0
+H-0071	Nottingham Trent University	98	C	20	Law				Overall	16	0	10	50	40	0
+H-0071	Nottingham Trent University	98	C	22	Social Work & Social Policy				Overall	14.7	15	45	35	5	0
+H-0071	Nottingham Trent University	98	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	8	0	0	55	35	10
+H-0071	Nottingham Trent University	98	D	28	Modern Languages				Overall	5.8	0	30	45	25	0
+H-0071	Nottingham Trent University	98	D	29	English Language & Literature				Overall	24.25	10	45	30	15	0
+H-0071	Nottingham Trent University	98	D	30	History				Overall	13.75	5	25	45	25	0
+H-0071	Nottingham Trent University	98	D	34	Art & Design: History, Practice, Theory				Overall	46.39	5	30	30	25	10
+H-0071	Nottingham Trent University	98	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	25.05	25	45	15	15	0
+H-0001	Open University	99	A	5	Biological Sciences				Overall	18.8	5	20	45	25	5
+H-0001	Open University	99	B	7	Earth Systems & Environmental Sciences				Overall	52.8	15	55	25	5	0
+H-0001	Open University	99	B	10	Mathematical Sciences				Overall	23.5	10	40	45	5	0
+H-0001	Open University	99	B	11	Computer Science & Informatics				Overall	24	25	45	30	0	0
+H-0001	Open University	99	B	13	Elec Engineering, Metallurgy & Materials				Overall	6	5	45	40	10	0
+H-0001	Open University	99	C	17	Geography, Environmental Studies & Archaeology				Overall	18	20	35	40	5	0
+H-0001	Open University	99	C	19	Business & Management Studies				Overall	37.9	5	35	40	20	0
+H-0001	Open University	99	C	22	Social Work & Social Policy				Overall	12.3	10	50	35	5	0
+H-0001	Open University	99	C	23	Sociology				Overall	42.3	20	35	30	15	0
+H-0001	Open University	99	C	24	Anthropology & Development Studies				Overall	22.21	15	30	40	15	0
+H-0001	Open University	99	C	25	Education				Overall	77.01	10	35	40	15	0
+H-0001	Open University	99	D	29	English Language & Literature				Overall	14.85	15	50	25	10	0
+H-0001	Open University	99	D	30	History				Overall	20.6	10	30	50	10	0
+H-0001	Open University	99	D	31	Classics				Overall	10	5	25	55	15	0
+H-0001	Open University	99	D	32	Philosophy				Overall	8	0	40	55	5	0
+H-0001	Open University	99	D	33	Theology & Religious Studies				Overall	10	15	20	40	25	0
+H-0001	Open University	99	D	34	Art & Design: History, Practice, Theory				Overall	28.8	25	40	35	0	0
+H-0001	Open University	99	D	35	Music, Drama, Dance, Performing Arts				Overall	11.5	15	30	50	5	0
+H-0156	University of Oxford	100	A	1	Clinical Medicine				Overall	233.76	40	40	15	5	0
+H-0156	University of Oxford	100	A	2	Public Health, Health Services & Primary Care				Overall	52.6	30	40	25	5	0
+H-0156	University of Oxford	100	A	4	Psychology, Psychiatry & Neuroscience				Overall	85.5	35	45	15	5	0
+H-0156	University of Oxford	100	A	5	Biological Sciences				Overall	168.28	25	45	25	0	5
+H-0156	University of Oxford	100	B	7	Earth Systems & Environmental Sciences				Overall	32.08	35	50	15	0	0
+H-0156	University of Oxford	100	B	8	Chemistry				Overall	73.9	30	45	25	0	0
+H-0156	University of Oxford	100	B	9	Physics				Overall	140.1	20	35	35	10	0
+H-0156	University of Oxford	100	B	10	Mathematical Sciences				Overall	133.91	35	45	20	0	0
+H-0156	University of Oxford	100	B	11	Computer Science & Informatics				Overall	55.75	35	45	20	0	0
+H-0156	University of Oxford	100	B	13	Elec Engineering, Metallurgy & Materials				Overall	37.3	25	55	15	5	0
+H-0156	University of Oxford	100	B	15	General Engineering				Overall	85.4	25	60	15	0	0
+H-0156	University of Oxford	100	C	17	Geography, Environmental Studies & Archaeology				Overall	64	35	30	25	10	0
+H-0156	University of Oxford	100	C	18	Economics & Econometrics				Overall	78.5	40	55	5	0	0
+H-0156	University of Oxford	100	C	19	Business & Management Studies				Overall	53	30	40	25	5	0
+H-0156	University of Oxford	100	C	20	Law				Overall	103.5	35	35	25	5	0
+H-0156	University of Oxford	100	C	21	Politics & International Studies				Overall	88.85	35	25	30	10	0
+H-0156	University of Oxford	100	C	22	Social Work & Social Policy				Overall	22.83	20	50	20	10	0
+H-0156	University of Oxford	100	C	23	Sociology				Overall	18.75	25	30	35	5	5
+H-0156	University of Oxford	100	C	24	Anthropology & Development Studies				Overall	63.7	35	30	30	5	0
+H-0156	University of Oxford	100	C	25	Education				Overall	36	30	35	30	5	0
+H-0156	University of Oxford	100	D	27	Area Studies				Overall	77.13	25	30	30	10	5
+H-0156	University of Oxford	100	D	28	Modern Languages				Overall	106.75	25	35	30	10	0
+H-0156	University of Oxford	100	D	29	English Language & Literature				Overall	93.25	40	25	30	5	0
+H-0156	University of Oxford	100	D	30	History				Overall	109	35	35	25	5	0
+H-0156	University of Oxford	100	D	31	Classics				Overall	71.26	40	30	25	5	0
+H-0156	University of Oxford	100	D	32	Philosophy				Overall	78.99	35	30	30	5	0
+H-0156	University of Oxford	100	D	33	Theology & Religious Studies				Overall	41	30	35	30	5	0
+H-0156	University of Oxford	100	D	34	Art & Design: History, Practice, Theory				Overall	9.66	30	35	20	15	0
+H-0156	University of Oxford	100	D	35	Music, Drama, Dance, Performing Arts				Overall	22.25	50	25	20	5	0
+H-0156	University of Oxford	100	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	8.83	20	35	35	10	0
+H-0072	Oxford Brookes University	101	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	14.3	10	20	40	25	5
+H-0072	Oxford Brookes University	101	A	4	Psychology, Psychiatry & Neuroscience				Overall	13.2	0	25	50	25	0
+H-0072	Oxford Brookes University	101	A	5	Biological Sciences				Overall	12	5	15	45	30	5
+H-0072	Oxford Brookes University	101	B	10	Mathematical Sciences				Overall	5.71	0	10	55	35	0
+H-0072	Oxford Brookes University	101	B	11	Computer Science & Informatics				Overall	10.67	15	35	35	15	0
+H-0072	Oxford Brookes University	101	B	15	General Engineering				Overall	11.6	5	40	25	30	0
+H-0072	Oxford Brookes University	101	C	16	Architecture, Built Environment & Planning				Overall	32.6	5	35	40	15	5
+H-0072	Oxford Brookes University	101	C	19	Business & Management Studies				Overall	18	5	20	45	25	5
+H-0072	Oxford Brookes University	101	C	20	Law				Overall	13.2	10	35	40	15	0
+H-0072	Oxford Brookes University	101	C	21	Politics & International Studies				Overall	10.5	0	20	55	25	0
+H-0072	Oxford Brookes University	101	C	24	Anthropology & Development Studies				Overall	12.2	5	30	35	25	5
+H-0072	Oxford Brookes University	101	C	25	Education				Overall	11	5	25	40	25	5
+H-0072	Oxford Brookes University	101	D	28	Modern Languages				Overall	4.45	5	30	40	20	5
+H-0072	Oxford Brookes University	101	D	29	English Language & Literature				Overall	15	5	35	55	5	0
+H-0072	Oxford Brookes University	101	D	30	History				Overall	23.05	25	40	25	10	0
+H-0072	Oxford Brookes University	101	D	32	Philosophy				Overall	4.8	0	0	75	25	0
+H-0072	Oxford Brookes University	101	D	34	Art & Design: History, Practice, Theory				Overall	8.25	15	40	30	15	0
+H-0072	Oxford Brookes University	101	D	35	Music, Drama, Dance, Performing Arts				Overall	5.5	15	20	40	25	0
+H-0073	University of Plymouth	102	A	1	Clinical Medicine				Overall	10.6	5	60	25	10	0
+H-0073	University of Plymouth	102	A	2	Public Health, Health Services & Primary Care				Overall	12.95	5	45	45	5	0
+H-0073	University of Plymouth	102	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	31.3	0	10	20	45	25
+H-0073	University of Plymouth	102	A	4	Psychology, Psychiatry & Neuroscience				Overall	34.55	5	25	55	15	0
+H-0073	University of Plymouth	102	A	5	Biological Sciences				Overall	30.8	0	25	50	25	0
+H-0073	University of Plymouth	102	A	6	Agriculture, Veterinary & Food Science				Overall	19	0	10	55	30	5
+H-0073	University of Plymouth	102	B	7	Earth Systems & Environmental Sciences				Overall	36.5	5	45	45	5	0
+H-0073	University of Plymouth	102	B	10	Mathematical Sciences				Overall	8	0	30	45	25	0
+H-0073	University of Plymouth	102	B	11	Computer Science & Informatics				Overall	11.25	25	50	25	0	0
+H-0073	University of Plymouth	102	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	11.2	0	25	55	20	0
+H-0073	University of Plymouth	102	B	13	Elec Engineering, Metallurgy & Materials				Overall	17.5	5	15	45	30	5
+H-0073	University of Plymouth	102	B	14	Civil and Construction Engineering				Overall	7.4	15	30	40	15	0
+H-0073	University of Plymouth	102	C	17	Geography, Environmental Studies & Archaeology				Overall	27.5	10	40	45	5	0
+H-0073	University of Plymouth	102	C	19	Business & Management Studies				Overall	29	5	25	45	20	5
+H-0073	University of Plymouth	102	C	22	Social Work & Social Policy				Overall	16.7	5	50	40	5	0
+H-0073	University of Plymouth	102	C	23	Sociology				Overall	23	5	30	40	25	0
+H-0073	University of Plymouth	102	C	25	Education				Overall	15.4	10	20	40	25	5
+H-0073	University of Plymouth	102	D	29	English Language & Literature				Overall	10	10	20	35	35	0
+H-0073	University of Plymouth	102	D	30	History				Overall	9	0	25	60	15	0
+H-0073	University of Plymouth	102	D	34	Art & Design: History, Practice, Theory				Overall	22.65	5	50	45	0	0
+H-0073	University of Plymouth	102	D	35	Music, Drama, Dance, Performing Arts				Overall	7.4	5	15	55	20	5
+H-0014	University College Plymouth St Mark & St John	103	C	17	Geography, Environmental Studies & Archaeology				Overall	1	0	0	85	5	10
+H-0014	University College Plymouth St Mark & St John	103	C	25	Education				Overall	8.8	0	5	15	50	30
+H-0014	University College Plymouth St Mark & St John	103	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	3	0	0	20	60	20
+H-0014	University College Plymouth St Mark & St John	103	D	29	English Language & Literature				Overall	1	0	0	40	20	40
+H-0014	University College Plymouth St Mark & St John	103	D	32	Philosophy				Overall	1	0	20	50	30	0
+H-0074	University of Portsmouth	104	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	35.7	15	40	30	10	5
+H-0074	University of Portsmouth	104	A	4	Psychology, Psychiatry & Neuroscience				Overall	16	0	25	55	20	0
+H-0074	University of Portsmouth	104	B	7	Earth Systems & Environmental Sciences				Overall	13.2	5	40	45	10	0
+H-0074	University of Portsmouth	104	B	10	Mathematical Sciences				Overall	16	15	60	25	0	0
+H-0074	University of Portsmouth	104	B	11	Computer Science & Informatics				Overall	12.2	5	20	40	30	5
+H-0074	University of Portsmouth	104	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	11.2	5	40	40	15	0
+H-0074	University of Portsmouth	104	C	17	Geography, Environmental Studies & Archaeology				Overall	11	5	25	55	15	0
+H-0074	University of Portsmouth	104	C	19	Business & Management Studies				Overall	56.8	5	30	35	30	0
+H-0074	University of Portsmouth	104	D	27	Area Studies				Overall	38.4	15	30	35	20	0
+H-0074	University of Portsmouth	104	D	34	Art & Design: History, Practice, Theory				Overall	20.8	0	10	45	35	10
+H-0100	Queen Margaret University Edinburgh	105	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	51.8	0	5	30	35	30
+H-0100	Queen Margaret University Edinburgh	105	C	19	Business & Management Studies				Overall	19	0	5	25	60	10
+H-0100	Queen Margaret University Edinburgh	105	D	28	Modern Languages				Overall	15.6	10	30	25	30	5
+H-0100	Queen Margaret University Edinburgh	105	D	35	Music, Drama, Dance, Performing Arts				Overall	5.6	0	0	20	60	20
+H-0100	Queen Margaret University Edinburgh	105	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	6	10	30	55	5	0
+H-0139	Queen Mary, University of London	106	A	1	Clinical Medicine				Overall	95.06	15	65	20	0	0
+H-0139	Queen Mary, University of London	106	A	2	Public Health, Health Services & Primary Care				Overall	16.8	30	35	35	0	0
+H-0139	Queen Mary, University of London	106	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	33.7	25	50	25	0	0
+H-0139	Queen Mary, University of London	106	A	4	Psychology, Psychiatry & Neuroscience				Overall	8.65	10	30	40	20	0
+H-0139	Queen Mary, University of London	106	A	5	Biological Sciences				Overall	80.4	20	45	25	10	0
+H-0139	Queen Mary, University of London	106	B	9	Physics				Overall	34.98	15	35	35	15	0
+H-0139	Queen Mary, University of London	106	B	10	Mathematical Sciences				Overall	43.4	10	35	40	10	5
+H-0139	Queen Mary, University of London	106	B	11	Computer Science & Informatics				Overall	28	25	50	25	0	0
+H-0139	Queen Mary, University of London	106	B	13	Elec Engineering, Metallurgy & Materials				Overall	52.1	15	40	35	10	0
+H-0139	Queen Mary, University of London	106	B	15	General Engineering				Overall	33	10	35	30	25	0
+H-0139	Queen Mary, University of London	106	C	17	Geography, Environmental Studies & Archaeology				Overall	32	25	50	20	5	0
+H-0139	Queen Mary, University of London	106	C	18	Economics & Econometrics				Overall	23	30	55	15	0	0
+H-0139	Queen Mary, University of London	106	C	19	Business & Management Studies				Overall	25.7	15	40	35	10	0
+H-0139	Queen Mary, University of London	106	C	20	Law				Overall	48.83	20	40	30	10	0
+H-0139	Queen Mary, University of London	106	C	21	Politics & International Studies				Overall	19	5	40	40	15	0
+H-0139	Queen Mary, University of London	106	D	28	Modern Languages				Overall	36.45	15	40	30	15	0
+H-0139	Queen Mary, University of London	106	D	29	English Language & Literature				Overall	34.95	40	30	25	5	0
+H-0139	Queen Mary, University of London	106	D	30	History				Overall	28.8	30	30	30	10	0
+H-0139	Queen Mary, University of London	106	D	35	Music, Drama, Dance, Performing Arts				Overall	12	50	40	5	5	0
+H-0184	Queen's University Belfast	107	A	1	Clinical Medicine				Overall	58	10	30	50	10	0
+H-0184	Queen's University Belfast	107	A	2	Public Health, Health Services & Primary Care				Overall	23.5	5	35	50	10	0
+H-0184	Queen's University Belfast	107	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	60.68	15	40	35	10	0
+H-0184	Queen's University Belfast	107	A	4	Psychology, Psychiatry & Neuroscience				Overall	19.5	5	25	50	20	0
+H-0184	Queen's University Belfast	107	A	5	Biological Sciences				Overall	35	5	25	50	20	0
+H-0184	Queen's University Belfast	107	A	6	Agriculture, Veterinary & Food Science				Overall	13	5	25	55	15	0
+H-0184	Queen's University Belfast	107	B	8	Chemistry				Overall	32.6	5	40	50	5	0
+H-0184	Queen's University Belfast	107	B	9	Physics				Overall	50	10	40	40	10	0
+H-0184	Queen's University Belfast	107	B	10	Mathematical Sciences				Overall	8.2	5	40	50	5	0
+H-0184	Queen's University Belfast	107	B	11	Computer Science & Informatics				Overall	21	15	45	30	10	0
+H-0184	Queen's University Belfast	107	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	25	15	50	30	5	0
+H-0184	Queen's University Belfast	107	B	13	Elec Engineering, Metallurgy & Materials				Overall	32	20	40	30	10	0
+H-0184	Queen's University Belfast	107	B	14	Civil and Construction Engineering				Overall	24.05	20	55	25	0	0
+H-0184	Queen's University Belfast	107	C	16	Architecture, Built Environment & Planning				Overall	12	10	20	45	25	0
+H-0184	Queen's University Belfast	107	C	17	Geography, Environmental Studies & Archaeology				Overall	35	25	30	40	5	0
+H-0184	Queen's University Belfast	107	C	19	Business & Management Studies				Overall	44	15	40	40	5	0
+H-0184	Queen's University Belfast	107	C	20	Law				Overall	35.5	25	35	35	5	0
+H-0184	Queen's University Belfast	107	C	21	Politics & International Studies				Overall	31	10	40	30	20	0
+H-0184	Queen's University Belfast	107	C	22	Social Work & Social Policy				Overall	21.61	20	35	35	10	0
+H-0184	Queen's University Belfast	107	C	23	Sociology				Overall	23	20	35	30	15	0
+H-0184	Queen's University Belfast	107	C	24	Anthropology & Development Studies				Overall	12	35	20	20	25	0
+H-0184	Queen's University Belfast	107	C	25	Education				Overall	19	10	40	30	15	5
+H-0184	Queen's University Belfast	107	D	28	Modern Languages				Overall	26.5	10	30	40	20	0
+H-0184	Queen's University Belfast	107	D	29	English Language & Literature				Overall	36.1	35	30	25	10	0
+H-0184	Queen's University Belfast	107	D	30	History				Overall	30.5	15	45	35	5	0
+H-0184	Queen's University Belfast	107	D	31	Classics				Overall	2.5	20	10	25	40	5
+H-0184	Queen's University Belfast	107	D	32	Philosophy				Overall	6.33	5	60	25	10	0
+H-0184	Queen's University Belfast	107	D	35	Music, Drama, Dance, Performing Arts				Overall	32.7	35	35	20	10	0
+H-0157	University of Reading	108	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	17.5	10	35	35	20	0
+H-0157	University of Reading	108	A	4	Psychology, Psychiatry & Neuroscience				Overall	28.8	10	50	35	5	0
+H-0157	University of Reading	108	A	5	Biological Sciences				Overall	34.7	5	30	45	15	5
+H-0157	University of Reading	108	A	6	Agriculture, Veterinary & Food Science				Overall	93.1	15	40	35	10	0
+H-0157	University of Reading	108	B	7	Earth Systems & Environmental Sciences				Overall	40.7	30	45	20	5	0
+H-0157	University of Reading	108	B	8	Chemistry				Overall	28	0	25	65	10	0
+H-0157	University of Reading	108	B	10	Mathematical Sciences				Overall	29	5	30	55	10	0
+H-0157	University of Reading	108	B	11	Computer Science & Informatics				Overall	22	5	25	50	20	0
+H-0157	University of Reading	108	B	13	Elec Engineering, Metallurgy & Materials				Overall	19	5	35	35	25	0
+H-0157	University of Reading	108	C	16	Architecture, Built Environment & Planning				Overall	36.2	25	35	30	5	5
+H-0157	University of Reading	108	C	17	Geography, Environmental Studies & Archaeology				Overall	37.9	40	25	25	10	0
+H-0157	University of Reading	108	C	19	Business & Management Studies				Overall	38.3	10	40	40	10	0
+H-0157	University of Reading	108	C	20	Law				Overall	21.9	20	40	30	10	0
+H-0157	University of Reading	108	C	21	Politics & International Studies				Overall	15	10	25	35	30	0
+H-0157	University of Reading	108	C	22	Social Work & Social Policy				Overall	8.9	5	45	45	5	0
+H-0157	University of Reading	108	C	25	Education				Overall	8.6	10	20	35	30	5
+H-0157	University of Reading	108	D	28	Modern Languages				Overall	35.25	15	30	40	15	0
+H-0157	University of Reading	108	D	29	English Language & Literature				Overall	31.5	25	40	25	10	0
+H-0157	University of Reading	108	D	30	History				Overall	18.5	10	40	40	10	0
+H-0157	University of Reading	108	D	31	Classics				Overall	13.2	10	40	40	10	0
+H-0157	University of Reading	108	D	32	Philosophy				Overall	12	30	45	25	0	0
+H-0157	University of Reading	108	D	34	Art & Design: History, Practice, Theory				Overall	24.2	35	40	20	5	0
+H-0157	University of Reading	108	D	35	Music, Drama, Dance, Performing Arts				Overall	11.2	30	25	35	10	0
+H-0104	Robert Gordon University	109	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	37.8	5	15	50	25	5
+H-0104	Robert Gordon University	109	B	11	Computer Science & Informatics				Overall	19.6	5	40	40	15	0
+H-0104	Robert Gordon University	109	B	15	General Engineering				Overall	14.6	5	15	65	15	0
+H-0104	Robert Gordon University	109	C	16	Architecture, Built Environment & Planning				Overall	20.8	10	20	40	25	5
+H-0104	Robert Gordon University	109	C	19	Business & Management Studies				Overall	20.7	5	35	30	25	5
+H-0104	Robert Gordon University	109	C	20	Law				Overall	9.6	0	5	50	35	10
+H-0104	Robert Gordon University	109	C	21	Politics & International Studies				Overall	8.2	0	25	45	30	0
+H-0104	Robert Gordon University	109	C	23	Sociology				Overall	6	0	15	25	45	15
+H-0104	Robert Gordon University	109	D	34	Art & Design: History, Practice, Theory				Overall	23	5	40	25	30	0
+H-0104	Robert Gordon University	109	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	11	15	45	40	0	0
+H-0031	Roehampton University	110	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	3.8	0	20	35	35	10
+H-0031	Roehampton University	110	A	4	Psychology, Psychiatry & Neuroscience				Overall	20.1	0	20	50	30	0
+H-0031	Roehampton University	110	A	5	Biological Sciences				Overall	4	0	5	35	55	5
+H-0031	Roehampton University	110	C	23	Sociology				Overall	16.25	5	25	45	20	5
+H-0031	Roehampton University	110	C	24	Anthropology & Development Studies				Overall	6.5	15	65	15	5	0
+H-0031	Roehampton University	110	C	25	Education				Overall	27.2	5	25	50	20	0
+H-0031	Roehampton University	110	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	7.7	0	0	30	65	5
+H-0031	Roehampton University	110	D	28	Modern Languages				Overall	6.5	5	25	40	30	0
+H-0031	Roehampton University	110	D	29	English Language & Literature				Overall	22.2	10	25	50	15	0
+H-0031	Roehampton University	110	D	30	History				Overall	9.7	10	25	50	15	0
+H-0031	Roehampton University	110	D	33	Theology & Religious Studies				Overall	6.5	5	15	55	25	0
+H-0031	Roehampton University	110	D	35	Music, Drama, Dance, Performing Arts				Overall	19.5	55	30	10	5	0
+H-0031	Roehampton University	110	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	17.5	5	30	60	5	0
+H-0032	Rose Bruford College	111	D	35	Music, Drama, Dance, Performing Arts				Overall	9.3	0	15	30	30	25
+H-0033	Royal Academy of Music	112	D	35	Music, Drama, Dance, Performing Arts				Overall	12.7	25	45	25	5	0
+H-0195	Royal Agricultural College	113	A	6	Agriculture, Veterinary & Food Science				Overall	8.2	0	15	25	55	5
+H-0003	Royal College of Art	114	D	34	Art & Design: History, Practice, Theory				Overall	51.65	40	25	25	5	5
+H-0034	Royal College of Music	115	D	35	Music, Drama, Dance, Performing Arts				Overall	17.9	15	35	35	15	0
+H-0141	Royal Holloway, University of London	116	A	4	Psychology, Psychiatry & Neuroscience				Overall	28	15	55	30	0	0
+H-0141	Royal Holloway, University of London	116	A	5	Biological Sciences				Overall	22	15	55	25	5	0
+H-0141	Royal Holloway, University of London	116	B	7	Earth Systems & Environmental Sciences				Overall	22.3	20	50	30	0	0
+H-0141	Royal Holloway, University of London	116	B	9	Physics				Overall	27.96	10	45	35	10	0
+H-0141	Royal Holloway, University of London	116	B	10	Mathematical Sciences				Overall	26.6	0	25	35	20	20
+H-0141	Royal Holloway, University of London	116	B	11	Computer Science & Informatics				Overall	20.83	25	40	25	10	0
+H-0141	Royal Holloway, University of London	116	C	17	Geography, Environmental Studies & Archaeology				Overall	32.1	20	45	30	5	0
+H-0141	Royal Holloway, University of London	116	C	18	Economics & Econometrics				Overall	22.5	20	60	20	0	0
+H-0141	Royal Holloway, University of London	116	C	19	Business & Management Studies				Overall	43.9	15	40	40	5	0
+H-0141	Royal Holloway, University of London	116	C	21	Politics & International Studies				Overall	14	5	25	45	25	0
+H-0141	Royal Holloway, University of London	116	C	22	Social Work & Social Policy				Overall	13.7	10	35	40	15	0
+H-0141	Royal Holloway, University of London	116	D	28	Modern Languages				Overall	30.5	15	35	30	15	5
+H-0141	Royal Holloway, University of London	116	D	29	English Language & Literature				Overall	29.2	30	35	25	10	0
+H-0141	Royal Holloway, University of London	116	D	30	History				Overall	30.7	20	40	30	10	0
+H-0141	Royal Holloway, University of London	116	D	31	Classics				Overall	17	10	25	45	20	0
+H-0141	Royal Holloway, University of London	116	D	35	Music, Drama, Dance, Performing Arts				Overall	37.88	60	30	5	5	0
+H-0141	Royal Holloway, University of London	116	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	17	20	55	20	5	0
+H-0035	Royal Northern College of Music	117	D	35	Music, Drama, Dance, Performing Arts				Overall	15.05	5	30	50	10	5
+H-0101	Royal Scottish Academy of Music and Drama	118	D	35	Music, Drama, Dance, Performing Arts				Overall	11.8	15	25	45	10	5
+H-0143	Royal Veterinary College	119	A	6	Agriculture, Veterinary & Food Science				Overall	102.97	10	45	35	5	5
+H-0158	University of Salford	120	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	56.93	5	30	45	20	0
+H-0158	University of Salford	120	B	10	Mathematical Sciences				Overall	9.8	0	35	55	10	0
+H-0158	University of Salford	120	B	13	Elec Engineering, Metallurgy & Materials				Overall	22	10	40	35	15	0
+H-0158	University of Salford	120	C	16	Architecture, Built Environment & Planning				Overall	75.1	25	40	25	10	0
+H-0158	University of Salford	120	C	17	Geography, Environmental Studies & Archaeology				Overall	9.1	5	25	45	25	0
+H-0158	University of Salford	120	C	19	Business & Management Studies				Overall	16	5	25	35	35	0
+H-0158	University of Salford	120	C	20	Law				Overall	5	0	20	35	45	0
+H-0158	University of Salford	120	C	22	Social Work & Social Policy				Overall	33.2	5	45	40	10	0
+H-0158	University of Salford	120	D	27	Area Studies				Overall	28.4	5	20	50	20	5
+H-0158	University of Salford	120	D	28	Modern Languages				Overall	9.6	5	30	40	20	5
+H-0158	University of Salford	120	D	29	English Language & Literature				Overall	17	10	25	55	10	0
+H-0158	University of Salford	120	D	34	Art & Design: History, Practice, Theory				Overall	18.7	5	15	55	20	5
+H-0158	University of Salford	120	D	35	Music, Drama, Dance, Performing Arts				Overall	9.41	0	25	50	25	0
+H-0158	University of Salford	120	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	47.6	15	35	40	10	0
+H-0147	School of Pharmacy	121	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	55	25	40	25	10	0
+H-0159	University of Sheffield	122	A	1	Clinical Medicine				Overall	129.21	5	50	35	5	5
+H-0159	University of Sheffield	122	A	2	Public Health, Health Services & Primary Care				Overall	61.17	0	15	35	45	5
+H-0159	University of Sheffield	122	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	57.3	15	35	30	15	5
+H-0159	University of Sheffield	122	A	4	Psychology, Psychiatry & Neuroscience				Overall	60.45	15	45	35	5	0
+H-0159	University of Sheffield	122	A	5	Biological Sciences				Overall	70.5	20	50	25	5	0
+H-0159	University of Sheffield	122	B	7	Earth Systems & Environmental Sciences				Overall	19.2	15	50	30	5	0
+H-0159	University of Sheffield	122	B	8	Chemistry				Overall	33.7	15	55	30	0	0
+H-0159	University of Sheffield	122	B	9	Physics				Overall	31.5	20	40	35	5	0
+H-0159	University of Sheffield	122	B	10	Mathematical Sciences				Overall	44.95	10	40	40	5	5
+H-0159	University of Sheffield	122	B	11	Computer Science & Informatics				Overall	34	15	50	30	5	0
+H-0159	University of Sheffield	122	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	50.2	30	45	20	5	0
+H-0159	University of Sheffield	122	B	13	Elec Engineering, Metallurgy & Materials				Overall	94.4	15	45	35	5	0
+H-0159	University of Sheffield	122	B	14	Civil and Construction Engineering				Overall	28.7	20	65	15	0	0
+H-0159	University of Sheffield	122	C	16	Architecture, Built Environment & Planning				Overall	48.6	30	35	30	5	0
+H-0159	University of Sheffield	122	C	17	Geography, Environmental Studies & Archaeology				Overall	59.9	25	35	30	10	0
+H-0159	University of Sheffield	122	C	18	Economics & Econometrics				Overall	15	15	55	25	5	0
+H-0159	University of Sheffield	122	C	19	Business & Management Studies				Overall	43.3	15	45	35	5	0
+H-0159	University of Sheffield	122	C	20	Law				Overall	31.58	15	35	35	15	0
+H-0159	University of Sheffield	122	C	21	Politics & International Studies				Overall	25	45	30	20	5	0
+H-0159	University of Sheffield	122	C	22	Social Work & Social Policy				Overall	26.6	20	45	30	5	0
+H-0159	University of Sheffield	122	C	25	Education				Overall	24.2	15	25	45	15	0
+H-0159	University of Sheffield	122	D	27	Area Studies				Overall	22	5	25	40	25	5
+H-0159	University of Sheffield	122	D	28	Modern Languages				Overall	53.5	20	30	35	15	0
+H-0159	University of Sheffield	122	D	29	English Language & Literature				Overall	42	30	25	40	5	0
+H-0159	University of Sheffield	122	D	30	History				Overall	29	35	30	25	10	0
+H-0159	University of Sheffield	122	D	32	Philosophy				Overall	19	35	35	30	0	0
+H-0159	University of Sheffield	122	D	33	Theology & Religious Studies				Overall	8	20	45	35	0	0
+H-0159	University of Sheffield	122	D	35	Music, Drama, Dance, Performing Arts				Overall	12.4	45	35	20	0	0
+H-0159	University of Sheffield	122	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	29.2	5	50	10	30	5
+H-0075	Sheffield Hallam University	123	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	52.5	0	25	40	25	10
+H-0075	Sheffield Hallam University	123	A	4	Psychology, Psychiatry & Neuroscience				Overall	12	0	10	35	55	0
+H-0075	Sheffield Hallam University	123	B	13	Elec Engineering, Metallurgy & Materials				Overall	20	5	30	40	25	0
+H-0075	Sheffield Hallam University	123	C	16	Architecture, Built Environment & Planning				Overall	24.8	20	30	35	15	0
+H-0075	Sheffield Hallam University	123	C	19	Business & Management Studies				Overall	23.1	5	20	40	30	5
+H-0075	Sheffield Hallam University	123	C	20	Law				Overall	9	0	5	35	55	5
+H-0075	Sheffield Hallam University	123	C	25	Education				Overall	14	5	20	35	35	5
+H-0075	Sheffield Hallam University	123	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	31.4	10	25	40	20	5
+H-0075	Sheffield Hallam University	123	D	29	English Language & Literature				Overall	18.51	5	25	55	15	0
+H-0075	Sheffield Hallam University	123	D	30	History				Overall	14.6	10	20	40	25	5
+H-0075	Sheffield Hallam University	123	D	34	Art & Design: History, Practice, Theory				Overall	30.05	20	30	15	35	0
+H-0075	Sheffield Hallam University	123	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	36.1	5	35	55	5	0
+H-0146	School of Oriental and African Studies	124	C	19	Business & Management Studies				Overall	14	5	35	50	10	0
+H-0146	School of Oriental and African Studies	124	C	20	Law				Overall	21.3	5	40	40	15	0
+H-0146	School of Oriental and African Studies	124	C	21	Politics & International Studies				Overall	18.25	15	45	30	10	0
+H-0146	School of Oriental and African Studies	124	C	24	Anthropology & Development Studies				Overall	50	10	30	40	20	0
+H-0146	School of Oriental and African Studies	124	D	27	Area Studies				Overall	53.3	30	35	20	10	5
+H-0146	School of Oriental and African Studies	124	D	28	Modern Languages				Overall	19	10	25	35	20	10
+H-0146	School of Oriental and African Studies	124	D	30	History				Overall	27.4	30	30	30	10	0
+H-0146	School of Oriental and African Studies	124	D	33	Theology & Religious Studies				Overall	16.9	15	50	25	10	0
+H-0146	School of Oriental and African Studies	124	D	34	Art & Design: History, Practice, Theory				Overall	11.5	30	20	40	10	0
+H-0146	School of Oriental and African Studies	124	D	35	Music, Drama, Dance, Performing Arts				Overall	8.2	35	45	10	10	0
+H-0076	London South Bank University	125	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	11.5	5	30	45	15	5
+H-0076	London South Bank University	125	A	4	Psychology, Psychiatry & Neuroscience				Overall	9.5	0	20	50	20	10
+H-0076	London South Bank University	125	B	11	Computer Science & Informatics				Overall	7	5	25	50	20	0
+H-0076	London South Bank University	125	B	15	General Engineering				Overall	17.06	5	55	35	5	0
+H-0076	London South Bank University	125	C	19	Business & Management Studies				Overall	3.69	5	15	30	40	10
+H-0076	London South Bank University	125	C	22	Social Work & Social Policy				Overall	18.8	15	45	35	5	0
+H-0076	London South Bank University	125	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	6	5	20	40	35	0
+H-0076	London South Bank University	125	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	13.5	15	25	45	15	0
+H-0160	University of Southampton	126	A	1	Clinical Medicine				Overall	130.44	10	50	35	5	0
+H-0160	University of Southampton	126	A	2	Public Health, Health Services & Primary Care				Overall	5.55	25	60	15	0	0
+H-0160	University of Southampton	126	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	44.3	0	25	35	30	10
+H-0160	University of Southampton	126	A	4	Psychology, Psychiatry & Neuroscience				Overall	39.1	15	45	35	5	0
+H-0160	University of Southampton	126	A	5	Biological Sciences				Overall	41.66	10	40	35	15	0
+H-0160	University of Southampton	126	B	7	Earth Systems & Environmental Sciences				Overall	62.83	20	50	25	5	0
+H-0160	University of Southampton	126	B	8	Chemistry				Overall	41.2	10	50	35	5	0
+H-0160	University of Southampton	126	B	9	Physics				Overall	45.3	15	40	40	5	0
+H-0160	University of Southampton	126	B	10	Mathematical Sciences				Overall	60.75	15	50	30	5	0
+H-0160	University of Southampton	126	B	11	Computer Science & Informatics				Overall	41.4	35	50	15	0	0
+H-0160	University of Southampton	126	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	132.49	15	45	35	5	0
+H-0160	University of Southampton	126	B	13	Elec Engineering, Metallurgy & Materials				Overall	65	25	40	30	5	0
+H-0160	University of Southampton	126	B	14	Civil and Construction Engineering				Overall	35.67	25	55	20	0	0
+H-0160	University of Southampton	126	C	17	Geography, Environmental Studies & Archaeology				Overall	53.95	25	35	35	5	0
+H-0160	University of Southampton	126	C	18	Economics & Econometrics				Overall	27.25	20	60	20	0	0
+H-0160	University of Southampton	126	C	19	Business & Management Studies				Overall	36.2	15	40	35	10	0
+H-0160	University of Southampton	126	C	20	Law				Overall	32.45	5	45	45	5	0
+H-0160	University of Southampton	126	C	21	Politics & International Studies				Overall	18.25	5	25	40	30	0
+H-0160	University of Southampton	126	C	22	Social Work & Social Policy				Overall	41.5	0	35	60	5	0
+H-0160	University of Southampton	126	C	25	Education				Overall	24.4	10	25	45	20	0
+H-0160	University of Southampton	126	D	27	Area Studies				Overall	23	30	25	30	10	5
+H-0160	University of Southampton	126	D	29	English Language & Literature				Overall	23.2	25	40	25	10	0
+H-0160	University of Southampton	126	D	30	History				Overall	23.15	30	40	25	5	0
+H-0160	University of Southampton	126	D	32	Philosophy				Overall	9.5	5	35	60	0	0
+H-0160	University of Southampton	126	D	34	Art & Design: History, Practice, Theory				Overall	21.92	15	35	40	10	0
+H-0160	University of Southampton	126	D	35	Music, Drama, Dance, Performing Arts				Overall	17.5	50	30	15	5	0
+H-0037	Southampton Solent University	127	B	15	General Engineering				Overall	7	5	5	20	50	20
+H-0037	Southampton Solent University	127	C	20	Law				Overall	7.2	0	0	10	65	25
+H-0037	Southampton Solent University	127	D	34	Art & Design: History, Practice, Theory				Overall	17.7	5	15	50	20	10
+H-0173	University of St Andrews	128	A	1	Clinical Medicine				Overall	7.5	15	25	35	25	0
+H-0173	University of St Andrews	128	A	4	Psychology, Psychiatry & Neuroscience				Overall	33.9	20	45	35	0	0
+H-0173	University of St Andrews	128	A	5	Biological Sciences				Overall	45.5	10	40	45	5	0
+H-0173	University of St Andrews	128	B	8	Chemistry				Overall	33	30	40	30	0	0
+H-0173	University of St Andrews	128	B	9	Physics				Overall	32.2	25	40	30	5	0
+H-0173	University of St Andrews	128	B	10	Mathematical Sciences				Overall	34	20	45	30	5	0
+H-0173	University of St Andrews	128	B	11	Computer Science & Informatics				Overall	21	15	45	35	5	0
+H-0173	University of St Andrews	128	C	17	Geography, Environmental Studies & Archaeology				Overall	29	20	40	35	5	0
+H-0173	University of St Andrews	128	C	18	Economics & Econometrics				Overall	27.15	15	40	45	0	0
+H-0173	University of St Andrews	128	C	19	Business & Management Studies				Overall	22	10	50	35	5	0
+H-0173	University of St Andrews	128	C	21	Politics & International Studies				Overall	27	10	35	35	20	0
+H-0173	University of St Andrews	128	C	24	Anthropology & Development Studies				Overall	11.66	25	30	30	15	0
+H-0173	University of St Andrews	128	D	28	Modern Languages				Overall	28.33	10	45	30	10	5
+H-0173	University of St Andrews	128	D	29	English Language & Literature				Overall	24.99	35	35	20	10	0
+H-0173	University of St Andrews	128	D	30	History				Overall	41.49	20	40	35	5	0
+H-0173	University of St Andrews	128	D	31	Classics				Overall	18	15	45	35	5	0
+H-0173	University of St Andrews	128	D	32	Philosophy				Overall	19.18	40	35	25	0	0
+H-0173	University of St Andrews	128	D	33	Theology & Religious Studies				Overall	16	20	30	45	5	0
+H-0173	University of St Andrews	128	D	34	Art & Design: History, Practice, Theory				Overall	14.2	15	60	15	10	0
+H-0173	University of St Andrews	128	D	35	Music, Drama, Dance, Performing Arts				Overall	5	50	35	15	0	0
+H-0145	St George's Hospital Medical School	129	A	1	Clinical Medicine				Overall	49.86	5	40	45	10	0
+H-0145	St George's Hospital Medical School	129	A	2	Public Health, Health Services & Primary Care				Overall	10.94	10	55	30	5	0
+H-0145	St George's Hospital Medical School	129	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	7	15	30	25	20	10
+H-0145	St George's Hospital Medical School	129	A	4	Psychology, Psychiatry & Neuroscience				Overall	3.83	5	10	45	20	20
+H-0145	St George's Hospital Medical School	129	A	5	Biological Sciences				Overall	46.4	5	35	45	5	10
+H-0145	St George's Hospital Medical School	129	C	25	Education				Overall	3.2	0	25	25	35	15
+H-0039	St Mary's University College	130	C	25	Education				Overall	4.6	0	10	20	40	30
+H-0039	St Mary's University College	130	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	5.2	0	10	30	50	10
+H-0039	St Mary's University College	130	D	29	English Language & Literature				Overall	9.5	10	10	35	30	15
+H-0039	St Mary's University College	130	D	33	Theology & Religious Studies				Overall	10.7	10	30	35	20	5
+H-0077	Staffordshire University	131	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	12.8	0	5	10	45	40
+H-0077	Staffordshire University	131	B	10	Mathematical Sciences				Overall	1	0	0	0	95	5
+H-0077	Staffordshire University	131	B	11	Computer Science & Informatics				Overall	7	0	30	45	25	0
+H-0077	Staffordshire University	131	B	15	General Engineering				Overall	6	5	45	40	10	0
+H-0077	Staffordshire University	131	C	25	Education				Overall	8.3	5	30	25	35	5
+H-0077	Staffordshire University	131	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	12.3	0	20	40	30	10
+H-0077	Staffordshire University	131	D	32	Philosophy				Overall	2	0	20	60	20	0
+H-0077	Staffordshire University	131	D	34	Art & Design: History, Practice, Theory				Overall	10.5	0	10	15	65	10
+H-0077	Staffordshire University	131	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	11.5	5	20	30	45	0
+H-0174	University of Stirling	132	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	16.6	20	30	35	10	5
+H-0174	University of Stirling	132	A	4	Psychology, Psychiatry & Neuroscience				Overall	24.2	5	10	55	30	0
+H-0174	University of Stirling	132	A	6	Agriculture, Veterinary & Food Science				Overall	32.9	5	45	40	10	0
+H-0174	University of Stirling	132	B	7	Earth Systems & Environmental Sciences				Overall	19.8	5	35	50	10	0
+H-0174	University of Stirling	132	B	11	Computer Science & Informatics				Overall	10	5	40	45	10	0
+H-0174	University of Stirling	132	C	18	Economics & Econometrics				Overall	7.6	15	45	40	0	0
+H-0174	University of Stirling	132	C	19	Business & Management Studies				Overall	42.7	10	30	40	20	0
+H-0174	University of Stirling	132	C	20	Law				Overall	7	5	35	30	30	0
+H-0174	University of Stirling	132	C	21	Politics & International Studies				Overall	6	5	10	45	35	5
+H-0174	University of Stirling	132	C	22	Social Work & Social Policy				Overall	25.8	10	45	40	5	0
+H-0174	University of Stirling	132	C	25	Education				Overall	20.6	15	40	35	10	0
+H-0174	University of Stirling	132	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	11.6	15	25	45	15	0
+H-0174	University of Stirling	132	D	27	Area Studies				Overall	12.03	5	25	45	20	5
+H-0174	University of Stirling	132	D	29	English Language & Literature				Overall	17	10	45	35	10	0
+H-0174	University of Stirling	132	D	30	History				Overall	18.5	15	35	40	5	5
+H-0174	University of Stirling	132	D	32	Philosophy				Overall	11	25	45	30	0	0
+H-0174	University of Stirling	132	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	14	10	60	25	5	0
+H-0193	Stranmillis University College	133	C	25	Education				Overall	6	5	20	15	40	20
+H-0169	University of Strathclyde	134	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	61.5	15	40	30	15	0
+H-0169	University of Strathclyde	134	A	4	Psychology, Psychiatry & Neuroscience				Overall	17	0	30	45	25	0
+H-0169	University of Strathclyde	134	B	8	Chemistry				Overall	26.4	10	60	25	5	0
+H-0169	University of Strathclyde	134	B	9	Physics				Overall	31.67	5	35	50	10	0
+H-0169	University of Strathclyde	134	B	10	Mathematical Sciences				Overall	34.66	10	30	45	15	0
+H-0169	University of Strathclyde	134	B	11	Computer Science & Informatics				Overall	13.4	15	35	40	10	0
+H-0169	University of Strathclyde	134	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	60	15	35	35	15	0
+H-0169	University of Strathclyde	134	B	13	Elec Engineering, Metallurgy & Materials				Overall	65	15	35	40	10	0
+H-0169	University of Strathclyde	134	B	14	Civil and Construction Engineering				Overall	21	5	35	30	25	5
+H-0169	University of Strathclyde	134	B	15	General Engineering				Overall	11	15	45	25	15	0
+H-0169	University of Strathclyde	134	C	16	Architecture, Built Environment & Planning				Overall	11.3	5	35	40	20	0
+H-0169	University of Strathclyde	134	C	19	Business & Management Studies				Overall	88.88	25	40	30	5	0
+H-0169	University of Strathclyde	134	C	20	Law				Overall	20.5	20	40	25	15	0
+H-0169	University of Strathclyde	134	C	21	Politics & International Studies				Overall	13	0	30	45	20	5
+H-0169	University of Strathclyde	134	C	22	Social Work & Social Policy				Overall	10.15	5	35	45	15	0
+H-0169	University of Strathclyde	134	C	23	Sociology				Overall	9	0	20	55	25	0
+H-0169	University of Strathclyde	134	C	25	Education				Overall	54.08	5	25	40	25	5
+H-0169	University of Strathclyde	134	D	27	Area Studies				Overall	4.4	10	10	40	40	0
+H-0169	University of Strathclyde	134	D	28	Modern Languages				Overall	5.5	0	20	55	25	0
+H-0169	University of Strathclyde	134	D	29	English Language & Literature				Overall	14.6	15	30	45	10	0
+H-0169	University of Strathclyde	134	D	30	History				Overall	15.1	5	35	45	15	0
+H-0078	University of Sunderland	135	A	2	Public Health, Health Services & Primary Care				Overall	4.6	0	15	25	50	10
+H-0078	University of Sunderland	135	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	25	0	20	25	40	15
+H-0078	University of Sunderland	135	A	4	Psychology, Psychiatry & Neuroscience				Overall	8	0	5	30	65	0
+H-0078	University of Sunderland	135	B	7	Earth Systems & Environmental Sciences				Overall	5	0	10	50	40	0
+H-0078	University of Sunderland	135	B	11	Computer Science & Informatics				Overall	33.97	5	20	35	40	0
+H-0078	University of Sunderland	135	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	9.25	5	15	20	40	20
+H-0078	University of Sunderland	135	C	20	Law				Overall	11	0	0	35	60	5
+H-0078	University of Sunderland	135	C	21	Politics & International Studies				Overall	3.7	0	5	35	50	10
+H-0078	University of Sunderland	135	C	25	Education				Overall	9.8	0	25	30	40	5
+H-0078	University of Sunderland	135	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	4	5	25	40	30	0
+H-0078	University of Sunderland	135	D	29	English Language & Literature				Overall	5	10	30	50	10	0
+H-0078	University of Sunderland	135	D	30	History				Overall	7.5	15	20	50	15	0
+H-0078	University of Sunderland	135	D	33	Theology & Religious Studies				Overall	1	0	5	85	0	10
+H-0078	University of Sunderland	135	D	34	Art & Design: History, Practice, Theory				Overall	33.07	5	35	35	15	10
+H-0078	University of Sunderland	135	D	35	Music, Drama, Dance, Performing Arts				Overall	6.66	0	25	40	30	5
+H-0078	University of Sunderland	135	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	13.44	15	50	30	5	0
+H-0161	University of Surrey	136	A	2	Public Health, Health Services & Primary Care				Overall	31.03	0	5	50	40	5
+H-0161	University of Surrey	136	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	61.65	20	40	35	5	0
+H-0161	University of Surrey	136	A	4	Psychology, Psychiatry & Neuroscience				Overall	34.8	10	30	45	15	0
+H-0161	University of Surrey	136	B	9	Physics				Overall	27.2	10	45	35	10	0
+H-0161	University of Surrey	136	B	10	Mathematical Sciences				Overall	17.42	15	55	25	5	0
+H-0161	University of Surrey	136	B	11	Computer Science & Informatics				Overall	16.2	10	40	30	15	5
+H-0161	University of Surrey	136	B	13	Elec Engineering, Metallurgy & Materials				Overall	65.65	30	40	25	5	0
+H-0161	University of Surrey	136	B	15	General Engineering				Overall	44.6	15	60	25	0	0
+H-0161	University of Surrey	136	C	18	Economics & Econometrics				Overall	14.6	15	50	35	0	0
+H-0161	University of Surrey	136	C	19	Business & Management Studies				Overall	46.4	10	40	40	10	0
+H-0161	University of Surrey	136	C	23	Sociology				Overall	21.4	30	25	35	10	0
+H-0161	University of Surrey	136	D	27	Area Studies				Overall	30.4	5	25	45	25	0
+H-0161	University of Surrey	136	D	35	Music, Drama, Dance, Performing Arts				Overall	14.1	15	60	20	5	0
+H-0162	University of Sussex	137	A	1	Clinical Medicine				Overall	34.5	5	30	45	20	0
+H-0162	University of Sussex	137	A	4	Psychology, Psychiatry & Neuroscience				Overall	45	15	45	35	5	0
+H-0162	University of Sussex	137	A	5	Biological Sciences				Overall	62.9	20	35	30	5	10
+H-0162	University of Sussex	137	B	8	Chemistry				Overall	21	10	40	45	5	0
+H-0162	University of Sussex	137	B	9	Physics				Overall	20	15	45	35	5	0
+H-0162	University of Sussex	137	B	10	Mathematical Sciences				Overall	13	10	40	40	10	0
+H-0162	University of Sussex	137	B	11	Computer Science & Informatics				Overall	33	20	50	25	5	0
+H-0162	University of Sussex	137	B	15	General Engineering				Overall	22.5	10	50	35	5	0
+H-0162	University of Sussex	137	C	17	Geography, Environmental Studies & Archaeology				Overall	19.3	15	50	30	5	0
+H-0162	University of Sussex	137	C	18	Economics & Econometrics				Overall	10	10	50	40	0	0
+H-0162	University of Sussex	137	C	20	Law				Overall	17.2	5	50	45	0	0
+H-0162	University of Sussex	137	C	21	Politics & International Studies				Overall	45.6	15	40	40	5	0
+H-0162	University of Sussex	137	C	22	Social Work & Social Policy				Overall	9	15	45	35	5	0
+H-0162	University of Sussex	137	C	23	Sociology				Overall	14	25	30	25	15	5
+H-0162	University of Sussex	137	C	24	Anthropology & Development Studies				Overall	22.35	25	30	35	10	0
+H-0162	University of Sussex	137	C	25	Education				Overall	21.5	20	35	30	15	0
+H-0162	University of Sussex	137	D	27	Area Studies				Overall	22	15	45	30	10	0
+H-0162	University of Sussex	137	D	28	Modern Languages				Overall	5	0	30	25	35	10
+H-0162	University of Sussex	137	D	29	English Language & Literature				Overall	33.5	20	35	40	5	0
+H-0162	University of Sussex	137	D	30	History				Overall	21.6	25	40	25	10	0
+H-0162	University of Sussex	137	D	32	Philosophy				Overall	11.5	10	50	40	0	0
+H-0162	University of Sussex	137	D	34	Art & Design: History, Practice, Theory				Overall	7	45	25	30	0	0
+H-0162	University of Sussex	137	D	35	Music, Drama, Dance, Performing Arts				Overall	7	20	45	30	5	0
+H-0162	University of Sussex	137	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	18.45	15	60	25	0	0
+H-0180	Swansea University	138	A	2	Public Health, Health Services & Primary Care				Overall	14.65	0	35	45	20	0
+H-0180	Swansea University	138	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	69.15	20	35	35	10	0
+H-0180	Swansea University	138	A	4	Psychology, Psychiatry & Neuroscience				Overall	26	5	30	45	20	0
+H-0180	Swansea University	138	A	5	Biological Sciences				Overall	16	0	20	55	20	5
+H-0180	Swansea University	138	B	9	Physics				Overall	20.75	10	40	45	5	0
+H-0180	Swansea University	138	B	10	Mathematical Sciences				Overall	20.5	5	35	50	10	0
+H-0180	Swansea University	138	B	11	Computer Science & Informatics				Overall	22	25	45	25	5	0
+H-0180	Swansea University	138	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	12.5	10	35	50	5	0
+H-0180	Swansea University	138	B	13	Elec Engineering, Metallurgy & Materials				Overall	30	15	45	35	5	0
+H-0180	Swansea University	138	B	14	Civil and Construction Engineering				Overall	18	35	60	5	0	0
+H-0180	Swansea University	138	B	15	General Engineering				Overall	18	15	65	20	0	0
+H-0180	Swansea University	138	C	17	Geography, Environmental Studies & Archaeology				Overall	29.3	15	45	35	5	0
+H-0180	Swansea University	138	C	18	Economics & Econometrics				Overall	18.2	15	45	40	0	0
+H-0180	Swansea University	138	C	19	Business & Management Studies				Overall	21.75	10	30	45	15	0
+H-0180	Swansea University	138	C	20	Law				Overall	25.05	5	40	50	5	0
+H-0180	Swansea University	138	C	21	Politics & International Studies				Overall	13	5	15	60	20	0
+H-0180	Swansea University	138	C	22	Social Work & Social Policy				Overall	17.5	10	50	30	10	0
+H-0180	Swansea University	138	C	24	Anthropology & Development Studies				Overall	4.6	5	10	55	30	0
+H-0180	Swansea University	138	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	9.28	0	0	35	55	10
+H-0180	Swansea University	138	D	27	Area Studies				Overall	11	10	20	35	25	10
+H-0180	Swansea University	138	D	28	Modern Languages				Overall	31	10	40	40	10	0
+H-0180	Swansea University	138	D	29	English Language & Literature				Overall	24.28	10	50	30	10	0
+H-0180	Swansea University	138	D	30	History				Overall	18	15	35	40	10	0
+H-0180	Swansea University	138	D	31	Classics				Overall	13.6	5	20	50	25	0
+H-0180	Swansea University	138	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	7.7	10	25	25	40	0
+H-0091	Swansea Metropolitan University	139	B	15	General Engineering				Overall	2.2	10	20	45	25	0
+H-0091	Swansea Metropolitan University	139	C	17	Geography, Environmental Studies & Archaeology				Overall	3.2	0	5	20	60	15
+H-0091	Swansea Metropolitan University	139	C	25	Education				Overall	8.89	5	10	30	40	15
+H-0091	Swansea Metropolitan University	139	D	34	Art & Design: History, Practice, Theory				Overall	10.8	5	25	55	10	5
+H-0079	University of Teesside	140	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	21.53	0	20	35	35	10
+H-0079	University of Teesside	140	B	11	Computer Science & Informatics				Overall	7	10	45	30	15	0
+H-0079	University of Teesside	140	B	15	General Engineering				Overall	16.4	0	25	55	20	0
+H-0079	University of Teesside	140	C	19	Business & Management Studies				Overall	12	5	20	35	40	0
+H-0079	University of Teesside	140	C	23	Sociology				Overall	10	5	20	40	35	0
+H-0079	University of Teesside	140	D	30	History				Overall	10.41	10	40	30	20	0
+H-0080	Thames Valley University	141	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	17.63	10	30	35	20	5
+H-0080	Thames Valley University	141	A	4	Psychology, Psychiatry & Neuroscience				Overall	8	0	0	30	50	20
+H-0080	Thames Valley University	141	B	11	Computer Science & Informatics				Overall	5	0	15	40	40	5
+H-0080	Thames Valley University	141	C	25	Education				Overall	1.4	0	25	30	30	15
+H-0080	Thames Valley University	141	D	34	Art & Design: History, Practice, Theory				Overall	4.2	0	20	25	55	0
+H-0080	Thames Valley University	141	D	35	Music, Drama, Dance, Performing Arts				Overall	11.5	0	10	25	50	15
+H-0080	Thames Valley University	141	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	5	0	20	30	45	5
+H-0149	University College London	142	A	1	Clinical Medicine				Overall	381.32	35	35	25	5	0
+H-0149	University College London	142	A	2	Public Health, Health Services & Primary Care				Overall	88.8	10	35	30	20	5
+H-0149	University College London	142	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	66.5	20	35	30	10	5
+H-0149	University College London	142	A	4	Psychology, Psychiatry & Neuroscience				Overall	155.62	30	45	20	5	0
+H-0149	University College London	142	A	5	Biological Sciences				Overall	125.36	35	35	20	0	10
+H-0149	University College London	142	B	7	Earth Systems & Environmental Sciences				Overall	31.5	25	55	20	0	0
+H-0149	University College London	142	B	8	Chemistry				Overall	53.75	15	50	35	0	0
+H-0149	University College London	142	B	9	Physics				Overall	101.03	20	40	35	5	0
+H-0149	University College London	142	B	10	Mathematical Sciences				Overall	45.25	10	40	40	10	0
+H-0149	University College London	142	B	11	Computer Science & Informatics				Overall	54.4	35	45	20	0	0
+H-0149	University College London	142	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	55	20	35	35	10	0
+H-0149	University College London	142	B	13	Elec Engineering, Metallurgy & Materials				Overall	33	25	35	35	5	0
+H-0149	University College London	142	B	14	Civil and Construction Engineering				Overall	35.6	15	40	40	5	0
+H-0149	University College London	142	C	16	Architecture, Built Environment & Planning				Overall	72.12	20	40	25	15	0
+H-0149	University College London	142	C	17	Geography, Environmental Studies & Archaeology				Overall	105.05	30	30	30	10	0
+H-0149	University College London	142	C	18	Economics & Econometrics				Overall	32.2	55	40	5	0	0
+H-0149	University College London	142	C	20	Law				Overall	42.8	35	40	20	5	0
+H-0149	University College London	142	C	21	Politics & International Studies				Overall	15	20	45	25	10	0
+H-0149	University College London	142	C	22	Social Work & Social Policy				Overall	7	15	60	25	0	0
+H-0149	University College London	142	C	24	Anthropology & Development Studies				Overall	26.5	30	30	25	15	0
+H-0149	University College London	142	D	28	Modern Languages				Overall	108	15	35	35	15	0
+H-0149	University College London	142	D	29	English Language & Literature				Overall	25	30	35	25	10	0
+H-0149	University College London	142	D	30	History				Overall	49	40	25	25	10	0
+H-0149	University College London	142	D	31	Classics				Overall	12.5	30	35	35	0	0
+H-0149	University College London	142	D	32	Philosophy				Overall	16.28	45	30	20	5	0
+H-0149	University College London	142	D	33	Theology & Religious Studies				Overall	7.2	30	40	20	10	0
+H-0149	University College London	142	D	34	Art & Design: History, Practice, Theory				Overall	35.2	30	50	10	10	0
+H-0149	University College London	142	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	11.7	30	25	35	10	0
+H-0117	University of East Anglia	143	A	2	Public Health, Health Services & Primary Care				Overall	37.5	5	40	45	10	0
+H-0117	University of East Anglia	143	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	36.6	10	30	30	25	5
+H-0117	University of East Anglia	143	A	4	Psychology, Psychiatry & Neuroscience				Overall	12	0	15	45	40	0
+H-0117	University of East Anglia	143	A	5	Biological Sciences				Overall	58.7	10	40	40	10	0
+H-0117	University of East Anglia	143	B	7	Earth Systems & Environmental Sciences				Overall	71.67	25	45	25	5	0
+H-0117	University of East Anglia	143	B	8	Chemistry				Overall	30	5	50	45	0	0
+H-0117	University of East Anglia	143	B	10	Mathematical Sciences				Overall	14	5	40	45	10	0
+H-0117	University of East Anglia	143	B	11	Computer Science & Informatics				Overall	17.5	20	45	30	0	5
+H-0117	University of East Anglia	143	C	18	Economics & Econometrics				Overall	13.5	15	50	30	5	0
+H-0117	University of East Anglia	143	C	19	Business & Management Studies				Overall	21	10	35	45	10	0
+H-0117	University of East Anglia	143	C	20	Law				Overall	20	5	35	40	20	0
+H-0117	University of East Anglia	143	C	21	Politics & International Studies				Overall	9	10	15	50	25	0
+H-0117	University of East Anglia	143	C	22	Social Work & Social Policy				Overall	16	10	45	35	10	0
+H-0117	University of East Anglia	143	C	24	Anthropology & Development Studies				Overall	32	25	35	25	15	0
+H-0117	University of East Anglia	143	C	25	Education				Overall	14.6	15	35	40	10	0
+H-0117	University of East Anglia	143	D	27	Area Studies				Overall	11	20	30	40	5	5
+H-0117	University of East Anglia	143	D	29	English Language & Literature				Overall	26.75	20	45	30	5	0
+H-0117	University of East Anglia	143	D	30	History				Overall	26	20	40	30	10	0
+H-0117	University of East Anglia	143	D	32	Philosophy				Overall	8	5	30	55	10	0
+H-0117	University of East Anglia	143	D	34	Art & Design: History, Practice, Theory				Overall	16	50	20	25	5	0
+H-0117	University of East Anglia	143	D	35	Music, Drama, Dance, Performing Arts				Overall	5	0	40	40	15	5
+H-0117	University of East Anglia	143	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	9	50	40	10	0	0
+H-0058	University of East London	144	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	12.5	10	20	35	35	0
+H-0058	University of East London	144	A	4	Psychology, Psychiatry & Neuroscience				Overall	10.2	0	20	65	15	0
+H-0058	University of East London	144	C	20	Law				Overall	9	5	30	45	20	0
+H-0058	University of East London	144	C	22	Social Work & Social Policy				Overall	9.3	0	35	40	25	0
+H-0058	University of East London	144	C	23	Sociology				Overall	31.9	10	30	35	20	5
+H-0058	University of East London	144	C	25	Education				Overall	7.8	5	20	30	30	15
+H-0058	University of East London	144	D	34	Art & Design: History, Practice, Theory				Overall	9.9	10	30	45	15	0
+H-0058	University of East London	144	D	35	Music, Drama, Dance, Performing Arts				Overall	5.2	5	30	55	10	0
+H-0058	University of East London	144	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	14.9	20	60	15	5	0
+H-0196	UHI Millennium Institute	145	A	5	Biological Sciences				Overall	2	0	10	55	35	0
+H-0196	UHI Millennium Institute	145	A	6	Agriculture, Veterinary & Food Science				Overall	3	0	5	35	60	0
+H-0196	UHI Millennium Institute	145	B	7	Earth Systems & Environmental Sciences				Overall	42	5	35	45	15	0
+H-0196	UHI Millennium Institute	145	C	16	Architecture, Built Environment & Planning				Overall	7.5	0	10	35	40	15
+H-0196	UHI Millennium Institute	145	C	17	Geography, Environmental Studies & Archaeology				Overall	3.3	5	15	40	40	0
+H-0196	UHI Millennium Institute	145	D	27	Area Studies				Overall	4	0	5	15	60	20
+H-0196	UHI Millennium Institute	145	D	28	Modern Languages				Overall	4	5	10	35	30	20
+H-0196	UHI Millennium Institute	145	D	33	Theology & Religious Studies				Overall	3.6	0	10	30	50	10
+H-0185	University of Ulster	146	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	100.65	20	30	35	10	5
+H-0185	University of Ulster	146	A	4	Psychology, Psychiatry & Neuroscience				Overall	27	5	20	45	30	0
+H-0185	University of Ulster	146	A	6	Agriculture, Veterinary & Food Science				Overall	7	0	35	55	10	0
+H-0185	University of Ulster	146	B	7	Earth Systems & Environmental Sciences				Overall	24	5	35	50	10	0
+H-0185	University of Ulster	146	B	11	Computer Science & Informatics				Overall	41	10	45	35	10	0
+H-0185	University of Ulster	146	B	13	Elec Engineering, Metallurgy & Materials				Overall	12	5	45	45	5	0
+H-0185	University of Ulster	146	C	16	Architecture, Built Environment & Planning				Overall	32.8	15	50	30	5	0
+H-0185	University of Ulster	146	C	19	Business & Management Studies				Overall	30.5	5	30	50	15	0
+H-0185	University of Ulster	146	C	20	Law				Overall	24.4	20	35	35	10	0
+H-0185	University of Ulster	146	C	21	Politics & International Studies				Overall	8	10	25	35	30	0
+H-0185	University of Ulster	146	C	22	Social Work & Social Policy				Overall	15.6	10	50	35	5	0
+H-0185	University of Ulster	146	C	25	Education				Overall	13	10	15	50	25	0
+H-0185	University of Ulster	146	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	7	5	25	45	25	0
+H-0185	University of Ulster	146	D	28	Modern Languages				Overall	29.2	25	30	35	10	0
+H-0185	University of Ulster	146	D	29	English Language & Literature				Overall	17.75	5	30	50	15	0
+H-0185	University of Ulster	146	D	30	History				Overall	20	15	40	30	15	0
+H-0185	University of Ulster	146	D	34	Art & Design: History, Practice, Theory				Overall	46.25	20	25	30	15	10
+H-0185	University of Ulster	146	D	35	Music, Drama, Dance, Performing Arts				Overall	8	0	30	50	15	5
+H-0185	University of Ulster	146	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	17	10	65	20	5	0
+H-0206	University for the Creative Arts	147	D	34	Art & Design: History, Practice, Theory				Overall	43.15	5	25	35	25	10
+H-0024	University of the Arts London	148	D	34	Art & Design: History, Practice, Theory				Overall	237.89	20	35	20	20	5
+H-0089	University of Wales Institute, Cardiff	149	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	28.7	5	10	35	35	15
+H-0089	University of Wales Institute, Cardiff	149	C	19	Business & Management Studies				Overall	8.25	0	10	25	55	10
+H-0089	University of Wales Institute, Cardiff	149	C	25	Education				Overall	10	0	0	30	50	20
+H-0089	University of Wales Institute, Cardiff	149	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	34	5	20	40	35	0
+H-0089	University of Wales Institute, Cardiff	149	D	34	Art & Design: History, Practice, Theory				Overall	20.6	10	60	25	5	0
+H-0081	University of the West of England, Bristol	150	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	42.9	15	50	25	10	0
+H-0081	University of the West of England, Bristol	150	A	6	Agriculture, Veterinary & Food Science				Overall	6	5	40	45	10	0
+H-0081	University of the West of England, Bristol	150	B	10	Mathematical Sciences				Overall	9	0	10	50	40	0
+H-0081	University of the West of England, Bristol	150	B	11	Computer Science & Informatics				Overall	15.8	10	35	40	15	0
+H-0081	University of the West of England, Bristol	150	B	15	General Engineering				Overall	6.6	10	45	35	10	0
+H-0081	University of the West of England, Bristol	150	C	16	Architecture, Built Environment & Planning				Overall	36.7	5	45	35	10	5
+H-0081	University of the West of England, Bristol	150	C	17	Geography, Environmental Studies & Archaeology				Overall	22.9	0	20	50	25	5
+H-0081	University of the West of England, Bristol	150	C	19	Business & Management Studies				Overall	40	0	30	55	15	0
+H-0081	University of the West of England, Bristol	150	C	20	Law				Overall	15	5	15	40	35	5
+H-0081	University of the West of England, Bristol	150	C	21	Politics & International Studies				Overall	11	0	15	30	50	5
+H-0081	University of the West of England, Bristol	150	C	22	Social Work & Social Policy				Overall	14.8	0	25	55	20	0
+H-0081	University of the West of England, Bristol	150	C	23	Sociology				Overall	12	0	15	40	40	5
+H-0081	University of the West of England, Bristol	150	C	25	Education				Overall	12.5	5	10	50	35	0
+H-0081	University of the West of England, Bristol	150	D	28	Modern Languages				Overall	6	10	35	40	15	0
+H-0081	University of the West of England, Bristol	150	D	29	English Language & Literature				Overall	14	5	25	55	15	0
+H-0081	University of the West of England, Bristol	150	D	30	History				Overall	17.5	5	35	50	10	0
+H-0081	University of the West of England, Bristol	150	D	34	Art & Design: History, Practice, Theory				Overall	15.7	10	50	25	15	0
+H-0081	University of the West of England, Bristol	150	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	22	15	45	35	0	5
+H-0186	University of Wales Centre for Advanced Welsh and Celtic Studies	151	D	28	Modern Languages				Overall	12.5	35	45	15	5	0
+H-0163	University of Warwick	152	A	1	Clinical Medicine				Overall	38	5	35	55	5	0
+H-0163	University of Warwick	152	A	2	Public Health, Health Services & Primary Care				Overall	30.9	10	55	30	5	0
+H-0163	University of Warwick	152	A	4	Psychology, Psychiatry & Neuroscience				Overall	18	5	60	30	5	0
+H-0163	University of Warwick	152	A	5	Biological Sciences				Overall	57.57	10	40	35	15	0
+H-0163	University of Warwick	152	A	6	Agriculture, Veterinary & Food Science				Overall	33.52	20	40	35	5	0
+H-0163	University of Warwick	152	B	8	Chemistry				Overall	32.8	15	60	25	0	0
+H-0163	University of Warwick	152	B	9	Physics				Overall	51	15	35	45	5	0
+H-0163	University of Warwick	152	B	10	Mathematical Sciences				Overall	85.25	30	35	30	5	0
+H-0163	University of Warwick	152	B	11	Computer Science & Informatics				Overall	26.5	15	50	30	5	0
+H-0163	University of Warwick	152	B	15	General Engineering				Overall	69.45	20	50	25	5	0
+H-0163	University of Warwick	152	C	18	Economics & Econometrics				Overall	49.63	40	55	5	0	0
+H-0163	University of Warwick	152	C	19	Business & Management Studies				Overall	130.7	25	50	20	5	0
+H-0163	University of Warwick	152	C	20	Law				Overall	47.33	10	35	40	15	0
+H-0163	University of Warwick	152	C	21	Politics & International Studies				Overall	31	20	40	25	15	0
+H-0163	University of Warwick	152	C	22	Social Work & Social Policy				Overall	22.8	10	50	35	5	0
+H-0163	University of Warwick	152	C	23	Sociology				Overall	37.8	30	25	30	15	0
+H-0163	University of Warwick	152	C	25	Education				Overall	35.43	20	40	25	15	0
+H-0163	University of Warwick	152	D	28	Modern Languages				Overall	28	20	30	35	15	0
+H-0163	University of Warwick	152	D	29	English Language & Literature				Overall	34.32	35	30	30	5	0
+H-0163	University of Warwick	152	D	30	History				Overall	36.75	30	45	20	5	0
+H-0163	University of Warwick	152	D	31	Classics				Overall	14	25	40	30	5	0
+H-0163	University of Warwick	152	D	32	Philosophy				Overall	22	15	40	40	5	0
+H-0163	University of Warwick	152	D	34	Art & Design: History, Practice, Theory				Overall	9	15	55	30	0	0
+H-0163	University of Warwick	152	D	35	Music, Drama, Dance, Performing Arts				Overall	24.6	30	55	15	0	0
+H-0105	University of the West of Scotland	153	A	2	Public Health, Health Services & Primary Care				Overall	7.4	0	15	30	55	0
+H-0105	University of the West of Scotland	153	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	6	15	25	30	25	5
+H-0105	University of the West of Scotland	153	B	7	Earth Systems & Environmental Sciences				Overall	7	0	15	50	35	0
+H-0105	University of the West of Scotland	153	B	9	Physics				Overall	3.7	0	20	50	20	10
+H-0105	University of the West of Scotland	153	B	11	Computer Science & Informatics				Overall	2	0	30	45	20	5
+H-0105	University of the West of Scotland	153	B	13	Elec Engineering, Metallurgy & Materials				Overall	3	0	50	40	10	0
+H-0105	University of the West of Scotland	153	C	19	Business & Management Studies				Overall	9	5	25	25	40	5
+H-0105	University of the West of Scotland	153	C	20	Law				Overall	2.5	0	0	15	75	10
+H-0105	University of the West of Scotland	153	C	22	Social Work & Social Policy				Overall	7	15	15	30	40	0
+H-0105	University of the West of Scotland	153	C	25	Education				Overall	5	5	25	25	25	20
+H-0105	University of the West of Scotland	153	D	27	Area Studies				Overall	4	0	5	45	45	5
+H-0105	University of the West of Scotland	153	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	13	10	20	25	40	5
+H-0083	University of Westminster	154	A	2	Public Health, Health Services & Primary Care				Overall	7.95	10	15	30	45	0
+H-0083	University of Westminster	154	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	20	10	25	40	15	10
+H-0083	University of Westminster	154	A	4	Psychology, Psychiatry & Neuroscience				Overall	9.5	0	15	45	40	0
+H-0083	University of Westminster	154	B	7	Earth Systems & Environmental Sciences				Overall	4.2	5	30	45	20	0
+H-0083	University of Westminster	154	B	11	Computer Science & Informatics				Overall	20.25	5	20	50	25	0
+H-0083	University of Westminster	154	B	13	Elec Engineering, Metallurgy & Materials				Overall	5	0	15	40	40	5
+H-0083	University of Westminster	154	C	16	Architecture, Built Environment & Planning				Overall	25.44	5	20	45	25	5
+H-0083	University of Westminster	154	C	17	Geography, Environmental Studies & Archaeology				Overall	5.8	10	40	40	10	0
+H-0083	University of Westminster	154	C	19	Business & Management Studies				Overall	21.4	5	25	40	25	5
+H-0083	University of Westminster	154	C	20	Law				Overall	28.6	0	35	50	15	0
+H-0083	University of Westminster	154	C	21	Politics & International Studies				Overall	14.4	5	15	40	35	5
+H-0083	University of Westminster	154	D	27	Area Studies				Overall	2	10	20	40	30	0
+H-0083	University of Westminster	154	D	28	Modern Languages				Overall	7.1	5	5	40	35	15
+H-0083	University of Westminster	154	D	29	English Language & Literature				Overall	10.2	0	20	40	40	0
+H-0083	University of Westminster	154	D	30	History				Overall	4	0	15	70	15	0
+H-0083	University of Westminster	154	D	34	Art & Design: History, Practice, Theory				Overall	22.05	20	55	25	0	0
+H-0083	University of Westminster	154	D	35	Music, Drama, Dance, Performing Arts				Overall	2.2	10	15	40	35	0
+H-0083	University of Westminster	154	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	16	60	30	10	0	0
+H-0021	University of Winchester	155	C	17	Geography, Environmental Studies & Archaeology				Overall	4.75	0	20	55	20	5
+H-0021	University of Winchester	155	C	25	Education				Overall	9.9	5	35	30	20	10
+H-0021	University of Winchester	155	D	30	History				Overall	7.4	15	40	35	5	5
+H-0021	University of Winchester	155	D	33	Theology & Religious Studies				Overall	5.6	0	10	45	40	5
+H-0021	University of Winchester	155	D	35	Music, Drama, Dance, Performing Arts				Overall	12.7	5	30	50	15	0
+H-0021	University of Winchester	155	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	14.9	5	30	50	15	0
+H-0085	University of Wolverhampton	156	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	33.72	5	15	30	35	15
+H-0085	University of Wolverhampton	156	B	12	Aero, Mech, Chem & Manufacturing Engineering				Overall	8	5	25	35	30	5
+H-0085	University of Wolverhampton	156	C	16	Architecture, Built Environment & Planning				Overall	12.5	10	40	40	10	0
+H-0085	University of Wolverhampton	156	C	19	Business & Management Studies				Overall	9	0	20	55	20	5
+H-0085	University of Wolverhampton	156	C	20	Law				Overall	12.6	0	25	40	30	5
+H-0085	University of Wolverhampton	156	C	25	Education				Overall	14	5	15	35	40	5
+H-0085	University of Wolverhampton	156	D	27	Area Studies				Overall	9	0	25	30	40	5
+H-0085	University of Wolverhampton	156	D	28	Modern Languages				Overall	5	15	40	45	0	0
+H-0085	University of Wolverhampton	156	D	30	History				Overall	16.5	5	25	50	20	0
+H-0085	University of Wolverhampton	156	D	34	Art & Design: History, Practice, Theory				Overall	27.05	10	25	50	15	0
+H-0085	University of Wolverhampton	156	D	36	Comm, Cultural & Media Studies, Library & Info Mgt				Overall	4	25	40	20	15	0
+H-0046	University of Worcester	157	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	8.2	0	5	40	45	10
+H-0046	University of Worcester	157	C	17	Geography, Environmental Studies & Archaeology				Overall	5	0	10	45	35	10
+H-0046	University of Worcester	157	D	29	English Language & Literature				Overall	5.4	5	20	35	35	5
+H-0046	University of Worcester	157	D	30	History				Overall	4.5	0	0	45	50	5
+H-0164	University of York	158	A	2	Public Health, Health Services & Primary Care				Overall	45.88	35	40	20	5	0
+H-0164	University of York	158	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	22.16	35	35	25	5	0
+H-0164	University of York	158	A	4	Psychology, Psychiatry & Neuroscience				Overall	29	20	45	30	5	0
+H-0164	University of York	158	A	5	Biological Sciences				Overall	57.51	25	35	30	10	0
+H-0164	University of York	158	B	7	Earth Systems & Environmental Sciences				Overall	16.8	10	50	35	5	0
+H-0164	University of York	158	B	8	Chemistry				Overall	46.71	15	60	25	0	0
+H-0164	University of York	158	B	9	Physics				Overall	26	15	40	35	10	0
+H-0164	University of York	158	B	10	Mathematical Sciences				Overall	34.34	10	40	45	5	0
+H-0164	University of York	158	B	11	Computer Science & Informatics				Overall	34.6	25	50	20	5	0
+H-0164	University of York	158	B	13	Elec Engineering, Metallurgy & Materials				Overall	21	10	45	35	10	0
+H-0164	University of York	158	C	17	Geography, Environmental Studies & Archaeology				Overall	21.9	25	35	30	10	0
+H-0164	University of York	158	C	18	Economics & Econometrics				Overall	40.6	15	45	40	0	0
+H-0164	University of York	158	C	19	Business & Management Studies				Overall	17	10	40	35	15	0
+H-0164	University of York	158	C	21	Politics & International Studies				Overall	21	15	30	30	20	5
+H-0164	University of York	158	C	22	Social Work & Social Policy				Overall	53.75	25	40	30	5	0
+H-0164	University of York	158	C	23	Sociology				Overall	21.2	30	30	35	5	0
+H-0164	University of York	158	C	25	Education				Overall	13.49	15	45	30	10	0
+H-0164	University of York	158	D	28	Modern Languages				Overall	13	20	45	30	5	0
+H-0164	University of York	158	D	29	English Language & Literature				Overall	40.83	45	30	20	5	0
+H-0164	University of York	158	D	30	History				Overall	32	25	30	40	5	0
+H-0164	University of York	158	D	32	Philosophy				Overall	15	15	40	40	5	0
+H-0164	University of York	158	D	34	Art & Design: History, Practice, Theory				Overall	15	45	25	25	5	0
+H-0164	University of York	158	D	35	Music, Drama, Dance, Performing Arts				Overall	15.1	50	25	20	5	0
+H-0013	York St John University	159	A	3	Allied Health, Dentistry, Nursing & Pharmacy				Overall	6.1	0	5	15	55	25
+H-0013	York St John University	159	A	4	Psychology, Psychiatry & Neuroscience				Overall	6	0	0	30	45	25
+H-0013	York St John University	159	C	25	Education				Overall	3.6	0	0	15	55	30
+H-0013	York St John University	159	C	26	Sport & Exercise Sciences, Leisure & Tourism				Overall	6.5	0	0	50	40	10
+H-0013	York St John University	159	D	29	English Language & Literature				Overall	6	0	10	30	40	20
+H-0013	York St John University	159	D	33	Theology & Religious Studies				Overall	6.5	0	5	40	50	5
+H-0013	York St John University	159	D	35	Music, Drama, Dance, Performing Arts				Overall	11.1	10	15	40	35	0

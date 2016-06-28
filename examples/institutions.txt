@@ -1,0 +1,193 @@
+Institution name	Display	Institution sort order
+University of Aberdeen	Aberdeen	1
+University of Abertay Dundee	Abertay Dundee	2
+Aberystwyth University	Aberystwyth	3
+Anglia Ruskin University	Anglia Ruskin	4
+Armagh Observatory	Armagh Observatory	5
+Aston University	Aston	6
+Bangor University	Bangor	7
+University of Bath	Bath	8
+Bath Spa University	Bath Spa	9
+University of Bedfordshire	Bedfordshire	10
+Birkbeck College	Birkbeck	11
+University of Birmingham	Birmingham	12
+Birmingham City University	Birmingham City	13
+"Bishop Grosseteste University College, Lincoln"	Bishop Grosseteste	14
+Bishop Grosseteste University	Bishop Grosseteste	14
+University of Bolton	Bolton	15
+Bournemouth University	Bournemouth	16
+Arts Institute at Bournemouth	"Arts University, Bournemouth"	17
+Arts University Bournemouth	"Arts University, Bournemouth"	17
+University of Bradford	Bradford	18
+University of Brighton	Brighton	19
+University of Bristol	Bristol	20
+British Institute in Paris	"UoL Institute, Paris"	21
+University of London Institute in Paris	"UoL Institute, Paris"	21
+Brunel University	Brunel	22
+Brunel University London	Brunel	22
+Buckinghamshire New University	Buckinghamshire	23
+University of Cambridge	Cambridge	24
+Canterbury Christ Church University	Canterbury Christ Church	25
+Cardiff University	Cardiff	26
+University of Central Lancashire	Central Lancashire	28
+University of Chester	Chester	29
+University of Chichester	Chichester	30
+City University London	City University London	31
+"City University, London"	City University London	31
+Courtauld Institute of Art	Courtauld Inst. of Art	32
+Coventry University	Coventry	33
+Cranfield University	Cranfield	34
+University of Cumbria	Cumbria	35
+Dartington College of Arts	Dartington College of Arts	36
+De Montfort University	De Montfort	37
+University of Derby	Derby	38
+University of Dundee	Dundee	39
+University of Durham	Durham	40
+Edge Hill University	Edge Hill	41
+University of Edinburgh	Edinburgh	42
+Edinburgh College of Art	Edinburgh College of Art	43
+University of Essex	Essex	44
+University of Exeter	Exeter	45
+University College Falmouth	Falmouth University	46
+Falmouth University	Falmouth University	46
+University of Glasgow	Glasgow	48
+Glasgow Caledonian University	Glasgow Caledonian	49
+Glasgow School of Art	Glasgow School of Art	50
+University of Gloucestershire	Gloucestershire	51
+Glyndwr University	Glyndwr	52
+Glynd_r University	Glyndwr	52
+"Goldsmiths College, University of London"	Goldsmiths	53
+Goldsmiths' College	Goldsmiths	53
+University of Greenwich	Greenwich	54
+Guildhall School of Music & Drama	Guildhall Music & Drama	55
+Harper Adams University College	Harper Adams	56
+Harper Adams University	Harper Adams	56
+Heriot-Watt University	Heriot-Watt	57
+University of Hertfordshire	Hertfordshire	58
+Heythrop College	Heythrop College	59
+University of the Highlands and Islands	Highlands and Islands	59.5
+University of Huddersfield	Huddersfield	60
+University of Hull	Hull	61
+Imperial College London	Imperial	62
+Institute of Cancer Research	Inst. of Cancer Research	63
+Institute of Education	Institute of Education	64
+Institute of Zoology	Institute of Zoology	65
+Keele University	Keele	66
+University of Kent	Kent	67
+King's College London	King's College London	68
+Kingston University	Kingston	69
+Lancaster University	Lancaster	71
+University of Leeds	Leeds	72
+Leeds Beckett University	Leeds Beckett	72.5
+Leeds College of Music	Leeds College of Music	73
+Leeds Metropolitan University	Leeds Met.	74
+Leeds Trinity & All Saints	Leeds Trinity	75
+Leeds Trinity University	Leeds Trinity	75
+University of Leicester	Leicester	76
+University of Lincoln	Lincoln	77
+University of Liverpool	Liverpool	78
+Liverpool Hope University	Liverpool Hope	79
+Liverpool John Moores University	Liverpool John Moores	80
+Liverpool School of Tropical Medicine	Liverpool Tropical Med.	80.5
+London Business School	London Business School	81
+London Metropolitan University	London Met	82
+Loughborough University	Loughborough	83
+London School of Economics and Political Science	LSE	84
+London School of Hygiene & Tropical Medicine	LSHTM	85
+University of Manchester	Manchester	86
+Manchester Metropolitan University	Manchester Met	87
+Middlesex University	Middlesex	88
+"University Marine Biological Station, Millport"	"Millport, Marine Bio Station"	89
+Napier University	Napier	90
+Edinburgh Napier University	Napier	90
+University of Newcastle upon Tyne	Newcastle	91
+Newcastle University	Newcastle	91
+Newman University College	Newman	92
+Newman University	Newman	92
+University of Northampton	Northampton	94
+University of Northumbria at Newcastle	Northumbria	95
+Norwich University College of the Arts	Norwich U of the Arts	96
+Norwich University of the Arts	Norwich U of the Arts	96
+University of Nottingham	Nottingham	97
+Nottingham Trent University	Nottingham Trent	98
+Open University	Open University	99
+University of Oxford	Oxford	100
+Oxford Brookes University	Oxford Brookes	101
+University of Plymouth	Plymouth	102
+University College Plymouth St Mark & St John	Plymouth St Mark & St John UC	103
+University of Portsmouth	Portsmouth	104
+Queen Margaret University Edinburgh	"Queen Margaret, Edinburgh"	105
+"Queen Mary, University of London"	"Queen Mary, London"	106
+Queen Mary University of London	"Queen Mary, London"	106
+Queen's University Belfast	"Queen's, Belfast"	107
+University of Reading	Reading	108
+Robert Gordon University	Robert Gordon	109
+Roehampton University	Roehampton	110
+Rose Bruford College	Rose Bruford College	111
+Royal Academy of Music	Royal Academy of Music	112
+Royal Agricultural College	Royal Agricultural University	113
+Royal Agricultural University	Royal Agricultural University	113
+Central School of Speech and Drama	RCS of Speech & Drama	113.5
+Royal Central School of Speech and Drama	RCS of Speech & Drama	113.5
+Royal College of Art	Royal College of Art	114
+Royal College of Music	Royal College of Music	115
+Royal Conservatoire of Scotland	Royal Conservatoire Scotland	115.5
+"Royal Holloway, University of London"	"Royal Holloway, London"	116
+Royal Northern College of Music	Royal Northern College of Music	117
+Royal Scottish Academy of Music and Drama	Royal Sc. Acad. of Music & Drama	118
+Royal Veterinary College	Royal Veterinary College	119
+University of Salford	Salford	120
+School of Pharmacy	School of Pharmacy	121
+University of Sheffield	Sheffield	122
+Sheffield Hallam University	Sheffield Hallam	123
+School of Oriental and African Studies	SOAS	124
+London South Bank University	South Bank	125
+"University of Wales, Newport"	University of South Wales	125.5
+University of Glamorgan	University of South Wales	125.5
+University of South Wales	University of South Wales	125.5
+University of Southampton	Southampton	126
+Southampton Solent University	Southampton Solent	127
+SRUC	SRUC	127.5
+University of St Andrews	St Andrews	128
+St George's Hospital Medical School	St George's Hospital	129
+"St.George's, University of London"	St George's Hospital	129
+"St Mary's University, Twickenham"	"St Mary's, Twickenham"	129.5
+St Mary's University College	"St Mary's, Belfast"	130
+Staffordshire University	Staffordshire	131
+University of Stirling	Stirling	132
+Stranmillis University College	Stranmillis College	133
+University of Strathclyde	Strathclyde	134
+University of Sunderland	Sunderland	135
+University of Surrey	Surrey	136
+University of Sussex	Sussex	137
+Swansea University	Swansea	138
+Swansea Metropolitan University	Swansea Met	139
+University of Teesside	Teesside	140
+Teesside University	Teesside University	140
+Thames Valley University	Thames Valley	141
+Trinity Laban Conservatoire of Music and Dance	Trinity Laban Conservatoire	141.2
+"University of Wales, Lampeter"	Trinity St David	141.5
+University of Wales Trinity Saint David	Trinity St David	141.5
+University College London	UCL	142
+University of East Anglia	UEA	143
+University of East London	UEL	144
+UHI Millennium Institute	UHI Millennium Institute	145
+University of Ulster	Ulster	146
+University for the Creative Arts	University for the Creative Arts	147
+University of the Arts London	University of the Arts	148
+"University of the Arts, London"	University of the Arts	148
+University of Wales	University of Wales	148.5
+"University of Wales Institute, Cardiff"	Cardiff Met	149
+Cardiff Metropolitan University	Cardiff Met	149
+"University of the West of England, Bristol"	UWE	150
+University of Wales Centre for Advanced Welsh and Celtic Studies	"Wales, CAWCS"	151
+University of Warwick	Warwick	152
+The University of West London	University of West London	152.5
+University of the West of Scotland	West of Scotland	153
+University of Westminster	Westminster	154
+University of Winchester	Winchester	155
+University of Wolverhampton	Wolverhampton	156
+University of Worcester	Worcester	157
+Writtle College	Writtle College	157.5
+University of York	York	158
+York St John University	York St John	159
