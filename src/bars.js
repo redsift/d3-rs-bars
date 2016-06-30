@@ -90,6 +90,11 @@ export default function bars(id) {
     let selection = context.selection ? context.selection() : context,
         transition = (context.selection !== undefined);
 
+    let _inset = inset;
+    if (typeof _inset !== 'object') {
+      _inset = { top: _inset, bottom: _inset, left: _inset, right: _inset };
+    }    
+
     let ldg = legend;
     if (legend != null) {
       if (!Array.isArray(legend)) {
@@ -243,8 +248,10 @@ export default function bars(id) {
         } else if (typeof fill === 'function') {
           colors = fill;
         } else if (Array.isArray(fill)) {
+          let userFill = fill.slice();
+          if (stacked) userFill.reverse();
           let count = -1;
-          colors = () => (count++, fill[ count % fill.length ])
+          colors = () => (count++, userFill[ count % userFill.length ])
         }
         return colors;  
       }
@@ -254,9 +261,10 @@ export default function bars(id) {
           h = root.childHeight();
       
       if (ldg !== null) {
-        h = h - DEFAULT_LEGEND_SIZE;
+        let topPadding = DEFAULT_LEGEND_PADDING * 2;
+        h = h - (DEFAULT_LEGEND_SIZE + topPadding);
         let rg = g.select('g.legend');
-        let lg = rg.attr('transform', 'translate(' + (w/2) + ',' + (h + DEFAULT_LEGEND_PADDING) + ')').selectAll('g').data(ldg);
+        let lg = rg.attr('transform', 'translate(' + (w/2) + ',' + (h + topPadding) + ')').selectAll('g').data(ldg);
         lg.exit().remove();
         let newlg = lg.enter().append('g');
         
@@ -325,10 +333,6 @@ export default function bars(id) {
         };
       }
 
-      
-      if (transition === true) {
-        rects = rects.transition(context);
-      }  
 
       // negative values need a center line
       let aZ = g.select('line.axis-z');
@@ -357,28 +361,28 @@ export default function bars(id) {
       if (orientation === 'top' || orientation === 'left') {
         let toV = w;
 
-        toI = h - inset;
-        gridSize = inset / 2 - h;
+        toI = h - (_inset.top + _inset.bottom);
+        gridSize = (_inset.top + _inset.bottom) / 2 - h;
         attrV = 'x';
         attrO = 'y';        
         attrVV = 'width';
         attrIV = 'height';
         axisV = axisBottom;
         axisI = axisLeft;  
-        translateV = 'translate(0,' + (h - inset / 2) + ')';
-        translateI = 'translate(' + (inset / 2) + ',0)';
+        translateV = 'translate(0,' + (h - _inset.top) + ')';
+        translateI = 'translate(' + _inset.left + ',0)';
         
         if (orientation === 'top') {
-          toV = h; toI = w; fromI = inset;
-          gridSize = inset / 2 - w;
+          toV = h; toI = w; fromI = _inset.left;
+          gridSize = (_inset.left + _inset.right) / 2 - w;
           attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height'; 
           axisV = axisLeft; axisI = axisTop;
-          translateV = 'translate(' + inset / 2 + ', 0)';
-          translateI = 'translate(0, ' + (inset / 2) + ')';
+          translateV = 'translate(' + _inset.left + ', 0)';
+          translateI = 'translate(0, ' + _inset.top + ')';
         }
         
         scaleI = scaleI.rangeRound([fromI, toI]);
-        scaleV = scaleV.range([inset, toV]);
+        scaleV = scaleV.range([_inset.left, toV]); //TODO: Wrong
 
 
         v0 = scaleV(mm[0]);
@@ -426,8 +430,11 @@ export default function bars(id) {
       }
       aV.tickFormat(scaleFn);
 
-      g.select('g.axis-v')
-        .attr('transform', translateV)
+      let gaV = g.select('g.axis-v');
+      if (transition === true) {
+        gaV = gaV.transition(context);
+      }  
+      gaV.attr('transform', translateV)
         .call(aV)
         .selectAll('line')
           .attr('class', grid ? 'grid' : null);
@@ -437,7 +444,11 @@ export default function bars(id) {
       aI.tickValues(vdata.map((d,i) => i));
       aI.tickFormat(labelFn);
       
-      g.select('g.axis-i').attr('transform', translateI).call(aI);
+      let gaI = g.select('g.axis-i');
+      if (transition === true) {
+        gaI = gaI.transition(context);
+      }  
+      gaI.attr('transform', translateI).call(aI);
       
       let t0 = scaleV(0);
       if (!isFinite(t0)) t0 = 0.0; // e.g. log scales
@@ -459,6 +470,14 @@ export default function bars(id) {
               .on('mouseover', rtip.show)
               .on('mouseout', rtip.hide)
             .merge(r);
+            
+            
+
+      
+      if (transition === true) {
+        r = r.transition(context);
+      }              
+            
       r.attr(attrV, fnAttrV)
             .attr(attrVV, fnAttrVV)
             .attr(attrO, (d, i) => stacked ? 0 : (i - ((maxSeries - 1) / 2)) * sz) // center the series when not stacked
