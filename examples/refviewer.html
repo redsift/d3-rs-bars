@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="//static.redsift.io/reusable/ui-rs-core/latest/css/ui-rs-core.min.css">
+    <style>
+      body {
+        margin: 1em;
+      }
+      button {
+        margin-left: 1em;
+      }
+      div.options {
+        display: flex;
+        align-items: baseline;
+        margin-top: 1em;
+      }
+      
+      
+    </style>    
+  </head>
+  <body>
+    <h1>REFViewer in D3</h1>
+    <p>Using the <code>d3-rs-bars</code> component, this <a href="http://www.staff.city.ac.uk/~jwo/refviewer/">re-implements the excellent REFViewer</a> by Jo Wood of the giCentre at City University, London.</p>
+    <div class="options">
+      <h5>Scale by</h5><button id="staff-pct">staff %</button><button id="staff-count">staff counts</button>
+    </div>
+    <div class="options">
+      <h5>Order by</h5><button id="order-inst">institution</button><button id="order-4">4*</button><button id="order-43">(4* + 3*)</button>
+    </div>
+    <div id="elm"></div>
+        
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="/d3-rs-bars.umd-es2015.min.js"></script>
+    <script>
+    'use strict';
+
+    var FILLS = [ '#C8091A', '#DF3C47', '#F07679', '#FEADAA', '#FFE4DC' ];
+    var LEGEND = [ '4*', '3*', '2*', '1*', 'u/c' ]; 
+    var BAR_WIDTH = 800;
+    var BAR_HEIGHT = 8;
+    var BAR_PAD = 1;
+
+    
+    var chart = d3_rs_bars.html('refviewer')
+                  .width(BAR_WIDTH)
+                  .fill(FILLS)
+                  .legend(LEGEND)
+                  .legendOrientation('top')
+                  .inset({ left: 180, right: 0, top: 16, bottom: 0 });
+                  
+    function draw(data, animate) {
+      chart.barSize(BAR_HEIGHT);
+      chart.height(data.length * (BAR_HEIGHT + BAR_PAD) + chart.margin() + chart.inset().top + chart.inset().bottom + 40);
+      
+      var elm = d3.select('#elm').datum(data);
+      if (animate === true) {
+        elm = elm.transition();
+      }
+      elm.call(chart);      
+    }
+    
+    function makeOptions(ops, cb) {
+      ops.forEach(function(n, i) {
+        var node = d3.select(n);
+        
+        if (i === 0) {
+          node.attr('class', 'danger');
+        }
+        
+        node.on('click', function() { 
+          var isSet = node.classed('danger');
+          if (isSet) return;
+          
+          isSet = !isSet;
+          node.attr('class', isSet ? 'danger' : '');
+          
+          ops.forEach(function(p, j) {
+            if (j !== i) {
+              d3.select(ops[j]).attr('class', '');
+            }
+          });
+          
+          
+          d3.event.stopPropagation();
+          cb(i);
+        });
+      });  
+    }
+        
+    // from: http://www.staff.city.ac.uk/~jwo/refviewer/data/RAE2008In2014Format.txt
+    d3.tsv("/institutions.txt", function(raw) {
+      var lookup = {};
+      // create lookups table of display values
+      raw.forEach(d => lookup[d['Institution name']] = d['Display']);
+
+      d3.tsv("/RAE2008In2014Format.txt", function(raw) {
+        var all = raw.map(d => ({ l: lookup[d['Institution name']], v: [ parseInt(d['4*']), parseInt(d['3*']), parseInt(d['2*']), parseInt(d['1*']), parseInt(d['unclassified']) ] }));
+        var grouped = d3.nest()
+              .key(d => d.l)
+              .rollup(v => v.reduce(function (p, e) {
+                for (var i=0; i<5; ++i) { p[i] = p[i] + e.v[i] };
+                return p;
+                }, [0, 0, 0, 0, 0] ))
+              .entries(all)
+              .map(d => ({ l: d.key, v: d.value, t: d3.sum(d.value)}));
+
+        var normal = grouped.map(e => ({ l: e.l, v: e.v.map(d => d / e.t) }));
+        
+        var staff = 0;
+        var sort = 0;
+
+        
+        function update(animate) {
+          var data;
+          if (staff === 1) {
+            data = grouped.slice();
+          } else {
+            data = normal.slice();
+          }
+          if (sort === 1) {
+            data = data.sort((a,b) => a.v[0] < b.v[0] ? 1 : a.v[0] > b.v[0] ? -1 : 0);
+          } else if (sort === 2) {
+            data = data.sort((a,b) => a.v[0] + a.v[1] < b.v[0] + b.v[1] ? 1 : a.v[0] + a.v[1] > b.v[0] + b.v[1] ? -1 : 0);
+          }
+          
+          draw(data, animate);            
+        }
+
+        update(false);
+
+        makeOptions([ '#staff-pct', '#staff-count' ], (i) => (staff = i, update(true)));
+        makeOptions([ '#order-inst', '#order-4', '#order-43' ], (i) => (sort = i, update(true)) );
+      });
+    });
+
+
+
+    
+    </script>
+  </body>
+</html>

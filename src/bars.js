@@ -7,6 +7,7 @@ import { timeFormatLocale } from 'd3-time-format';
 import { formatLocale } from 'd3-format';
 
 import { html as svg } from '@redsift/d3-rs-svg';
+import { svg as legends } from "@redsift/d3-rs-legends";
 import { units, time } from "@redsift/d3-rs-intl";
 import { tip } from "@redsift/d3-rs-tip";
 import { 
@@ -25,12 +26,24 @@ const DEFAULT_TICK_FORMAT_VALUE_SMALL = '.3f';
 const DEFAULT_TICK_FORMAT_INDEX = ',d';
 const DEFAULT_TICK_COUNT = 4;
 const DEFAULT_SCALE = 42; // why not
-const DEFAULT_LEGEND_SIZE = 10;
-const DEFAULT_LEGEND_PADDING = 8;
-const DEFAULT_LEGEND_TEXT_SCALE = 8; // hack value to do fast estimation of length of string
 const DEFAULT_HIGHLIGHT_TEXT_PADDING = 2;
+const DEFAULT_HIGHLIGHT_SIZE = 14;
+const DEFAULT_HIGHLIGHT_TEXT_SCALE = 8;
+
+const PAD_SCALE = 8;
+
 // Font fallback chosen to keep presentation on places like GitHub where Content Security Policy prevents inline SRC
-const DEFAULT_STYLE = "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300); text{ font-family: 'Source Code Pro', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-weight: 300; fill: " + display.text.black + "; } path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; } line { stroke-width: 1.5px } line.grid { stroke-width: 1.0px } line.axis-z { stroke-width: 2.0px } .legend text { font-size: 12px } .highlight { opacity: 0.66 } .highlight text { font-size: 12px } ";
+const DEFAULT_STYLE = [
+  "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300);",
+  "text{ font-family: 'Source Code Pro', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-weight: 300; fill: " + display.text.black + "; }",
+  "path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; }",
+  "line { stroke-width: 1.5px }",
+  "line.grid { stroke-width: 1.0px }",
+  "line.axis-z { stroke-width: 2.0px }",
+  ".legend text { font-size: 12px }",
+  ".highlight { pointer-events: none; opacity: 0.66 }",
+  ".highlight text { font-size: 12px }"
+  ].join(" \n");
 
 export default function bars(id) {
   let classed = 'chart-bars', 
@@ -43,6 +56,8 @@ export default function bars(id) {
       scale = 1.0,
       logValue = 0,
       barSize = 6,
+      rotateIndex = 0,
+      rotateValues = 0,
       fill = null,
       orientation = 'left',
       minValue = null,
@@ -61,6 +76,7 @@ export default function bars(id) {
       legend = null,
       highlight = null,
       displayTip = -1,
+      legendOrientation = 'bottom',
       value = function (d) {
         if (Array.isArray(d)) {
           return d;
@@ -88,7 +104,6 @@ export default function bars(id) {
         ldg = null;
       }
     }
-
     
     let hlt = highlight;
     if (highlight == null) {
@@ -96,9 +111,6 @@ export default function bars(id) {
     } else if (!Array.isArray(highlight)) {
       hlt = [ highlight ];
     }   
-     
-    //TODO: display highlight on value
-    //TODO: display an exposed tip if displayTip
     
     let formatTime = null;
     if (labelTime != null) {
@@ -144,7 +156,7 @@ export default function bars(id) {
 
       let sid = null;
       if (id) sid = 'svg-' + id;
-      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale);
+      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale).background(background);
       let tnode = node;
       if (transition === true) {
         tnode = node.transition(context);
@@ -163,6 +175,13 @@ export default function bars(id) {
       rtip.style(st);
 
       elmS.call(rtip);
+    
+      let _inset = inset;
+      if (typeof _inset === 'object') {
+        _inset = { top: _inset.top, bottom: _inset.bottom, left: _inset.left, right: _inset.right };
+      } else {
+        _inset = { top: _inset, bottom: _inset, left: _inset, right: _inset };
+      }
     
       let g = elmS.select(_impl.self())
       if (g.empty()) {
@@ -237,8 +256,10 @@ export default function bars(id) {
         } else if (typeof fill === 'function') {
           colors = fill;
         } else if (Array.isArray(fill)) {
+          let userFill = fill.slice();
+          if (stacked) userFill.reverse();
           let count = -1;
-          colors = () => (count++, fill[ count % fill.length ])
+          colors = () => (count++, userFill[ count % userFill.length ])
         }
         return colors;  
       }
@@ -248,34 +269,19 @@ export default function bars(id) {
           h = root.childHeight();
       
       if (ldg !== null) {
-        h = h - DEFAULT_LEGEND_SIZE;
-        let rg = g.select('g.legend');
-        let lg = rg.attr('transform', 'translate(' + (w/2) + ',' + (h + DEFAULT_LEGEND_PADDING) + ')').selectAll('g').data(ldg);
-        lg.exit().remove();
-        let newlg = lg.enter().append('g');
+        let lchart = legends().width(w).height(h).inset(0).fill(fill).orientation(legendOrientation);
         
-        let colors = _makeFillFn();
-
-        newlg.append('rect')
-              .attr('width', DEFAULT_LEGEND_SIZE)
-              .attr('height', DEFAULT_LEGEND_SIZE)
-              .attr('fill', colors);
-
-        newlg.append('text')
-          .attr('dominant-baseline', 'central')
-          .attr('y', DEFAULT_LEGEND_SIZE / 2)
-          .attr('x', () => DEFAULT_LEGEND_SIZE + DEFAULT_LEGEND_PADDING);
-              
-        lg = newlg.merge(lg);
-
-        lg.selectAll('text').text((d) => d);
-
-        let lens = ldg.map((s) => s.length * DEFAULT_LEGEND_TEXT_SCALE + DEFAULT_LEGEND_SIZE + 2 * DEFAULT_LEGEND_PADDING);
-        let clens = []
-        let total = lens.reduce((p, c) => (clens.push(p) , p + c), 0);
+        if (legendOrientation === 'top') {
+          _inset.top = _inset.top + lchart.childHeight();
+        } else if (legendOrientation === 'left') {
+          _inset.left = _inset.left + lchart.childWidth();
+        } else if (legendOrientation === 'right') { 
+          _inset.right = _inset.right + lchart.childWidth();
+        } else {
+          _inset.bottom = _inset.bottom + lchart.childHeight();
+        }
         
-        let offset = -total / 2;
-        rg.selectAll('g').data(clens).attr('transform', (d) => 'translate(' + (offset + d) + ',0)');
+        elmS.datum(ldg).call(lchart);
       }            
       
       let colors = _makeFillFn();
@@ -319,10 +325,6 @@ export default function bars(id) {
         };
       }
 
-      
-      if (transition === true) {
-        rects = rects.transition(context);
-      }  
 
       // negative values need a center line
       let aZ = g.select('line.axis-z');
@@ -345,34 +347,39 @@ export default function bars(id) {
           attrIV = '',
           axisV = null,
           axisI = null,
+          anchorI = null,
           translateV = '',
           translateI = '';
             
       if (orientation === 'top' || orientation === 'left') {
-        let toV = w;
-
-        toI = h - inset;
-        gridSize = inset / 2 - h;
+        let toV = w - _inset.right;
+        let fromV = _inset.left;
+        toI = h - _inset.bottom;
+        fromI = _inset.top;
+        
+        gridSize = (_inset.top + _inset.bottom) - h;
         attrV = 'x';
         attrO = 'y';        
         attrVV = 'width';
         attrIV = 'height';
         axisV = axisBottom;
         axisI = axisLeft;  
-        translateV = 'translate(0,' + (h - inset / 2) + ')';
-        translateI = 'translate(' + (inset / 2) + ',0)';
+        translateV = 'translate(0,' + (h - _inset.bottom) + ')';
+        translateI = 'translate(' + _inset.left + ',0)';
         
         if (orientation === 'top') {
-          toV = h; toI = w; fromI = inset;
-          gridSize = inset / 2 - w;
+          toV = h - _inset.bottom; fromV = _inset.top;
+          toI = w - _inset.right; fromI = _inset.left;
+          gridSize = (_inset.left + _inset.right) - w;
           attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height'; 
           axisV = axisLeft; axisI = axisTop;
-          translateV = 'translate(' + inset / 2 + ', 0)';
-          translateI = 'translate(0, ' + (inset / 2) + ')';
+          translateV = 'translate(' + (_inset.left - PAD_SCALE) + ', 0)';
+          translateI = 'translate(0, ' + _inset.top + ')';
+          anchorI = rotateIndex > 0 ? 'end' : rotateIndex < 0 ? 'start' : 'middle';
         }
         
         scaleI = scaleI.rangeRound([fromI, toI]);
-        scaleV = scaleV.range([inset, toV]);
+        scaleV = scaleV.range([fromV, toV]);
 
 
         v0 = scaleV(mm[0]);
@@ -381,36 +388,39 @@ export default function bars(id) {
         fnAttrV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) : (mm[0] < 0 ? t0 : Math.min(scaleV(d), v0) );
         fnAttrVV = (d) => mm[0] < 0 && d < 0 ? t0 - scaleV(d) :  Math.max(scaleV(Math.abs(d)) - (mm[0] < 0 ? t0 : v0), 1);
       } else if (orientation === 'bottom' || orientation === 'right') {
-        let toV = w - inset;
+        let toV = w - _inset.right;
+        let fromV = _inset.left;
             
-        toI = h - inset;
-        gridSize = inset / 2 - h;
+        toI = h - _inset.bottom;
+        fromI = _inset.top;
+        gridSize = (_inset.top + _inset.bottom) - h;
         attrV = 'x';
         attrO = 'y'; 
         attrVV = 'width';
         attrIV = 'height';
         axisV = axisBottom;
         axisI = axisRight;
-        translateV = 'translate(0,' + (h - inset / 2) + ')';
-        translateI = 'translate(' + (w - inset / 2) + ',0)';        
+        translateV = 'translate(0,' + (h - _inset.bottom) + ')';
+        translateI = 'translate(' + (w - _inset.right) + ',0)';        
                 
         if (orientation === 'bottom') {
-          toV = h - inset; toI = w; 
-          gridSize = inset / 2 - w;
-          fromI = inset;
+          toV = h - _inset.bottom; fromV = _inset.top;
+          toI = w - _inset.right; fromI = _inset.left;
+          gridSize = (_inset.left + _inset.right) - w;
           attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height';
           axisV = axisLeft; axisI = axisBottom;
-          translateV = 'translate(' + inset / 2 + ', 0)';
-          translateI = 'translate(0, ' + (h - inset / 2) + ')';          
+          translateV = 'translate(' + (_inset.left - PAD_SCALE) + ', 0)';
+          translateI = 'translate(0, ' + (h - _inset.bottom) + ')';          
+          anchorI = rotateIndex > 0 ? 'start' : rotateIndex < 0 ? 'end' : 'middle';
         }        
         
         scaleI = scaleI.rangeRound([fromI, toI]);
-        scaleV = scaleV.range([toV, 0]);
+        scaleV = scaleV.range([toV, fromV]);
 
         v0 = scaleV(mm[0]);
         let t0 = scaleV(0);
                 
-        fnAttrV = (d) => mm[0] < 0 && d < 0 ? t0 : Math.min(scaleV(d), v0);
+        fnAttrV = (d) => mm[0] < 0 && d < 0 ? t0 : Math.min(scaleV(d), v0 - 1);
         fnAttrVV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) - t0 : Math.max((mm[0] < 0 ? t0 : v0) - scaleV(Math.abs(d)), 1);
       }
 
@@ -420,27 +430,39 @@ export default function bars(id) {
       }
       aV.tickFormat(scaleFn);
 
-      g.select('g.axis-v')
-        .attr('transform', translateV)
+      let gaV = g.select('g.axis-v');
+      if (transition === true) {
+        gaV = gaV.transition(context);
+      }  
+      gaV.attr('transform', translateV)
         .call(aV)
         .selectAll('line')
           .attr('class', grid ? 'grid' : null);
-      
+
+      gaV.selectAll('text').attr('transform', 'rotate(' + rotateValues + ')');
 
       let aI = axisI(scaleI).ticks(ticks, tickFormatIndex);
       aI.tickValues(vdata.map((d,i) => i));
       aI.tickFormat(labelFn);
       
-      g.select('g.axis-i').attr('transform', translateI).call(aI);
+      let gaI = g.select('g.axis-i');
+      if (transition === true) {
+        gaI = gaI.transition(context);
+      }  
+      gaI.attr('transform', translateI).call(aI);
+      
+      gaI.selectAll('text')
+        .attr('transform', 'rotate(' + rotateIndex + ')')   
+        .attr('text-anchor', anchorI);
       
       let t0 = scaleV(0);
       if (!isFinite(t0)) t0 = 0.0; // e.g. log scales
 
       let c0 = t0 + 0.5;
       if (orientation === 'bottom' || orientation === 'top') {
-        aZ.attr('y1', c0).attr('y2', c0).attr('x1', inset / 2).attr('x2', toI + inset / 2);
+        aZ.attr('y1', c0).attr('y2', c0).attr('x1', _inset.left).attr('x2', toI);
       } else {
-        aZ.attr('x1', c0).attr('x2', c0).attr('y1', 0).attr('y2', toI + inset / 2);
+        aZ.attr('x1', c0).attr('x2', c0).attr('y1', _inset.top).attr('y2', toI);
       }
 
       let sz = fnBarSize(scaleI);
@@ -453,6 +475,11 @@ export default function bars(id) {
               .on('mouseover', rtip.show)
               .on('mouseout', rtip.hide)
             .merge(r);
+      
+      if (transition === true) {
+        r = r.transition(context);
+      }              
+            
       r.attr(attrV, fnAttrV)
             .attr(attrVV, fnAttrVV)
             .attr(attrO, (d, i) => stacked ? 0 : (i - ((maxSeries - 1) / 2)) * sz) // center the series when not stacked
@@ -466,7 +493,9 @@ export default function bars(id) {
       
       nhls.append('rect').attr('class', 'marker');
       nhls.append('rect').attr('class', 'label-background');
-      nhls.append('text').attr('class', 'label').attr('text-anchor', 'end');    
+      nhls.append('text').attr('class', 'label')
+          .attr('dominant-baseline', 'text-before-edge')
+          .attr('text-anchor', 'start');    
       
       hls.attr('transform', (d) => 'translate(' + ( attrV === 'x' ? (scaleV(d) + ',0') : ('0,' + scaleV(d)) ) + ')');
       hls.selectAll('rect.marker')
@@ -481,15 +510,19 @@ export default function bars(id) {
         }
         return d + ''; // TODO: FLoating point?
       }
+
       
       hls.selectAll('rect.label-background')
-        .attr(attrV, -DEFAULT_LEGEND_SIZE) // TODO: Position wrong for left / right charts
-        .attr(attrO, (d) => toI - (DEFAULT_HIGHLIGHT_TEXT_PADDING * 2 + textForData(d).length * DEFAULT_LEGEND_TEXT_SCALE))
-        .attr('height', DEFAULT_LEGEND_SIZE + 1)
-        .attr('width', (d) => DEFAULT_HIGHLIGHT_TEXT_PADDING * 2 + textForData(d).length * DEFAULT_LEGEND_TEXT_SCALE)
+        .attr(attrV, 0) // TODO: Position wrong for left / right charts
+        .attr(attrO, d => toI - (DEFAULT_HIGHLIGHT_TEXT_PADDING * 2 + textForData(d).length * DEFAULT_HIGHLIGHT_TEXT_SCALE))
+        .attr('height', DEFAULT_HIGHLIGHT_SIZE + 1)
+        .attr('width', d => DEFAULT_HIGHLIGHT_TEXT_PADDING * 2 + textForData(d).length * DEFAULT_HIGHLIGHT_TEXT_SCALE)
         .attr('fill', icolors);
       
-      hls.selectAll('text').attr(attrO, toI - DEFAULT_HIGHLIGHT_TEXT_PADDING).text((d) => textForData(d));
+      
+      hls.selectAll('text')
+        .attr(attrO, (d) => toI - (DEFAULT_HIGHLIGHT_TEXT_PADDING + textForData(d).length * DEFAULT_HIGHLIGHT_TEXT_SCALE))
+        .text((d) => textForData(d));
         
       if (displayTip > -1) {
         let no = r.nodes();
@@ -627,6 +660,18 @@ export default function bars(id) {
   _impl.highlight = function(value) {
     return arguments.length ? (highlight = value, _impl) : highlight;
   };    
+  
+  _impl.legendOrientation = function(value) {
+    return arguments.length ? (legendOrientation = value, _impl) : legendOrientation;
+  };  
+     
+  _impl.rotateIndex = function(value) {
+    return arguments.length ? (rotateIndex = value, _impl) : rotateIndex;
+  }; 
+  
+  _impl.rotateValues = function(value) {
+    return arguments.length ? (rotateValues = value, _impl) : rotateValues;
+  };        
             
   return _impl;
 }
