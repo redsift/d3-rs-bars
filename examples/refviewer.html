@@ -13,6 +13,8 @@
         align-items: baseline;
         margin-top: 1em;
       }
+      
+      
     </style>    
   </head>
   <body>
@@ -26,7 +28,7 @@
     </div>
     <div id="elm"></div>
         
-    <script src="https://d3js.org/d3.v4.0.0-alpha.49.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="/d3-rs-bars.umd-es2015.min.js"></script>
     <script>
     'use strict';
@@ -42,11 +44,12 @@
                   .width(BAR_WIDTH)
                   .fill(FILLS)
                   .legend(LEGEND)
-                  .inset({ left: 180, right: 0, top: 0, bottom: 0 });
+                  .legendOrientation('top')
+                  .inset({ left: 180, right: 0, top: 16, bottom: 0 });
                   
     function draw(data, animate) {
       chart.barSize(BAR_HEIGHT);
-      chart.height(data.length * (BAR_HEIGHT + BAR_PAD) + chart.margin() + chart.inset().top + chart.inset().bottom + 52);
+      chart.height(data.length * (BAR_HEIGHT + BAR_PAD) + chart.margin() + chart.inset().top + chart.inset().bottom + 40);
       
       var elm = d3.select('#elm').datum(data);
       if (animate === true) {

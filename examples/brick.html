@@ -11,7 +11,7 @@
   <body>
     <div id="elm"></div>
         
-    <script src="https://d3js.org/d3.v4.0.0-alpha.49.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="/d3-rs-bars.umd-es2015.min.js"></script>
     <script>
 
@@ -43,7 +43,7 @@
     d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false).legend([ 'One', 'longer', 'TWO' ]).highlight(5.05));
     d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-right').orientation('right').stacked(false).logValue(10).highlight(3.03));
     d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-top').logValue(10).orientation('top').stacked(false).highlight(3.03));
-    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-bottom').orientation('bottom').stacked(false).legend([ '1', '2', '3' ]).highlight(3.03));    
+    d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side-bottom').orientation('bottom').stacked(false).inset(0).legendOrientation('top').legend([ '1', '2', '3' ]).highlight(3.03));    
     
     d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('log-right').logValue(10).orientation('right').fill(['red', 'blue']));
 

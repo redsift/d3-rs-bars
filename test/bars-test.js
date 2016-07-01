@@ -10,17 +10,19 @@ tape("html() empty state", function(t) {
     
     t.equal(el.selectAll('svg').size(), 1);
     
+    var node = el.select(host.self());
+    
     // In this chart, no rects should be visible
-    t.equal(el.selectAll('rect').size(), 0);
+    t.equal(node.selectAll('rect').size(), 0);
     
     // But there should be some text
-    t.ok(el.selectAll('text').size() > 0);
+    t.ok(node.selectAll('text').size() > 0);
     
     // Should be some lines
-    t.ok(el.selectAll('line').size() > 0);
+    t.ok(node.selectAll('line').size() > 0);
     
     // should have an X and Y axis
-    t.equal(el.selectAll('g.axis').size(), 2);
+    t.equal(node.selectAll('g.axis').size(), 2);
         
     t.end();
 });
@@ -32,8 +34,10 @@ tape("html() 1 bar state", function(t) {
     
     t.equal(el.selectAll('svg').size(), 1);
     
+    var node = el.select(host.self());
+        
     // In this chart, one rect should be there
-    t.equal(el.selectAll('rect').size(), 1);
+    t.equal(node.selectAll('rect').size(), 1);
     
     t.end();
 });
@@ -43,6 +47,23 @@ tape("html() 1 bar state", function(t) {
 var layout = o.l;
 var testSize = o.s;
 
+tape("html() data reentrant - " + layout, function(t) {
+    var host = bars.html().orientation(layout);
+    var el = d3.select('#test');
+    el.datum([ 1, 2 ]).call(host);
+    
+    t.equal(el.selectAll('svg').size(), 1);
+    
+    rects = el.selectAll('*');
+    var initial = rects.size()
+    
+    el.datum([ 1, 2 ]).call(host);
+    
+    t.equal(initial, rects.size());
+        
+    t.end();
+});
+
 tape("html() data state - " + layout, function(t) {
     var host = bars.html().orientation(layout);
     var el = d3.select('#test');
@@ -50,7 +71,9 @@ tape("html() data state - " + layout, function(t) {
     
     t.equal(el.selectAll('svg').size(), 1);
     
-    rects = el.selectAll('rect');
+    var node = el.select(host.self());
+        
+    rects = node.selectAll('rect');
     t.equal(rects.size(), 2);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
@@ -70,7 +93,9 @@ tape("html() data scale - " + layout, function(t) {
     
     t.equal(el.selectAll('svg').size(), 1);
     
-    rects = el.selectAll('rect');
+    var node = el.select(host.self());
+    
+    rects = node.selectAll('rect');
     t.equal(rects.size(), 2);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
@@ -89,7 +114,9 @@ tape("html() data extremes - " + layout, function(t) {
     
     t.equal(el.selectAll('svg').size(), 1);
     
-    rects = el.selectAll('rect');
+    var node = el.select(host.self());
+        
+    rects = node.selectAll('rect');
     t.equal(rects.size(), 3);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
@@ -112,7 +139,9 @@ tape("html() data series stacked - " + layout, function(t) {
     
     t.equal(el.selectAll('svg').size(), 1);
     
-    rects = el.selectAll('rect');
+    var node = el.select(host.self());
+        
+    rects = node.selectAll('rect');
     t.equal(rects.size(), 3);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
