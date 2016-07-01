@@ -39,12 +39,14 @@
     var BAR_HEIGHT = 8;
     var BAR_PAD = 1;
 
+    var pct = d3.format('.0%');
     
     var chart = d3_rs_bars.html('refviewer')
                   .width(BAR_WIDTH)
                   .fill(FILLS)
                   .legend(LEGEND)
                   .legendOrientation('top')
+                  .displayHtml((d,i) => d.l + ', ' + LEGEND[i] + ', ' + (d.v[i] > 0 && d.v[i] < 1 ? pct(d.v[i]) : d.v[i] ))
                   .inset({ left: 180, right: 0, top: 16, bottom: 0 });
                   
     function draw(data, animate) {
