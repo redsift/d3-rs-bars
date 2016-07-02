@@ -206,10 +206,11 @@ export default function bars(id) {
           return a.map(function (v) { 
             let z = t;
             t += v;
-            return t;
+            z = (logValue !== 0 && z === 0.0 ? z = 1.0 : z);
+            return [z, t];
           }).reverse();
         } else {
-          return a;
+          return a.map(v => [logValue === 0 ? 0 : 1, v]);
         }
       });
       
@@ -235,12 +236,12 @@ export default function bars(id) {
           maxSeries = Math.max(maxSeries, l);
           twoD = true;
         }        
-        return max(d)
+        return max(d, v => v[1]);
       });
 
       let minV = minValue;
       if (minV == null) {
-        minV = min(vdata, (d) => min(d));
+        minV = min(vdata, (d) => min(d, v => v[1]));
         if (minV > 0) {
           minV = logValue === 0 ? 0 : 1;
         }
@@ -347,8 +348,7 @@ export default function bars(id) {
         aZ.remove();
       }
 
-      let v0 = 0.0,
-          toI = 0.0,
+      let toI = 0.0,
           fromI = 0.0,
           gridSize = 0.0,
           fnAttrV = null,
@@ -393,12 +393,10 @@ export default function bars(id) {
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([fromV, toV]);
 
-
-        v0 = scaleV(mm[0]);
         let t0 = scaleV(0);
 
-        fnAttrV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) : (mm[0] < 0 ? t0 : Math.min(scaleV(d), v0) );
-        fnAttrVV = (d) => mm[0] < 0 && d < 0 ? t0 - scaleV(d) :  Math.max(scaleV(Math.abs(d)) - (mm[0] < 0 ? t0 : v0), 1);
+        fnAttrV = (z, d) => mm[0] < 0 && d < 0 ? scaleV(d) : (mm[0] < 0 ? t0 : Math.min(scaleV(d), scaleV(z)) );
+        fnAttrVV = (z, d) => mm[0] < 0 && d < 0 ? t0 - scaleV(d) :  Math.max(scaleV(Math.abs(d)) - (mm[0] < 0 ? t0 : scaleV(Math.abs(z))), 1);
       } else if (orientation === 'bottom' || orientation === 'right') {
         let toV = w - _inset.right;
         let fromV = _inset.left;
@@ -429,11 +427,10 @@ export default function bars(id) {
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([toV, fromV]);
 
-        v0 = scaleV(mm[0]);
         let t0 = scaleV(0);
                 
-        fnAttrV = (d) => mm[0] < 0 && d < 0 ? t0 : Math.min(scaleV(d), v0 - 1);
-        fnAttrVV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) - t0 : Math.max((mm[0] < 0 ? t0 : v0) - scaleV(Math.abs(d)), 1);
+        fnAttrV = (z, d) => mm[0] < 0 && d < 0 ? t0 : Math.min(scaleV(d), scaleV(z) - 1);
+        fnAttrVV = (z, d) => mm[0] < 0 && d < 0 ? scaleV(d) - t0 : Math.max((mm[0] < 0 ? t0 : scaleV(Math.abs(z))) - scaleV(Math.abs(d)), 1);
       }
 
       let aV = axisV(scaleV).ticks(tickCountValue, (tickFormatValue == null ? DEFAULT_TICK_FORMAT_VALUE : tickFormatValue));
@@ -494,11 +491,11 @@ export default function bars(id) {
         r = r.transition(context);
       }              
             
-      r.attr(attrV, (d,i) => fnAttrV(d.d, i))
-            .attr(attrVV, (d, i) => fnAttrVV(d.d, i))
+      r.attr(attrV, (d,i) => fnAttrV(d.d[0], d.d[1], i))
+            .attr(attrVV, (d, i) => fnAttrVV(d.d[0], d.d[1], i))
             .attr(attrO, (d, i) => stacked ? 0 : (i - ((maxSeries - 1) / 2)) * sz) // center the series when not stacked
             .attr(attrIV, sz)
-            .attr('fill', (d, i) => colors(d.d, i));
+            .attr('fill', (d, i) => colors(d.d[1], i));
 
       let hls = g.selectAll('.highlight').data(hlt);
       hls.exit().remove();

@@ -148,8 +148,8 @@ tape("html() data series stacked - " + layout, function(t) {
     var two = parseInt(rects.nodes()[1].getAttribute(testSize));
     var three = parseInt(rects.nodes()[2].getAttribute(testSize));
     
-    t.equal(one, three);
-    t.ok(one > two);
+    t.equal(one, three / 2);
+    t.equal(one, two);
         
     t.end();            
 });

@@ -45,6 +45,7 @@
                   .width(BAR_WIDTH)
                   .fill(FILLS)
                   .legend(LEGEND)
+                  .orientation('left')
                   .legendOrientation('top')
                   .displayHtml((d,i) => d.l + ', ' + LEGEND[i] + ', ' + (d.v[i] > 0 && d.v[i] < 1 ? pct(d.v[i]) : d.v[i] ))
                   .inset({ left: 180, right: 0, top: 16, bottom: 0 });

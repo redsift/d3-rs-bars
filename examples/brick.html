@@ -19,7 +19,7 @@
 
 //https://bricks.redsift.io/reusable/d3-rs-bars?_datum=&orientation=bottom&scale=2&width=400&height=200&stacked=false&labelTime=%Y&legend=2014
     d3.select('#elm').datum([{v:[10,16],l:1388534400000},{v:[13,3], l:1420070400000},{v:[13,3], l:1420070400000},{v:[13,3], l:1420070400000}]).call(d3_rs_bars.html('years').orientation('bottom').stacked(false).labelTime('%Y').highlight([9 , 2]));
- 
+
     d3.select('#elm').datum([]).call(d3_rs_bars.html('empty'));
     
     d3.select('#elm').datum([ 1 ]).call(d3_rs_bars.html('singles'));
@@ -37,7 +37,7 @@
     d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('global').fill('global').minValue(0).maxValue(120));
 
     var stack = [ 1, [ 5, 2, 4, 3, 2, 1 ], [ 2, 5, 4, 3, 2, 1 ], 10, [100, 99, 80, 70, 60, 50, 30, 20 ] ];
-    d3.select('#elm').datum(stack).call(d3_rs_bars.html('log').logValue(10).width(400).height(200));
+    d3.select('#elm').datum(stack).call(d3_rs_bars.html('log').orientation('left').logValue(10).width(400).height(200));
     
     var side = [  [ 1, 9 ], [ 5, 2 ], [ 2, 5 ], [ 10, 1 ] ];
     d3.select('#elm').datum(side).call(d3_rs_bars.html('log-side').logValue(10).stacked(false).legend([ 'One', 'longer', 'TWO' ]).highlight(5.05));

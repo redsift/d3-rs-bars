@@ -1,6 +1,6 @@
 {
   "name": "@redsift/d3-rs-bars",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Generates bar charts using D3v4.",
   "keywords": [
     "bar",
