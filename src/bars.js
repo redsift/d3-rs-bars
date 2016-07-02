@@ -77,6 +77,7 @@ export default function bars(id) {
       highlight = null,
       displayTip = -1,
       legendOrientation = 'bottom',
+      displayHtml = null,
       value = function (d) {
         if (Array.isArray(d)) {
           return d;
@@ -163,19 +164,25 @@ export default function bars(id) {
       }
       tnode.call(root);
       
-      let elmS = node.select(root.self()).select(root.child());
+
+      let _displayHtml = displayHtml;
+      if (_displayHtml == null) {
+        _displayHtml = (d,i) => value(d)[i];
+      }
 
       let tid = null;
       if (id) tid = 'tip-' + id;
-      let rtip = tip(tid).html((d) => d);
-      
+      let rtip = tip(tid);
+
       rtip.direction(orientation === 'top' ? 's' : 'n');   
               
       let st = style + ' ' + rtip.style();
       rtip.style(st);
 
+      let elmS = node.select(root.self()).select(root.child());
       elmS.call(rtip);
-    
+
+
       let _inset = inset;
       if (typeof _inset === 'object') {
         _inset = { top: _inset.top, bottom: _inset.bottom, left: _inset.left, right: _inset.right };
@@ -191,24 +198,37 @@ export default function bars(id) {
         g.append('g').attr('class', 'legend');
       }
 
-
-      let twoD = false;
-      
-      let data = g.datum() || [];
-      
+      let data = node.datum() || [];
       let vdata = data.map(function(d) {
         let a = value(d);
         if (stacked) {
           let t = 0.0;
-          return a.map((v) => (t += v, t)).reverse();
+          return a.map(function (v) { 
+            let z = t;
+            t += v;
+            z = (logValue !== 0 && z === 0.0 ? z = 1.0 : z);
+            return [z, t];
+          }).reverse();
         } else {
-          return a;
+          return a.map(v => [logValue === 0 ? 0 : 1, v]);
         }
       });
       
-      g.datum(vdata); // this rebind is required even though there is a following select
+      (function (_data, _vdata) {
+        let ht = function(v, i) { 
+          let d = _data[v.i];
+          if (stacked === true) {
+            i = _vdata[v.i].length - i - 1;
+          }
+          return _displayHtml(d, i)
+        }
+        rtip.html(ht);
+      })(data, vdata);
+
+
       let maxSeries = 1;
-     
+      let twoD = false;
+  
       let maxV = max(vdata, function (d) { 
         let l = d.length;
         
@@ -216,12 +236,12 @@ export default function bars(id) {
           maxSeries = Math.max(maxSeries, l);
           twoD = true;
         }        
-        return max(d)
+        return max(d, v => v[1]);
       });
 
       let minV = minValue;
       if (minV == null) {
-        minV = min(vdata, (d) => min(d));
+        minV = min(vdata, (d) => min(d, v => v[1]));
         if (minV > 0) {
           minV = logValue === 0 ? 0 : 1;
         }
@@ -270,23 +290,16 @@ export default function bars(id) {
       
       if (ldg !== null) {
         let lchart = legends().width(w).height(h).inset(0).fill(fill).orientation(legendOrientation);
-        
-        if (legendOrientation === 'top') {
-          _inset.top = _inset.top + lchart.childHeight();
-        } else if (legendOrientation === 'left') {
-          _inset.left = _inset.left + lchart.childWidth();
-        } else if (legendOrientation === 'right') { 
-          _inset.right = _inset.right + lchart.childWidth();
-        } else {
-          _inset.bottom = _inset.bottom + lchart.childHeight();
-        }
-        
+
+        _inset = lchart.childInset(_inset);
+
         elmS.datum(ldg).call(lchart);
       }            
-      
+      elmS.datum(data);
+
       let colors = _makeFillFn();
             
-      let rects = g.selectAll('g.stack').data(vdata);
+      let rects = g.selectAll('g.stack').data(data);
       rects.exit().remove();
       rects = rects.enter().append('g').attr('class', 'stack').merge(rects);
             
@@ -335,8 +348,7 @@ export default function bars(id) {
         aZ.remove();
       }
 
-      let v0 = 0.0,
-          toI = 0.0,
+      let toI = 0.0,
           fromI = 0.0,
           gridSize = 0.0,
           fnAttrV = null,
@@ -381,12 +393,10 @@ export default function bars(id) {
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([fromV, toV]);
 
-
-        v0 = scaleV(mm[0]);
         let t0 = scaleV(0);
 
-        fnAttrV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) : (mm[0] < 0 ? t0 : Math.min(scaleV(d), v0) );
-        fnAttrVV = (d) => mm[0] < 0 && d < 0 ? t0 - scaleV(d) :  Math.max(scaleV(Math.abs(d)) - (mm[0] < 0 ? t0 : v0), 1);
+        fnAttrV = (z, d) => mm[0] < 0 && d < 0 ? scaleV(d) : (mm[0] < 0 ? t0 : Math.min(scaleV(d), scaleV(z)) );
+        fnAttrVV = (z, d) => mm[0] < 0 && d < 0 ? t0 - scaleV(d) :  Math.max(scaleV(Math.abs(d)) - (mm[0] < 0 ? t0 : scaleV(Math.abs(z))), 1);
       } else if (orientation === 'bottom' || orientation === 'right') {
         let toV = w - _inset.right;
         let fromV = _inset.left;
@@ -417,11 +427,10 @@ export default function bars(id) {
         scaleI = scaleI.rangeRound([fromI, toI]);
         scaleV = scaleV.range([toV, fromV]);
 
-        v0 = scaleV(mm[0]);
         let t0 = scaleV(0);
                 
-        fnAttrV = (d) => mm[0] < 0 && d < 0 ? t0 : Math.min(scaleV(d), v0 - 1);
-        fnAttrVV = (d) => mm[0] < 0 && d < 0 ? scaleV(d) - t0 : Math.max((mm[0] < 0 ? t0 : v0) - scaleV(Math.abs(d)), 1);
+        fnAttrV = (z, d) => mm[0] < 0 && d < 0 ? t0 : Math.min(scaleV(d), scaleV(z) - 1);
+        fnAttrVV = (z, d) => mm[0] < 0 && d < 0 ? scaleV(d) - t0 : Math.max((mm[0] < 0 ? t0 : scaleV(Math.abs(z))) - scaleV(Math.abs(d)), 1);
       }
 
       let aV = axisV(scaleV).ticks(tickCountValue, (tickFormatValue == null ? DEFAULT_TICK_FORMAT_VALUE : tickFormatValue));
@@ -468,23 +477,25 @@ export default function bars(id) {
       let sz = fnBarSize(scaleI);
 
       let r = rects.attr('transform', (d, i) => 'translate(' + (attrV !== 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
-                    .data((d) => (d == null) ? [] : d.map(value)).selectAll('rect').data((d) => d);
+                    .data((d) => (d == null) ? [] : vdata)
+                    .selectAll('rect')
+                    .data((d, i) => d.map(v => ({ d: v, i: i })));
       r.exit().remove();
       r = r.enter()
             .append('rect')
-              .on('mouseover', rtip.show)
-              .on('mouseout', rtip.hide)
             .merge(r);
-      
+
+      r.on('mouseover', rtip.show).on('mouseout', rtip.hide);
+
       if (transition === true) {
         r = r.transition(context);
       }              
             
-      r.attr(attrV, fnAttrV)
-            .attr(attrVV, fnAttrVV)
+      r.attr(attrV, (d,i) => fnAttrV(d.d[0], d.d[1], i))
+            .attr(attrVV, (d, i) => fnAttrVV(d.d[0], d.d[1], i))
             .attr(attrO, (d, i) => stacked ? 0 : (i - ((maxSeries - 1) / 2)) * sz) // center the series when not stacked
             .attr(attrIV, sz)
-            .attr('fill', colors);
+            .attr('fill', (d, i) => colors(d.d[1], i));
 
       let hls = g.selectAll('.highlight').data(hlt);
       hls.exit().remove();
@@ -652,7 +663,11 @@ export default function bars(id) {
   _impl.legend = function(value) {
     return arguments.length ? (legend = value, _impl) : legend;
   };  
-  
+
+  _impl.displayHtml = function(value) {
+    return arguments.length ? (displayHtml = value, _impl) : displayHtml;
+  }; 
+
   _impl.displayTip = function(value) {
     return arguments.length ? (displayTip = value, _impl) : displayTip;
   };   
