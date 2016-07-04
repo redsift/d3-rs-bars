@@ -1,6 +1,6 @@
 {
   "name": "@redsift/d3-rs-bars",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generates bar charts using D3v4.",
   "keywords": [
     "bar",
@@ -22,8 +22,8 @@
     "url": "https://github.com/redsift/d3-rs-bars.git"
   },
   "scripts": {
-    "serve": "gulp -o d3-rs-bars -g d3-selection -g d3-array -g d3-scale -g d3-axis serve",
-    "build": "gulp -o d3-rs-bars -g d3-selection -g d3-array -g d3-scale -g d3-axis build",
+    "serve": "gulp -o d3-rs-bars -g d3-selection serve",
+    "build": "gulp -o d3-rs-bars -g d3-selection build",
     "pretest": "npm outdated && npm run build",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
     "prepublish": "npm run build"

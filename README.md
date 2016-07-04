@@ -10,6 +10,9 @@
 
 [View @redsift/d3-rs-bars on Codepen](http://codepen.io/rahulpowar/pen/mEOopX?editors=0010)
 
+[Full example @redsift/d3-rs-bars as REFViewer on Codepen](http://codepen.io/rahulpowar/full/OXgWYj/)
+
+
 ### Bottom orientation
 
 ![Sample bars with a bottom orientation](https://bricks.redsift.io/reusable/d3-rs-bars.svg?_datum=[1,200,3100,1000]&orientation=bottom)
