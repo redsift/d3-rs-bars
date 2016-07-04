@@ -4,7 +4,7 @@ import { max, min } from 'd3-array';
 import { scaleLinear, scaleLog } from 'd3-scale';
 import { axisTop, axisRight, axisBottom, axisLeft } from 'd3-axis';
 import { timeFormatLocale } from 'd3-time-format';
-import { formatLocale } from 'd3-format';
+import { format, formatDefaultLocale } from 'd3-format';
 
 import { html as svg } from '@redsift/d3-rs-svg';
 import { svg as legends } from "@redsift/d3-rs-legends";
@@ -20,9 +20,6 @@ const DEFAULT_SIZE = 420;
 const DEFAULT_ASPECT = 160 / 420;
 const DEFAULT_MARGIN = 26;  // white space
 const DEFAULT_INSET = 24;   // scale space
-const DEFAULT_TICK_FORMAT_VALUE = ',.0f';
-const DEFAULT_TICK_FORMAT_VALUE_SI = '.2s';
-const DEFAULT_TICK_FORMAT_VALUE_SMALL = '.3f';
 const DEFAULT_TICK_FORMAT_INDEX = ',d';
 const DEFAULT_TICK_COUNT = 4;
 const DEFAULT_SCALE = 42; // why not
@@ -119,32 +116,7 @@ export default function bars(id) {
       formatTime = locale.format(labelTime);
     }
 
-    let scaleFn = tickDisplayValue;
-    
-    if (scaleFn == null && logValue === 0) {
-      let locale = formatLocale(units(language).d3);
-
-      let defaultValueFormat = locale.format(DEFAULT_TICK_FORMAT_VALUE);
-      let defaultValueFormatSi = locale.format(DEFAULT_TICK_FORMAT_VALUE_SI);
-      let defaultValueFormatSmall = locale.format(DEFAULT_TICK_FORMAT_VALUE_SMALL);      
-      
-      if (tickFormatValue != null) {
-        let fn = locale.format(tickFormatValue);
-        scaleFn = (i) => fn(i); 
-      } else {
-        scaleFn = function (i) {
-          if (i === 0.0) {
-            return defaultValueFormat(i);
-          } else if (i > 9999 || i <= 0.001) {
-            return defaultValueFormatSi(i);  
-          } else if (i < 1) {
-            return defaultValueFormatSmall(i);  
-          } else {
-            return defaultValueFormat(i);
-          }
-        }
-      }
-    }
+    formatDefaultLocale(units(language).d3);
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
        
@@ -305,7 +277,7 @@ export default function bars(id) {
             
       let sV = scaleLinear(); 
       if (logValue > 0) sV = scaleLog().base(logValue);
-      let scaleV = sV.domain(mm); // .clamp(true)
+      let scaleV = sV.domain(mm);
       
       let sI = scaleLinear(); 
       let domainI = [ 0, DEFAULT_SCALE ];
@@ -323,6 +295,8 @@ export default function bars(id) {
 
       let labelFn = label;
       if (labelFn == null) {
+        let scaleIFormat = scaleI.tickFormat(ticks, tickFormatIndex);
+        
         labelFn = function (i) {
           let d = data[i];
           if (d != null && d.l !== undefined) {
@@ -334,7 +308,7 @@ export default function bars(id) {
           if (formatTime != null ) {
             return formatTime(i);
           }
-          return scaleI.tickFormat(ticks, tickFormatIndex)(i);
+          return scaleIFormat(i);
         };
       }
 
@@ -433,12 +407,19 @@ export default function bars(id) {
         fnAttrVV = (z, d) => mm[0] < 0 && d < 0 ? scaleV(d) - t0 : Math.max((mm[0] < 0 ? t0 : scaleV(Math.abs(z))) - scaleV(Math.abs(d)), 1);
       }
 
-      let aV = axisV(scaleV).ticks(tickCountValue, (tickFormatValue == null ? DEFAULT_TICK_FORMAT_VALUE : tickFormatValue));
+      let formatValue = tickFormatValue;
+      if (logValue > 0 && formatValue == null) {
+        formatValue = '.0r';
+      }
+
+      let aV = axisV(scaleV).ticks(tickCountValue, (formatValue == null ? scaleV.tickFormat(tickCountValue) : formatValue));
       if (grid) {
         aV.tickSizeInner(gridSize);
       }
-      aV.tickFormat(scaleFn);
-
+      if (tickDisplayValue) {
+        aV.tickFormat(tickDisplayValue);
+      }
+      
       let gaV = g.select('g.axis-v');
       if (transition === true) {
         gaV = gaV.transition(context);
@@ -450,9 +431,9 @@ export default function bars(id) {
 
       gaV.selectAll('text').attr('transform', 'rotate(' + rotateValues + ')');
 
-      let aI = axisI(scaleI).ticks(ticks, tickFormatIndex);
-      aI.tickValues(vdata.map((d,i) => i));
-      aI.tickFormat(labelFn);
+      let aI = axisI(scaleI)
+                  .tickValues(vdata.map((d,i) => i))
+                  .tickFormat(labelFn);
       
       let gaI = g.select('g.axis-i');
       if (transition === true) {
@@ -516,10 +497,13 @@ export default function bars(id) {
         .attr('fill', icolors);
       
       function textForData(d) {
-        if (scaleFn != null) {
-          return scaleFn(d)
+        if (tickDisplayValue != null) {
+          return tickDisplayValue(d);
         }
-        return d + ''; // TODO: FLoating point?
+        if (formatValue != null) {
+          return format(formatValue)(d);
+        }
+        return scaleV.tickFormat(tickCountValue)(d);
       }
 
       

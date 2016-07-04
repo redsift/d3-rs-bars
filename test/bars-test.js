@@ -1,5 +1,7 @@
 var tape = require("@redsift/tape-reel")("<div id='test'></div>"),
     d3 = require("d3-selection"),
+    scale = require("d3-scale"),
+    fmt = require("d3-format"),
     bars = require("../");
 
 // This test should be on all brick compatable charts
@@ -38,6 +40,27 @@ tape("html() 1 bar state", function(t) {
         
     // In this chart, one rect should be there
     t.equal(node.selectAll('rect').size(), 1);
+    
+    t.end();
+});
+
+tape("html() custom local currency works", function(t) {
+    var definition = {
+        "decimal": ".",
+        "thousands": ",",
+        "grouping": [3],
+        "currency": ["£", ""]
+    };
+
+    fmt.formatDefaultLocale(definition);
+    
+    var s = scale.scaleLog()
+        .domain([1, 100]);
+    
+    var ticks = s.ticks(5),
+        tickFormat = s.tickFormat(5, '$.02f');
+
+    t.equal(0, ticks.map(tickFormat).filter(v => v !== '').filter(v => v.indexOf('£') !== 0).length);
     
     t.end();
 });
