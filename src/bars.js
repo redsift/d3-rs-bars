@@ -9,11 +9,12 @@ import { format, formatDefaultLocale } from 'd3-format';
 import { html as svg } from '@redsift/d3-rs-svg';
 import { svg as legends } from "@redsift/d3-rs-legends";
 import { units, time } from "@redsift/d3-rs-intl";
-import { tip } from "@redsift/d3-rs-tip";
+import { body as tip } from "@redsift/d3-rs-tip";
 import { 
-  random as random, 
-  presentation10 as presentation10,
-  display as display
+  random, 
+  presentation10,
+  display, widths, 
+  fonts, dashes
 } from '@redsift/d3-rs-theme';
 
 const DEFAULT_SIZE = 420;
@@ -29,19 +30,6 @@ const DEFAULT_HIGHLIGHT_TEXT_SCALE = 8;
 
 const PAD_SCALE = 8;
 
-// Font fallback chosen to keep presentation on places like GitHub where Content Security Policy prevents inline SRC
-const DEFAULT_STYLE = [
-  "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300);",
-  "text{ font-family: 'Source Code Pro', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-weight: 300; fill: " + display.text.black + "; }",
-  "path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; }",
-  "line { stroke-width: 1.5px }",
-  "line.grid { stroke-width: 1.0px }",
-  "line.axis-z { stroke-width: 2.0px }",
-  ".legend text { font-size: 12px }",
-  ".highlight { pointer-events: none; opacity: 0.66 }",
-  ".highlight text { font-size: 12px }"
-  ].join(" \n");
-
 export default function bars(id) {
   let classed = 'chart-bars', 
       theme = 'light',
@@ -49,7 +37,7 @@ export default function bars(id) {
       width = DEFAULT_SIZE,
       height = null,
       margin = DEFAULT_MARGIN,
-      style = DEFAULT_STYLE,
+      style = undefined,
       scale = 1.0,
       logValue = 0,
       barSize = 6,
@@ -136,6 +124,7 @@ export default function bars(id) {
       }
       tnode.call(root);
       
+      let snode = node.select(root.self());
 
       let _displayHtml = displayHtml;
       if (_displayHtml == null) {
@@ -147,11 +136,31 @@ export default function bars(id) {
       let rtip = tip(tid);
 
       rtip.direction(orientation === 'top' ? 's' : 'n');   
-              
-      let st = style + ' ' + rtip.style();
-      rtip.style(st);
 
-      let elmS = node.select(root.self()).select(root.child());
+      // Tip
+      let _style = style;
+      if (_style === undefined) {
+        // build a style sheet from the embedded charts
+        let w = root.childWidth()
+        _style = [ _impl, rtip ].filter(c => c != null).reduce((p, c) => p + c.defaultStyle(theme, w), '');
+      }
+
+      let defsEl = snode.select('defs');
+      if (defsEl.empty()) {
+        defsEl = snode.append('defs');
+      }
+
+      let styleEl = defsEl.selectAll('style' + (id ?  '#style-bars-' + id : '.style-' + classed)).data(_style ? [ _style ] : []);
+      styleEl.exit().remove();
+      styleEl = styleEl.enter()
+                  .append('style')
+                    .attr('type', 'text/css')
+                    .attr('id', (id ?  'style-bars-' + id : null))
+                    .attr('class', (id ?  null : 'style-' + classed))
+                  .merge(styleEl);
+      styleEl.text(s => s);
+
+      let elmS = snode.select(root.child());
       elmS.call(rtip);
 
 
@@ -534,6 +543,59 @@ export default function bars(id) {
   _impl.id = function() {
     return id;
   };
+
+  _impl.defaultStyle = (_theme, _width) => `
+                  ${fonts.fixed.cssImport}
+                  ${fonts.variable.cssImport}  
+                  ${_impl.self()} .axis line, 
+                  ${_impl.self()} .axis path { 
+                                              shape-rendering: crispEdges; 
+                                              stroke-width: ${widths.axis}; 
+                                              stroke: none;
+                                            }
+                  ${_impl.self()} g.axis-v line, 
+                  ${_impl.self()} g.axis-v path { 
+                                              stroke: ${display[_theme].axis};
+                                            }
+                                            
+                  ${_impl.self()} g.axis-i line, 
+                  ${_impl.self()} g.axis-i path { 
+                                              stroke: ${display[_theme].axis}; 
+                                            }
+                                              
+                  ${_impl.self()} text { 
+                                        font-family: ${fonts.variable.family};
+                                        font-size: ${fonts.variable.sizeForWidth(_width)};                
+                                      }
+
+                  ${_impl.self()} g.highlight {
+                                                pointer-events: none; 
+                                                opacity: 0.66;
+                                              }
+
+                  ${_impl.self()} .axis text, 
+                  ${_impl.self()} g.highlight text { 
+                                    font-family: ${fonts.fixed.family};
+                                    font-size: ${fonts.fixed.sizeForWidth(_width)};                
+                                    font-weight: ${fonts.fixed.weightMonochrome};  
+                                    fill: ${display[_theme].text}
+                                  }                
+                  
+                  ${_impl.self()} g.axis-v line.grid,
+                  ${_impl.self()} g.axis-i line.grid { 
+                                             stroke-width: ${widths.grid}; 
+                                             stroke-dasharray: ${dashes.grid};
+                                             stroke: ${display[_theme].grid};
+                                            }
+
+                  ${_impl.self()} g.axis-i g.tick line.grid.first,                  
+                  ${_impl.self()} g.axis-v g.tick line.grid.first {
+                                              stroke: none;
+                                            }
+                  ${_impl.self()} line.axis-z {
+                                            stroke-width: ${widths.grid};
+                                          }       
+                `;
     
   _impl.classed = function(value) {
     return arguments.length ? (classed = value, _impl) : classed;
