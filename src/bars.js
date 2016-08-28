@@ -135,14 +135,18 @@ export default function bars(id) {
       if (id) tid = 'tip-' + id;
       let rtip = tip(tid);
 
-      rtip.direction(orientation === 'top' ? 's' : 'n');   
+      rtip.direction(orientation === 'top' ? 's' : 'n');
+
+      let lid = null;
+      if (id) lid = 'legend-' + id;
+      let rlegend = legends(lid);   
 
       // Tip
       let _style = style;
       if (_style === undefined) {
         // build a style sheet from the embedded charts
         let w = root.childWidth()
-        _style = [ _impl, rtip ].filter(c => c != null).reduce((p, c) => p + c.defaultStyle(theme, w), '');
+        _style = [ _impl, rtip, rlegend ].filter(c => c != null).reduce((p, c) => p + c.defaultStyle(theme, w), '');
       }
 
       let defsEl = snode.select('defs');
@@ -270,7 +274,7 @@ export default function bars(id) {
           h = root.childHeight();
       
       if (ldg !== null) {
-        let lchart = legends().width(w).height(h).inset(0).fill(fill).orientation(legendOrientation);
+        let lchart = rlegend.width(w).height(h).inset(0).fill(fill).orientation(legendOrientation);
 
         _inset = lchart.childInset(_inset);
 
