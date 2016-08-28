@@ -587,7 +587,7 @@ export default function bars(id) {
                   
                   ${_impl.self()} g.axis-v line.grid,
                   ${_impl.self()} g.axis-i line.grid { 
-                                             stroke-width: ${widths.grid}; 
+                                             stroke-width: ${logValue > 0 ? widths.axis : widths.grid}; 
                                              stroke-dasharray: ${dashes.grid};
                                              stroke: ${display[_theme].grid};
                                             }
