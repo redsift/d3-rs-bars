@@ -470,7 +470,10 @@ export default function bars(id) {
 
       let sz = fnBarSize(scaleI);
 
-      let r = rects.attr('transform', (d, i) => 'translate(' + (attrV !== 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
+      let r = rects.attr('transform', (d, i) => 'translate(' + (attrV !== 'x' ? 
+            `${scaleI(i) - sz/2},${orientation === 'top' ? widths.axis : 0}` : 
+            `${orientation === 'left' ? widths.axis : 0},${scaleI(i) - sz/2}`
+          ) + ')')
                     .data((d) => (d == null) ? [] : vdata)
                     .selectAll('rect')
                     .data((d, i) => d.map(v => ({ d: v, i: i })));
