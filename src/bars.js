@@ -372,7 +372,7 @@ export default function bars(id) {
           gridSize = (_inset.left + _inset.right) - w;
           attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height'; 
           axisV = axisLeft; axisI = axisTop;
-          translateV = 'translate(' + (_inset.left - PAD_SCALE) + ', 0)';
+          translateV = 'translate(' + _inset.left + ', 0)';
           translateI = 'translate(0, ' + _inset.top + ')';
           anchorI = rotateIndex > 0 ? 'end' : rotateIndex < 0 ? 'start' : 'middle';
         }
@@ -406,7 +406,7 @@ export default function bars(id) {
           gridSize = (_inset.left + _inset.right) - w;
           attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height';
           axisV = axisLeft; axisI = axisBottom;
-          translateV = 'translate(' + (_inset.left - PAD_SCALE) + ', 0)';
+          translateV = 'translate(' + _inset.left + ', 0)';
           translateI = 'translate(0, ' + (h - _inset.bottom) + ')';          
           anchorI = rotateIndex > 0 ? 'start' : rotateIndex < 0 ? 'end' : 'middle';
         }        
@@ -425,7 +425,9 @@ export default function bars(id) {
         formatValue = '.0r';
       }
 
-      let aV = axisV(scaleV).ticks(tickCountValue, (formatValue == null ? scaleV.tickFormat(tickCountValue) : formatValue));
+      let aV = axisV(scaleV)
+        .tickPadding(PAD_SCALE)
+        .ticks(tickCountValue, (formatValue == null ? scaleV.tickFormat(tickCountValue) : formatValue));
       if (grid) {
         aV.tickSizeInner(gridSize);
       }
