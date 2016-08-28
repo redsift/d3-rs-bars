@@ -569,7 +569,7 @@ export default function bars(id) {
                                               
                   ${_impl.self()} text { 
                                         font-family: ${fonts.variable.family};
-                                        font-size: ${fonts.variable.sizeForWidth(_width)};                
+                                        font-weight: ${fonts.variable.weightMonochrome};                
                                       }
 
                   ${_impl.self()} g.highlight {
@@ -577,7 +577,11 @@ export default function bars(id) {
                                                 opacity: 0.66;
                                               }
 
-                  ${_impl.self()} .axis text, 
+                  ${_impl.self()} .axis text { 
+                                    font-family: ${fonts.fixed.family};                
+                                    font-weight: ${fonts.fixed.weightMonochrome};  
+                                    fill: ${display[_theme].text}
+                                  }
                   ${_impl.self()} g.highlight text { 
                                     font-family: ${fonts.fixed.family};
                                     font-size: ${fonts.fixed.sizeForWidth(_width)};                
