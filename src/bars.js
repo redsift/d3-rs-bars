@@ -33,7 +33,7 @@ const PAD_SCALE = 8;
 export default function bars(id) {
   let classed = 'chart-bars', 
       theme = 'light',
-      background = null,
+      background = undefined,
       width = DEFAULT_SIZE,
       height = null,
       margin = DEFAULT_MARGIN,
@@ -104,6 +104,11 @@ export default function bars(id) {
       formatTime = locale.format(labelTime);
     }
 
+    let _background = background;
+    if (_background === undefined) {
+      _background = display[theme].background;
+    }
+
     formatDefaultLocale(units(language).d3);
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
@@ -117,7 +122,7 @@ export default function bars(id) {
 
       let sid = null;
       if (id) sid = 'svg-' + id;
-      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale).background(background);
+      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale).background(_background);
       let tnode = node;
       if (transition === true) {
         tnode = node.transition(context);
@@ -330,7 +335,6 @@ export default function bars(id) {
       let aZ = g.select('line.axis-z');
       if (mm[0] < 0) {
         if (aZ.empty()) aZ = g.append('line').attr('class', 'axis-z axis grid');
-        aZ.attr('stroke', '#000');
       } else {
         aZ.remove();
       }
@@ -607,6 +611,7 @@ export default function bars(id) {
                                             }
                   ${_impl.self()} line.axis-z {
                                             stroke-width: ${widths.grid};
+                                            stroke: ${display[_theme].axis};
                                           }       
                 `;
     
