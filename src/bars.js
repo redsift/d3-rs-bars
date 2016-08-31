@@ -9,11 +9,12 @@ import { format, formatDefaultLocale } from 'd3-format';
 import { html as svg } from '@redsift/d3-rs-svg';
 import { svg as legends } from "@redsift/d3-rs-legends";
 import { units, time } from "@redsift/d3-rs-intl";
-import { tip } from "@redsift/d3-rs-tip";
+import { body as tip } from "@redsift/d3-rs-tip";
 import { 
-  random as random, 
-  presentation10 as presentation10,
-  display as display
+  random, 
+  presentation10,
+  display, widths, 
+  fonts, dashes
 } from '@redsift/d3-rs-theme';
 
 const DEFAULT_SIZE = 420;
@@ -29,27 +30,14 @@ const DEFAULT_HIGHLIGHT_TEXT_SCALE = 8;
 
 const PAD_SCALE = 8;
 
-// Font fallback chosen to keep presentation on places like GitHub where Content Security Policy prevents inline SRC
-const DEFAULT_STYLE = [
-  "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:300);",
-  "text{ font-family: 'Source Code Pro', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-weight: 300; fill: " + display.text.black + "; }",
-  "path, line { fill: none; stroke: " + display.lines.seperator + "; shape-rendering: crispEdges; }",
-  "line { stroke-width: 1.5px }",
-  "line.grid { stroke-width: 1.0px }",
-  "line.axis-z { stroke-width: 2.0px }",
-  ".legend text { font-size: 12px }",
-  ".highlight { pointer-events: none; opacity: 0.66 }",
-  ".highlight text { font-size: 12px }"
-  ].join(" \n");
-
 export default function bars(id) {
   let classed = 'chart-bars', 
       theme = 'light',
-      background = null,
+      background = undefined,
       width = DEFAULT_SIZE,
       height = null,
       margin = DEFAULT_MARGIN,
-      style = DEFAULT_STYLE,
+      style = undefined,
       scale = 1.0,
       logValue = 0,
       barSize = 6,
@@ -116,6 +104,11 @@ export default function bars(id) {
       formatTime = locale.format(labelTime);
     }
 
+    let _background = background;
+    if (_background === undefined) {
+      _background = display[theme].background;
+    }
+
     formatDefaultLocale(units(language).d3);
 
     let fnBarSize = (I) => barSize < 0.0 ? Math.max(I(-barSize), 1) : barSize;
@@ -129,13 +122,14 @@ export default function bars(id) {
 
       let sid = null;
       if (id) sid = 'svg-' + id;
-      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale).background(background);
+      let root = svg(sid).width(width).height(sh).margin(margin).scale(scale).background(_background);
       let tnode = node;
       if (transition === true) {
         tnode = node.transition(context);
       }
       tnode.call(root);
       
+      let snode = node.select(root.self());
 
       let _displayHtml = displayHtml;
       if (_displayHtml == null) {
@@ -146,12 +140,36 @@ export default function bars(id) {
       if (id) tid = 'tip-' + id;
       let rtip = tip(tid);
 
-      rtip.direction(orientation === 'top' ? 's' : 'n');   
-              
-      let st = style + ' ' + rtip.style();
-      rtip.style(st);
+      rtip.direction(orientation === 'top' ? 's' : 'n');
 
-      let elmS = node.select(root.self()).select(root.child());
+      let lid = null;
+      if (id) lid = 'legend-' + id;
+      let rlegend = legends(lid);   
+
+      // Tip
+      let _style = style;
+      if (_style === undefined) {
+        // build a style sheet from the embedded charts
+        let w = root.childWidth()
+        _style = [ _impl, rtip, rlegend ].filter(c => c != null).reduce((p, c) => p + c.defaultStyle(theme, w), '');
+      }
+
+      let defsEl = snode.select('defs');
+      if (defsEl.empty()) {
+        defsEl = snode.append('defs');
+      }
+
+      let styleEl = defsEl.selectAll('style' + (id ?  '#style-bars-' + id : '.style-' + classed)).data(_style ? [ _style ] : []);
+      styleEl.exit().remove();
+      styleEl = styleEl.enter()
+                  .append('style')
+                    .attr('type', 'text/css')
+                    .attr('id', (id ?  'style-bars-' + id : null))
+                    .attr('class', (id ?  null : 'style-' + classed))
+                  .merge(styleEl);
+      styleEl.text(s => s);
+
+      let elmS = snode.select(root.child());
       elmS.call(rtip);
 
 
@@ -261,7 +279,7 @@ export default function bars(id) {
           h = root.childHeight();
       
       if (ldg !== null) {
-        let lchart = legends().width(w).height(h).inset(0).fill(fill).orientation(legendOrientation);
+        let lchart = rlegend.width(w).height(h).inset(0).fill(fill).orientation(legendOrientation);
 
         _inset = lchart.childInset(_inset);
 
@@ -317,7 +335,6 @@ export default function bars(id) {
       let aZ = g.select('line.axis-z');
       if (mm[0] < 0) {
         if (aZ.empty()) aZ = g.append('line').attr('class', 'axis-z axis grid');
-        aZ.attr('stroke', '#000');
       } else {
         aZ.remove();
       }
@@ -359,7 +376,7 @@ export default function bars(id) {
           gridSize = (_inset.left + _inset.right) - w;
           attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height'; 
           axisV = axisLeft; axisI = axisTop;
-          translateV = 'translate(' + (_inset.left - PAD_SCALE) + ', 0)';
+          translateV = 'translate(' + _inset.left + ', 0)';
           translateI = 'translate(0, ' + _inset.top + ')';
           anchorI = rotateIndex > 0 ? 'end' : rotateIndex < 0 ? 'start' : 'middle';
         }
@@ -393,7 +410,7 @@ export default function bars(id) {
           gridSize = (_inset.left + _inset.right) - w;
           attrV = 'y'; attrO = 'x'; attrIV = 'width'; attrVV = 'height';
           axisV = axisLeft; axisI = axisBottom;
-          translateV = 'translate(' + (_inset.left - PAD_SCALE) + ', 0)';
+          translateV = 'translate(' + _inset.left + ', 0)';
           translateI = 'translate(0, ' + (h - _inset.bottom) + ')';          
           anchorI = rotateIndex > 0 ? 'start' : rotateIndex < 0 ? 'end' : 'middle';
         }        
@@ -412,7 +429,9 @@ export default function bars(id) {
         formatValue = '.0r';
       }
 
-      let aV = axisV(scaleV).ticks(tickCountValue, (formatValue == null ? scaleV.tickFormat(tickCountValue) : formatValue));
+      let aV = axisV(scaleV)
+        .tickPadding(PAD_SCALE)
+        .ticks(tickCountValue, (formatValue == null ? scaleV.tickFormat(tickCountValue) : formatValue));
       if (grid) {
         aV.tickSizeInner(gridSize);
       }
@@ -457,7 +476,10 @@ export default function bars(id) {
 
       let sz = fnBarSize(scaleI);
 
-      let r = rects.attr('transform', (d, i) => 'translate(' + (attrV !== 'x' ? (scaleI(i) - sz/2) + ',0' : '0,'+ (scaleI(i) - sz/2) ) + ')')
+      let r = rects.attr('transform', (d, i) => 'translate(' + (attrV !== 'x' ? 
+            `${scaleI(i) - sz/2},${orientation === 'top' ? widths.axis : 0}` : 
+            `${orientation === 'left' ? widths.axis : 0},${scaleI(i) - sz/2}`
+          ) + ')')
                     .data((d) => (d == null) ? [] : vdata)
                     .selectAll('rect')
                     .data((d, i) => d.map(v => ({ d: v, i: i })));
@@ -534,6 +556,64 @@ export default function bars(id) {
   _impl.id = function() {
     return id;
   };
+
+  _impl.defaultStyle = (_theme, _width) => `
+                  ${fonts.fixed.cssImport}
+                  ${fonts.variable.cssImport}  
+                  ${_impl.self()} .axis line, 
+                  ${_impl.self()} .axis path { 
+                                              shape-rendering: crispEdges; 
+                                              stroke-width: ${widths.axis}; 
+                                              stroke: none;
+                                            }
+                  ${_impl.self()} g.axis-v line, 
+                  ${_impl.self()} g.axis-v path { 
+                                              stroke: ${display[_theme].axis};
+                                            }
+                                            
+                  ${_impl.self()} g.axis-i line, 
+                  ${_impl.self()} g.axis-i path { 
+                                              stroke: ${display[_theme].axis}; 
+                                            }
+                                              
+                  ${_impl.self()} text { 
+                                        font-family: ${fonts.variable.family};
+                                        font-weight: ${fonts.variable.weightMonochrome};                
+                                      }
+
+                  ${_impl.self()} g.highlight {
+                                                pointer-events: none; 
+                                                opacity: 0.66;
+                                              }
+
+                  ${_impl.self()} .axis text { 
+                                    font-family: ${fonts.fixed.family};                
+                                    font-weight: ${fonts.fixed.weightMonochrome};  
+                                    fill: ${display[_theme].text}
+                                  }
+                  ${_impl.self()} g.highlight text { 
+                                    font-family: ${fonts.fixed.family};
+                                    font-size: ${fonts.fixed.sizeForWidth(_width)};                
+                                    font-weight: ${fonts.fixed.weightMonochrome};  
+                                    fill: ${display[_theme].text}
+                                  }                
+                  
+                  ${_impl.self()} g.axis-v line.grid,
+                  ${_impl.self()} g.axis-i line.grid { 
+                                             stroke-width: ${logValue > 0 ? widths.axis : widths.grid}; 
+                                             stroke-dasharray: ${dashes.grid};
+                                             stroke: ${display[_theme].grid};
+                                            }
+
+                  ${_impl.self()} g.axis-i g.tick line.grid.first,                  
+                  ${_impl.self()} g.axis-v g.tick line.grid.first {
+                                              stroke: none;
+                                            }
+                  ${_impl.self()} line.axis-z {
+                                            stroke-width: ${widths.grid};
+                                            stroke: ${display[_theme].axis};
+                                          }       
+                `;
     
   _impl.classed = function(value) {
     return arguments.length ? (classed = value, _impl) : classed;
