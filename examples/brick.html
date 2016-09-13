@@ -18,6 +18,7 @@
     'use strict';
 
 //https://bricks.redsift.io/reusable/d3-rs-bars?_datum=&orientation=bottom&scale=2&width=400&height=200&stacked=false&labelTime=%Y&legend=2014
+
     d3.select('#elm').datum([{v:[10,16],l:1388534400000},{v:[13,3], l:1420070400000},{v:[13,3], l:1420070400000},{v:[13,3], l:1420070400000}]).call(d3_rs_bars.html('years').orientation('bottom').stacked(false).labelTime('%Y').highlight([9 , 2]));
 
     d3.select('#elm').datum([]).call(d3_rs_bars.html('empty'));
@@ -70,6 +71,11 @@
     d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003 ]).call(d3_rs_bars.html('si-small').fill('global'));
     
     d3.select('#elm').datum([ 0.0001, 0.0002, 0.0003, 0.1, 50, 6000000 ]).call(d3_rs_bars.html('mix').fill('global'));
+    
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('minLeft').scale(2).minValue(9).fill('global'));
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('minRight').scale(2).minValue(9).orientation('right').fill('global'));
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('minTop').scale(2).minValue(9).orientation('top').fill('global'));
+    d3.select('#elm').datum([ 1, 2, 3, 10, 100 ]).call(d3_rs_bars.html('minBottom').scale(2).minValue(9).orientation('bottom').fill('global'));
 
     </script>
   </body>

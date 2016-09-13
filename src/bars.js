@@ -30,7 +30,11 @@ const DEFAULT_HIGHLIGHT_TEXT_SCALE = 8;
 
 const PAD_SCALE = 8;
 
+let objectId = 0;
+
 export default function bars(id) {
+  objectId++;
+
   let classed = 'chart-bars', 
       theme = 'light',
       background = undefined,
@@ -179,6 +183,8 @@ export default function bars(id) {
       } else {
         _inset = { top: _inset, bottom: _inset, left: _inset, right: _inset };
       }
+
+      let cid = id != null ? 'clip-bars-' + id : 'clip-bars-' + objectId;
     
       let g = elmS.select(_impl.self())
       if (g.empty()) {
@@ -186,7 +192,10 @@ export default function bars(id) {
         g.append('g').attr('class', 'axis-v axis');
         g.append('g').attr('class', 'axis-i axis');
         g.append('g').attr('class', 'legend');
+        g.append('clipPath').attr('id', cid).append('rect');
+        g.append('g').attr('class', 'stacks').attr('clip-path', `url(#${cid})`);
       }
+ 
 
       let data = node.datum() || [];
       let vdata = data.map(function(d) {
@@ -287,12 +296,19 @@ export default function bars(id) {
       }            
       elmS.datum(data);
 
+      g.select('#' + cid).select('rect')
+        .attr('x', _inset.left + (orientation === 'left' ? widths.axis : 0))
+        .attr('y', _inset.top + (orientation === 'top' ? widths.axis : 0))
+        .attr('width', w - (orientation === 'right' ? (_inset.right + _inset.left) : 0))
+        .attr('height', h - (orientation === 'bottom' ? (_inset.bottom + _inset.top) : 0));    
+ 
+
       let colors = _makeFillFn();
             
-      let rects = g.selectAll('g.stack').data(data);
+      let rects = g.select('g.stacks').selectAll('g.stack').data(data);
       rects.exit().remove();
       rects = rects.enter().append('g').attr('class', 'stack').merge(rects);
-            
+
       let sV = scaleLinear(); 
       if (logValue > 0) sV = scaleLog().base(logValue);
       let scaleV = sV.domain(mm);
