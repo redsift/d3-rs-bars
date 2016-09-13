@@ -14,8 +14,8 @@ tape("html() empty state", function(t) {
     
     var node = el.select(host.self());
     
-    // In this chart, no rects should be visible
-    t.equal(node.selectAll('rect').size(), 0);
+    // In this chart, no rects should be visible apart from the clipper
+    t.equal(node.select('g.stacks').selectAll('rect').size(), 0);
     
     // But there should be some text
     t.ok(node.selectAll('text').size() > 0);
@@ -39,7 +39,7 @@ tape("html() 1 bar state", function(t) {
     var node = el.select(host.self());
         
     // In this chart, one rect should be there
-    t.equal(node.selectAll('rect').size(), 1);
+    t.equal(node.select('g.stacks').selectAll('rect').size(), 1);
     
     t.end();
 });
@@ -96,7 +96,7 @@ tape("html() data state - " + layout, function(t) {
     
     var node = el.select(host.self());
         
-    rects = node.selectAll('rect');
+    rects = node.select('g.stacks').selectAll('rect');
     t.equal(rects.size(), 2);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
@@ -118,7 +118,7 @@ tape("html() data scale - " + layout, function(t) {
     
     var node = el.select(host.self());
     
-    rects = node.selectAll('rect');
+    rects = node.select('g.stacks').selectAll('rect');
     t.equal(rects.size(), 2);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
@@ -139,7 +139,7 @@ tape("html() data extremes - " + layout, function(t) {
     
     var node = el.select(host.self());
         
-    rects = node.selectAll('rect');
+    rects = node.select('g.stacks').selectAll('rect');
     t.equal(rects.size(), 3);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
@@ -164,7 +164,7 @@ tape("html() data series stacked - " + layout, function(t) {
     
     var node = el.select(host.self());
         
-    rects = node.selectAll('rect');
+    rects = node.select('g.stacks').selectAll('rect');
     t.equal(rects.size(), 3);
     
     var one = parseInt(rects.nodes()[0].getAttribute(testSize));
