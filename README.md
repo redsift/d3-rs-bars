@@ -46,9 +46,11 @@
 
 ### ES6
 
-	import { chart } from "@redsift/d3-rs-bars";
-	let eml = chart.html();
-	...
+	import { html as bars } from "@redsift/d3-rs-bars";
+	import { select } from "d3-selection";
+	
+	let chart = bars();
+	select('body').datum([ 1, 2, 3, 10, 100 ]).call(chart);
 	
 ### Require
 
