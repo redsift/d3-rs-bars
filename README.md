@@ -4,7 +4,7 @@
 
 ## Builds
 
-[![Circle CI](https://circleci.com/gh/Redsift/d3-rs-bars.svg?style=svg)](https://circleci.com/gh/Redsift/d3-rs-bars)
+[![Circle CI](https://img.shields.io/circleci/project/redsift/d3-rs-bars.svg?style=flat-square)](https://circleci.com/gh/redsift/d3-rs-bars)
 
 ## Example
 
