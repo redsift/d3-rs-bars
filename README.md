@@ -8,9 +8,11 @@
 
 ## Example
 
-[View @redsift/d3-rs-bars on Codepen](http://codepen.io/rahulpowar/pen/mEOopX?editors=0010)
+[View @redsift/d3-rs-bars on CodePen](http://codepen.io/rahulpowar/pen/mEOopX?editors=0010)
 
-[Full example @redsift/d3-rs-bars as REFViewer on Codepen](http://codepen.io/rahulpowar/full/OXgWYj/)
+[Full example @redsift/d3-rs-bars as REFViewer on CodePen](http://codepen.io/rahulpowar/full/OXgWYj/)
+
+[View @redsift/d3-rs-bars Collection on CodePen](http://codepen.io/collection/AYWgqm/)
 
 
 ### Bottom orientation
