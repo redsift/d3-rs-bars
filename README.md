@@ -5,6 +5,8 @@
 ## Builds
 
 [![Circle CI](https://img.shields.io/circleci/project/redsift/d3-rs-bars.svg?style=flat-square)](https://circleci.com/gh/redsift/d3-rs-bars)
+[![npm](https://img.shields.io/npm/v/@redsift/d3-rs-bars.svg?style=flat-square)](https://www.npmjs.com/package/@redsift/d3-rs-bars)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/redsift/d3-rs-bars/master/LICENSE)
 
 ## Example
 
@@ -102,5 +104,9 @@ Property|Description|Transition|Preview
 `logValue`| *Integer* Alter the grid spacing for value. |Y| [![Preview of logValue](https://bricks.redsift.cloud/reusable/d3-rs-bars.svg?_datum=[%20[%203,%209%20],%20[%205,%202%20],%20[%2010,%205%20],%20[%2020,%202%20]%20]&logValue=20)](https://bricks.redsift.cloud/reusable/d3-rs-bars.svg?_datum=[%20[%203,%209%20],%20[%205,%202%20],%20[%2010,%205%20],%20[%2020,%202%20]%20]&logValue=20)<br>Examples: [Bricks](https://bricks.redsift.cloud/reusable/d3-rs-bars.svg?_datum=[%20[%203,%209%20],%20[%205,%202%20],%20[%2010,%205%20],%20[%2020,%202%20]%20]&logValue=20)/[CodePen](http://codepen.io/geervesh/pen/RGxazO)
 `language`| *String* Change the language format of the chart affecting digit, currency and time formats. |N| [CodePen Example](http://codepen.io/geervesh/pen/RGxRob)
 
+### Time
 
+To use any of the formatter a function is parsed to [`labelTime`](http://codepen.io/geervesh/pen/gwXvyO) function. To apply UTC format, d3.utcFormat(*specifier*) is used, argument being the [string specifiers](https://github.com/d3/d3-time-format#locale_format) and when using Local Time, only the string specifiers can be supply since by default the time format is set to Local Time.
+
+Additional information about Time format for D3 can be found [here](https://github.com/d3/d3-time-format#d3-time-format).
 
