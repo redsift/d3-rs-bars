@@ -106,7 +106,8 @@ Property|Description|Transition|Preview
 
 ### Time
 
-To use any of the formatter a function is parsed to [`labelTime`](http://codepen.io/geervesh/pen/gwXvyO) function. To apply UTC format, d3.utcFormat(*specifier*) is used, argument being the [string specifiers](https://github.com/d3/d3-time-format#locale_format) and when using Local Time, only the string specifiers can be supply since by default the time format is set to Local Time.
+The two main time formatter available are UTC and Local Time. UTC uses the time standard applied across the world which is unaffected by Daylight Saving Time whereas Local Time is set to your local timezone. 
+To use any of the formatters, string specifiers is passed to the [`labelTime`](http://codepen.io/geervesh/pen/gwXvyO) function. To apply UTC format, d3.utcFormat(*specifier*) is used as a parameter to `labelTime`, *specifier* being the [string specifiers](https://github.com/d3/d3-time-format#locale_format). When using Local Time, only string specifiers can be passed to `labelTime` since by default the time format is set to Local Time.
 
 Additional information about Time format for D3 can be found [here](https://github.com/d3/d3-time-format#d3-time-format).
 
